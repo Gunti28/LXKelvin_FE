@@ -7,21 +7,25 @@ import Listing from './pages/Listing';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-      <Route path="/" element={<ListingLayout />}>
-      <Route path="all-categories" element={<Listing />} />
+//     <Router>
+//       <Routes>
+//       <Route path="/" element={<ListingLayout />}>
+//       <Route path="all-categories" element={<Listing />} />
 
-  <Route path="vegetables" element={<ProductList />} />
-  <Route path="fruits" element={<ProductList />} />
-  <Route path="seasonalvegetables" element={<ProductList />} />
-  <Route path="seasonalfruits" element={<ProductList />} />
-  <Route path="milk-products" element={<ProductList />} />
-  <Route path="TrackingDetails" element={<TrackingDetails/>}/>
+//   <Route path="vegetables" element={<ProductList />} />
+//   <Route path="fruits" element={<ProductList />} />
+//   <Route path="seasonalvegetables" element={<ProductList />} />
+//   <Route path="seasonalfruits" element={<ProductList />} />
+//   <Route path="milk-products" element={<ProductList />} />
+//   <Route path="TrackingDetails" element={<TrackingDetails/>}/>
 
-</Route>
-      </Routes>
-    </Router>
+// </Route>
+//       </Routes>
+//     </Router>
+
+<div>
+  
+</div>
   );
 }
 
