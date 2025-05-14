@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "../css/Listing.css";
-import Tomato from '../assets/image 30.svg';
+import Tomato from '../assets/Listing/image 30.svg';
 import Cauliflower from '../assets/image 8.svg';
 import Beans from '../assets/image 17.svg';
 import Garlic from '../assets/image 18.svg';
