@@ -33,7 +33,7 @@ const DeliveryAddress = () => {
     }, []);
 
     const initializeMap = () => {
-        const defaultLocation = { lat: 47.4715, lng: 48.1755 }; // Default location (can be set to a default city)
+        const defaultLocation = { lat: 47.4715, lng: 48.1755 };
 
         const mapOptions = {
             zoom: 15,
