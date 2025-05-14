@@ -43,10 +43,8 @@ const HomePage = () => {
 
   return (
     <div className="container-fluid ">
-      {/* Top Carousel */}
       <Swiper
         navigation={true}
-        // autoplay={{ delay: 4000, disableOnInteraction: false }}
         modules={[Navigation, Autoplay]}
         className="mySwiper mt-5"
       >
@@ -78,20 +76,6 @@ const HomePage = () => {
             </div>
           </div>
         </SwiperSlide> 
-
-    
-        {/* {[slid2, slid3, slid4].map((num,index) => (
-          <SwiperSlide key={num}>
-            <img
-              src={num}
-              alt={`Slide ${num}`}
-              style={{ width: '100%', maxHeight: '300px', objectFit: 'cover' }}
-              // onClick={()=> setModelType("paymentfailed")}
-              onClick={index === 1 ? ()=> setModelType("paymentfailed") : index === 2 ? setModelType("thankyou"):undefined}
-              
-            />
-          </SwiperSlide>
-        ))} */}
         {[slid2, slid3, slid4].map((num, index) => (
   <SwiperSlide key={index}>
     <img
@@ -115,8 +99,6 @@ const HomePage = () => {
             show={modelType === "thankyou"}
             onClose={closeModel}
             />
-      
-      {/* Category Section */}
       <Container  fluid className="mt-4 ">
         <h4 className="text-center  mb-4">CATEGORIES</h4>
         <div  className='text-end'>
@@ -129,7 +111,6 @@ const HomePage = () => {
               
           <div  key={idx} className='t1 mb-5  cardtotal'>
               <Card className='cardimage' >
-                {/* <Card.Img variant="top" src={cat.image}  height="170" width="300"  style={{ objectFit: 'cover' }} /> */}
                 <Card.Img variant="top" src={cat.image} style={{ height: '170px', width: '100%', objectFit: 'cover' }} />
                 <Card.Body className='cardBody'>
                   <Card.Title className="text-center cardfont">{cat.title}</Card.Title>
