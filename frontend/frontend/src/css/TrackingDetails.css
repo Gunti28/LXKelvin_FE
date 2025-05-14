@@ -1,4 +1,4 @@
-/* Base Styles (Unchanged) */
+
 .tracking-details-container {
   background-color: #fff;
   padding: 20px;
@@ -71,10 +71,6 @@
 .call-button:hover {
   background-color: #45a049;
 }
-
-/* Improved Media Queries */
-
-/* Small devices (phones) */
 @media (max-width: 480px) {
   .tracking-details-container {
     max-width: 90%;
@@ -115,7 +111,6 @@
   }
 }
 
-/* Medium devices (tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
   .tracking-details-container {
     max-width: 80%;
@@ -141,8 +136,6 @@
     font-size: 1.1rem;
   }
 }
-
-/* Larger devices (desktops) */
 @media (min-width: 769px) {
   .tracking-details-container {
     max-width: 400px;

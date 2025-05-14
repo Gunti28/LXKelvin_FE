@@ -1,35 +1,3 @@
-
-// import React from 'react';
-// import { NavLink, Outlet } from 'react-router-dom';
-// import "../css/ListingLayout.css";
-
-// const ListingLayout = () => {
-//   return (
-//     <div className="layout-container">
-//       {/* Sidebar */}
-//       <aside className="sidebar">
-//         <nav>
-//         <ul>
-//           <li><NavLink to="/all-categories">All Categories</NavLink></li>
-//           <li><NavLink to="/vegetables">Vegetables</NavLink></li>
-//           <li><NavLink to="/fruits">Fruits</NavLink></li>
-//           <li><NavLink to="/seasonalvegetables">Seasonal Vegetables</NavLink></li>
-//           <li><NavLink to="/seasonalfruits">Seasonal Fruits</NavLink></li>
-//           <li><NavLink to="/milkproducts">Milk Products</NavLink></li>
-//         </ul>
-//         </nav>
-//       </aside>
-
-//       {/* Main Content */}
-//       <main className="main-content">
-//         <Outlet />
-//       </main>
-//     </div>
-//   );
-// };
-
-// export default ListingLayout;
-
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -47,12 +15,9 @@ const ListingLayout = () => {
 
   return (
     <div className="layout-container">
-      {/* Hamburger Menu Button for Mobile */}
       <Button className="d-md-none mb-3 hamburger-btn" onClick={handleShow} variant="outline-primary">
         <GiHamburgerMenu size={24} />
       </Button>
-
-      {/* Sidebar for Desktop & Offcanvas for Mobile */}
       <aside className="sidebar d-none d-md-block">
         <nav>
           <ul style={{listStyle:"none"}}>
@@ -81,8 +46,6 @@ const ListingLayout = () => {
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
-
-      {/* Main Content */}
       <main className="main-content">
         <Outlet />
       </main>
