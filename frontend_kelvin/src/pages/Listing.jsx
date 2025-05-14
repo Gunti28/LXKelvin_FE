@@ -21,8 +21,6 @@ const products = [
   { name: "Kiwi", image: Kiwi, price: 28, originalPrice: 35, Colour: "#c6f5c3", category: "fruits", stockCount: 7, discount: 0 }
 ];
 
-
-
 const quantityOptions = ["500g", "1kg", "2kg"];
 
 function getMessage(stockCount, discount) {
