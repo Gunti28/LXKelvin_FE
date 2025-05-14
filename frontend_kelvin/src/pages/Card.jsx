@@ -69,8 +69,6 @@ function PricingCards() {
         ))}
       </ul>
     </Card.Text>
-    
-    {/* Plan Button fixed to bottom */}
   
       <Button
         className={`${CardStyle.custombutton} w-100`}
