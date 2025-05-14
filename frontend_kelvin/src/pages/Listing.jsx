@@ -2,13 +2,13 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import "../css/Listing.css";
 import Tomato from '../assets/Listing/image 30.svg';
-import Cauliflower from '../assets/image 8.svg';
-import Beans from '../assets/image 17.svg';
-import Garlic from '../assets/image 18.svg';
-import Apple from '../assets/Apple.svg';
-import Banana from '../assets/Banana.svg';
-import Watermelon from '../assets/Watermelon.svg';
-import Kiwi from '../assets/Kiwi.svg';
+import Cauliflower from '../assets/Listing/image 8.svg';
+import Beans from '../assets/Listing/image 17.svg';
+import Garlic from '../assets/Listing/image 18.svg';
+import Apple from '../assets/Listing/Apple.svg';
+import Banana from '../assets/Listing/Banana.svg';
+import Watermelon from '../assets/Listing/Watermelon.svg';
+import Kiwi from '../assets/Listing/Kiwi.svg';
 
 const products = [
   { name: "Tomato", image: Tomato, price: 40, originalPrice: 50, Colour: "#fbd7d7", category: "vegetables", stockCount: 0, discount: 20 },
