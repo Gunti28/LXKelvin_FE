@@ -1,0 +1,170 @@
+.page-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #e3e9a641;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.delivery-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family:montserrat;
+}
+
+.help-option,
+.chat-option,
+.call-option {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    max-width: 90%;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-color: #e0e0e0;
+    justify-content: center;
+}
+
+.help-option:hover,
+.chat-option:hover,
+.call-option:hover{
+    width:410px;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.icon1{
+    margin-left: -400%;
+}
+.icon2 {
+    margin-left: -350%;
+}
+
+.green-text {
+    color: #4CAF50;
+}
+
+.rating-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    max-width: 90%;
+    padding: 25px;
+    text-align:center;
+}
+
+.rating-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.star {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+    
+}
+
+.star.active {
+    color: #4CAF50;
+}
+
+.rating-comment {
+    margin-bottom: 10px;
+    
+    color: #333;
+    font-size: 14px;
+}
+
+.comment-box {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 15px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    width: 60%;
+    padding: 10px;
+    font-weight: 500;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #FF8C00;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    /* width: 65%; */
+
+}
+
+.left-scooter-container {
+    position: absolute;
+    bottom: 40%;
+    left: 5%;
+}
+
+.right-scooter-container {
+    position: absolute;
+    margin-right: -10%;
+    bottom: 40%;
+    right: 5%;
+}
+
+.scooter-img {
+    width: 250px;
+    height: auto;
+}
+
+@media (max-width: 868px) {
+
+    .left-scooter-container,
+    .right-scooter-container {
+        display: none;
+    }
+
+    .help-option,
+    .chat-option,
+    .call-option,
+    .rating-card {
+        width: 85%;
+    }
+
+    .delivery-title {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,149 @@
+/* DeliveryAddress.css */
+
+.delivery-address-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.delivery-address-modal {
+    background-color: #fff;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    opacity: 0.75;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.autofill-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9f5fb;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.autofill-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.875rem;
+}
+
+.google-map {
+    width: 100%;
+    height: 400px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+}
+
+.form-control {
+    padding: 10px 15px;
+    height: auto;
+}
+
+.address-type-section p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.address-type-options {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.address-option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.address-option.active {
+    border-bottom-color: #28a745;
+}
+
+.address-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    background-color: #ff9800;
+    border-color: #ff9800;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .google-map {
+        height: 300px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .address-type-options {
+        flex-direction: column;
+    }
+
+    .address-option {
+        padding: 10px 0;
+        margin-bottom: 5px;
+    }
+}
