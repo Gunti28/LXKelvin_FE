@@ -2,7 +2,7 @@
 
  .hero-section {
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
   }
 
@@ -11,7 +11,7 @@
     z-index: 1;
   }
   .navbar {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: transparent;
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 10; 

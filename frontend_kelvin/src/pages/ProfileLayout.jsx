@@ -26,7 +26,6 @@ const ProfileLayout = () => {
 
   const handleClose = () => setShowSidebar(false);
   const handleShow = () => setShowSidebar(true);
-
   return (
     <div className={styles.MainCon}>
       <Button

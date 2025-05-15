@@ -5,7 +5,6 @@ import FooterImg from "../assets/footerimg.jpg";
 import headerimg from "../assets/vipimage.png";
 import "../css/Vippaymentsucess.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
- 
  function Vippaymentsucess({ show, onClose }) {
   return (
     <Modal

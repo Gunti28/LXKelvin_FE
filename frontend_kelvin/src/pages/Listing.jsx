@@ -22,7 +22,6 @@ const products = [
 ];
 
 
-
 const quantityOptions = ["500g", "1kg", "2kg"];
 
 function getMessage(stockCount, discount) {

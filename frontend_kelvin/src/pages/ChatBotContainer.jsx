@@ -6,7 +6,6 @@ export default function ChatBotContainer() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleChat = () => setIsOpen(prev => !prev);
-
     return (
         <>
             <OrderDelivered toggleChat={toggleChat} />

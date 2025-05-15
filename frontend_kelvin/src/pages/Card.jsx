@@ -83,7 +83,6 @@ function PricingCards() {
 
   </Card.Body>
 </Card>
-
           </div>
         ))}
       </div>

@@ -12,7 +12,6 @@ function EditAddressModal({ show, onHide, address, onSave }) {
     type: "",
     isDefault: false,
   });
-
   useEffect(() => {
     if (address) {
       setForm(address);
