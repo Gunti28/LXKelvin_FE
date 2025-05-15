@@ -6,7 +6,7 @@ import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
 
-function Register({ show, onClose, onCreateAccount }) {
+const Register = ({ show, onClose, onCreateAccount }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -141,6 +141,7 @@ function Register({ show, onClose, onCreateAccount }) {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
+          alt="FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

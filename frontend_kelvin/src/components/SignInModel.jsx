@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Logo from "../assets/Logo1.svg";
@@ -7,7 +6,7 @@ import FooterImg from "../assets/footerimg.jpg";
 import "../css/ModelPage.css";
 import { Form, Button, Container } from "react-bootstrap";
 
-function SignInModel({ show, onClose, onCreateAccount }) {
+const SignInModel = ({ show, onClose, onCreateAccount }) => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
@@ -26,7 +25,7 @@ function SignInModel({ show, onClose, onCreateAccount }) {
     >
       <Modal.Header className="border-0 justify-content-center">
         <Modal.Title id="contained-modal-title-vcenter">
-          <img src={Logo} width={150} />
+          <img src={Logo} alt="Logo" width={150} />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="border-0 d-flex justify-content-center align-items-center flex-column  body ">
@@ -56,6 +55,7 @@ function SignInModel({ show, onClose, onCreateAccount }) {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
+          alt = {FooterImg}
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

@@ -4,7 +4,7 @@ import { Popover, Overlay, Button } from 'react-bootstrap';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import Location from '../assets/Location.svg';
 
-function LocationModel({ show, target, container, onClose, onLocationSet  }) {
+const LocationModel = ({ show, target, container, onClose, onLocationSet  }) => {
   const [address, setAddress] = useState('');
   const [location, setLocation] = useState('');
 

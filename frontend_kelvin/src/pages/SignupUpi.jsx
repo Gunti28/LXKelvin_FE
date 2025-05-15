@@ -4,7 +4,9 @@ import SignupUpistyle from "../css/SinupUpi.module.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { IoIosArrowDown } from "react-icons/io";
-function SignupUpi() {
+
+const SignupUpi = () => {
+
   return (
     <div className="container justify-content-center align-items-center ">
       <strong>
