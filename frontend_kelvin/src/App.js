@@ -1,3 +1,4 @@
+
 // import HomePage from "./pages/Categories";
 // import ListingLayout from "./pages/ListingLayout";
 import OrderSummery from "./pages/OrderSummery";
@@ -49,6 +50,7 @@ function App() {
     //   </Routes>
     // </Router>
     <OrderSummery />
+
   );
 }
 

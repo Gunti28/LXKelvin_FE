@@ -16,8 +16,7 @@
     -webkit-backdrop-filter: blur(10px);
     z-index: 10; 
   }
-
-
+  
   .searchbar ul {
     z-index: 9999 !important; 
   }

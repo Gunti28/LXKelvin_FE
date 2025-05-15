@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import FooterImg from "../assets/footerimg.jpg";
-import "../css/Model.css";
+import "../css/ModelPage.css";
 import { Button } from "react-bootstrap";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
