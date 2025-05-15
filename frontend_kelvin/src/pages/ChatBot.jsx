@@ -147,7 +147,6 @@ export default function ChatBot({ isOpen, toggleChat }) {
                             </span>
                         </div>
                     )}
-
                     <div ref={chatEndRef} />
                 </div>
 

@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../css/CustomerSupport.module.css";
 import { Icon } from "@iconify/react";
-
 const CustomerSupport = () => {
   return (
     <div className={styles.CustomerCon}>

@@ -58,7 +58,6 @@ function ConfirmPage() {
           </Form.Label>
         </div>
       </div>
-      
       <div className="mt-4">
         <style type="text/css">
           {`.btn-flat { background-color:orange;color: white; font-size:20px; width:250px; height:50px}`}

@@ -4,8 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import FooterImg from "../assets/footerimg.jpg";
 import paymentfaild from "../assets/paymentfaild.png";
 import "../css/Vippaymentsucess.css";
-import { IoCheckmarkDoneOutline } from "react-icons/io5";
- 
+import { IoCheckmarkDoneOutline } from "react-icons/io5"; 
  function Paymentfaild({ show, onClose }) {
   return (
     <Modal

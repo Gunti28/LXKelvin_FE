@@ -8,7 +8,6 @@ import groupImage from "../assets/Group 1000004821.jpg";
 import Form from "react-bootstrap/Form";
 import { CiCircleQuestion } from "react-icons/ci";
 import { HiOutlineCreditCard } from "react-icons/hi";
-
 function Setupcard() {
   return (
     <div className="container d-flex flex-column align-items-center">

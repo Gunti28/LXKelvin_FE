@@ -39,8 +39,7 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
         <img
           src={FooterImg}
           className="image-fluid w-100 "
-          alt="FooterImg"
-          
+          alt="FooterImg" 
           style={{ objectFit: "cover" }}
         />
       </Modal.Footer>

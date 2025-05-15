@@ -148,5 +148,4 @@ const MyOrders = () => {
     </div>
   );
 };
-
 export default MyOrders;
