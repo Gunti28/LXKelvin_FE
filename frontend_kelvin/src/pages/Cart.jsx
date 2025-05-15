@@ -8,7 +8,6 @@ import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import SplitButton from "react-bootstrap/SplitButton";
 import Heart from '../assets/heart1.svg'
-
 const Cart = () => {
     const [liked, setLiked] = useState(false);
   const [cartItems, setCartItems] = useState([

@@ -144,7 +144,6 @@ const AdressNew = (props) => {
               />
             </div>
           </Form.Group>
-
           <Form.Group>
             <Form.Check
               type="checkbox"

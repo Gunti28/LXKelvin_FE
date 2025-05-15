@@ -23,7 +23,6 @@ const ProductList = () => {
       return { products };
     }
   };
-
   useEffect(() => {
     const fetchData = async () => {
       const filter = getCategory();

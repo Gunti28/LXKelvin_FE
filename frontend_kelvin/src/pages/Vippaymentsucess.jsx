@@ -7,6 +7,7 @@ import "../css/Vippaymentsucess.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
  
  const Vippaymentsucess = ({ show, onClose }) => {
+
   return (
     <Modal
       show={show}

@@ -13,6 +13,7 @@ import Button from "react-bootstrap/Button";
 import Paymentstyles from "../css/Payment.module.css";
 
 const Paymentpage = () => {
+
   return (
     <div className="container justify-content-center align-items-center ">
       <strong>

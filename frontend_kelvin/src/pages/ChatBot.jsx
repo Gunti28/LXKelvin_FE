@@ -147,7 +147,6 @@ export const ChatBot = ({ isOpen, toggleChat }) => {
                             </span>
                         </div>
                     )}
-
                     <div ref={chatEndRef} />
                 </div>
 

@@ -8,6 +8,11 @@ app.js
 package.json
 package-lock.json
 
+# files
+app.js
+package.json
+package-lock.json
+
 # testing
 /coverage
 

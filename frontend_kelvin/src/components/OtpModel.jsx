@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Modal from "react-bootstrap/Modal";
 import Logo from "../assets/Logo1.svg";
 import FooterImg from "../assets/footerimg.jpg";
-import "../css/Model.css";
+import "../css/ModelPage.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Button, Container } from "react-bootstrap";

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../css/Navbar.css";
 import {
   Navbar,
@@ -25,6 +25,26 @@ import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
 
 const NavbarComponent = () => {
+
+
+      const [scrolled, setScrolled] = useState(false);
+  
+      useEffect(() => {
+          const handleScroll = () => {
+              if (window.scrollY > 50) {
+                  setScrolled(true);
+              } else {
+                  setScrolled(false);
+              }
+          };
+  
+          window.addEventListener('scroll', handleScroll);
+  
+          return () => {
+              window.removeEventListener('scroll', handleScroll);
+          };
+      }, []);
+
   const [showLocationModel, setShowLocationModel] = useState(false);
   const locationRef = useRef(null);
   const [showPopover, setShowPopover] = useState(false);

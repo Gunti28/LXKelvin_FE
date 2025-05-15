@@ -10,6 +10,7 @@ import { CiCircleQuestion } from "react-icons/ci";
 import { HiOutlineCreditCard } from "react-icons/hi";
 
 const Setupcard = () => {
+
   return (
     <div className="container d-flex flex-column align-items-center">
   <div className={Setupcardstyle.cardSection}>

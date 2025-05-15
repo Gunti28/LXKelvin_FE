@@ -83,7 +83,6 @@ const PricingCards = () => {
 
   </Card.Body>
 </Card>
-
           </div>
         ))}
       </div>

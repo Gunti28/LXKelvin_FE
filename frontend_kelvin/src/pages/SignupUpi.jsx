@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import { IoIosArrowDown } from "react-icons/io";
 
 const SignupUpi = () => {
+
   return (
     <div className="container justify-content-center align-items-center ">
       <strong>
