@@ -106,7 +106,7 @@ const NavbarComponent = () => {
 
   return (
     <div className="hero-section">
-      <Navbar variant="light" expand="lg" className="navbar p-0">
+      <Navbar variant="dark" expand="lg" className="navbar bg-transparent p-0">
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />

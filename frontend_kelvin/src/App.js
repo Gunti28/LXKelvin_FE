@@ -1,22 +1,24 @@
 
-// import HomePage from "./pages/Categories";
-// import ListingLayout from "./pages/ListingLayout";
+import HomePage from "./pages/Categories";
+import ListingLayout from "./pages/ListingLayout";
+import Hero from "./components/Hero";
+import NavbarComponent from "./components/Navbar";
 import OrderSummery from "./pages/OrderSummery";
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import ProductDetailsPage from "./pages/ProductDetailsPage";
-// import PricingCards from "./pages/Card";
-// import DeliveryAddress from "./pages/DeliveryAddress";
-// import Cart from "./pages/Cart";
-// import Paymentpage from "./pages/Paymentpage";
-// import Setupcard from "./pages/Setupcard";
-// import SignupUpi from "./pages/SignupUpi";
-// import OrderTracking from "./pages/OrderTracking";
-// import TrackingDetails from "./pages/TrackingDetails";
-// import ChatBotContainer from "./pages/ChatBotContainer";
-// import Vippaymentsucess from "./pages/Vippaymentsucess";
-// import Paymentfaild from "./pages/PaymentFailed";
-// import Thankyou from "./pages/Thankyou";
-// import Pay1 from "./pages/payment";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ProductDetailsPage from "./pages/ProductDetailsPage";
+import PricingCards from "./pages/Card";
+import DeliveryAddress from "./pages/DeliveryAddress";
+import Cart from "./pages/Cart";
+import Paymentpage from "./pages/Paymentpage";
+import Setupcard from "./pages/Setupcard";
+import SignupUpi from "./pages/SignupUpi";
+import OrderTracking from "./pages/OrderTracking";
+import TrackingDetails from "./pages/TrackingDetails";
+import ChatBotContainer from "./pages/ChatBotContainer";
+import Vippaymentsucess from "./pages/Vippaymentsucess";
+import Paymentfaild from "./pages/PaymentFailed";
+import Thankyou from "./pages/Thankyou";
+import Pay1 from "./pages/payment";
 
 function App() {
   return (
@@ -50,7 +52,6 @@ function App() {
     //   </Routes>
     // </Router>
     <OrderSummery />
-
   );
 }
 
