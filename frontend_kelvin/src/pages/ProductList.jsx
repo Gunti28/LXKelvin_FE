@@ -18,12 +18,11 @@ const ProductList = () => {
     } else if (location.pathname.includes("fruits")) {
       return { category: "fruits" };
     } else if (location.pathname.includes("milk-products")) {
-      return { category: "milk-products" };
+      return { category: "milk-products" }; 
     } else {
       return { products };
     }
   };
-
   useEffect(() => {
     const fetchData = async () => {
       const filter = getCategory();

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import styles from "../css/AddressEdit.module.css";
 
-function AdressNew(props) {
+const AdressNew = (props) => {
   const [modalAddress, setModalAddress] = useState({
     houseNo: "",
     landMark: "",
@@ -144,7 +144,6 @@ function AdressNew(props) {
               />
             </div>
           </Form.Group>
-
           <Form.Group>
             <Form.Check
               type="checkbox"

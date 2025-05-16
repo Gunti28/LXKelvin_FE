@@ -3,14 +3,15 @@ import { Icon } from '@iconify/react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import '../css/ProductDetailsPage.css'; // Import your CSS file for styling
 // Import all images
-import t1 from '../assets/t1.png';
-import t2 from '../assets/t2.png';
-import t3 from '../assets/t3.png';
-import t4 from '../assets/t4.png';
-import t5 from '../assets/t5.png';
-import it1 from '../assets/it1.jpg';
-import it2 from '../assets/it2.jpg';
-import it3 from '../assets/it3.jpg';
+import t1 from '../assets/productdetails_Images/t1.png';
+import t2 from '../assets/productdetails_Images/t2.png';
+import t3 from '../assets/productdetails_Images/t3.png';
+import t4 from '../assets/productdetails_Images/t4.png';
+import t5 from '../assets/productdetails_Images/t5.png';
+import it1 from '../assets/productdetails_Images/it1.jpg';
+import it2 from '../assets/productdetails_Images/it2.jpg';
+import it3 from '../assets/productdetails_Images/it3.jpg';
+
 
 
 const ProductDetailsPage= () => {
@@ -88,9 +89,8 @@ const ProductDetailsPage= () => {
     return (
         <Container className="product-page mt-4">
             <Row>
-                {/* Left Column */}
+                
                 <Col md={6} className="left-column">
-                    {/* Row 1: Main Image Preview */}
                     <div className="main-image-container">
                         <img
                             src={images[currentImageIndex]}

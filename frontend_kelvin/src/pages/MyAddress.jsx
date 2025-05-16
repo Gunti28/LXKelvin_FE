@@ -3,9 +3,7 @@ import styles from "../css/Address.module.css";
 import { Icon } from "@iconify/react";
 import AdressEdit from "./AddressEdit";
 import EditAddressModal from "./EditAddressModal";
-
 const AddressList = () => {
-
   const [addresses, setAddresses] = useState([
     {
       id: 1,

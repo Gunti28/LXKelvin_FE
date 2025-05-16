@@ -51,13 +51,13 @@ const SaveForLater = () => {
         </div>
         <p className={styles.addNew}>items</p>
       </div>
-
       {savedItems.map((item) => (
         <div key={item.id} className={styles.savedCard}>
           <div
             className={styles.imageCon}
             style={{ backgroundColor: item.bgColor }}
           >
+            
             <img
               src={item.image}
               alt={item.name}

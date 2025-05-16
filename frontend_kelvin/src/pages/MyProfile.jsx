@@ -10,7 +10,6 @@ const MyProfile = () => {
   const [mainNumber, setMainNumber] = useState("9494216347");
   const [isGold, setIsGold] = useState(false);
   const [isEditable, setIsEditable] = useState(false);
-
   const handleEdit = (e) => {
     e.preventDefault();
     setIsEditable((prev) => !prev);
@@ -40,6 +39,7 @@ const MyProfile = () => {
             <p className={styles.proNo}>{mainNumber}</p>
           </div>
         </div>
+        
         <div className={isGold ? styles.goldCard : styles.card}>
           <h2 className={styles.title}>{isGold ? "Gold" : "Premium"}</h2>
           <p className={styles.subtitle}>Subscription pass</p>
