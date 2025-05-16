@@ -5,18 +5,16 @@ import Logo from "../assets/Logo1.svg";
 import FooterImg from "../assets/footerimg.jpg";
 import  ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
-<<<<<<< HEAD
-function SignInModel() {
-=======
-const SignInModel = ({ show, onClose, onCreateAccount }) => {
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
+
+const SignInModel = () => {
+
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email submitted:", email);
-    // onCreateAccount(); 
   };
 
   return (
@@ -48,10 +46,11 @@ const SignInModel = ({ show, onClose, onCreateAccount }) => {
                 style={{borderColor: 'black', boxShadow: 'none' }}
               />
             </Form.Group>
-
+            <NavLink to='/enterotp'>
             <Button variant="warning" type="submit" className="w-100 mt-3 mb-2" >
               Continue
             </Button>
+            </NavLink>
           </Form>
         </Container>
       </Modal.Body>

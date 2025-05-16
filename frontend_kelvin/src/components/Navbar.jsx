@@ -23,7 +23,7 @@ import Register from "./Register";
 import Success from "./Success";
 import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
-import Hero from "./Hero";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
 
@@ -107,11 +107,7 @@ const NavbarComponent = () => {
 
   return (
     <div className="hero-section">
-<<<<<<< HEAD
-      <Navbar variant="dark" expand="lg" className="navbar p-0">
-=======
       <Navbar variant="dark" expand="lg" className="navbar bg-transparent p-0">
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />
@@ -300,34 +296,31 @@ const NavbarComponent = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-
+              <NavLink to='/signin'>
               <Button
                 variant="warning"
                 className=" w-35"
-                onClick={() => setModalType("signin")}
+                // onClick={()=>useNavigate('/signin')}
               >
                 Sign In
               </Button>
-              <SignInModel
+              </NavLink>
+              {/* <SignInModel
                 show={modalType === "signin"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("otp")}
               />
               <OtpModel
                 show={modalType === "otp"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("register")}
               />
               <Register
                 show={modalType === "register"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("success")}
               />
               <Success
                 show={modalType === "success"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType(null)}
-              />
+              /> */}
             </div>
           </Navbar.Collapse>
         </Container>

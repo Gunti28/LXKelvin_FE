@@ -15,6 +15,7 @@ const CustomerSupport = () => {
               className={styles.MainIcon}
             />
           </div>
+          
           <h2 className={styles.heading}>Frequently asked questions</h2>
         </div>
       </div>
