@@ -1,4 +1,4 @@
-.chat-panel {
+.chatPanel {
     position: fixed;
     bottom: 70px;
     top:20px;
@@ -18,31 +18,31 @@
     pointer-events: none;
 }
 
-.chat-panel.show {
+.chatPanel.show {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
 }
 
-.chat-body {
+.chatBody {
     max-height: 65vh;
     overflow-y: auto;
 }
 
-.typing-indicator {
+.typingIndicator {
     font-style: italic;
 }
 
-.typing-indicator .dot {
+.typingIndicator .dot {
     animation: blink 1s infinite;
     margin-left: 1px;
 }
 
-.typing-indicator .dot:nth-child(2) {
+.typingIndicator .dot:nth-child(2) {
     animation-delay: 0.2s;
 }
 
-.typing-indicator .dot:nth-child(3) {
+.typingIndicator .dot:nth-child(3) {
     animation-delay: 0.4s;
 }
 
@@ -60,7 +60,7 @@
 }
 
 /* Fade in animation */
-.fade-in {
+.fadeIn {
     animation: fadeIn 0.4s ease-in-out;
 }
 
@@ -78,7 +78,7 @@
 
 /* Mobile responsiveness */
 @media (max-width: 776px) {
-    .chat-panel {
+    .chatPanel {
         top: 0;
         right: -100%;
         bottom: auto;
@@ -90,11 +90,11 @@
         pointer-events: auto;
     }
 
-    .chat-panel.show {
+    .chatPanel.show {
         right: 0;
     }
 
-    .chat-body {
+    .chatBody {
         max-height: 55vh;
     }
 }
