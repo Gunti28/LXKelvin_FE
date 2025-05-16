@@ -5,8 +5,9 @@ import "../css/ModelPage.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
-function Register({ show, onClose, onCreateAccount }) {
+const Register =() => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +18,6 @@ function Register({ show, onClose, onCreateAccount }) {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSubmit = (event) => {
-    onCreateAccount();
     event.preventDefault();
     if (!name || !email || !password || !confirmPassword) {
       setError("Fill all the field");
@@ -33,8 +33,7 @@ function Register({ show, onClose, onCreateAccount }) {
 
   return (
     <Modal
-      show={show}
-      onHide={onClose}
+      show={true}
       size="medium"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -126,7 +125,7 @@ function Register({ show, onClose, onCreateAccount }) {
                 style={{ borderColor: "black", boxShadow: "none" }}
               />
             </Form.Group>
-
+              <NavLink to = '/success'>
             <Button
               type="submit"
               disabled={checked ? false : true}
@@ -135,6 +134,7 @@ function Register({ show, onClose, onCreateAccount }) {
             >
               Continue
             </Button>
+            </NavLink>
           </Form>
         </Container>
       </Modal.Body>

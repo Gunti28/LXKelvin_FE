@@ -6,20 +6,19 @@ import Logo from "../assets/Logo1.svg";
 import FooterImg from "../assets/footerimg.jpg";
 import "../css/ModelPage.css";
 import { Form, Button, Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
-function SignInModel({ show, onClose, onCreateAccount }) {
+const SignInModel = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email submitted:", email);
-    onCreateAccount(); 
   };
 
   return (
     <Modal
-      show={show}
-      onHide={onClose}
+      show={true}
       size="medium"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -46,10 +45,11 @@ function SignInModel({ show, onClose, onCreateAccount }) {
                 style={{borderColor: 'black', boxShadow: 'none' }}
               />
             </Form.Group>
-
+            <NavLink to='/enterotp'>
             <Button variant="warning" type="submit" className="w-100 mt-3 mb-2" >
               Continue
             </Button>
+            </NavLink>
           </Form>
         </Container>
       </Modal.Body>

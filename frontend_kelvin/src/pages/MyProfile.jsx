@@ -39,6 +39,7 @@ const MyProfile = () => {
             <p className={styles.proNo}>{mainNumber}</p>
           </div>
         </div>
+        
         <div className={isGold ? styles.goldCard : styles.card}>
           <h2 className={styles.title}>{isGold ? "Gold" : "Premium"}</h2>
           <p className={styles.subtitle}>Subscription pass</p>

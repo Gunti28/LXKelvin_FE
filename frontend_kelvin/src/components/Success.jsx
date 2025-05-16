@@ -8,11 +8,10 @@ import { Button } from "react-bootstrap";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
 
-function Success({ show, onClose, onCreateAccount }) {
+const  Success = ()=> {
   return (
     <Modal
-      show={show}
-      onHide={onClose}
+      show={true}
       size="sm"
       aria-labelledby="contained-modal-title-vcenter"
       centered

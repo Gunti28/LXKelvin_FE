@@ -23,6 +23,7 @@ import Register from "./Register";
 import Success from "./Success";
 import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
 
@@ -291,34 +292,31 @@ const NavbarComponent = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-
+              <NavLink to='/signin'>
               <Button
                 variant="warning"
                 className=" w-35"
-                onClick={() => setModalType("signin")}
+                // onClick={()=>useNavigate('/signin')}
               >
                 Sign In
               </Button>
-              <SignInModel
+              </NavLink>
+              {/* <SignInModel
                 show={modalType === "signin"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("otp")}
               />
               <OtpModel
                 show={modalType === "otp"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("register")}
               />
               <Register
                 show={modalType === "register"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("success")}
               />
               <Success
                 show={modalType === "success"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType(null)}
-              />
+              /> */}
             </div>
           </Navbar.Collapse>
         </Container>
