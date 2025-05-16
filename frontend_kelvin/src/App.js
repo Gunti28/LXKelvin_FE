@@ -1,33 +1,4 @@
 
-<<<<<<< HEAD
-import './App.css';
-import Hero from './components/Hero';
-import NavbarComponent from './components/Navbar';
-import OtpModel from './components/OtpModel';
-import Register from './components/Register';
-import SignInModel from './components/SignInModel';
-import Success from './components/Success';
-import Cart from './pages/Cart';
-import DeliveryAddress from './pages/DeliveryAddress';
-import Sign from './pages/Demo';
-import Navbarpage from './pages/Demo';
-
-function App() {
-  return (
-    <div className="App">
-      {/* <NavbarComponent/> */}
-      {/* <Hero/> */}
-      {/* <Navbarpage/> */}
-{/* <DeliveryAddress/> */}
-      {/* <Cart/> */}
-      {/* <SignInModel/> */}
-      {/* <Sign/> */}
-      {/* <Success/> */}
-      {/* <SignInModel/> */}
-    {/* <Register/> */}
-    {/* <OtpModel/> */}
-    </div>
-=======
 import HomePage from "./pages/Categories";
 import ListingLayout from "./pages/ListingLayout";
 import Hero from "./components/Hero";
@@ -81,7 +52,6 @@ function App() {
     //   </Routes>
     // </Router>
     <OrderSummery />
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
   );
 }
 

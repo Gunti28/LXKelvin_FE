@@ -6,11 +6,9 @@ import FooterImg from "../assets/footerimg.jpg";
 import  ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 
-<<<<<<< HEAD
-function SignInModel() {
-=======
-const SignInModel = ({ show, onClose, onCreateAccount }) => {
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
+
+const SignInModel = () => {
+
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {

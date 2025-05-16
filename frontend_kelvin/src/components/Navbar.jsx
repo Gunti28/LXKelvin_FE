@@ -107,11 +107,7 @@ const NavbarComponent = () => {
 
   return (
     <div className="hero-section">
-<<<<<<< HEAD
-      <Navbar variant="dark" expand="lg" className="navbar p-0">
-=======
       <Navbar variant="dark" expand="lg" className="navbar bg-transparent p-0">
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />

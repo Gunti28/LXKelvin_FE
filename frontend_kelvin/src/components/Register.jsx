@@ -6,11 +6,10 @@ import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
 
-<<<<<<< HEAD
-function Register() {
-=======
-const Register = ({ show, onClose, onCreateAccount }) => {
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
+
+
+const Register = () => {
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
