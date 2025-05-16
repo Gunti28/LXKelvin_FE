@@ -1,7 +1,11 @@
 import React, { useCallback, useState,useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import { Icon } from "@iconify/react";
-
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const DragAndDrop = ({ clearPreview }) => {
   const [files, setFiles] = useState([]);
 
@@ -28,7 +32,9 @@ const DragAndDrop = ({ clearPreview }) => {
     onDrop,
     accept: "image/*",
   });
-
+/**
+ * 
+ */
   return (
     <div
       {...getRootProps()}

@@ -57,6 +57,7 @@ const SaveForLater = () => {
             className={styles.imageCon}
             style={{ backgroundColor: item.bgColor }}
           >
+            
             <img
               src={item.image}
               alt={item.name}

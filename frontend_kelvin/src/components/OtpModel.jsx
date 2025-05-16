@@ -7,15 +7,15 @@ import ModelPage from  "../css/ModelPage.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Button, Container } from "react-bootstrap";
-
+import { useNavigate } from 'react-router-dom';
 
 const OtpModel = () => {
-
 
     const [otp, setOtp] = useState(['', '', '', '']);
     const [timer, setTimer] = useState();
     const [resendDisabled, setResendDisabled] = useState(true);
     const inputRefs = useRef([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (timer > 0) {
@@ -45,10 +45,12 @@ const handleChange = (value, index) => {
       if (enteredOtp === '1234') {
         toast.success('OTP Verified!');
         setTimeout(() => {
+          navigate('/registeruser')
           // onClose(); 
           setTimeout(() => {
             // onCreateAccount(); 
           }, 300); 
+
         }, 1000);
       } else {
         toast.error('Invalid OTP');

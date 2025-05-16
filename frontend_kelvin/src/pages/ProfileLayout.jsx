@@ -20,7 +20,6 @@ const navItems = [
     label: "Logout",
   },
 ];
-
 const ProfileLayout = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 

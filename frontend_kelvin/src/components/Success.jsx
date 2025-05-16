@@ -7,8 +7,8 @@ import ModelPage from  "../css/ModelPage.module.css";
 import { Button } from "react-bootstrap";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
+const  Success = ()=> {
 
-function Success() {
   return (
     <Modal
       show={true}
