@@ -66,9 +66,6 @@ function App() {
         </Route>
       </Routes>
     </Router>
-    // <OrderSummery />
-    // <NavbarComponent />
-    // <DeliveryAddress />
   );
 }
 

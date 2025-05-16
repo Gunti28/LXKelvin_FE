@@ -162,7 +162,7 @@ const NavbarComponent = () => {
                     left: "15px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color: "#aaa",
+                    color: "white",
                     zIndex: 2,
                   }}
                 />
@@ -170,13 +170,15 @@ const NavbarComponent = () => {
                   type="search"
                   placeholder="Search for products..."
                   aria-label="Search"
-                  className="white-placeholder "
+                  className="white-placeholder"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   style={{
                     borderRadius: "50px",
                     paddingLeft: "40px",
                     paddingRight: "40px",
+                    borderWidth:2,
+                    borderColor:"white",
                     backgroundColor: "transparent",
                     color: "white",
                   }}
@@ -226,8 +228,10 @@ const NavbarComponent = () => {
                     position: "absolute",
                     top: "45px",
                     width: "50%",
-                    background: "#fff",
+                    background: ' rgba(255, 255, 255, 0.5)',
+                    // background:"#fff",
                     color: "#000",
+                    backdropFilter:'blur(25)',
                     listStyle: "none",
                     margin: 0,
                     padding: "5px 0",
@@ -366,6 +370,7 @@ const NavbarComponent = () => {
           </div>
         </div>
       )}
+
     </div>
   );
 };

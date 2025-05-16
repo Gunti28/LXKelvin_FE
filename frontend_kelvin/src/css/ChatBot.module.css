@@ -1,0 +1,100 @@
+.chatPanel {
+    position: fixed;
+    bottom: 70px;
+    top:20px;
+    right: 30px;
+    width: 360px;
+    max-height: 800px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    z-index: 1050;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.chatPanel.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.chatBody {
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.typingIndicator {
+    font-style: italic;
+}
+
+.typingIndicator .dot {
+    animation: blink 1s infinite;
+    margin-left: 1px;
+}
+
+.typingIndicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typingIndicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+
+    0%,
+    80%,
+    100% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+}
+
+/* Fade in animation */
+.fadeIn {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 776px) {
+    .chatPanel {
+        top: 0;
+        right: -100%;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .chatPanel.show {
+        right: 0;
+    }
+
+    .chatBody {
+        max-height: 55vh;
+    }
+}

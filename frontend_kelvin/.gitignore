@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+app.js
+package.json
+package-lock.json
 
 # files
 app.js

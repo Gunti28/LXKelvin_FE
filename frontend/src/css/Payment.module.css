@@ -1,0 +1,62 @@
+.Arrow{
+    justify-content: space-between;
+    margin-left: 20%;
+    align-items: end;
+}
+.vector{
+    color: #979797;
+    display: flex;
+}
+
+.cardWrapper {
+  width: 75%;
+  margin: 1rem auto 0 auto;
+}
+
+.encryptedNote {
+  font-size: 13px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  /* gap: 5px; */
+  /* margin-top: 0.5rem; */
+}
+
+.form {
+  width: 100%;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.termsLabel {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  flex: 1; /* allow label to fill space */
+  margin: 0;
+}
+
+
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .cardWrapper {
+    width: 95%;
+  }
+
+  .encryptedNote {
+    justify-content: flex-end;
+    font-size: 12px;
+  }
+
+  .termsLabel {
+    font-size: 0.8rem;
+  }
+
+}
+

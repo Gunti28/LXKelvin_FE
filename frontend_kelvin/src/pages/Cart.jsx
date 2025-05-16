@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Button } from "react-bootstrap";
-import "../css/Cart.css";
+import CartModule from '../css/Cart.module.css';
 import TomatoCart from "../assets/tomatocart.png";
 import KiwiCart from "../assets/kiwicart.png";
 import { MdOutlineEuro } from "react-icons/md";
@@ -123,7 +123,7 @@ const Cart = () => {
           <p>Subtotal</p>
         </div>
 
-        <div className="mainitemsec justify-content-center align-items-center"
+        <div className={` ${CartModule.mainitemsec} justify-content-center align-items-center`}
           style={{
             maxHeight: cartItems.length > 2 ? "450px" : "auto",
             overflowY: cartItems.length > 2 ? "auto" : "visible",
@@ -134,11 +134,11 @@ const Cart = () => {
           {cartItems.map((item) => (
             <div
               key={item.id}
-              className="d-flex flex-row justify-content-between align-items-center pt-4 cart-item"
+              className={`d-flex flex-row justify-content-between align-items-center pt-4 ${CartModule.cart-item}`}
             >
-              <div className="d-flex flex-row justify-content-center align-items-center gap-3 itemimg">
+              <div className={`d-flex flex-row justify-content-center align-items-center gap-3 ${CartModule.itemimg}`}>
                 <img src={item.image}  />
-                <div className="imgtext">
+                <div className={CartModule.imgtext}>
                   <div>{item.name}</div>
                   <p>
                     <MdOutlineEuro />
@@ -150,10 +150,10 @@ const Cart = () => {
                 </div>
               </div>
 
-              <div style={{ marginRight: 150 }}  className="cart-item-buttons">
+              <div style={{ marginRight: 150 }}  className={CartModule.itembtn}>
                 <div className="d-flex flex-row justify-content-center align-items-center gap-3">
                   <SplitButton
-                    as={ButtonGroup}
+                    as={ButtonGroup}  
                     size="sm"
                     variant="light"
                     title={item.selectedWeight}
@@ -179,7 +179,7 @@ const Cart = () => {
                     >
                       -
                     </Button>
-                    <p className=" midCount">{item.quantity}</p>
+                    <p className= {CartModule.midCount}>{item.quantity}</p>
                     <Button
                       style={{
                          borderWidth:1,
@@ -213,7 +213,7 @@ const Cart = () => {
                 </div>
               </div>
 
-              <div className="cart-item-price">
+              <div className={CartModule.itemprice}>
                 <div>
                   <MdOutlineEuro />{" "}
                   {(

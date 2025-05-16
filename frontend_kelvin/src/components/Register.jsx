@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import FooterImg from "../assets/footerimg.jpg";
-import "../css/ModelPage.css";
+import ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const Register =() => {
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -88,7 +89,7 @@ const Register =() => {
                   color: "#000",
                 }}
               >
-                {showPassword ? <FiEyeOff /> : <FiEye />}
+                {showPassword ? <FiEye /> : <FiEyeOff />}
               </div>
               <Form.Control
                 type={showConfirmPassword ? "text" : "password"}
@@ -109,7 +110,7 @@ const Register =() => {
                   color: "#000",
                 }}
               >
-                {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+                {showConfirmPassword ? <FiEye /> : <FiEyeOff />}
               </div>
               {error && (
                 <p className="text-center mb-0" style={{ color: "red" }}>
@@ -141,6 +142,7 @@ const Register =() => {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
+          alt="FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />
