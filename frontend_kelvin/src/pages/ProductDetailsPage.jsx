@@ -13,6 +13,7 @@ import it2 from '../assets/productdetails_Images/it2.jpg';
 import it3 from '../assets/productdetails_Images/it3.jpg';
 
 
+
 const ProductDetailsPage= () => {
 
     const [productName, setProductName] = useState('Organic Tomato');
@@ -88,9 +89,8 @@ const ProductDetailsPage= () => {
     return (
         <Container className="product-page mt-4">
             <Row>
-                {/* Left Column */}
+                
                 <Col md={6} className="left-column">
-                    {/* Row 1: Main Image Preview */}
                     <div className="main-image-container">
                         <img
                             src={images[currentImageIndex]}

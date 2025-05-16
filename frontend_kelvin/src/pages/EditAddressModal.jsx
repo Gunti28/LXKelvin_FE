@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import styles from "../css/EditAddressModal.module.css";
 
-function EditAddressModal({ show, onHide, address, onSave }) {
+const EditAddressModal = ({ show, onHide, address, onSave }) => {
   const [form, setForm] = useState({
     houseNo: "",
     landMark: "",
@@ -12,7 +12,6 @@ function EditAddressModal({ show, onHide, address, onSave }) {
     type: "",
     isDefault: false,
   });
-
   useEffect(() => {
     if (address) {
       setForm(address);
@@ -159,5 +158,3 @@ function EditAddressModal({ show, onHide, address, onSave }) {
 }
 
 export default EditAddressModal;
-
-

@@ -41,7 +41,7 @@ const plans = [
     buttonTextColor:'white',
   },
 ];
-function PricingCards() {
+const PricingCards = () => {
   return (
     <div className="container fluid  my-5 ">
       <h4 className="text-center mb-4 fw-bold">Choose the plan thats right for you</h4>
@@ -69,8 +69,6 @@ function PricingCards() {
         ))}
       </ul>
     </Card.Text>
-    
-    {/* Plan Button fixed to bottom */}
   
       <Button
         className={`${CardStyle.custombutton} w-100`}
@@ -85,7 +83,6 @@ function PricingCards() {
 
   </Card.Body>
 </Card>
-
           </div>
         ))}
       </div>

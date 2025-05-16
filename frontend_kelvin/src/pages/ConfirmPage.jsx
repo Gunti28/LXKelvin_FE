@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import confrimstyle from "../css/Confirm.module.css";
 
-function ConfirmPage() {
+const ConfirmPage = () => {
   return (
     <div className="mt-5 container-fluid justify-content-center align-items-center ">
       <strong>
@@ -58,7 +58,6 @@ function ConfirmPage() {
           </Form.Label>
         </div>
       </div>
-      
       <div className="mt-4">
         <style type="text/css">
           {`.btn-flat { background-color:orange;color: white; font-size:20px; width:250px; height:50px}`}

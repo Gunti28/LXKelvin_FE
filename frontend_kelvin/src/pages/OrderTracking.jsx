@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "../css/OrderTracking.module.css";
 import bike from "../assets/OrderIcons/image 6.svg";
 import { Icon } from "@iconify/react";
-
 const items = [
   { name: "Cauliflower", price: 30 },
   { name: "Cucumber", price: 30 },

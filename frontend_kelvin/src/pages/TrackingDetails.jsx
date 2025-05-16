@@ -11,7 +11,6 @@ const TrackingDetails = () => {
         <h4>Order Placed</h4>
         <p className="order-info">Placed on Sun, 12 Oct 23, 4:12</p>
       </div>
-
       <div className="tracking-card delivery-partner">
         <div className="partner-info">
           <img
