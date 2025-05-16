@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
 
+import ChatBot from './pages/ChatBot';
+import OrderDelivered from './pages/OrderDelivered';
+import ChatBotContainer from './pages/ChatBotContainer';
+//import DeliveryAddress from './pages/DeliveryAddress';
+//import ProductDetailsPage from './pages/ProductDetailsPage';
+//import listing from './pages/Listing';
+//import Listing from './pages/Listing';
+
+
+
+
+//import './css/orderDelivered.css';
+//import './css/ChatBot.css';
+//import './css/DeliveryAddress.css';
+//import './css/ProductDetailsPage.css';
+//import './css/Listing.css';
+
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* <OrderDelivered />
+    <ChatBot /> */}
+    <ChatBotContainer/>
+    {/* <Listing/> */}
+
+      
     </div>
   );
 }
