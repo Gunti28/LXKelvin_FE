@@ -31,7 +31,6 @@ const  Success = ()=> {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
-          alt="FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />
