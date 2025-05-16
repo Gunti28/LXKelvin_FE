@@ -115,8 +115,7 @@ const HomePage = () => {
           ))}
         </div>
       </Container>
-      
-    </div>
+          </div>
   );
 };
 
