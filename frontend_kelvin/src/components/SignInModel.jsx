@@ -4,22 +4,21 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Logo from "../assets/Logo1.svg";
 import FooterImg from "../assets/footerimg.jpg";
-import "../css/ModelPage.css";
+import  ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 
-function SignInModel({ show, onClose, onCreateAccount }) {
+function SignInModel() {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email submitted:", email);
-    onCreateAccount(); 
+    // onCreateAccount(); 
   };
 
   return (
     <Modal
-      show={show}
-      onHide={onClose}
+      show={true}
       size="medium"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -29,10 +28,10 @@ function SignInModel({ show, onClose, onCreateAccount }) {
           <img src={Logo} width={150} />
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body className="border-0 d-flex justify-content-center align-items-center flex-column  body ">
+      <Modal.Body className={`border-0 d-flex justify-content-center align-items-center flex-column ${ModelPage.body}`} >
         <div className="text-center">
           <p className="fs-5 texting ">Experience the Taste of Real Organic</p>
-          <p className="textingsmall">Login or SignUp</p>
+          <p className={ModelPage.textingsmall}>Login or SignUp</p>
         </div>
         <Container fluid>
           <Form onSubmit={handleSubmit}>

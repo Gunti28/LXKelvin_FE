@@ -3,12 +3,12 @@ import React, { useState, useRef, useEffect } from 'react';
 import Modal from "react-bootstrap/Modal";
 import Logo from "../assets/Logo1.svg";
 import FooterImg from "../assets/footerimg.jpg";
-import "../css/ModelPage.css";
+import ModelPage from  "../css/ModelPage.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Button, Container } from "react-bootstrap";
 
-function OtpModel({ show, onClose, onCreateAccount }) {
+function OtpModel() {
 
     const [otp, setOtp] = useState(['', '', '', '']);
     const [timer, setTimer] = useState();
@@ -43,9 +43,9 @@ const handleChange = (value, index) => {
       if (enteredOtp === '1234') {
         toast.success('OTP Verified!');
         setTimeout(() => {
-          onClose(); 
+          // onClose(); 
           setTimeout(() => {
-            onCreateAccount(); 
+            // onCreateAccount(); 
           }, 300); 
         }, 1000);
       } else {
@@ -68,8 +68,7 @@ const handleChange = (value, index) => {
 
   return (
     <Modal
-      show={show}
-      onHide={onClose}
+      show={true}
       size="medium"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -83,7 +82,7 @@ const handleChange = (value, index) => {
         <div className="text-center">
           <p className="fs-6 mb-4 ">We have sent a Verification code to</p>
           
-          <div className="otp-input-group d-flex justify-content-center align-item-center  gap-3 mb-4">
+          <div className=" d-flex justify-content-center align-item-center  gap-3 mb-4">
 {otp.map((digit, i) => (
           <input
             key={i}
@@ -93,7 +92,7 @@ const handleChange = (value, index) => {
             onChange={e => handleChange(e.target.value, i)}
             onKeyDown={e => handleKeyDown(e, i)}
             ref={el => (inputRefs.current[i] = el)}
-             className="otp-input"
+             className={ModelPage.otpInput}
           />
 
         ))}
