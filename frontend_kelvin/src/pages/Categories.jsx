@@ -70,6 +70,7 @@ const HomePage = () => {
             </div>
           </div>
         </SwiperSlide> 
+
         {[slid2, slid3, slid4].map((num, index) => (
   <SwiperSlide key={index}>
     <img
@@ -93,6 +94,8 @@ const HomePage = () => {
             show={modelType === "thankyou"}
             onClose={closeModel}
             />
+      
+      {/* Category Section */}
       <Container  fluid className="mt-4 ">
         <h4 className="text-center  mb-4">CATEGORIES</h4>
         <div  className='text-end'>
@@ -105,6 +108,7 @@ const HomePage = () => {
               
           <div  key={idx} className={`${Category.cardtotal}t1 mb-5 `}>
               <Card className='cardimage' >
+                {/* <Card.Img variant="top" src={cat.image}  height="170" width="300"  style={{ objectFit: 'cover' }} /> */}
                 <Card.Img variant="top" src={cat.image} style={{ height: '170px', width: '100%', objectFit: 'cover' }} />
                 <Card.Body className={cardtotal.cardBody}>
                   <Card.Title className={`${Category.cardfont} text-center ${cat.title}`}/>

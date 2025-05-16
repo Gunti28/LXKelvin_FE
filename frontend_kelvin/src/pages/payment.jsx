@@ -1,12 +1,12 @@
-
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import FooterImg from "../assets/footerimg.jpg";
 import pay1 from "../assets/pay1.png";
 import "../css/Vippaymentsucess.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
- 
- function Pay1({ show, onClose }) {
+
+ const Pay1 = ({ show, onClose }) => {
+
   return (
     <Modal
       show={show}
@@ -17,7 +17,7 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
     >
       <Modal.Header className="border-0 justify-content-center  " >
         <Modal.Title id="contained-modal-title-vcenter">
-       <div  className=" mt-5 circle d-flex justify-content-center" style={{}}>
+       <div  className=" mt-5 circle d-flex justify-content-center">
        <IoCheckmarkDoneOutline className="mt-3 text-white" />
        </div>
         </Modal.Title>
@@ -46,6 +46,6 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
   );
 }
  
-export default Pay1 ;
+export default Pay1;
  
  

@@ -344,5 +344,9 @@
     .couponHeading {
         font-size: 13px;
     }
+    .cardImg, .netImg {
+        width: 30px;
+        height: 20px !important;
+    }
     
 }

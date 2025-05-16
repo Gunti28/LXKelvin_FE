@@ -6,7 +6,6 @@ import amexp from "../assets/summaryImg/logos_amex-digital.jpg";
 import appay from "../assets/summaryImg/cib_apple-pay.jpg";
 import mascar from "../assets/summaryImg/Group 1000004821.jpg";
 import paypal from "../assets/summaryImg/image 591.jpg";
-
 const OrderSummery = () => {
   const [addressList, setAddressList] = useState({
     name: "Rakesh chappali",

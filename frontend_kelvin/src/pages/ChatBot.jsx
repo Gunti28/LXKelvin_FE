@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../css/ChatBot.css';
+import styles from '../css/ChatBot.module.css';
 
 const chatFlow = {
     start: {
@@ -49,13 +49,13 @@ const chatFlow = {
     }
 };
 
-export default function ChatBot({ isOpen, toggleChat }) { 
+export const ChatBot = ({ isOpen, toggleChat }) => { 
+
     const [chatHistory, setChatHistory] = useState([{ id: "start", fromUser: false }]);
     const [input, setInput] = useState("");
     const [isTyping, setIsTyping] = useState(false);
     const [dropdownReply, setDropdownReply] = useState("");
     const chatEndRef = useRef(null);
-
 
     const currentStep = chatFlow[chatHistory[chatHistory.length - 1]?.id];
 
@@ -100,24 +100,24 @@ export default function ChatBot({ isOpen, toggleChat }) {
                 💬 Chat
             </button>
 
-            <div className={`chat-panel bg-white border-start ${isOpen ? 'show' : ''}`}>
+            <div className={`bg-white border-start ${styles.chatPanel} ${isOpen ? styles.show : ''}`}>
                 <div className="d-flex justify-content-between align-items-center p-3 border-bottom bg-light">
                     <strong>🧺 Customer Support</strong>
                     <button className="btn-close" onClick={toggleChat}></button>
                 </div>
 
-                <div className="p-3 overflow-auto flex-grow-1 chat-body">
+                <div className={`p-3 overflow-auto flex-grow-1 ${styles.chatBody}`}>
                     {chatHistory.map((item, index) => {
                         if (item.fromUser) {
                             return (
-                                <div key={index} className="text-end mb-2 fade-in">
+                                <div key={index} className={`text-end mb-2 ${styles.fadeIn}`}>
                                     <span className="badge bg-success">{item.text}</span>
                                 </div>
                             );
                         } else {
                             const step = chatFlow[item.id];
                             return (
-                                <div key={index} className="mb-3 fade-in">
+                                <div key={index} className={`mb-3 ${styles.fadeIn}`}>
                                     <div className="badge bg-secondary d-block text-start mb-2" dangerouslySetInnerHTML={{ __html: step.message }} />
                                     {step.image && (
                                         <img src={step.image} alt="promo" className="img-fluid rounded mb-2 border" />
@@ -141,13 +141,12 @@ export default function ChatBot({ isOpen, toggleChat }) {
                     })}
 
                     {isTyping && (
-                        <div className="mb-2 fade-in">
-                            <span className="badge bg-light text-muted typing-indicator">
-                                Typing<span className="dot">.</span><span className="dot">.</span><span className="dot">.</span>
+                        <div className={`mb-2 ${styles.fadeIn}`}>
+                            <span className={`badge bg-light text-muted ${styles.typingIndicator}`}>
+                                Typing<span className={styles.dot}>.</span><span className={styles.dot}>.</span><span className={styles.dot}>.</span>
                             </span>
                         </div>
                     )}
-
                     <div ref={chatEndRef} />
                 </div>
 

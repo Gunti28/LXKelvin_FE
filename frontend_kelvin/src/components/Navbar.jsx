@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import  Navbar from '../css/Navbar.module.css';
+=======
+import React, { useState, useRef, useEffect } from "react";
+import "../css/Navbar.css";
+>>>>>>> 0ee1cafec2f949a3e266ab2b21ca2533d88d5e0d
 import {
   Navbar,
   Nav,
@@ -23,8 +28,29 @@ import Register from "./Register";
 import Success from "./Success";
 import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
+
+
+      const [scrolled, setScrolled] = useState(false);
+  
+      useEffect(() => {
+          const handleScroll = () => {
+              if (window.scrollY > 50) {
+                  setScrolled(true);
+              } else {
+                  setScrolled(false);
+              }
+          };
+  
+          window.addEventListener('scroll', handleScroll);
+  
+          return () => {
+              window.removeEventListener('scroll', handleScroll);
+          };
+      }, []);
+
   const [showLocationModel, setShowLocationModel] = useState(false);
   const locationRef = useRef(null);
   const [showPopover, setShowPopover] = useState(false);
@@ -141,7 +167,7 @@ const NavbarComponent = () => {
                     left: "15px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color: "#aaa",
+                    color: "white",
                     zIndex: 2,
                   }}
                 />
@@ -149,13 +175,15 @@ const NavbarComponent = () => {
                   type="search"
                   placeholder="Search for products..."
                   aria-label="Search"
-                  className="white-placeholder "
+                  className="white-placeholder"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   style={{
                     borderRadius: "50px",
                     paddingLeft: "40px",
                     paddingRight: "40px",
+                    borderWidth:2,
+                    borderColor:"white",
                     backgroundColor: "transparent",
                     color: "white",
                   }}
@@ -205,8 +233,10 @@ const NavbarComponent = () => {
                     position: "absolute",
                     top: "45px",
                     width: "50%",
-                    background: "#fff",
+                    background: ' rgba(255, 255, 255, 0.5)',
+                    // background:"#fff",
                     color: "#000",
+                    backdropFilter:'blur(25)',
                     listStyle: "none",
                     margin: 0,
                     padding: "5px 0",
@@ -271,34 +301,31 @@ const NavbarComponent = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-
+              <NavLink to='/signin'>
               <Button
                 variant="warning"
                 className=" w-35"
-                onClick={() => setModalType("signin")}
+                // onClick={()=>useNavigate('/signin')}
               >
                 Sign In
               </Button>
-              <SignInModel
+              </NavLink>
+              {/* <SignInModel
                 show={modalType === "signin"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("otp")}
               />
               <OtpModel
                 show={modalType === "otp"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("register")}
               />
               <Register
                 show={modalType === "register"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType("success")}
               />
               <Success
                 show={modalType === "success"}
                 onClose={closeModal}
-                onCreateAccount={() => setModalType(null)}
-              />
+              /> */}
             </div>
           </Navbar.Collapse>
         </Container>
@@ -348,6 +375,7 @@ const NavbarComponent = () => {
           </div>
         </div>
       )}
+
     </div>
   );
 };

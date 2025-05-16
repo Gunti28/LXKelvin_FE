@@ -3,17 +3,18 @@ import React, { useState, useRef, useEffect } from 'react';
 import Modal from "react-bootstrap/Modal";
 import Logo from "../assets/Logo1.svg";
 import FooterImg from "../assets/footerimg.jpg";
-import "../css/Model.css";
+import ModelPage from  "../css/ModelPage.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Button, Container } from "react-bootstrap";
-
-function OtpModel({ show, onClose, onCreateAccount }) {
+import { useNavigate } from 'react-router-dom';
+const OtpModel = () => {
 
     const [otp, setOtp] = useState(['', '', '', '']);
     const [timer, setTimer] = useState();
     const [resendDisabled, setResendDisabled] = useState(true);
     const inputRefs = useRef([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (timer > 0) {
@@ -43,10 +44,12 @@ const handleChange = (value, index) => {
       if (enteredOtp === '1234') {
         toast.success('OTP Verified!');
         setTimeout(() => {
-          onClose(); 
+          navigate('/registeruser')
+          // onClose(); 
           setTimeout(() => {
-            onCreateAccount(); 
+            // onCreateAccount(); 
           }, 300); 
+
         }, 1000);
       } else {
         toast.error('Invalid OTP');
@@ -68,8 +71,7 @@ const handleChange = (value, index) => {
 
   return (
     <Modal
-      show={show}
-      onHide={onClose}
+      show={true}
       size="medium"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -83,7 +85,7 @@ const handleChange = (value, index) => {
         <div className="text-center">
           <p className="fs-6 mb-4 ">We have sent a Verification code to</p>
           
-          <div className="otp-input-group d-flex justify-content-center align-item-center  gap-3 mb-4">
+          <div className=" d-flex justify-content-center align-item-center  gap-3 mb-4">
 {otp.map((digit, i) => (
           <input
             key={i}
@@ -93,7 +95,7 @@ const handleChange = (value, index) => {
             onChange={e => handleChange(e.target.value, i)}
             onKeyDown={e => handleKeyDown(e, i)}
             ref={el => (inputRefs.current[i] = el)}
-             className="otp-input"
+             className={ModelPage.otpInput}
           />
 
         ))}
@@ -118,6 +120,7 @@ const handleChange = (value, index) => {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
+          alt = "FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

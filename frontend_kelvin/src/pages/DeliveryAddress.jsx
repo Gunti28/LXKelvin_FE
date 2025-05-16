@@ -17,10 +17,9 @@ const DeliveryAddress = () => {
     const mapRef = useRef(null);
     const googleMapRef = useRef(null);
 
-    // Initialize Google Maps
     useEffect(() => {
         const googleMapScript = document.createElement('script');
-        googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&libraries=places`;
+        googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8QaW9-ex8E_VtTWW-spyivlnyzDTm3w&libraries=places`;
         googleMapScript.async = true;
         googleMapScript.defer = true;
 
@@ -46,7 +45,7 @@ const DeliveryAddress = () => {
         const mapInstance = new window.google.maps.Map(mapRef.current, mapOptions);
         setMap(mapInstance);
 
-        // Create a marker
+
         const markerInstance = new window.google.maps.Marker({
             position: defaultLocation,
             map: mapInstance,
@@ -55,17 +54,15 @@ const DeliveryAddress = () => {
         });
         setMarker(markerInstance);
 
-        // Add event listener for marker drag end
+      
         markerInstance.addListener('dragend', handleMarkerDragEnd);
 
-        // Add event listener for map click
         mapInstance.addListener('click', (event) => {
             markerInstance.setPosition(event.latLng);
             reverseGeocode(event.latLng);
         });
     };
 
-    // Get current user location
     const getCurrentLocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -308,7 +305,6 @@ const DeliveryAddress = () => {
                                         Make this as your default address
                                     </label>
                                 </div>
-
                                 <button type="submit" className="btn btn-warning btn-block save-btn">
                                     Save & Continue
                                 </button>

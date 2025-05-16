@@ -12,7 +12,8 @@ import { IoIosArrowForward } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import Paymentstyles from "../css/Payment.module.css";
 
-function Paymentpage() {
+const Paymentpage = () => {
+
   return (
     <div className="container justify-content-center align-items-center ">
       <strong>
