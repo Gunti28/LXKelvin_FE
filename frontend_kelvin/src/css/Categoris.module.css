@@ -1,3 +1,4 @@
+
 .text{
     position: absolute;
 }
@@ -9,7 +10,7 @@
   .card:hover {
     transform: scale(1.03);
   }
- 
+
   @media (min-width:768px  ) and (max-width: 1000px) {
 .foont{
   font-size: 14px;
@@ -37,8 +38,10 @@
  
    /* For small tablets and large phones */
   @media (min-width: 577px) and (max-width: 767px) {
+
     .mySwiper .swiperSlide {
       width: 90% !important;
+
     }
  
     .foont{
@@ -62,14 +65,12 @@
   }
  
  
- 
- 
   /* For small phones */
   @media screen and  (max-width: 576px) {
     .mySwiper1 .swiperSlide {
       width: 100% !important;
     }
- 
+
     .cardTitle {
       font-size: 40px;
     }
