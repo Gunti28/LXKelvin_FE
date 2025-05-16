@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
-import '../css/Categoris.css';
+import  Category from '../css/Categoris.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
 import slid1 from '../assets/slid-1.png';
 import slid2 from '../assets/slid-1.png';
 import slid3 from '../assets/slid-1.png';
 import slid4 from '../assets/slid-1.png';
-
 import fc from '../assets/fruits-categorie.png';
 import sfc from '../assets/seasonal fruits-categorie.png';
 import vc from '../assets/Vegetables-categorie.png';
 import svc from '../assets/seasonal Vegetables-categorie.png';
 import milk from '../assets/milk.png';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -46,10 +44,10 @@ const HomePage = () => {
       <Swiper
         navigation={true}
         modules={[Navigation, Autoplay]}
-        className="mySwiper mt-5"
+        className={`${Category.mySwiper} mt-5`}
       >
         <SwiperSlide>
-          <div className="carousel d-flex flex-column align-items-center">
+          <div className={`${Category.carousel} d-flex flex-column align-items-center`}>
             
             <img 
               src={slid1}
@@ -60,14 +58,10 @@ const HomePage = () => {
                 objectFit: 'cover',
                 borderRadius: '10px',
               }}
-              onClick={()=> setModelType("payment")}
+             
             />
-            <Vippaymentsucess
-            show={modelType === "payment"}
-            onClose={closeModel}
-            />
-            <div className="text-center p-4 text" style={{ background: 'transparent' }}>
-              <h3 className='foont'>
+                      <div className="text-center p-4 text" style={{ background: 'transparent' }}>
+              <h3 className={Categoryfoont}>
                 Let's celebrate the goodness of <span style={{ color: 'green' }}>greens</span>
               </h3>
               <Button  variant="outline-dark" className="mt-2 btn1"  href='https://i.scdn.co/image/ab67616d0000b2734e42de9a9d9888d50b99e8a7'>
@@ -109,11 +103,11 @@ const HomePage = () => {
           {categories.map((cat, idx) => (
             <Col md={3} sm={6} xs={12}  className="mb-4">
               
-          <div  key={idx} className='t1 mb-5  cardtotal'>
+          <div  key={idx} className={`${Category.cardtotal}t1 mb-5 `}>
               <Card className='cardimage' >
                 <Card.Img variant="top" src={cat.image} style={{ height: '170px', width: '100%', objectFit: 'cover' }} />
-                <Card.Body className='cardBody'>
-                  <Card.Title className="text-center cardfont">{cat.title}</Card.Title>
+                <Card.Body className={cardtotal.cardBody}>
+                  <Card.Title className={`${Category.cardfont} text-center ${cat.title}`}/>
                 </Card.Body>
               </Card>
               </div>

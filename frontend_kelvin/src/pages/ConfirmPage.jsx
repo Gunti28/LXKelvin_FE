@@ -22,6 +22,7 @@ function ConfirmPage() {
               <div>Place Plan Amount here</div>
             </div>
             <div>EditPlan </div>
+            
           </Card.Body>
         </Card>
         <Card

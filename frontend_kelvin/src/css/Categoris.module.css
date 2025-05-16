@@ -1,3 +1,4 @@
+
 .text{
     position: absolute;
 }
@@ -43,7 +44,7 @@
 
    /* For small tablets and large phones */
   @media (min-width: 577px) and (max-width: 767px) {
-    .mySwiper1 .swiper-slide {
+    .mySwiper1 .swiperSlide {
       width: 90% !important; 
     }
   
@@ -72,11 +73,11 @@
   
   /* For small phones */
   @media screen and  (max-width: 576px) {
-    .mySwiper1 .swiper-slide {
+    .mySwiper1 .swiperSlide {
       width: 100% !important;
     }
   
-    .card-title {
+    .cardTitle {
       font-size: 40px;
     }
   

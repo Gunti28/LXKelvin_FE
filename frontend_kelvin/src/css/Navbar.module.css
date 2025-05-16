@@ -1,12 +1,13 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
- .hero-section {
+ .heroSection {
     position: relative;
     height: 100vh;
     overflow: hidden;
   }
 
-  .hero-section > * {
+  .heroSection > * {
     position: relative;
     z-index: 1;
   }
@@ -28,11 +29,11 @@
     border: none !important;
   }
   
-  .hero-section .navbar {
+  .heroSection .navbar {
     padding: 0.5rem 1rem;
   }
 
-  .hero-content {
+  .heroContent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,7 +42,7 @@
     text-align: center;
   }
 
-  .white-placeholder::placeholder {
+  .whitePlaceholder::placeholder {
     color: white;
   }
 
@@ -60,7 +61,7 @@
     }
   }
   
-  .mic-animating {
+  .micAnimating {
     animation: micPulse 1s infinite;
   }
   

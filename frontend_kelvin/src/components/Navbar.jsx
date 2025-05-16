@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../css/Navbar.css";
+import  Navbar from '../css/Navbar.module.css';
 import {
   Navbar,
   Nav,
@@ -86,14 +86,14 @@ const NavbarComponent = () => {
 
   return (
     <div className="hero-section">
-      <Navbar variant="dark" expand="lg" className="navbar bg-transparent p-0">
+      <Navbar variant="dark" expand="lg" className={`${Navbar.navbar} bg-transparent p-0 `}>
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
-            <Nav className="gap-4 " navbarScroll>
+            <Nav className="gap-4 " >
               <div
                 onClick={() => setShowPopover(!showPopover)}
                 // onMouseEnter={() => setShowPopover(true)}
