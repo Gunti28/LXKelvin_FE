@@ -21,68 +21,35 @@ const products = [
   { name: "Kiwi", image: Kiwi, price: 28, originalPrice: 35, Colour: "#c6f5c3", category: "fruits", stockCount: 7, discount: 0 }
 ];
 
-const quantityOptions = ["500g", "1kg", "2kg"];
-
-function getMessage(stockCount, discount) {
-  if (stockCount === 0) return { text: "Out of stock", className: "out-of-stock" };
-  if (stockCount <= 2) return { text: `Hurry up, Only ${stockCount} items left`, className: "low-stock" };
-  if (discount > 0) return { text: `Buy 3, Get ${discount}% OFF`, className: "discount" };
-  return { text: "Available Soon", className: "available-soon" };
-}
-
-export default function Listing() {
+const Listing = () => {
   const location = useLocation();
   const path = location.pathname.slice(1);
 
-  const filteredProducts =
-    path === "all-categories"
-      ? products
-      : products.filter(
-          (p) => p.category.toLowerCase() === path.toLowerCase()
-        );
+  const filteredProducts = path === "all-categories" ? products : products.filter(p => p.category.toLowerCase() === path.toLowerCase());
 
   return (
-    <div className="page-container">
-      <h1 className="page-title">
-        {path === "all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}
-      </h1>
-      <div className="cards-grid">
-        {filteredProducts.map((product, index) => {
-          const message = getMessage(product.stockCount, product.discount);
-
-          return (
-            <div
-              key={index}
-              className={`product-card ${!product.stockCount ? 'out-of-stock' : ''}`}
-              style={{ backgroundColor: product.Colour || "#f4f4f4" }}
-            >
-              <img src={product.image} alt={product.name} className="product-image" />
-              <h2 className="product-name">{product.name}</h2>
-              {product.stockCount ? (
-                <>
-                  <select className="product-quantity">
-                    {quantityOptions.map((q, i) => (
-                      <option key={i}>{q}</option>
-                    ))}
-                  </select>
-                  <div className="product-price">
-                    ₹{product.price} <span className="original-price">₹{product.originalPrice}</span>
-                  </div>
-                  <button className="add-to-cart">Add to cart</button><br/>
-                                <span className={`product-message ${message.className}`}>{message.text}</span>
-
-                </>
-              ) : (
-                <div className="out-of-stock-overlay">
-                                <span className={`product-message ${message.className}`}>{message.text}</span>
-
-                </div>
-                
-              )}
+    <div className="listing-container">
+      <h1 className="page-title">{path === "all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}</h1>
+      <div className="product-grid">
+        {filteredProducts.map((product, index) => ( 
+          <div key={index} className="product-card" style={{ backgroundColor: product.Colour, filter: product.stockCount === 0 ? "grayscale(100%)" : "none" }}>
+            <img src={product.image} alt={product.name} className="product-image" />
+            <h2 className="product-name">{product.name}</h2>
+            <div className="price-section">
+              <span className="discount-price">₹{product.price}</span>
+              <span className="original-price">₹{product.originalPrice}</span>
             </div>
-          );
-        })}
+            {product.stockCount > 0 ? (
+              <button className="add-to-cart">Add to cart</button>
+            ) : (
+              <button className="out-of-stock">Out of Stock</button>
+    
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
-}
+};
+
+export default Listing;

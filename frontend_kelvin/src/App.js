@@ -6,7 +6,7 @@ import ListingLayout from './pages/ListingLayout';
 import Listing from './pages/Listing';
 
 function App() {
-  return (
+//   return (
 //     <Router>
 //       <Routes>
 //       <Route path="/" element={<ListingLayout />}>
@@ -22,11 +22,11 @@ function App() {
 // </Route>
 //       </Routes>
 //     </Router>
+//   );
 
 <div>
   
 </div>
-  );
 }
 
 export default App;

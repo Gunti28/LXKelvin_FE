@@ -6,7 +6,7 @@ import thankyou from "../assets/tankyou.png"
 import "../css/Vippaymentsucess.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
  
- function Thankyou({ show, onClose }) {
+ const Thankyou = ({ show, onClose }) => {
   return (
     <Modal
       show={show}

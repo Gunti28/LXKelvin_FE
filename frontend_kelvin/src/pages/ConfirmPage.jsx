@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import confrimstyle from "../css/Confirm.module.css";
 
-function ConfirmPage() {
+const ConfirmPage = () => {
   return (
     <div className="mt-5 container-fluid justify-content-center align-items-center ">
       <strong>

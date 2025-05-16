@@ -49,7 +49,7 @@ const chatFlow = {
     }
 };
 
-export default function ChatBot({ isOpen, toggleChat }) { 
+export const ChatBot = ({ isOpen, toggleChat }) => { 
     const [chatHistory, setChatHistory] = useState([{ id: "start", fromUser: false }]);
     const [input, setInput] = useState("");
     const [isTyping, setIsTyping] = useState(false);
