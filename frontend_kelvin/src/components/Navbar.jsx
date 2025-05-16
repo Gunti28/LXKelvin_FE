@@ -23,6 +23,7 @@ import Register from "./Register";
 import Success from "./Success";
 import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
+import Hero from "./Hero";
 
 const NavbarComponent = () => {
 
@@ -106,7 +107,11 @@ const NavbarComponent = () => {
 
   return (
     <div className="hero-section">
+<<<<<<< HEAD
+      <Navbar variant="dark" expand="lg" className="navbar p-0">
+=======
       <Navbar variant="dark" expand="lg" className="navbar bg-transparent p-0">
+>>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />
@@ -161,7 +166,7 @@ const NavbarComponent = () => {
                     left: "15px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color: "#aaa",
+                    color: "white",
                     zIndex: 2,
                   }}
                 />
@@ -169,13 +174,15 @@ const NavbarComponent = () => {
                   type="search"
                   placeholder="Search for products..."
                   aria-label="Search"
-                  className="white-placeholder "
+                  className="white-placeholder"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   style={{
                     borderRadius: "50px",
                     paddingLeft: "40px",
                     paddingRight: "40px",
+                    borderWidth:2,
+                    borderColor:"white",
                     backgroundColor: "transparent",
                     color: "white",
                   }}
@@ -225,8 +232,10 @@ const NavbarComponent = () => {
                     position: "absolute",
                     top: "45px",
                     width: "50%",
-                    background: "#fff",
+                    background: ' rgba(255, 255, 255, 0.5)',
+                    // background:"#fff",
                     color: "#000",
+                    backdropFilter:'blur(25)',
                     listStyle: "none",
                     margin: 0,
                     padding: "5px 0",
@@ -368,6 +377,7 @@ const NavbarComponent = () => {
           </div>
         </div>
       )}
+
     </div>
   );
 };

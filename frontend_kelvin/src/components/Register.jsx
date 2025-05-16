@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import FooterImg from "../assets/footerimg.jpg";
-import "../css/ModelPage.css";
+import ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
 
+<<<<<<< HEAD
+function Register() {
+=======
 const Register = ({ show, onClose, onCreateAccount }) => {
+>>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +21,7 @@ const Register = ({ show, onClose, onCreateAccount }) => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSubmit = (event) => {
-    onCreateAccount();
+    // onCreateAccount();
     event.preventDefault();
     if (!name || !email || !password || !confirmPassword) {
       setError("Fill all the field");
@@ -33,8 +37,7 @@ const Register = ({ show, onClose, onCreateAccount }) => {
 
   return (
     <Modal
-      show={show}
-      onHide={onClose}
+      show={true}
       size="medium"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -89,7 +92,7 @@ const Register = ({ show, onClose, onCreateAccount }) => {
                   color: "#000",
                 }}
               >
-                {showPassword ? <FiEyeOff /> : <FiEye />}
+                {showPassword ? <FiEye /> : <FiEyeOff />}
               </div>
               <Form.Control
                 type={showConfirmPassword ? "text" : "password"}
@@ -110,7 +113,7 @@ const Register = ({ show, onClose, onCreateAccount }) => {
                   color: "#000",
                 }}
               >
-                {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+                {showConfirmPassword ? <FiEye /> : <FiEyeOff />}
               </div>
               {error && (
                 <p className="text-center mb-0" style={{ color: "red" }}>
