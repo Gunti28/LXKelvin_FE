@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
-import '../css/ProductDetailsPage.css'; // Import your CSS file for styling
-// Import all images
+import '../css/ProductDetailsPage.css';
 import t1 from '../assets/t1.png';
 import t2 from '../assets/t2.png';
 import t3 from '../assets/t3.png';
@@ -88,9 +87,8 @@ const ProductDetailsPage= () => {
     return (
         <Container className="product-page mt-4">
             <Row>
-                {/* Left Column */}
+                
                 <Col md={6} className="left-column">
-                    {/* Row 1: Main Image Preview */}
                     <div className="main-image-container">
                         <img
                             src={images[currentImageIndex]}

@@ -7,7 +7,12 @@ import ModelPage from  "../css/ModelPage.module.css";
 import { Button } from "react-bootstrap";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
+<<<<<<< HEAD
 function Success() {
+=======
+
+const Success = ({ show, onClose, onCreateAccount }) => {
+>>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
   return (
     <Modal
       show={true}
@@ -30,6 +35,7 @@ function Success() {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
+          alt="FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

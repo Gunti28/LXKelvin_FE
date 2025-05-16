@@ -6,7 +6,6 @@ import { Offcanvas, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import "../css/ListingLayout.css";
-
 const ListingLayout = () => {
   const [show, setShow] = useState(false);
 

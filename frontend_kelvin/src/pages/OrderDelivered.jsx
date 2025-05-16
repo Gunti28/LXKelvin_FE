@@ -5,7 +5,6 @@ import Delivery from '../assets/delivery_man.svg';
 import icon1 from '../assets/d1.svg';
 import icon2 from '../assets/d2.svg';
 import icon3 from '../assets/d3.svg';
-
 const OrderDelivered = ({ toggleChat }) => {
     return (
         <>

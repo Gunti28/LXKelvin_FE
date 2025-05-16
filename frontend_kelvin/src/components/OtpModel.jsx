@@ -8,7 +8,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Button, Container } from "react-bootstrap";
 
+<<<<<<< HEAD
 function OtpModel() {
+=======
+const OtpModel = ({ show, onClose, onCreateAccount }) => {
+>>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
 
     const [otp, setOtp] = useState(['', '', '', '']);
     const [timer, setTimer] = useState();
@@ -117,6 +121,7 @@ const handleChange = (value, index) => {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
+          alt = "FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

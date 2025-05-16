@@ -305,7 +305,6 @@ const DeliveryAddress = () => {
                                         Make this as your default address
                                     </label>
                                 </div>
-
                                 <button type="submit" className="btn btn-warning btn-block save-btn">
                                     Save & Continue
                                 </button>

@@ -6,7 +6,7 @@ import thankyou from "../assets/tankyou.png"
 import "../css/Vippaymentsucess.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
  
- function Thankyou({ show, onClose }) {
+ const Thankyou = ({ show, onClose }) => {
   return (
     <Modal
       show={show}
@@ -39,8 +39,7 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
         <img
           src={FooterImg}
           className="image-fluid w-100 "
-          alt="FooterImg"
-          
+          alt="FooterImg" 
           style={{ objectFit: "cover" }}
         />
       </Modal.Footer>

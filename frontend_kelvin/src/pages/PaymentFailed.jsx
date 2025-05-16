@@ -6,7 +6,7 @@ import paymentfaild from "../assets/paymentfaild.png";
 import "../css/Vippaymentsucess.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
  
- function Paymentfaild({ show, onClose }) {
+ const Paymentfaild = ({ show, onClose }) => {
   return (
     <Modal
       show={show}

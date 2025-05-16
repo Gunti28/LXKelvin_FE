@@ -10,7 +10,6 @@ const MyProfile = () => {
   const [mainNumber, setMainNumber] = useState("9494216347");
   const [isGold, setIsGold] = useState(false);
   const [isEditable, setIsEditable] = useState(false);
-
   const handleEdit = (e) => {
     e.preventDefault();
     setIsEditable((prev) => !prev);
