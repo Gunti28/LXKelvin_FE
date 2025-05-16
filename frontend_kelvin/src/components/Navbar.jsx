@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import  Navbar from '../css/Navbar.module.css';
 =======
 import React, { useState, useRef, useEffect } from "react";
 import "../css/Navbar.css";
 >>>>>>> 0ee1cafec2f949a3e266ab2b21ca2533d88d5e0d
+=======
+import  NavbarCss from '../css/Navbar.module.css';
+import React, { useState, useRef, useEffect } from "react";
+ 
+>>>>>>> 8e833a7d646236e30fc20ae08502368bcb52258f
 import {
   Navbar,
   Nav,
@@ -29,12 +35,12 @@ import Success from "./Success";
 import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
 import { NavLink, useNavigate } from "react-router-dom";
-
+ 
 const NavbarComponent = () => {
-
-
+ 
+ 
       const [scrolled, setScrolled] = useState(false);
-  
+ 
       useEffect(() => {
           const handleScroll = () => {
               if (window.scrollY > 50) {
@@ -43,19 +49,19 @@ const NavbarComponent = () => {
                   setScrolled(false);
               }
           };
-  
+ 
           window.addEventListener('scroll', handleScroll);
-  
+ 
           return () => {
               window.removeEventListener('scroll', handleScroll);
           };
       }, []);
-
+ 
   const [showLocationModel, setShowLocationModel] = useState(false);
   const locationRef = useRef(null);
   const [showPopover, setShowPopover] = useState(false);
   const targetRef = useRef(null);
-
+ 
   const [userLocation, setUserLocation] = useState("");
   const [location, setLocation] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -79,16 +85,16 @@ const NavbarComponent = () => {
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
   const [listening, setListening] = useState(false);
-
+ 
   const startListening = () => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
-
+ 
     if (!SpeechRecognition) {
       alert("Speech Recognition not supported in this browser.");
       return;
     }
-
+ 
     const recognition = new SpeechRecognition();
     recognition.continuous = false;
     recognition.interimResults = false;
@@ -100,7 +106,7 @@ const NavbarComponent = () => {
       setSearchTerm(transcript);
       setListening(false);
     };
-
+ 
     recognition.onerror = (event) => {
       console.error("Speech recognition error:", event.error);
       setListening(false);
@@ -109,10 +115,15 @@ const NavbarComponent = () => {
       setListening(false);
     };
   };
-
+ 
   return (
+<<<<<<< HEAD
     <div className="hero-section">
       <Navbar variant="dark" expand="lg" className={`${Navbar.navbar} bg-transparent p-0 `}>
+=======
+    <div className={NavbarCss.heroSection}>
+      <Navbar variant="dark" expand="lg" className={`${NavbarCss.navbar} bg-transparent p-0 `}>
+>>>>>>> 8e833a7d646236e30fc20ae08502368bcb52258f
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />
@@ -136,7 +147,7 @@ const NavbarComponent = () => {
                     ? `${userLocation.slice(0, 20)}...`
                     : "Location"}
                 </Nav.Link>
-
+ 
                 <LocationModel
                   show={showPopover}
                   onClose={() => setShowPopover(false)}
@@ -148,7 +159,7 @@ const NavbarComponent = () => {
                   }}
                 />
               </div>
-
+ 
               <Nav.Link href="#" className=" text-white">
                 Best Seller
               </Nav.Link>
@@ -156,10 +167,10 @@ const NavbarComponent = () => {
                 Today Deals
               </Nav.Link>
             </Nav>
-
-            <div className="searchbar  d-flex flex-grow-1 justify-content-center position-relative w-300 my-2 ">
+ 
+            <div className={`${NavbarCss.searchBar}  d-flex flex-grow-1 justify-content-center position-relative w-300 my-2 `}>
               {/* <div className="d-flex justify-content-center w-100 my-2"> */}
-
+ 
               <div style={{ width: "500px", position: "relative" }}>
                 <FaSearch
                   style={{
@@ -175,7 +186,7 @@ const NavbarComponent = () => {
                   type="search"
                   placeholder="Search for products..."
                   aria-label="Search"
-                  className="white-placeholder"
+                  className={NavbarCss.whitePlaceholder}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   style={{
@@ -188,7 +199,7 @@ const NavbarComponent = () => {
                     color: "white",
                   }}
                 />
-
+ 
                 <IoMic
                   onClick={startListening}
                   className={listening ? "mic-animating" : ""}
@@ -274,14 +285,14 @@ const NavbarComponent = () => {
                 </ul>
               )}
             </div>
-
+ 
             <div className="d-flex align-items-center gap-3">
               {/* <div className="d-flex align-items-center  justify-content-center me-5"> */}
               <Dropdown>
                 <Dropdown.Toggle
                   variant="light"
                   id="dropdown-language"
-                  className="me-5 lang"
+                  className={`me-5 ${NavbarCss.lang}`}
                 >
                   <img src={Italian} alt="Italian" width={20} />
                   Italian
@@ -375,9 +386,9 @@ const NavbarComponent = () => {
           </div>
         </div>
       )}
-
+ 
     </div>
   );
 };
-
+ 
 export default NavbarComponent;

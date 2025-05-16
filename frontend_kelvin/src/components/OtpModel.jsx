@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Button, Container } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
+
 const OtpModel = () => {
 
     const [otp, setOtp] = useState(['', '', '', '']);
