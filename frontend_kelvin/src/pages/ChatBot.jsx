@@ -49,7 +49,7 @@ const chatFlow = {
     }
 };
 
-export const ChatBot = ({ isOpen, toggleChat }) => { 
+const ChatBot = ({ isOpen, toggleChat }) => { 
 
     const [chatHistory, setChatHistory] = useState([{ id: "start", fromUser: false }]);
     const [input, setInput] = useState("");
@@ -180,3 +180,5 @@ export const ChatBot = ({ isOpen, toggleChat }) => {
         </>
     );
 }
+
+export default ChatBot;

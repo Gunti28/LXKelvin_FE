@@ -53,7 +53,7 @@ const SignupUpi = () => {
       id="confirmCheck"
       style={{ width: "20px", height: "20px" }}
     />
-    <Form.Label
+    <Form.Label  
       htmlFor="confirmCheck"
       className={`${SignupUpistyle.termsLabel} m-0`}
     >
@@ -62,7 +62,6 @@ const SignupUpi = () => {
     </Form.Label>
   </div>
 </Form>
-
 
       <div className="mt-2">
         <style type="text/css">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import OrderDelivered from './OrderDelivered';
 import ChatBot from './ChatBot';
 
-export const ChatBotContainer = () => {
+ const ChatBotContainer = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleChat = () => setIsOpen(prev => !prev);
@@ -13,3 +13,5 @@ export const ChatBotContainer = () => {
         </>
     );
 }
+
+export default ChatBotContainer;

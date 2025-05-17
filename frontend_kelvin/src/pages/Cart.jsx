@@ -126,9 +126,7 @@ const Cart = () => {
         <div className={` ${CartModule.mainitemsec} justify-content-center align-items-center`}
           style={{
             maxHeight: cartItems.length > 2 ? "450px" : "auto",
-            overflowY: cartItems.length > 2 ? "auto" : "visible",
-            marginBottom: "20px",
-            paddingRight: "10px",
+            overflowY: cartItems.length > 2 ? "auto" : "visible"    
           }}
         >
           {cartItems.map((item) => (
@@ -150,7 +148,7 @@ const Cart = () => {
                 </div>
               </div>
 
-              <div style={{ marginRight: 150 }}  className={CartModule.itembtn}>
+              <div className={CartModule.itembtn}>
                 <div className="d-flex flex-row justify-content-center align-items-center gap-3">
                   <SplitButton
                     as={ButtonGroup}  
@@ -180,13 +178,7 @@ const Cart = () => {
                       -
                     </Button>
                     <p className= {CartModule.midCount}>{item.quantity}</p>
-                    <Button
-                      style={{
-                         borderWidth:1,
-                        backgroundColor: "white",
-                        color:"black",
-                         borderColor:"#FF9900"
-                      }}
+                    <Button className= {CartModule.quantityButton}
                       onClick={() => updateQuantity(item.id, 1)}
                     >
                       +
@@ -221,7 +213,7 @@ const Cart = () => {
                   ).toFixed(2)}
                 </div>
 
-                <div style={{ color: "#17B017", fontSize: 14 }}>
+               <div className={CartModule.discountText}>
                   discount: <MdOutlineEuro />{" "}
                   {item.quantity > 0 ? item.discount.toFixed(2) : "0.00"}
                 </div>
@@ -230,19 +222,10 @@ const Cart = () => {
           ))}
         </div>
 
-        <div
-          style={{
-            position: "sticky",
-            bottom: 0,
-            backgroundColor: "#fff",
-            zIndex: 1000,
-            paddingBottom: "10px",
-          }}
-        >
-          <div
-            style={{ backgroundColor: "#D9D9D9", borderRadius: 10 }}
-            className="d-flex justify-content-between align-items-center flex-row ps-3 pe-5 mt-5"
-          >
+      <div className={CartModule.stickyContainer}>
+
+         <div className={`${CartModule.highlightContainer} d-flex justify-content-between align-items-center flex-row ps-3 pe-5 mt-5`}>
+
             <p className="pt-3">Missed Something ?</p>
             <Button variant="light">+ Add items </Button>
           </div>

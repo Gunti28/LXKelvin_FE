@@ -29,6 +29,7 @@ import SignInModel from "./components/SignInModel";
 import OtpModel from "./components/OtpModel";
 import Register from "./components/Register";
 import Success from "./components/Success";
+import Chatbot from "./pages/ChatBot";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path='/failedpayment' element={<Paymentfaild />}/>
         <Route path='/successfulpayment' element={<Pay1 />}/>
         <Route path='/thankyou' element={<Thankyou />}/>
+        <Route path='/chatbot' element={<Chatbot />}/>
         <Route path='/viewprofile/' element={<ProfileLayout />}>
         <Route index element={<MyProfile />} />
           <Route path='myaddress' element={<AddressList />} />
