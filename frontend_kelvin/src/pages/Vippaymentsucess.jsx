@@ -34,9 +34,6 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
         <h3 className="text-success">Payment Successfull !!</h3>
         <p>Thank You</p>
         </div>
-          {/* <Button variant="warning" onClick={onCreateAccount} width={100} >
-          Create Account
-        </Button> */}
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img

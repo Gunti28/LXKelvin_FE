@@ -32,19 +32,17 @@ const Paymentpage = () => {
               <img
                 src={encryptedIcon}
                 alt="Encrypted Icon"
-                style={{ height: "20px", marginLeft: "8px" }}
+                style={{  marginLeft: "8px" }}
               />
               <img
                 src={amexLogo}
                 alt="American Express Logo"
-                style={{ height: "20px" }}
                 className="image-fluid ms-2"
               />
               <img
                 src={groupImage}
                 alt="Group Illustration"
                 className="ms-2"
-                style={{ height: "20px" }}
               />
             </div>
             <Button
@@ -68,13 +66,11 @@ const Paymentpage = () => {
                 src={paypal}
                 alt="paypal"
                 className="ms-2"
-                style={{ height: "20px" }}
               />
               <img
                 src={applePayLogo}
                 alt="Apple Pay"
                 className="ms-2"
-                style={{ height: "20px" }}
               />
             </div>
             <Button
@@ -97,7 +93,6 @@ const Paymentpage = () => {
     <Form.Check
       type="checkbox"
       id="confirmCheck"
-      style={{ width: "20px", height: "20px", marginTop: "2px" }}
     />
     <Form.Label htmlFor="confirmCheck" className={`${Paymentstyles.termsLabel}`}>
       By confirming, you authorize the platform to charge the selected payment method for the subscription plan, including any applicable taxes or fees.

@@ -1,6 +1,6 @@
 import  NavbarCss from '../css/Navbar.module.css';
 import React, { useState, useRef, useEffect } from "react";
- 
+
 import {
   Navbar,
   Nav,
@@ -12,11 +12,11 @@ import {
 } from "react-bootstrap";
 import { FaSearch, FaCamera, FaMicrophone } from "react-icons/fa";
 import { IoMic } from "react-icons/io5";
-import Logo from "../assets/Logo1.svg";
-import Italian from "../assets/ItalianImg.svg";
-import French from "../assets/French.svg";
-import Spanish from "../assets/Spanish.svg";
-import Greece from "../assets/Greece.svg";
+import Logo from "../assets/NavbarIcons/Logo1.svg";
+import Italian from "../assets/NavbarIcons/ItalianImg.svg";
+import French from "../assets/NavbarIcons/French.svg";
+import Spanish from "../assets/NavbarIcons/Spanish.svg";
+import Greece from "../assets/NavbarIcons/Greece.svg";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import SignInModel from "./SignInModel";
 import OtpModel from "./OtpModel";

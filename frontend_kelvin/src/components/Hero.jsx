@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Logo from '../assets/navlogo.svg';
+import Logo from '../assets/NavbarIcons/navlogo.svg';
 import HeroStyles from '../css/Hero.module.css';
 
 const Hero = () => {

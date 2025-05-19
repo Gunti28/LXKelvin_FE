@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import FooterImg from "../assets/footerimg.jpg";
+import FooterImg from "../assets/RegistraionIcons/footerimg.jpg";
 import ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
