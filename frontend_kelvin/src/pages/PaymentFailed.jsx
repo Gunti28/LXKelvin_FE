@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import FooterImg from "../assets/footerimg.jpg";
-import paymentfaild from "../assets/paymentfaild.png";
+import paymentfaild from "../assets/paymentfaildandsucess/paymentfaild.png";
+
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
  
  const Paymentfaild = () => {

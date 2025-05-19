@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Logo from "../assets/NavbarIcons/Logo1.svg";
@@ -44,7 +43,8 @@ const SignInModel = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                style={{borderColor: 'black', boxShadow: 'none' }}
+                className={ModelPage.formCont}
+                
               />
             </Form.Group>
             <NavLink to='/enterotp'>
@@ -58,8 +58,8 @@ const SignInModel = () => {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
-          className="image-fluid w-100 "
-          style={{ objectFit: "cover" }}
+          className={`image-fluid w-100 ${ ModelPage.footerImg}`}
+          
         />
       </Modal.Footer>
     </Modal>

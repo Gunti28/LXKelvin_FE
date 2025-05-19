@@ -1,4 +1,6 @@
-import  NavbarCss from '../css/Navbar.module.css';
+
+
+import  NavbarCss from '../css/NavbarStyle.module.css';
 import React, { useState, useRef, useEffect } from "react";
 
 import {
@@ -25,6 +27,7 @@ import Success from "./Success";
 import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
 import { NavLink, useNavigate } from "react-router-dom";
+import '../css/NavbarComponent.module.css';
  
 const NavbarComponent = () => {
  
@@ -107,8 +110,10 @@ const NavbarComponent = () => {
   };
  
   return (
+
     <div className={NavbarCss.heroSection}>
       <Navbar variant="dark" expand="lg" className={`${NavbarCss.navbar} bg-transparent p-0 `}>
+
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />
@@ -358,12 +363,14 @@ const NavbarComponent = () => {
               onClick={() => setShowDragAndDrop(false)}
               style={{
                 marginTop: "10px",
-                background: "darkred",
+                background: "#929292",
                 color: "white",
                 border: "none",
                 padding: "6px 12px",
                 borderRadius: "6px",
                 cursor: "pointer",
+                align :"right",
+                float: "right",
               }}
             >
               Close
