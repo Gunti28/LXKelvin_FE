@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../css/ChatBot.module.css';
 
-const chatFlow = {
+    const chatFlow = {
     start: {
         message: "👋 Hi there! Welcome to *Organic*. How can I assist you today?",
         options: [

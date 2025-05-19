@@ -7,7 +7,10 @@ import Location from '../assets/Location.svg';
 const LocationModel = ({ show, target, container, onClose, onLocationSet  }) => {
   const [address, setAddress] = useState('');
   const [location, setLocation] = useState('');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5bd61263e4d9feb7c20828fbee182caf963e3b2b
 
   const detectLocation = () => {
     if (navigator.geolocation) {

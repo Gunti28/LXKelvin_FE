@@ -15,13 +15,14 @@ const ConfirmPage = () => {
         <Card
           className={`mt-3 border-top-0 ${confrimstyle.cardWrapper}`}
           style={{ borderRadius: "1px", background: "#D4E7F380" }}
-        >
+          >
           <Card.Body className=" d-flex justify-content-between align-items-center">
             <div className="fs-bold text-start ">
               PREMUM
               <div>Place Plan Amount here</div>
             </div>
-            <div>EditPlan </div>
+
+          <Button variant="link">Edit Plan</Button>
           </Card.Body>
         </Card>
         <Card
@@ -32,7 +33,7 @@ const ConfirmPage = () => {
             <div className="fs-bold text-start "> PayPal
               <div>9434265721@ybl</div>
             </div>
-            <div>Change</div>
+          <Button variant="link"> change</Button>
           </Card.Body>
         </Card>
         <div className={`${confrimstyle.Para}`}>
