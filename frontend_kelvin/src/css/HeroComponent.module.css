@@ -3,10 +3,6 @@
 
 .mainSection {
     height: 100vh;
-    background-image: url("../assets/NavbarIcons/LandingPage.svg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
 }
 
 .heroOverlay {
@@ -21,7 +17,7 @@
 .organicText {
     font-family: 'Caveat', cursive;
     color: #4CAF50;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -29,7 +25,7 @@
 .vegetableText {
     font-family: 'Caveat', sans-serif;
     color: #FF8C00;
-    font-size: 4rem;
+    font-size: 3rem;
     font-style: italic;
     font-weight: 700;
     line-height: 1.2;
@@ -38,7 +34,7 @@
 .subtitleText {
     font-family: 'Montserrat';
     color: white;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -51,6 +47,8 @@
     align-items: flex-end;
     padding-right: 5%;
 }
+
+
 
 .heroLogo {
     margin-right: 200px;

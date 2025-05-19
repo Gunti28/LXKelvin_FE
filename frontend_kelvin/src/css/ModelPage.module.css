@@ -7,6 +7,26 @@
 .textingsmall{
     margin-top: -10px;
 }
+.RegText {
+    color: blue;
+    cursor: pointer;
+    
+
+}
+.NewUserText {
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 14px;
+    
+
+}
+.sec {
+    height: 100vh;
+    background-image: url("../assets/LandingPage.svg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
 .otpInput{
     width: 35px;

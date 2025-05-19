@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../css/ChatBot.module.css';
 
-
-
  const ChatBot = ({ isOpen, toggleChat }) => { 
 
     const chatFlow = {

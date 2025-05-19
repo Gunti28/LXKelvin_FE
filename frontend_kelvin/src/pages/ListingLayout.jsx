@@ -13,6 +13,7 @@ const ListingLayout = () => {
   const handleShow = () => setShow(true);
 
   return (
+
     <div className="layout-container">
       <Button className="d-md-none mb-3 hamburger-btn" onClick={handleShow} variant="outline-primary">
         <GiHamburgerMenu size={24} />
@@ -20,12 +21,12 @@ const ListingLayout = () => {
       <aside className="sidebar d-none d-md-block">
         <nav>
           <ul style={{listStyle:"none"}}>
-            <li><NavLink to="/all-categories">All Categories</NavLink></li>
-            <li><NavLink to="/vegetables">Vegetables</NavLink></li>
-            <li><NavLink to="/fruits">Fruits</NavLink></li>
-            <li><NavLink to="/seasonalvegetables">Seasonal Vegetables</NavLink></li>
-            <li><NavLink to="/seasonalfruits">Seasonal Fruits</NavLink></li>
-            <li><NavLink to="/milkproducts">Milk Products</NavLink></li>
+            <li><NavLink to="/products/all-categories">All Categories</NavLink></li>
+            <li><NavLink to="/products/vegetables">Vegetables</NavLink></li>
+            <li><NavLink to="/products/fruits">Fruits</NavLink></li>
+            <li><NavLink to="/products/seasonalvegetables">Seasonal Vegetables</NavLink></li>
+            <li><NavLink to="/products/seasonalfruits">Seasonal Fruits</NavLink></li>
+            <li><NavLink to="/products/milkproducts">Milk Products</NavLink></li>
           </ul>
         </nav>
       </aside>

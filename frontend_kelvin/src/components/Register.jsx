@@ -5,7 +5,7 @@ import ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Register =() => {
 
@@ -17,6 +17,7 @@ const Register =() => {
   const [checked, setChecked] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,6 +29,7 @@ const Register =() => {
       return;
     } else {
       setError("");
+      navigate('/success')
 
     }
   };
@@ -53,7 +55,7 @@ const Register =() => {
             >
               <Form.Control
                 type="name"
-                placeholder="Name "
+                placeholder="Name *"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -62,7 +64,7 @@ const Register =() => {
               />
               <Form.Control
                 type="email"
-                placeholder="Email "
+                placeholder="Email *"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -71,7 +73,7 @@ const Register =() => {
               />
               <Form.Control
                 type={showPassword ? "text" : "password"}
-                placeholder="Password "
+                placeholder="Password *"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -93,7 +95,7 @@ const Register =() => {
               </div>
               <Form.Control
                 type={showConfirmPassword ? "text" : "password"}
-                placeholder="Repeat Password"
+                placeholder="Repeat Password *"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
@@ -126,22 +128,23 @@ const Register =() => {
                 style={{ borderColor: "black", boxShadow: "none" }}
               />
             </Form.Group>
-              <NavLink to = '/success'>
             <Button
               type="submit"
               disabled={checked ? false : true}
               className="w-100 mt-1 mb-2 "
               style={{ backgroundColor: "#FF9900", borderWidth: 0 }}
+              onClick={handleSubmit}
             >
               Continue
             </Button>
-            </NavLink>
+            
           </Form>
         </Container>
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
+          alt="FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

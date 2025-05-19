@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import Category from '../css/Categoris.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
@@ -17,21 +16,33 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Navigation, Autoplay } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 
 const categories = [
-  { title: "Vegetables", image: vc },
-  { title: "Fruits", image: fc },
-  { title: "Seasonal Vegetables", image: svc },
-  { title: "Seasonal Fruits", image: sfc },
-  { title: "milk", image: milk },
+  { title: 'Vegetables', image: vc, to:'/products/vegetables' },
+  { title: 'Fruits', image: fc , to:'/products/fruits' },
+  { title: 'Seasonal Vegetables', image: svc ,to:'/products/seasonalvegetables' },
+  { title: 'Seasonal Fruits', image: sfc ,to:'/products/seasonalfruits'},
+  { title: 'milk', image: milk ,to:'/products/milkproducts'},
+
 ];
 
 const HomePage = () => {
   const [modelType, setModelType] = useState(null);
   const closeModel = () => setModelType(null);
+  const navigate= useNavigate();
+
+  const handleAllCategories = () => {
+    navigate('/products/all-categories')
+
+  }
+   
+  const handleCardClick = (to) => {
+    navigate(to);
+  };
 
   return (
-    <div className="container-fluid ">
+    <div className="container-fluid MainDashboard">
       <Swiper
         navigation={true}
         modules={[Navigation, Autoplay]}
@@ -119,6 +130,7 @@ const HomePage = () => {
             <Col md={3} sm={6} xs={12}  className="mb-4">
               
           <div  key={idx} className='t1 mb-5  cardtotal'>
+
               <Card className={Category.cardimage} >
                 <Card.Img variant="top" src={cat.image} className={Category.cd}/>
                 <Card.Body className={Category.cardBody}>
