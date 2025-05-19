@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Container, Button } from "react-bootstrap";
 import CartModule from '../css/Cart.module.css';
-import TomatoCart from "../assets/tomatocart.png";
-import KiwiCart from "../assets/kiwicart.png";
+import TomatoCart from "../assets/CartIcons/tomatocart.png";
+import KiwiCart from "../assets/CartIcons/kiwicart.png";
 import { MdOutlineEuro } from "react-icons/md";
 import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";

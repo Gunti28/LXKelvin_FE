@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React, { useState, useEffect } from 'react';
 import { Container, Nav, Navbar as BootstrapNavbar, NavDropdown, Form, Button, Image } from 'react-bootstrap';
 import { Search, Mic, Camera } from 'lucide-react';
@@ -121,4 +120,3 @@ const Navbarpage = () => {
 
 export default Navbarpage;
 
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd

@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import "../css/Listing.css";
+import ListingStyle from  "../css/Listing.module.css";
 import Tomato from '../assets/Listing/image 30.svg';
 import Cauliflower from '../assets/Listing/image 8.svg';
 import Beans from '../assets/Listing/image 17.svg';
@@ -28,20 +28,21 @@ const Listing = () => {
   const filteredProducts = path === "products/all-categories" ? products : products.filter(p => p.category.toLowerCase() === path.toLowerCase());
   return (
     <div className="listing-container">
-      <h1 className="page-title">{path === "products/all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}</h1>
-      <div className="product-grid">
+
+      <h1 className={ListingStyle.pageTitle}>{path === "all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}</h1>
+      <div className={ListingStyle.productGrid}>
         {filteredProducts.map((product, index) => ( 
-          <div key={index} className="product-card" style={{ backgroundColor: product.Colour, filter: product.stockCount === 0 ? "grayscale(100%)" : "none" }}>
-            <img src={product.image} alt={product.name} className="product-image" />
-            <h2 className="product-name">{product.name}</h2>
-            <div className="price-section">
-              <span className="discount-price">₹{product.price}</span>
-              <span className="original-price">₹{product.originalPrice}</span>
+          <div key={index} className={ListingStyle.productCard} style={{ backgroundColor: product.Colour, filter: product.stockCount === 0 ? "grayscale(100%)" : "none" }}>
+            <img src={product.image} alt={product.name} className={ListingStyle.productImage} />
+            <h2 className={ListingStyle.productName}>{product.name}</h2>
+            <div className={ListingStyle.priceSection}>
+              <span className={ListingStyle.discountPrice}>₹{product.price}</span>
+              <span className={ListingStyle.originalPrice}>₹{product.originalPrice}</span>
             </div>
             {product.stockCount > 0 ? (
-              <button className="add-to-cart">Add to cart</button>
+              <button className={ListingStyle.addToCart}>Add to cart</button>
             ) : (
-              <button className="out-of-stock">Out of Stock</button>
+              <button className={ListingStyle.outOfStock}>Out of Stock</button>
     
             )}
           </div>

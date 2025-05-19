@@ -1,5 +1,7 @@
+
+
+import  NavbarCss from '../css/NavbarComponent.module.css';
 import React, { useState, useRef, useEffect } from "react";
-import "../css/Navbar.css";
 import {
   Navbar,
   Nav,
@@ -11,11 +13,11 @@ import {
 } from "react-bootstrap";
 import { FaSearch, FaCamera, FaMicrophone } from "react-icons/fa";
 import { IoMic } from "react-icons/io5";
-import Logo from "../assets/Logo1.svg";
-import Italian from "../assets/ItalianImg.svg";
-import French from "../assets/French.svg";
-import Spanish from "../assets/Spanish.svg";
-import Greece from "../assets/Greece.svg";
+import Logo from "../assets/NavbarIcons/Logo1.svg";
+import Italian from "../assets/NavbarIcons/ItalianImg.svg";
+import French from "../assets/NavbarIcons/French.svg";
+import Spanish from "../assets/NavbarIcons/Spanish.svg";
+import Greece from "../assets/NavbarIcons/Greece.svg";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import SignInModel from "./SignInModel";
 import OtpModel from "./OtpModel";
@@ -28,11 +30,11 @@ import Hero from "./Hero";
 import HomePage from "../pages/Categories";
 import { Icon } from "@iconify/react";
 
-
 const NavbarComponent = () => {
-
-
+ 
+ 
       const [scrolled, setScrolled] = useState(false);
+
       const navigate = useNavigate();
         const [showSignin,setShowSignin] = useState(true);
         const [showProfile,setShowProfile] = useState(false);
@@ -45,16 +47,19 @@ const NavbarComponent = () => {
                   setScrolled(false);
               }
           };
-  
+ 
           window.addEventListener('scroll', handleScroll);
-  
+ 
           return () => {
               window.removeEventListener('scroll', handleScroll);
           };
       }, []);
+
+  const [showLocationModel, setShowLocationModel] = useState(false);
+  const locationRef = useRef(null);
   const [showPopover, setShowPopover] = useState(false);
   const targetRef = useRef(null);
-
+ 
   const [userLocation, setUserLocation] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [showDragAndDrop, setShowDragAndDrop] = useState(false);
@@ -98,16 +103,16 @@ const NavbarComponent = () => {
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
   const [listening, setListening] = useState(false);
-
+ 
   const startListening = () => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
-
+ 
     if (!SpeechRecognition) {
       alert("Speech Recognition not supported in this browser.");
       return;
     }
-
+ 
     const recognition = new SpeechRecognition();
     recognition.continuous = false;
     recognition.interimResults = false;
@@ -119,7 +124,7 @@ const NavbarComponent = () => {
       setSearchTerm(transcript);
       setListening(false);
     };
-
+ 
     recognition.onerror = (event) => {
       console.error("Speech recognition error:", event.error);
       setListening(false);
@@ -128,22 +133,26 @@ const NavbarComponent = () => {
       setListening(false);
     };
   };
+
     useEffect(()=>{
       setTimeout(() => {
             setShowHero(false);
             setShowDashboard(true);
           }, 3000);
     },[]);
+
   return (
-    <div className="hero-section">
-      <Navbar variant="dark" expand="lg" className="navbar bg-transparent p-0">
+
+    <div className={NavbarCss.heroSection}>
+      <Navbar variant="dark" expand="lg" className={`${NavbarCss.navbar} bg-transparent p-0 `}>
+
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
-            <Nav className="gap-4 " navbarScroll>
+            <Nav className="gap-4 " >
               <div
                 onClick={() => setShowPopover(!showPopover)}
                 // onMouseEnter={() => setShowPopover(true)}
@@ -160,7 +169,7 @@ const NavbarComponent = () => {
                     ? `${userLocation.slice(0, 20)}...`
                     : "Location"}
                 </Nav.Link>
-
+ 
                 <LocationModel
                   show={showPopover}
                   onClose={() => setShowPopover(false)}
@@ -172,7 +181,7 @@ const NavbarComponent = () => {
                   }}
                 />
               </div>
-
+ 
               <Nav.Link href="#" className=" text-white">
                 Best Seller
               </Nav.Link>
@@ -180,10 +189,10 @@ const NavbarComponent = () => {
                 Today Deals
               </Nav.Link>
             </Nav>
-
-            <div className="searchbar  d-flex flex-grow-1 justify-content-center position-relative w-300 my-2 ">
+ 
+            <div className={`${NavbarCss.searchBar}  d-flex flex-grow-1 justify-content-center position-relative w-300 my-2 `}>
               {/* <div className="d-flex justify-content-center w-100 my-2"> */}
-
+ 
               <div style={{ width: "500px", position: "relative" }}>
                 <FaSearch
                   style={{
@@ -199,7 +208,7 @@ const NavbarComponent = () => {
                   type="search"
                   placeholder="Search for products..."
                   aria-label="Search"
-                  className="white-placeholder"
+                  className={NavbarCss.whitePlaceholder}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   style={{
@@ -212,7 +221,7 @@ const NavbarComponent = () => {
                     color: "white",
                   }}
                 />
-
+ 
                 <IoMic
                   onClick={startListening}
                   className={listening ? "mic-animating" : ""}
@@ -298,14 +307,14 @@ const NavbarComponent = () => {
                 </ul>
               )}
             </div>
-
+ 
             <div className="d-flex align-items-center gap-3">
               {/* <div className="d-flex align-items-center  justify-content-center me-5"> */}
               <Dropdown>
                 <Dropdown.Toggle
                   variant="light"
                   id="dropdown-language"
-                  className="me-5 lang"
+                  className={`me-5 ${NavbarCss.lang}`}
                 >
                   <img src={Italian} alt="Italian" width={20} />
                   Italian
@@ -383,12 +392,14 @@ const NavbarComponent = () => {
               onClick={() => setShowDragAndDrop(false)}
               style={{
                 marginTop: "10px",
-                background: "darkred",
+                background: "#929292",
                 color: "white",
                 border: "none",
                 padding: "6px 12px",
                 borderRadius: "6px",
                 cursor: "pointer",
+                align :"right",
+                float: "right",
               }}
             >
               Close
@@ -410,5 +421,5 @@ const NavbarComponent = () => {
     </div>
   );
 };
-
+ 
 export default NavbarComponent;

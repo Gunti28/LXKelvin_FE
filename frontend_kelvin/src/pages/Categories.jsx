@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
-import '../css/Categoris.css';
+import Category from '../css/Categoris.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
-import slid1 from '../assets/slid-1.png';
-import slid2 from '../assets/slid-1.png';
-import slid3 from '../assets/slid-1.png';
-import slid4 from '../assets/slid-1.png';
-
-import fc from '../assets/fruits-categorie.png';
-import sfc from '../assets/seasonal fruits-categorie.png';
-import vc from '../assets/Vegetables-categorie.png';
-import svc from '../assets/seasonal Vegetables-categorie.png';
-import milk from '../assets/milk.png';
-
+import slid1 from '../assets/banerslides/slid-1.png';
+import slid2 from '../assets/banerslides/slid-1.png';
+import slid3 from '../assets/banerslides/slid-1.png';
+import fc from '../assets/allcategories/fruits-categorie.png';
+import sfc from '../assets/allcategories/seasonal fruits-categorie.png';
+import vc from '../assets/allcategories/Vegetables-categorie.png';
+import svc from '../assets/allcategories/seasonal Vegetables-categorie.png';
+import milk from '../assets/allcategories/milk.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -49,69 +46,99 @@ const HomePage = () => {
       <Swiper
         navigation={true}
         modules={[Navigation, Autoplay]}
-        className="mySwiper mt-5"
+        className={`${Category.mySwiper} mt-5`}
       >
-        <SwiperSlide>
-          <div className="carousel d-flex flex-column align-items-center">
-            
-            <img 
-              src={slid1}
-              alt="Fruits and Vegetables"
-              style={{
-                width: '90%',
-                maxHeight: '300px',
-                objectFit: 'cover',
-                borderRadius: '10px',
-              }}/>
-          
-            <div className="text-center p-4 text" style={{ background: 'transparent' }}>
-              <h3 className='foont'>
-                Let's celebrate the goodness of <span style={{ color: 'green' }}>greens</span>
-              </h3>
-              <Button  variant="outline-dark" className="mt-2 btn1"  onClick={handleAllCategories}>
-                Up To <strong style={{ color: 'orange' }}>20%</strong> OFF
-              </Button>
-            </div>
-          </div>
-        </SwiperSlide> 
-
-        {[slid2, slid3, slid4].map((num, index) => (
-  <SwiperSlide key={index}>
-    <img
-      src={num}
-      alt={`Slide ${index + 2}`}
-      style={{
-                width: '90%',
-                maxHeight: '300px',
-                objectFit: 'cover',
-                borderRadius: '10px',
-                marginLeft:'4rem'
-              }}
+     <SwiperSlide>
+  <div className={`${Category.carousel} d-flex align-items-center justify-content-center`}>
+    <img 
+      src={slid1}
+      alt="Fruits and Vegetables"
+      className={Category.banner}
     />
-  </SwiperSlide>
-))}      
+    <div className={`${Category.text} text-center p-4`}>
+      <h3 className={Category.foont}>
+        Let's celebrate the goodness of <span style={{ color: 'green' }}>greens</span>
+      </h3>
+      <Button
+        variant="outline-dark"
+        className={Category.btn1}
+             >
+        Up To <strong style={{ color: 'orange' }}>20%</strong> OFF
+      </Button>
+    </div>
+  </div>
+</SwiperSlide>
+
+
+<SwiperSlide>
+  <div className={`${Category.carousel} d-flex align-items-center justify-content-center`}>
+    <img 
+      src={slid2}
+      alt="Banner Slide 2"
+      className={Category.banner}
+    />
+    <div className={`${Category.text} text-center p-4`}>
+      <h3 className={Category.foont}>
+        Freshness at your <span style={{ color: 'green' }}>doorstep</span>
+      </h3>
+      <Button
+        variant="outline-success"
+        className={Category.btn1}
+      >
+        Shop Now
+      </Button>
+    </div>
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className={`${Category.carousel} d-flex align-items-center justify-content-center`}>
+    <img 
+      src={slid3}
+      alt="Banner Slide 3"
+      className={Category.banner}
+    />
+    <div className={`${Category.text} text-center p-4`}>
+      <h3 className={Category.foont}>
+        Daily Deals on <span style={{ color: 'orange' }}>Essentials</span>
+      </h3>
+      <Button
+        variant="outline-warning"
+        className={Category.btn1}
+      >
+        Check Offers
+      </Button>
+    </div>
+  </div>
+</SwiperSlide>
       </Swiper>
-      <Container  fluid className="mt-4 ">
-        <h4 className="text-center  mb-4 CatText">CATEGORIES</h4>
-        <div  className='text-end'>
-       <button onClick={handleAllCategories} className='CatBtn'>All Categories</button>
+
+      {/* Category Section */}
+      <Container fluid className="mt-4 ">
+        <h4 className="text-center  mb-4">CATEGORIES</h4>
+        <div className="text-end">
+          <Button
+            variant="primary"
+            size="sm"
+          >
+            All Categories
+          </Button>
         </div>
         <hr />
-        <div className="category-scroll d-flex overflow-auto gap-3">
+        <div className=" d-flex overflow-auto gap-3">
           {categories.map((cat, idx) => (
             <Col md={3} sm={6} xs={12}  className="mb-4">
               
           <div  key={idx} className='t1 mb-5  cardtotal'>
-              <Card className='cardimage' 
-              onClick={() => handleCardClick(cat.to)}
-              >
-                <Card.Img variant="top" src={cat.image} style={{ height: '150px', width: '100%', objectFit: 'cover' }} />
-                <Card.Body className='cardBody'>
+
+              <Card className={Category.cardimage} >
+                <Card.Img variant="top" src={cat.image} className={Category.cd}/>
+                <Card.Body className={Category.cardBody}>
                   <Card.Title className="text-center cardfont">{cat.title}</Card.Title>
                 </Card.Body>
               </Card>
               </div>
-              </Col>
+            </Col>
           ))}
         </div>
       </Container>

@@ -1,13 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import amexLogo from "../assets/logos_amex-digital.jpg";
-import encryptedIcon from "../assets/Group 1000004820.jpg";
-import applePayLogo from "../assets/cib_apple-pay.jpg";
+import AMEX from "../assets/Paymentpage/AMEX.jpg"
+import visa from "../assets/Paymentpage/visa.jpg"
+import applePay from "../assets/Paymentpage/applepay.jpg";
 import { CiLock } from "react-icons/ci";
-import groupImage from "../assets/Group 1000004821.jpg";
+import Pay from "../assets/Paymentpage/Pay.jpg";
 import Form from "react-bootstrap/Form";
-import paypal from "../assets/paypal.jpg";
-import vectorIcon from "../assets/Vector.png";
+import paypal from "../assets/Paymentpage/paypal.jpg";
+import vector from "../assets/Paymentpage/Vector.png"
 import { IoIosArrowForward } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import Paymentstyles from "../css/Payment.module.css";
@@ -30,21 +30,19 @@ const Paymentpage = () => {
             <div>
               Credit Card
               <img
-                src={encryptedIcon}
+                src={visa}
                 alt="Encrypted Icon"
-                style={{ height: "20px", marginLeft: "8px" }}
+                style={{  marginLeft: "8px" }}
               />
               <img
-                src={amexLogo}
+                src={AMEX}
                 alt="American Express Logo"
-                style={{ height: "20px" }}
                 className="image-fluid ms-2"
               />
               <img
-                src={groupImage}
+                src={Pay}
                 alt="Group Illustration"
                 className="ms-2"
-                style={{ height: "20px" }}
               />
             </div>
             <Button
@@ -68,13 +66,11 @@ const Paymentpage = () => {
                 src={paypal}
                 alt="paypal"
                 className="ms-2"
-                style={{ height: "20px" }}
               />
               <img
-                src={applePayLogo}
+                src={applePay}
                 alt="Apple Pay"
                 className="ms-2"
-                style={{ height: "20px" }}
               />
             </div>
             <Button
@@ -97,7 +93,6 @@ const Paymentpage = () => {
     <Form.Check
       type="checkbox"
       id="confirmCheck"
-      style={{ width: "20px", height: "20px", marginTop: "2px" }}
     />
     <Form.Label htmlFor="confirmCheck" className={`${Paymentstyles.termsLabel}`}>
       By confirming, you authorize the platform to charge the selected payment method for the subscription plan, including any applicable taxes or fees.
@@ -109,7 +104,7 @@ const Paymentpage = () => {
 
         <div className={`${Paymentstyles.vector} `}>
           <img
-            src={vectorIcon}
+            src={vector}
             alt="Vector Icon"
             style={{ marginRight: "8px" }}
           />

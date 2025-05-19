@@ -1,19 +1,20 @@
-.product-page {
+.productPage {
     padding: 20px;
+    overflow: auto;
 }
 
-.product-page .breadcrumb {
+.productPage .breadcrumb {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 1rem;
 }
 
 /* Left Column Styles */
-.left-column {
+.leftColumn {
     padding-right: 30px;
 }
 
-.main-image-container {
+.mainImageContainer {
     position: relative;
     width: 100%;
     height: 400px;
@@ -26,14 +27,14 @@
     background: #fff;
 }
 
-.main-preview-image {
+.mainPreviewImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.thumbnails-row {
+.thumbnailsRow {
     display: flex;
     gap: 10px;
     margin-top: 20px;
@@ -63,7 +64,7 @@
     box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
 }
 
-.thumbnail-container {
+.thumbnailContainer {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -72,7 +73,7 @@
 }
 
 /* Carousel Controls */
-.carousel-control {
+.carouselControl {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -90,31 +91,31 @@
     transition: all 0.3s ease;
 }
 
-.carousel-control:hover {
+.carouselControl:hover {
     background: rgba(255, 255, 255, 1);
     color: #ffa500;
     transform: scale(1.1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-control.prev {
+.carouselControl .prev {
     left: 10px;
 }
 
-.carousel-control.next {
+.carousel-control .next {
     right: 10px;
 }
 
 /* Right Column Styles */
-.right-column {
+.rightColumn {
     padding-left: 30px;
 }
 
-.product-details-section {
+.productDetailsSection {
     margin-bottom: 40px;
 }
 
-.breadcrumb {
+.breadCrumb {
     color: #666;
     font-size: 14px;
     margin-bottom: 20px;
@@ -125,7 +126,7 @@ h2 {
     margin-bottom: 25px;
 }
 
-.quantity-selector {
+.quantitySelector {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -133,7 +134,7 @@ h2 {
     /* Override previous margin */
 }
 
-.quantity-add-container {
+.quantityAddContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,7 +142,7 @@ h2 {
     margin-bottom: 25px;
 }
 
-.add-button {
+.addButton {
     min-width: 120px;
     height: 40px;
     padding: 8px 24px;
@@ -152,13 +153,13 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.add-button:hover {
+.addButton:hover {
     background-color: #e69500 !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 165, 0, 0.2);
 }
 
-.add-to-cart-btn {
+.addToCartBtn {
     background-color: #ffa500 !important;
     border: none !important;
     padding: 12px !important;
@@ -167,58 +168,58 @@ h2 {
     width: 100%;
 }
 
-.quantity-price-section {
+.quantityPriceSection {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 30px;
 }
 
-.price-row {
+.priceRow {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
 }
 
-.price-details {
+.priceDetails {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
-.price-section {
+   
+.priceSection {
     margin-bottom: 25px;
 }
 
-.discounted-price {
+.discountedPrice {
     font-size: 24px;
     font-weight: 600;
 }
 
-.original-price {
+.originalPrice {
     color: #666;
     text-decoration: line-through;
     margin-left: 10px;
 }
 
-.discount-percent {
+.discountPercent {
     color: #28a745;
     margin-left: 10px;
 }
 
-.price-display {
+.priceDisplay {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.current-price {
+.currentPrice {
     font-size: 28px;
     font-weight: 600;
 }
 
-.pmd-price {
+.pmdPrice {
     color: #666;
     font-size: 16px;
 }
@@ -229,7 +230,7 @@ h2 {
     font-weight: 500;
 }
 
-.heart-icon {
+.heartIcon {
     color: #ef7f24;
     float: right;
     margin-left: auto;
@@ -237,19 +238,19 @@ h2 {
     cursor: pointer;
     transition: all 0.1s ease;
 }
-.heart-icon:hover {
+.heartIcon:hover {
     color: #e73434;
     
 }
 
-.subscription-container {
+.subscriptionContainer {
     background-color: #fff8e1;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 30px;
 }
 
-.subscription-banner {
+.subscriptionBanner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,25 +258,25 @@ h2 {
     margin-bottom: 20px;
 }
 
-.subscription-content {
+.subscriptionContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
-.subscription-content h6 {
+.subscriptionContent h6 {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-.offer-text {
+.offerText {
     font-size: 1rem;
     color: #333;
 }
 
-.view-plans-btn {
+.viewPlansBtn {
     color: #ffa500 !important;
     border-color: #ffa500 !important;
     background: white !important;
@@ -286,14 +287,14 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.view-plans-btn:hover {
+.viewPlansBtn:hover {
     background-color: #ffa500 !important;
     color: white !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 165, 0, 0.2);
 }
 
-subscription-section {
+/* subscription-section {
     background-color: #fff8e1;
     border-radius: 8px;
     padding: 20px;
@@ -333,7 +334,7 @@ vip-badge {
 subscription-box h6 {
     margin: 25px 0 15px 0;
     font-weight: 600;
-}
+} */
 
 button.btn-warning {
     background-color: #ffa500;
@@ -345,11 +346,11 @@ button.btn-warning {
 }
 
 /* Subscription Offer Banner */
-.subscription-offer {
+.subscriptionOffer {
     margin: 20px 0;
 }
 
-.offer-banner {
+.offerBanner {
     background: linear-gradient(to right, #d4af37, #f4d03f);
     padding: 12px 20px;
     border-radius: 8px;
@@ -357,7 +358,7 @@ button.btn-warning {
     transition: all 0.3s ease;
 }
 
-.offer-banner p {
+.offerBanner p {
     margin: 0;
     color: #fff;
     font-size: 16px;
@@ -365,7 +366,7 @@ button.btn-warning {
     text-align: center;
 }
 
-.vip-tag {
+.vipTag {
     background: #7f1d1d;
     color: white;
     padding: 2px 8px;
@@ -374,22 +375,22 @@ button.btn-warning {
     margin: 0 4px;
 }
 
-.off-text {
+.offText {
     font-weight: 600;
 }
 
-.offer-banner:hover {
+.offerBanner:hover {
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Subscription Plan Section */
-.subscription-plan-section {
+.subscriptionPlanSection {
     margin: 30px 0;
     text-align: left;
 }
 
-.subscription-plan-section h3 {
+.subscriptionPlanSection h3 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -397,24 +398,24 @@ button.btn-warning {
 }
 
 /* Why Choose Section */
-.why-choose-section {
+.whyChooseSection {
     background: white;
     border-radius: 8px;
     padding: 20px;
 }
 
-.why-choose-section h4 {
+.whyChooseSection h4 {
     margin-bottom: 25px;
     font-size: 20px;
 }
 
-.benefits-container {
+.benefitsContainer {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.benefit-item {
+.benefitItem {
     display: flex;
     gap: 15px;
     align-items: flex-start;
@@ -425,14 +426,14 @@ button.btn-warning {
     border: 1px solid transparent;
 }
 
-.benefit-item:hover {
+.benefitItem:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border-color: #ffa500;
     background: #fff;
 }
 
-.benefit-icon {
+.benefitIcon {
     width: 48px;
     height: 48px;
     padding: 12px;
@@ -440,29 +441,29 @@ button.btn-warning {
     border-radius: 50%;
 }
 
-.benefit-icon img {
+.benefitIcon img {
     width: 100%;
     height: 100%;
 }
 
-.benefit-content h5 {
+.benefitContent h5 {
     font-size: 16px;
     margin-bottom: 5px;
 }
 
-.benefit-content p {
+.benefitContent p {
     color: #666;
     font-size: 14px;
     margin: 0;
 }
 
-.product-benefits-container {
+.productBenefitsContainer {
     display: flex;
     gap: 30px;
     margin-top: 40px;
 }
 
-.benefits-heading {
+.benefitsHeading {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 25px;
@@ -470,68 +471,68 @@ button.btn-warning {
     padding-left: 10px;
 }
 
-.benefit-card {
+.benefitCard {
     border: none;
     background-color: #f9f9f9;
     margin-bottom: 1rem;
 }
 
-.product-info-section {
+.productInfoSection {
     background: white;
     border-radius: 8px;
     padding: 20px;
     margin-top: 30px;
 }
 
-.details-heading {
+.detailsHeading {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.info-item {
+.infoItem {
     margin-bottom: 20px;
 }
 
-.info-item p {
+.infoItem p {
     margin-bottom: 5px;
 }
 
-.info-item strong {
+.infoItem strong {
     color: #333;
 }
 
 /* Customer Feedback Section */
-.customer-feedback {
+.customerFeedback {
     margin-top: 40px;
     padding: 20px;
 }
 
-.customer-feedback h3 {
+.customerFeedback h3 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.feedback-container {
+.feedbackContainer {
     height: 320px;
     overflow-y: auto;
     padding-right: 10px;
 }
 
-.feedback-container::-webkit-scrollbar {
+.feedbackContainer::-webkit-scrollbar {
     width: 6px;
 }
 
-.feedback-container::-webkit-scrollbar-track {
+.feedbackContainer::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
 }
 
-.feedback-container::-webkit-scrollbar-thumb {
+.feedbackContainer::-webkit-scrollbar-thumb {
     background: #ffa500;
     border-radius: 10px;
 }
 
-.feedback-item {
+.feedbackItem {
     background: #fff;
     border-radius: 8px;
     padding: 20px;
@@ -540,67 +541,65 @@ button.btn-warning {
     border: 1px solid #eee;
 }
 
-.feedback-header {
+.feedbackHeader {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 10px;
 }
 
-.feedback-avatar {
+.feedbackAvatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
 }
 
-.feedback-avatar img {
+.feedbackAvatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.feedback-user {
+.feedbackUser {
     flex-grow: 1;
 }
 
-.feedback-user h4 {
+.feedbackUser h4 {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
 }
 
-.feedback-date {
+.feedbackDate {
     color: #666;
     font-size: 14px;
     margin-top: 4px;
 }
 
-.feedback-rating {
+.feedbackRating {
     color: #ffa500;
     font-size: 18px;
 }
 
-.feedback-content {
+.feedbackContent {
     margin-top: 10px;
     color: #333;
     font-size: 15px;
 }
 
-.details-heading {
+.detailsHeading {
     font-weight: bolder;
     size: 35px;
-
-
 }
 
 @media (max-width: 768px) {
-    .product-benefits-container {
+    .productBenefitsContainer {
         flex-direction: column;
     }
 
-    .product-info-section,
-    .benefits-container {
+    .productInfoSection,
+    .benefitsContainer {
         margin-right: 0;
         margin-bottom: 30px;
     }

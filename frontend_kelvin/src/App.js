@@ -1,10 +1,8 @@
 
-import HomePage from "./pages/Categories";
 import ListingLayout from "./pages/ListingLayout";
-import Hero from "./components/Hero";
 import NavbarComponent from "./components/Navbar";
 import OrderSummery from "./pages/OrderSummery";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import PricingCards from "./pages/Card";
 import DeliveryAddress from "./pages/DeliveryAddress";
@@ -25,16 +23,13 @@ import AddressList from "./pages/MyAddress";
 import MyOrders from "./pages/MyOrders";
 import SaveForLater from "./pages/SaveForLater";
 import CustomerSupport from "./pages/CustomerSupport";
-import SignInModel from "./components/SignInModel";
-import OtpModel from "./components/OtpModel";
-import Register from "./components/Register";
-import Success from "./components/Success";
 import Listing from "./pages/Listing";
 import ProductList from "./pages/ProductList";
 
+
 function App() {
   return (
-        <Router>
+    <Router>
       <Routes>
         <Route path='/*' element={<NavbarComponent />} />
         {/* <Route path='signin' element={<SignInModel />}/>
@@ -77,6 +72,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+
   );
 }
 

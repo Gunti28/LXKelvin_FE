@@ -1,35 +1,35 @@
 import React from "react";
-import "../css/TrackingDetails.css";
+import style from "../css/TrackingDetails.module.css"
 import { FaPhoneAlt } from "react-icons/fa";
 
 const TrackingDetails = () => {
   return (
-    <div className="tracking-details-container">
+    <div className={style.trackingdetailscontainer}>
       <h2>Tracking Details</h2>
 
-      <div className="tracking-card">
+      <div className={style.trackingcard}>
         <h4>Order Placed</h4>
-        <p className="order-info">Placed on Sun, 12 Oct 23, 4:12</p>
+        <p className={style.orderinfo}>Placed on Sun, 12 Oct 23, 4:12</p>
       </div>
-      <div className="tracking-card delivery-partner">
-        <div className="partner-info">
+      <div className={style.deliverypartner}>
+        <div className={style.partnerinfo}>
           <img
             src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
             alt="Delivery Partner"
-            className="partner-image"
+            className={style.partnerimage}
           />
-          <p>
+          <p className={style.para}>
             HELLO! I'm Ajay Kumar, your delivery partner
           </p>
         </div>
-        <a href="tel:+1234567890" className="call-button">
-          <FaPhoneAlt />
+        <a href="tel:+1234567890" className={style.callbutton}>
+          <FaPhoneAlt  />
         </a>
       </div>
 
-      <div className="tracking-card">
+      <div className={style.trackingcard}>
         <h4>Address</h4>
-        <p className="address-info">
+        <p className={style.addressinfo}>
           921 Church Street, San Francisco 912144
         </p>
       </div>

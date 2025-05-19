@@ -1,6 +1,8 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
- .hero-section {
+
+ .heroSection {
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -11,21 +13,21 @@
     background-position: center;
     position: relative;
   }
-
-  .hero-section > * {
+  .heroSection > * {
     position: relative;
     z-index: 1;
   }
   .navbar {
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(10px);
-    z-index: 10; 
+    z-index: 10;
+  }
+ 
+ 
+  .searchBar ul {
+    z-index: 9999 !important;
   }
 
-
-  .searchbar ul {
-    z-index: 9999 !important; 
-  }
   .ProfileCon{
     display: flex;
     flex-direction: row;
@@ -45,17 +47,16 @@
 
   }
 
-
   .toggle {
     background-color: transparent !important;
     border: none !important;
   }
-  
-  .hero-section .navbar {
+
+  .heroSection .navbar {
     padding: 0.5rem 1rem;
   }
-
-  .hero-content {
+ 
+  .heroContent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,11 +64,10 @@
     z-index: 2;
     text-align: center;
   }
-
-  .white-placeholder::placeholder {
+  .whitePlaceholder::placeholder {
     color: white;
   }
-
+ 
   @keyframes micPulse {
     0% {
       transform: scale(1);
@@ -82,45 +82,43 @@
       color: #ffffff;
     }
   }
-  
-  .mic-animating {
+
+  .micAnimating {
     animation: micPulse 1s infinite;
   }
-  
-  
-
+ 
+ 
+ 
   @media (max-width: 1300px) {
-   .searchbar{
+   .searchBar{
     width: 280px;
    }
    .lang{
     margin-left: 25px;
    }
   }
-  
+ 
   @media (max-width: 990px) {
-    .searchbar{
+    .searchBar{
 margin-left: 200px;
-
+ 
    }
   }
   @media (max-width: 690px) {
-    .searchbar{
+    .searchBar{
 margin-left: 100px;
-
+ 
    }
   }
   @media (max-width: 500px) {
-    .searchbar{
+    .searchBar{
 margin-left: 30px;
    }
   }
-
+ 
   @media (max-width: 350px) {
-    .searchbar{
+    .searchBar{
 margin-left: 0px;
    }
   }
-
-  
-  
+ 

@@ -1,4 +1,4 @@
-.page-background {
+.pageBackground {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 
-.delivery-title {
+.deliveryTitle {
     font-size: 50px;
     font-weight: bold;
     color: #333;
@@ -19,9 +19,9 @@
     font-family:montserrat;
 }
 
-.help-option,
-.chat-option,
-.call-option {
+.helpOption,
+.chatOption,
+.callOption {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -36,13 +36,13 @@
     justify-content: center;
 }
 
-.help-option:hover,
-.chat-option:hover,
-.call-option:hover{
+.helpOption:hover,
+.chatOption:hover,
+.callOption:hover{
     width:410px;
 }
 
-.icon-wrapper {
+.iconWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,11 +55,11 @@
     margin-left: -350%;
 }
 
-.green-text {
+.greenText {
     color: #4CAF50;
 }
 
-.rating-card {
+.ratingCard {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -69,7 +69,7 @@
     text-align:center;
 }
 
-.rating-title {
+.ratingTitle {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
@@ -83,25 +83,25 @@
     margin-bottom: 15px;
 }
 
-.star {
+/* .star {
     font-size: 24px;
     color: #ddd;
     cursor: pointer;
     
-}
+} */
 
-.star.active {
+.starActive {
     color: #4CAF50;
 }
 
-.rating-comment {
+.ratingComment {
     margin-bottom: 10px;
     
     color: #333;
     font-size: 14px;
 }
 
-.comment-box {
+.commentBox {
     width: 100%;
     height: 80px;
     margin-bottom: 15px;
@@ -115,7 +115,7 @@
     font-size: 14px;
 }
 
-.submit-btn {
+.submitBtn {
     width: 60%;
     padding: 10px;
     font-weight: 500;
@@ -125,46 +125,46 @@
     color: white;
 }
 
-.submit-btn:hover {
+.submitBtn:hover {
     background-color: #FF8C00;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     /* width: 65%; */
 
 }
 
-.left-scooter-container {
+.leftScooterContainer {
     position: absolute;
     bottom: 40%;
     left: 5%;
 }
 
-.right-scooter-container {
+.rightScooterContainer {
     position: absolute;
     margin-right: -10%;
     bottom: 40%;
     right: 5%;
 }
 
-.scooter-img {
+.scooterImg {
     width: 250px;
     height: auto;
 }
 
 @media (max-width: 868px) {
 
-    .left-scooter-container,
-    .right-scooter-container {
+    .leftScooterContainer,
+    .rightScooterContainer {
         display: none;
     }
 
-    .help-option,
-    .chat-option,
-    .call-option,
-    .rating-card {
+    .helpOption,
+    .chatOption,
+    .callOption,
+    .ratingCard {
         width: 85%;
     }
 
-    .delivery-title {
+    .deliveryTitle {
         font-size: 28px;
     }
 }

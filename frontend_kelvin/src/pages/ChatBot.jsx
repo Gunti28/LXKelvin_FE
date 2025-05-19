@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../css/ChatBot.module.css';
 
-
  const ChatBot = ({ isOpen, toggleChat }) => { 
+
     const chatFlow = {
     start: {
         message: "👋 Hi there! Welcome to *Organic*. How can I assist you today?",
@@ -50,7 +50,6 @@ import styles from '../css/ChatBot.module.css';
         options: [{ label: "🔁 Back to Main Menu", next: "start" }]
     }
 };
-
 
     const [chatHistory, setChatHistory] = useState([{ id: "start", fromUser: false }]);
     const [input, setInput] = useState("");

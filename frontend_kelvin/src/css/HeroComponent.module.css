@@ -1,16 +1,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
-.main-section {
+.mainSection {
     height: 100vh;
-    /* background-size: cover;
-    background-position: center;
-    position: relative; */
 }
 
-.hero-overlay {
+.heroOverlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,7 +14,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.organic-text {
+.organicText {
     font-family: 'Caveat', cursive;
     color: #4CAF50;
     font-size: 5rem;
@@ -27,7 +22,7 @@
     line-height: 1;
 }
 
-.vegetable-text {
+.vegetableText {
     font-family: 'Caveat', sans-serif;
     color: #FF8C00;
     font-size: 3rem;
@@ -36,7 +31,7 @@
     line-height: 1.2;
 }
 
-.subtitle-text {
+.subtitleText {
     font-family: 'Montserrat';
     color: white;
     font-size: 1.5rem;
@@ -44,7 +39,7 @@
 }
 
 
-.hero-content-container {
+.heroContentContainer {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -53,50 +48,51 @@
     padding-right: 5%;
 }
 
-.hero-logo {
-    margin-right: 8rem;
+
+
+.heroLogo {
+    margin-right: 200px;
 }
 
 @media (max-width: 992px) {
-    .organic-text {
+    .organicText {
         font-size: 4rem;
     }
 
-    .vegetable-text {
+    .vegetableText {
         font-size: 2.5rem;
     }
 
-    .subtitle-text {
+    .subtitleText {
         font-size: 1.2rem;
     }
 
-    .hero-content-container {
+    .heroContentContainer {
         align-items: center;
         padding-right: 0;
         text-align: center;
     }
-        .hero-logo {
+        .heroLogo {
     margin-right: 0px;
 }
 
 }
 
 @media (max-width: 768px) {
-    .organic-text {
+    .organicText {
         font-size: 3rem;
     }
 
-    .vegetable-text {
+    .vegetableText {
         font-size: 2rem;
     }
 
-    .subtitle-text {
+    .subtitleText {
         font-size: 1rem;
     }
 
-    .hero-logo {
+    .heroLogo {
     margin-right: 0px;
 }
-
 
 }

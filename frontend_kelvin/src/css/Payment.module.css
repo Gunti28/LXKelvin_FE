@@ -6,6 +6,11 @@
 .vector{
     color: #979797;
     display: flex;
+    margin-top: 40px;
+}
+
+img{
+  height: 20px;
 }
 
 .cardWrapper {
@@ -56,6 +61,9 @@
 
   .termsLabel {
     font-size: 0.8rem;
+  }
+  img{
+    height: 10px !important;
   }
 
 }

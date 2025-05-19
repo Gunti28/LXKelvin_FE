@@ -2,12 +2,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Modal from "react-bootstrap/Modal";
 import Logo from "../assets/Logo1.svg";
-import FooterImg from "../assets/footerimg.jpg";
+import FooterImg from "../assets/RegistraionIcons/footerimg.jpg";
 import ModelPage from  "../css/ModelPage.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Button, Container } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
+
 const OtpModel = ({onOtpSuccess}) => {
 
     const [otp, setOtp] = useState(['', '', '', '']);

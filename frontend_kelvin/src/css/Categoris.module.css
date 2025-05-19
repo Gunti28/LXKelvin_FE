@@ -1,5 +1,6 @@
-.text{
-    position: absolute;
+.carousel {
+  position: relative;
+  width: 100%;
 }
 .MainDashboard {
   overflow-y: auto;
@@ -23,19 +24,44 @@
   border-bottom: 1.5px solid #fff;
 }
 
-/* Base styles */
-.card {
-    transition: transform 0.3s ease;
-  }
-  .card:hover {
-    transform: scale(1.03);
-  }
-  .allcat
-  {
-    
-  }
+.banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; 
+  color: #000; 
+}
+
+.foont {
+  font-size: 24px;
+}
+
+.btn1 {
+  margin-top: 10px;
+}
+
+
+.container {
+  padding: 20px;
   
-  @media (min-width:768px  ) and (max-width: 1000px) {
+}
+
+/* Text styles for default (desktop) */
+.text {
+  font-size: 24px;
+  
+}
+
+
+ @media (min-width:768px  ) and (max-width: 1000px) {
 .foont{
   font-size: 14px;
 }
@@ -87,9 +113,6 @@
       
     }
   }
-
-
-  
   
   /* For small phones */
   @media screen and  (max-width: 576px) {
@@ -123,9 +146,3 @@
       
       
   }
-  /* @media (min-width: 767px) and (max-width: 920px) {
-    .cardfont{
-    font-size: 1rem !important;
-    }
-
-  } */

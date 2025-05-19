@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import FooterImg from "../assets/footerimg.jpg";
+import FooterImg from "../assets/RegistraionIcons/footerimg.jpg";
 import ModelPage from  "../css/ModelPage.module.css";
 import { Button } from "react-bootstrap";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
@@ -40,7 +40,6 @@ const  Success = ()=> {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
-          alt="FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import Logo from "../assets/Logo1.svg";
-import FooterImg from "../assets/footerimg.jpg";
+import Logo from "../assets/NavbarIcons/Logo1.svg";
+import FooterImg from "../assets/RegistraionIcons/footerimg.jpg";
 import  ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -31,7 +31,7 @@ const SignInModel = () => {
     >
       <Modal.Header className="border-0 justify-content-center">
         <Modal.Title id="contained-modal-title-vcenter">
-          <img src={Logo} alt="Logo" width={150} />
+          <img src={Logo} width={150} />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className={`border-0 d-flex justify-content-center align-items-center flex-column ${ModelPage.body}`} >
@@ -48,7 +48,8 @@ const SignInModel = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                style={{borderColor: 'black', boxShadow: 'none' }}
+                className={ModelPage.formCont}
+                
               />
             </Form.Group>
             <Button variant="warning" type="submit" className="w-100 mt-3 mb-2">
@@ -63,9 +64,8 @@ const SignInModel = () => {
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
-          alt = {FooterImg}
-          className="image-fluid w-100 "
-          style={{ objectFit: "cover" }}
+          className={`image-fluid w-100 ${ ModelPage.footerImg}`}
+          
         />
       </Modal.Footer>
     </Modal>
