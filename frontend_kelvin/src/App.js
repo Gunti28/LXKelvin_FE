@@ -33,48 +33,41 @@ import Success from "./components/Success";
 
 function App() {
   return (
-    //     <Router>
-    //   <Routes>
-    //     <Route path='/' element={<NavbarComponent />}/>
-    //     <Route path='/signin' element={<SignInModel />}/>
-    //     <Route path='/enterotp' element={<OtpModel />}/>
-    //     <Route path='/registeruser' element={<Register />}/>
-    //     <Route path='/success' element={<Success />}/>
-    //     <Route path='/dashboard' element={<HomePage />}/>
-    //     <Route path='/products' element={<ListingLayout />}/>
-    //     <Route path='/productpage' element={<ProductDetailsPage />}/>
-    //     <Route path='/cart' element={<Cart />}/>
-    //     <Route path='/subscriptionplans' element={<PricingCards />}/>
-    //     <Route path='/deliverydetails' element={<DeliveryAddress />}/>
-    //     <Route path='/ordersummary' element={<OrderSummery />}/>
-    //     <Route path='/products' element={<ListingLayout />}/>
-    //     <Route path='/choosepayment' element={<Paymentpage />}/>
-    //     <Route path='/cardpayment' element={<Setupcard />}/>
-    //     <Route path='/netbankingpayment' element={<SignupUpi />}/>
-    //     <Route path='/ordertracking' element={<OrderTracking />}/>
-    //     <Route path='/trackingdetails' element={<TrackingDetails />}/>
-    //     <Route path='/ordereddelivered' element={<ChatBotContainer />}/>
-    //     <Route path='/vippass' element={<Vippaymentsucess />}/>
-    //     <Route path='/failedpayment' element={<Paymentfaild />}/>
-    //     <Route path='/successfulpayment' element={<Pay1 />}/>
-    //     <Route path='/thankyou' element={<Thankyou />}/>
-    //     <Route path='/viewprofile/' element={<ProfileLayout />}>
-    //     <Route index element={<MyProfile />} />
-    //       <Route path='myaddress' element={<AddressList />} />
-    //       <Route path='myorders' element={<MyOrders />} />
-    //       <Route path='saveforlater' element={<SaveForLater />} />
-    //       <Route path='customersupport' element={<CustomerSupport />} />
-    //     </Route>
-    //   </Routes>
-    // </Router>
-    // <SignupUpi/>
-    // <PricingCards/>
-    // <Paymentpage/>
-    // <Paymentpage />
-    // <Setupcard />
-    // <Thankyou />
-    <TrackingDetails />
-    // <Vippaymentsucess />
+        <Router>
+      <Routes>
+        <Route path='/' element={<NavbarComponent />}/>
+        <Route path='/signin' element={<SignInModel />}/>
+        <Route path='/enterotp' element={<OtpModel />}/>
+        <Route path='/registeruser' element={<Register />}/>
+        <Route path='/success' element={<Success />}/>
+        <Route path='/dashboard' element={<HomePage />}/>
+        <Route path='/products' element={<ListingLayout />}/>
+        <Route path='/productpage' element={<ProductDetailsPage />}/>
+        <Route path='/cart' element={<Cart />}/>
+        <Route path='/subscriptionplans' element={<PricingCards />}/>
+        <Route path='/deliverydetails' element={<DeliveryAddress />}/>
+        <Route path='/ordersummary' element={<OrderSummery />}/>
+        <Route path='/products' element={<ListingLayout />}/>
+        <Route path='/choosepayment' element={<Paymentpage />}/>
+        <Route path='/cardpayment' element={<Setupcard />}/>
+        <Route path='/netbankingpayment' element={<SignupUpi />}/>
+        <Route path='/ordertracking' element={<OrderTracking />}/>
+        <Route path='/trackingdetails' element={<TrackingDetails />}/>
+        <Route path='/ordereddelivered' element={<ChatBotContainer />}/>
+        <Route path='/vippass' element={<Vippaymentsucess />}/>
+        <Route path='/failedpayment' element={<Paymentfaild />}/>
+        <Route path='/successfulpayment' element={<Pay1 />}/>
+        <Route path='/thankyou' element={<Thankyou />}/>
+        <Route path='/viewprofile/' element={<ProfileLayout />}>
+        <Route index element={<MyProfile />} />
+          <Route path='myaddress' element={<AddressList />} />
+          <Route path='myorders' element={<MyOrders />} />
+          <Route path='saveforlater' element={<SaveForLater />} />
+          <Route path='customersupport' element={<CustomerSupport />} />
+        </Route>
+      </Routes>
+    </Router>
+
   );
 }
 
