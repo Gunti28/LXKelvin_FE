@@ -101,23 +101,6 @@ const HomePage = () => {
 </SwiperSlide>
       </Swiper>
 
-      <Swiper
-  navigation={true}
-  autoplay={{ delay: 3000 }}
-  modules={[Navigation, Autoplay]}
-  className={`${Category.mySwiper} mt-5`}
->
-  {/* Slide 1 */}
-  <SwiperSlide>...</SwiperSlide>
-
-  {/* Slide 2 */}
-  <SwiperSlide>...</SwiperSlide>
-
-  {/* Slide 3 */}
-  <SwiperSlide>...</SwiperSlide>
-</Swiper>
-
-
       {/* Category Section */}
       <Container fluid className="mt-4 ">
         <h4 className="text-center  mb-4">CATEGORIES</h4>
