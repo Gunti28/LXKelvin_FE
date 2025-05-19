@@ -3,15 +3,14 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import FooterImg from "../assets/footerimg.jpg";
 import thankyou from "../assets/tankyou.png"
-import "../css/Vippaymentsucess.css";
+import Thankyoustyle from "../css/Thankyou.module.css"
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
  
- const Thankyou = ({ show, onClose }) => {
+ const Thankyou = () => {
   return (
     <Modal
-      show={show}
+      show={true}
       size="md"
-      onHide={onClose}
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -25,22 +24,20 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
       <Modal.Body className="border-0 d-flex justify-content-center align-items-center flex-column ">
       <img
           src={thankyou}
-          className="image-fluid w-25 H-25 "
+          className={`${Thankyoustyle.img}image-fluid w-25 H-25 `}
           alt="pay1Img"
-          style={{ width: "100px", height: "100px",objectFit: "cover" }}
         />
         <br></br>
         <div className="text-center">
-        <h3 className="text-sucess" style={{color:"red"}}> Thank you </h3>
+        <h3 className={Thankyoustyle.thankyou} > Thank you </h3>
         </div>
           
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
-          className="image-fluid w-100 "
+          className="image-fluid w-100 object-fit-cover "
           alt="FooterImg" 
-          style={{ objectFit: "cover" }}
         />
       </Modal.Footer>
     </Modal>

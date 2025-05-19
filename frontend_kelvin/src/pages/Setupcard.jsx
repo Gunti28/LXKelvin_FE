@@ -2,9 +2,9 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Setupcardstyle from "../css/Setupcard.module.css";
-import encryptedIcon from "../assets/Group 1000004820.jpg";
-import amexLogo from "../assets/logos_amex-digital.jpg";
-import groupImage from "../assets/Group 1000004821.jpg";
+import visa from "../assets/Setupcard/visa.jpg";
+import pay from "../assets/Setupcard/Pay.jpg";
+import AMEX from "../assets/Setupcard/AMEX.jpg";
 import Form from "react-bootstrap/Form";
 import { CiCircleQuestion } from "react-icons/ci";
 import { HiOutlineCreditCard } from "react-icons/hi";
@@ -20,17 +20,17 @@ const Setupcard = () => {
 
        <div className={`d-flex gap-2 mt-3 ${Setupcardstyle.imgs}`}>
         <img
-          src={encryptedIcon}
+          src={visa}
           alt="Encrypted Icon"
           style={{ height: "20px" }}
         />
         <img
-          src={amexLogo}
+          src={AMEX}
           alt="American Express Logo"
           style={{ height: "30px" }}
         />
         <img
-          src={groupImage}
+          src={pay}
           alt="Group Illustration"
           style={{ height: "20px" }}
         />

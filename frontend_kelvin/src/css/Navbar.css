@@ -68,8 +68,6 @@
   .mic-animating {
     animation: micPulse 1s infinite;
   }
-  
-  
 
   @media (max-width: 1300px) {
    .searchbar{
