@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/Categoris.css';
+import Category from  '../css/Categoris.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
 import slid1 from '../assets/slid-1.png';

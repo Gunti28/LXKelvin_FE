@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useRef } from "react";
-import  Navbar from '../css/Navbar.module.css';
-=======
-import React, { useState, useRef, useEffect } from "react";
-import "../css/Navbar.css";
->>>>>>> 0ee1cafec2f949a3e266ab2b21ca2533d88d5e0d
-=======
+
 import  NavbarCss from '../css/Navbar.module.css';
 import React, { useState, useRef, useEffect } from "react";
  
->>>>>>> 8e833a7d646236e30fc20ae08502368bcb52258f
 import {
   Navbar,
   Nav,
@@ -35,6 +26,7 @@ import Success from "./Success";
 import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
 import { NavLink, useNavigate } from "react-router-dom";
+import '../css/NavbarComponent.module.css';
  
 const NavbarComponent = () => {
  
@@ -117,13 +109,10 @@ const NavbarComponent = () => {
   };
  
   return (
-<<<<<<< HEAD
-    <div className="hero-section">
-      <Navbar variant="dark" expand="lg" className={`${Navbar.navbar} bg-transparent p-0 `}>
-=======
+
     <div className={NavbarCss.heroSection}>
       <Navbar variant="dark" expand="lg" className={`${NavbarCss.navbar} bg-transparent p-0 `}>
->>>>>>> 8e833a7d646236e30fc20ae08502368bcb52258f
+
         <Container fluid>
           <Navbar.Brand href="#">
             <img src={Logo} alt="Logo" width={60} className="" />
@@ -373,12 +362,14 @@ const NavbarComponent = () => {
               onClick={() => setShowDragAndDrop(false)}
               style={{
                 marginTop: "10px",
-                background: "darkred",
+                background: "#929292",
                 color: "white",
                 border: "none",
                 padding: "6px 12px",
                 borderRadius: "6px",
                 cursor: "pointer",
+                align :"right",
+                float: "right",
               }}
             >
               Close
