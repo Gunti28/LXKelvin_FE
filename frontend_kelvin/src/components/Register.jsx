@@ -93,7 +93,7 @@ const Register =() => {
               </div>
               <Form.Control
                 type={showConfirmPassword ? "text" : "password"}
-                placeholder="Reset Password"
+                placeholder="Repeat Password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
