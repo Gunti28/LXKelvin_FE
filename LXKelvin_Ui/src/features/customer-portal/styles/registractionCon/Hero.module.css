@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.mainSection {
+    height: 100vh;
+    background-image: url("../assets/NavbarIcons/LandingPage.svg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.organicText {
+    font-family: 'Caveat', cursive;
+    color: #4CAF50;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.vegetableText {
+    font-family: 'Caveat', sans-serif;
+    color: #FF8C00;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.subtitleText {
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1.9rem;
+    margin-top: 1rem;
+}
+
+
+.heroContentContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 5%;
+}
+
+.heroLogo {
+    margin-right: 200px;
+}
+
+@media (max-width: 992px) {
+    .organicText {
+        font-size: 4rem;
+    }
+
+    .vegetableText {
+        font-size: 2.5rem;
+    }
+
+    .subtitleText {
+        font-size: 1.2rem;
+    }
+
+    .heroContentContainer {
+        align-items: center;
+        padding-right: 0;
+        text-align: center;
+    }
+        .heroLogo {
+    margin-right: 0px;
+}
+
+}
+
+@media (max-width: 768px) {
+    .organicText {
+        font-size: 3rem;
+    }
+
+    .vegetableText {
+        font-size: 2rem;
+    }
+
+    .subtitleText {
+        font-size: 1rem;
+    }
+
+    .heroLogo {
+    margin-right: 0px;
+}
+
+}

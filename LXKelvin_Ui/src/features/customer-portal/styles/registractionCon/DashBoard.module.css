@@ -1,0 +1,126 @@
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; 
+  color: #000; 
+}
+
+.foont {
+  font-size: 24px;
+}
+
+.btn1 {
+  margin-top: 10px;
+}
+
+
+.container {
+  padding: 20px;
+  
+}
+
+/* Text styles for default (desktop) */
+.text {
+  font-size: 24px;
+  
+}
+
+
+ @media (min-width:768px  ) and (max-width: 1000px) {
+.foont{
+  font-size: 14px;
+}
+.btn1{
+  width: auto;
+  height: 30px;
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 10px !important;
+}
+.cardimage {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+.cardBody{
+  max-height: 60px !important;
+}
+.cardfont{
+  font-size: 1rem !important;
+}
+
+
+  }
+  
+
+   /* For small tablets and large phones */
+  @media (min-width: 577px) and (max-width: 767px) {
+    .mySwiper1 .swiper-slide {
+      width: 90% !important; 
+    }
+  
+    .foont{
+      font-size: 12px !important;
+    }
+    .btn1{
+      width: auto;
+      height: 30px;
+      text-align: center;
+      font-size: 10px;
+      padding-bottom: 10px !important;
+    }
+     img{
+    height: 200px !important;
+    }
+    .cardtotal{
+      position: relative;
+      flex-direction: column;
+      
+    }
+  }
+  
+  /* For small phones */
+  @media screen and  (max-width: 576px) {
+    .mySwiper1 .swiper-slide {
+      width: 100% !important;
+    }
+  
+    .card-title {
+      font-size: 40px;
+    }
+  
+
+    img{
+      height: 200px !important;
+      }
+      .foont{
+        font-size: 12px !important;
+      }
+      .btn1{
+        width: auto;
+        height: 30px;
+        text-align: center;
+        font-size: 10px;
+        padding-bottom: 10px !important;
+      }
+      .cardtotal {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+      
+  }

@@ -1,0 +1,170 @@
+.pageBackground {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #e3e9a641;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.deliveryTitle {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family:montserrat;
+}
+
+.helpOption,
+.chatOption,
+.callOption {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    max-width: 90%;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-color: #e0e0e0;
+    justify-content: center;
+}
+
+.helpOption:hover,
+.chatOption:hover,
+.callOption:hover{
+    width:410px;
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.icon1{
+    margin-left: -400%;
+}
+.icon2 {
+    margin-left: -350%;
+}
+
+.greenText {
+    color: #4CAF50;
+}
+
+.ratingCard {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    max-width: 90%;
+    padding: 25px;
+    text-align:center;
+}
+
+.ratingTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+/* .star {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+    
+} */
+
+.starActive {
+    color: #4CAF50;
+}
+
+.ratingComment {
+    margin-bottom: 10px;
+    
+    color: #333;
+    font-size: 14px;
+}
+
+.commentBox {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 15px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.submitBtn {
+    width: 60%;
+    padding: 10px;
+    font-weight: 500;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.submitBtn:hover {
+    background-color: #FF8C00;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    /* width: 65%; */
+
+}
+
+.leftScooterContainer {
+    position: absolute;
+    bottom: 40%;
+    left: 5%;
+}
+
+.rightScooterContainer {
+    position: absolute;
+    margin-right: -10%;
+    bottom: 40%;
+    right: 5%;
+}
+
+.scooterImg {
+    width: 250px;
+    height: auto;
+}
+
+@media (max-width: 868px) {
+
+    .leftScooterContainer,
+    .rightScooterContainer {
+        display: none;
+    }
+
+    .helpOption,
+    .chatOption,
+    .callOption,
+    .ratingCard {
+        width: 85%;
+    }
+
+    .deliveryTitle {
+        font-size: 28px;
+    }
+}
