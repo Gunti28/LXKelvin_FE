@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
-import '../css/ProductDetailsPage.css'; // Import your CSS file for styling
-// Import all images
+import ProductDetPage from '../css/ProductDetailsPage.module.css'; 
 import t1 from '../assets/productdetails_Images/t1.png';
 import t2 from '../assets/productdetails_Images/t2.png';
 import t3 from '../assets/productdetails_Images/t3.png';
@@ -11,8 +10,6 @@ import t5 from '../assets/productdetails_Images/t5.png';
 import it1 from '../assets/productdetails_Images/it1.jpg';
 import it2 from '../assets/productdetails_Images/it2.jpg';
 import it3 from '../assets/productdetails_Images/it3.jpg';
-
-
 
 const ProductDetailsPage= () => {
 
@@ -87,64 +84,66 @@ const ProductDetailsPage= () => {
     
 
     return (
-        <Container className="product-page mt-4">
+        <Container className={`${ProductDetPage.productPage} mt-4`}>
             <Row>
                 
-                <Col md={6} className="left-column">
-                    <div className="main-image-container">
+                <Col md={6} className={ProductDetPage.leftColumn}>
+                    <div className={ProductDetPage.mainImageContainer}>
                         <img
                             src={images[currentImageIndex]}
                             alt={productName}
-                            className="main-preview-image"
+                            className={ProductDetPage.mainPreviewImage}
                         />
                         <button
-                            className="carousel-control prev"
+                            className={ProductDetPage.carouselControl}
                             onClick={handlePrevImage}
                             aria-label="Previous image"
+                            style={{left:10}}
                         >
                             &#8249;
                         </button>
                         <button
-                            className="carousel-control next"
+                            className={ProductDetPage.carouselControl}
                             onClick={handleNextImage}
                             aria-label="Next image"
+                            style={{right:10}}
                         >
                             &#8250;
                         </button>
                     </div>
 
                     {/* Row 2: Thumbnails */}
-                    <div className="thumbnails-row">
+                    <div className={ProductDetPage.thumbnailsRow}>
                         {curImages.map((src, i) => (
                             <img
                                 key={i}
                                 src={src}
                                 alt={`Thumb ${i + 1}`}
-                                className={`thumbnail ${i === currentImageIndex ? 'active' : ''}`}
+                                className={`${ProductDetPage.thumbnail} ${i === currentImageIndex ? 'active' : ''}`}
                                 onClick={() => handleThumbnailClick(i)}
                             />
                         ))}
                     </div>
 
                     {/* Row 3: Product Details Section */}
-                    <div className="product-info-section mt-4">
-                        <h4 className="details-heading"><p>Product Details</p></h4>
-                        <div className="info-item">
+                    <div className={`${ProductDetPage.productInfoSection} mt-4`}>
+                        <h4 className={ProductDetPage.detailsHeading}><p>Product Details</p></h4>
+                        <div className={ProductDetPage.infoItem}>
                             <p><strong>Product Name:</strong></p>
                             <p>{productName}</p>
                         </div>
 
-                        <div className="info-item">
+                        <div className={ProductDetPage.infoItem}>
                             <p><strong>Health Benefits</strong></p>
                             <p>{productHealthBenefits}</p>
                         </div>
 
-                        <div className="info-item">
+                        <div className={ProductDetPage.infoItem}>
                             <p><strong>Packaging:</strong></p>
                             <p>{productPackaging}</p>
                         </div>
 
-                        <div className="info-item">
+                        <div className={ProductDetPage.infoItem}>
                             <p><strong>About:</strong></p>
                             <p>{productAbout}</p>
                         </div>
@@ -152,9 +151,9 @@ const ProductDetailsPage= () => {
                 </Col>
 
                 {/* Right Column */}
-                <Col md={6} className="right-column">
-                    <div className="product-details-section">
-                        <div className="navigation-path">
+                <Col md={6} className={ProductDetPage.rightColumn}>
+                    <div className={ProductDetPage.productDetailsSection}>
+                        <div className={ProductDetPage.navigationPath}>
                             <span>Home</span>
                             <span>/</span>
                             <span>Fresh Vegetables</span>
@@ -164,27 +163,27 @@ const ProductDetailsPage= () => {
 
                         <h2>{productName}</h2>
 
-                        <div className="quantity-price-section">
-                            <div className="quantity-add-container">
-                                <Form.Group className="quantity-selector">
+                        <div className={ProductDetPage.quantityPriceSection}>
+                            <div className={ProductDetPage.quantityAddContainer}>
+                                <Form.Group className={ProductDetPage.quantitySelector}>
                                     <Form.Label>Quantity: </Form.Label>
-                                    <Form.Select className="quantity-dropdown">
+                                    <Form.Select className={ProductDetPage.quantityDropdown}>
                                         <option>500 g</option>
                                     </Form.Select>
                                 </Form.Group>
-                                <Button variant="warning" className="add-button">
+                                <Button variant="warning" className={ProductDetPage.addButton}>
                                     Add
                                 </Button>
                             </div>
 
-                            <div className="price-display">
-                                <span className="current-price">€{productFinalPrice}</span>
-                                <span className="pmd-price">PMD €{productOldPrice}</span>
-                                <span className="discount">{productDiscount}% OFF</span>
+                            <div className={ProductDetPage.priceDisplay}>
+                                <span className={ProductDetPage.currentPrice}>€{productFinalPrice}</span>
+                                <span className={ProductDetPage.pmdPrice}>PMD €{productOldPrice}</span>
+                                <span className={ProductDetPage.discount}>{productDiscount}% OFF</span>
                                 {/* <div className="heart-icon">
                                 <Icon icon="solar:heart-linear" width="34" height="34" />
                                 </div> */}
-                                <div className="heart-icon" onClick={toggleIcon} style={{ cursor: "pointer" }}>
+                                <div className={ProductDetPage.heartIcon} onClick={toggleIcon} style={{ cursor: "pointer" }}>
                                     {liked ? (
                                         <Icon icon="solar:heart-bold" width="34" height="34" color="red" />
                                     ) : (
@@ -194,51 +193,51 @@ const ProductDetailsPage= () => {
                             </div>
                         </div>
 
-                        <div className="subscription-offer">
-                            <div className="offer-banner">
-                                <p>Get extra <span className="off-text">(15% OFF)</span> with <span className="vip-tag">VIP</span> Subscription</p>
+                        <div className={ProductDetPage.subscriptionOffer}>
+                            <div className={ProductDetPage.offerBanner}>
+                                <p>Get extra <span className={ProductDetPage.offText}>(15% OFF)</span> with <span className="vip-tag">VIP</span> Subscription</p>
                             </div>
                         </div>
 
-                        <div className="subscription-plan-section">
+                        <div className={ProductDetPage.subscriptionPlanSection}>
                             <h3>Select Your Subscription Plan</h3>
-                            <Button variant="outline-warning" className="view-plans-btn">
+                            <Button variant="outline-warning" className={ProductDetPage.viewPlansBtn}>
                                 View Plans
                             </Button>
                         </div>
 
                         {/* Row 2: Why Everyone Choose Section */}
-                        <div className="why-choose-section">
+                        <div className={ProductDetPage.whyChooseSection}>
                             <h4>Why Everyone Choose This App</h4>
-                            <div className="benefits-container">
-                                <div className="benefit-item">
-                                    <div className="benefit-icon" style={{ width: '100px', height: '80px' }}>
+                            <div className={ProductDetPage.benefitsContainer}>
+                                <div className={ProductDetPage.benefitItem}>
+                                    <div className={ProductDetPage.benefitIcon} style={{ width: '100px', height: '80px' }}>
                                         <img src={it1}
                                             alt="Time Saving" />
                                     </div>
-                                    <div className="benefit-content">
+                                    <div className={ProductDetPage.benefitContent}>
                                         <h5>Time-Saving</h5>
                                         <p>Easily find items with search tools or reorder from your previous purchases</p>
                                     </div>
                                 </div>
 
-                                <div className="benefit-item" >
-                                    <div className="benefit-icon" style={{ width: '100px', height: '80px' }}>
+                                <div className={ProductDetPage.benefitItem} >
+                                    <div className={ProductDetPage.benefitIcon} style={{ width: '100px', height: '80px' }}>
                                         <img src={it2}
                                             alt="Promotions" />
                                     </div>
-                                    <div className="benefit-content">
+                                     <div className={ProductDetPage.benefitContent}>
                                         <h5>Promotions and Discounts</h5>
                                         <p>Many apps offer app-only discounts, coupons, and promotions</p>
                                     </div>
                                 </div>
 
-                                <div className="benefit-item">
-                                    <div className="benefit-icon" style={{ width: '100px', height: '80px' }}>
+                                <div className={ProductDetPage.benefitItem} >
+                                    <div className={ProductDetPage.benefitIcon} style={{ width: '100px', height: '80px' }}>
                                         <img src={it3}
                                             alt="Price Alerts" />
                                     </div>
-                                    <div className="benefit-content">
+                                   <div className={ProductDetPage.benefitContent}>
                                         <h5>Price Alerts</h5>
                                         <p>Set notifications for price drops on your favorite items</p>
                                     </div>
@@ -251,24 +250,24 @@ const ProductDetailsPage= () => {
                 </Col>
             </Row>
             {/* Customer Feedback Section */}
-            <div className="customer-feedback">
+            <div className={ProductDetPage.customerFeedback}>
                 <h3>Customer Feedback</h3>
-                <div className="feedback-container">
+                <div className={ProductDetPage.feedbackContainer}>
                     {feedBack.map((feedback, index) => (
-                        <div key={index} className="feedback-item">
-                            <div className="feedback-header">
-                                <div className="feedback-avatar">
+                        <div key={index} className={ProductDetPage.feedbackItem}>
+                            <div className={ProductDetPage.feedbackHeader}>
+                                <div className={ProductDetPage.feedbackAvatar}>
                                     <img src={`../assets/${feedback.avatar}`} alt={feedback.name} />
                                 </div>
-                                <div className="feedback-user">
+                                <div className={ProductDetPage.feedbackUser}>
                                     <h4>{feedback.name}</h4>
-                                    <div className="feedback-date">{feedback.date}</div>
+                                    <div className={ProductDetPage.feedbackDate}>{feedback.date}</div>
                                 </div>
-                                <div className="feedback-rating">
+                                <div className={ProductDetPage.feedbackRating}>
                                     {'★'.repeat(feedback.rating)}{'☆'.repeat(5 - feedback.rating)}
                                 </div>
                             </div>
-                            <div className="feedback-content">
+                            <div className={ProductDetPage.feedbackContent}>
                                 {feedback.content}
                             </div>
                         </div>

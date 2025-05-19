@@ -9,6 +9,10 @@
     margin-top: 40px;
 }
 
+img{
+  height: 20px;
+}
+
 .cardWrapper {
   width: 75%;
   margin: 1rem auto 0 auto;
@@ -57,6 +61,9 @@
 
   .termsLabel {
     font-size: 0.8rem;
+  }
+  img{
+    height: 10px !important;
   }
 
 }

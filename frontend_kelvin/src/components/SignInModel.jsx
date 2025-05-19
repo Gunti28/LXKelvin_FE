@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import Logo from "../assets/Logo1.svg";
-import FooterImg from "../assets/footerimg.jpg";
+import Logo from "../assets/NavbarIcons/Logo1.svg";
+import FooterImg from "../assets/RegistraionIcons/footerimg.jpg";
 import  ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";

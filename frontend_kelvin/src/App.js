@@ -27,6 +27,7 @@ import CustomerSupport from "./pages/CustomerSupport";
 import OtpModel from "./components/OtpModel";
 import Register from "./components/Register";
 import Success from "./components/Success";
+import OrderDelivered from "./pages/OrderDelivered";
 import SignInModel from "./components/SignInModel";
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+
   );
 }
 
