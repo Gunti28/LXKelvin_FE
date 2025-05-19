@@ -21,6 +21,7 @@ const ConfirmPage = () => {
               PREMUM
               <div>Place Plan Amount here</div>
             </div>
+
           <Button variant="link">Edit Plan</Button>
           </Card.Body>
         </Card>
