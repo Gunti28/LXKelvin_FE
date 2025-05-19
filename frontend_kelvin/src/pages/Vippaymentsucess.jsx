@@ -1,9 +1,9 @@
 
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import FooterImg from "../assets/footerimg.jpg";
-import headerimg from "../assets/vipimage.png";
-import "../css/Vippaymentsucess.css";
+import FooterImg from "../assets/paymentfaildandsucess/footerimg.jpg";
+import headerimg from "../assets/paymentfaildandsucess/vipimage.png";
+import "../css/paymentfaildandsucess/Vippaymentsucess.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
  
  const Vippaymentsucess = ({ show, onClose }) => {
