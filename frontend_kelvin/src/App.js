@@ -2,7 +2,6 @@
 
 import HomePage from "./pages/Categories";
 import ListingLayout from "./pages/ListingLayout";
-import Hero from "./components/Hero";
 import NavbarComponent from "./components/Navbar";
 import OrderSummery from "./pages/OrderSummery";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -67,7 +66,6 @@ function App() {
         </Route>
       </Routes>
     </Router>
-    // <HomePage />
   );
 }
 

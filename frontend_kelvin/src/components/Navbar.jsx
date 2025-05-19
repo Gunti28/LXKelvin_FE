@@ -1,8 +1,7 @@
 
-import  NavbarCss from '../css/Navbar.module.css';
+import  NavbarCss from '../css/NavbarStyle.module.css';
 import React, { useState, useRef, useEffect } from "react";
  
-
 import {
   Navbar,
   Nav,
