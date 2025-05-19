@@ -1,5 +1,5 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import axiosInstance from '../../lib/services/axiosInstanceConnect';
+import axiosInstance from './axiosInstanceConnect';
 /**
  *  Define the async thunk for fetchProducts
  */

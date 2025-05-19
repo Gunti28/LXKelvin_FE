@@ -1,19 +1,29 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from "../../../lib/services/productsService";
+import { fetchProducts } from "../../../lib/services/productsAsyncThunk";
 
 
+/**
+ *  to view the all products
+ * @returns 
+ */
 const Products = () => {
+  /**
+   * declarations
+   */
   const dispatch = useDispatch();
   const { products, status, error } = useSelector((state) => state.products);
-
+  let productsContent;
+  
+  /**
+   * to get the initial page render 
+   */
   useEffect(() => {
     if (status === 'init') {
       dispatch(fetchProducts());
     }
   }, [dispatch, status]);
 
-  let productsContent;
 
   if (status === 'loading') {
     productsContent = <div>Loading...</div>;
