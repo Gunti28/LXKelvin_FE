@@ -11,9 +11,9 @@ const SignupUpi = () => {
     <div className="container justify-content-center align-items-center ">
       <strong>
         <h4
-          className={`${SignupUpistyle.heading}text-center mt-5 mb-4 fw-bold`}
+          className={`${SignupUpistyle.heading} text-center mt-5 mb-4 fw-bold`}
         >
-          Choose Your Payment Method
+          Sign up UPI Pay
         </h4>
       </strong>
 
@@ -51,7 +51,6 @@ const SignupUpi = () => {
       className={`${SignupUpistyle.check} me-2 mt-1`}
       type="checkbox"
       id="confirmCheck"
-      style={{ width: "20px", height: "20px" }}
     />
     <Form.Label
       htmlFor="confirmCheck"
@@ -64,14 +63,10 @@ const SignupUpi = () => {
 </Form>
 
 
-      <div className="mt-2">
-        <style type="text/css">
-          {`.btn-flat { background-color:orange;color: white; font-size:20px; width:250px; height:50px}`}
-        </style>
+      <div className="mt-2 d-flex justify-content-center align-items-center ">
         <Button
           variant="flat"
           className={SignupUpistyle.buttonResponsive}
-          style={{ borderRadius: "4px" }}
         >
           Next
         </Button>
