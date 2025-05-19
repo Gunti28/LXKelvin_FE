@@ -29,24 +29,35 @@ import SignInModel from "./components/SignInModel";
 import OtpModel from "./components/OtpModel";
 import Register from "./components/Register";
 import Success from "./components/Success";
+import Listing from "./pages/Listing";
+import ProductList from "./pages/ProductList";
 
 function App() {
   return (
         <Router>
       <Routes>
-        <Route path='/' element={<NavbarComponent />}/>
-        <Route path='/signin' element={<SignInModel />}/>
-        <Route path='/enterotp' element={<OtpModel />}/>
-        <Route path='/registeruser' element={<Register />}/>
-        <Route path='/success' element={<Success />}/>
-        <Route path='/dashboard' element={<HomePage />}/>
+        <Route path='/*' element={<NavbarComponent />} />
+        {/* <Route path='signin' element={<SignInModel />}/>
+        <Route path='enterotp' element={<OtpModel />}/>
+        <Route path='registeruser' element={<Register />}/>
+        <Route path='success' element={<Success />}/> */}
+        {/* <Route path='/dashboard' element={<HomePage />}/> */}
         <Route path='/products' element={<ListingLayout />}/>
         <Route path='/productpage' element={<ProductDetailsPage />}/>
         <Route path='/cart' element={<Cart />}/>
         <Route path='/subscriptionplans' element={<PricingCards />}/>
         <Route path='/deliverydetails' element={<DeliveryAddress />}/>
         <Route path='/ordersummary' element={<OrderSummery />}/>
-        <Route path='/products' element={<ListingLayout />}/>
+        <Route path='/products/' element={<ListingLayout />}>
+        <Route path='all-categories' index element={<Listing />}/>
+        <Route path="vegetables" element={<ProductList />} />
+      <Route path="fruits" element={<ProductList />} />
+      <Route path="seasonalvegetables" element={<ProductList />} />
+      <Route path="seasonalfruits" element={<ProductList />} />
+      <Route path="milk-products" element={<ProductList />} />
+      <Route path="TrackingDetails" element={<TrackingDetails/>}/>
+      
+        </Route>
         <Route path='/choosepayment' element={<Paymentpage />}/>
         <Route path='/cardpayment' element={<Setupcard />}/>
         <Route path='/netbankingpayment' element={<SignupUpi />}/>

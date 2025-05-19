@@ -3,20 +3,10 @@ import { Popover, Overlay, Button } from "react-bootstrap";
 import PlacesAutocomplete from "react-places-autocomplete";
 import Location from "../assets/Location.svg";
 
-<<<<<<< HEAD
-function LocationModel({ show, target, container, onClose, onLocationSet }) {
-  const [address, setAddress] = useState("");
-  const [location, setLocation] = useState("");
-=======
-import React, { useState } from 'react';
-import { Popover, Overlay, Button } from 'react-bootstrap';
-import PlacesAutocomplete from 'react-places-autocomplete';
-import Location from '../assets/Location.svg';
 
 const LocationModel = ({ show, target, container, onClose, onLocationSet  }) => {
   const [address, setAddress] = useState('');
   const [location, setLocation] = useState('');
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
 
   const detectLocation = () => {
     if (navigator.geolocation) {

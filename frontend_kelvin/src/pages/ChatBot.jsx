@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../css/ChatBot.module.css';
 
-const chatFlow = {
+
+ const ChatBot = ({ isOpen, toggleChat }) => { 
+    const chatFlow = {
     start: {
         message: "👋 Hi there! Welcome to *Organic*. How can I assist you today?",
         options: [
@@ -49,7 +51,6 @@ const chatFlow = {
     }
 };
 
-export const ChatBot = ({ isOpen, toggleChat }) => { 
 
     const [chatHistory, setChatHistory] = useState([{ id: "start", fromUser: false }]);
     const [input, setInput] = useState("");
@@ -180,3 +181,5 @@ export const ChatBot = ({ isOpen, toggleChat }) => {
         </>
     );
 }
+
+export default ChatBot;

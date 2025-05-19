@@ -5,17 +5,22 @@ import Logo from "../assets/Logo1.svg";
 import FooterImg from "../assets/footerimg.jpg";
 import  ModelPage from  "../css/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 const SignInModel = () => {
 
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email submitted:", email);
+    navigate('/enterotp');
   };
+  const handleRegister = () => {
+    navigate('/registeruser')
+  }
 
   return (
     <Modal
@@ -46,11 +51,12 @@ const SignInModel = () => {
                 style={{borderColor: 'black', boxShadow: 'none' }}
               />
             </Form.Group>
-            <NavLink to='/enterotp'>
-            <Button variant="warning" type="submit" className="w-100 mt-3 mb-2" >
+            <Button variant="warning" type="submit" className="w-100 mt-3 mb-2">
               Continue
             </Button>
-            </NavLink>
+            <p className={`${ModelPage.NewUserText} justify-content-center align-items-center d-flex `}>New User ?<span onClick={handleRegister} className={ModelPage.RegText}>&nbsp;Register now</span>
+            </p>
+            
           </Form>
         </Container>
       </Modal.Body>

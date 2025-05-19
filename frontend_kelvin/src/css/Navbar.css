@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
  .hero-section {
-<<<<<<< HEAD
-    /* position: relative; */
-    /* height: 100vh; */
-=======
     position: relative;
     height: 100vh;
->>>>>>> 91e272ad91f1f4ecd2ca32d2dfe573136a2106cd
     overflow: hidden;
-      background-color: rgba(0, 0, 0, 0.1) !important;
-          height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    height: 100vh;
     background-image: url("../assets/LandingPage.svg");
     background-size: cover;
     background-position: center;
@@ -30,6 +25,24 @@
 
   .searchbar ul {
     z-index: 9999 !important; 
+  }
+  .ProfileCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin-bottom: -0.5rem;
+    width: 7vw;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  .ProfileSection{
+    cursor: pointer;
+
+  }
+  .CartSection{
+    cursor: pointer;
+
   }
 
 

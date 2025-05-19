@@ -23,12 +23,19 @@ import Register from "./Register";
 import Success from "./Success";
 import DragAndDrop from "./DragAndDrop";
 import LocationModel from "./LocationModel";
-import { NavLink, useNavigate } from "react-router-dom";
+import {Route, Routes, useNavigate } from "react-router-dom";
+import Hero from "./Hero";
+import HomePage from "../pages/Categories";
+import { Icon } from "@iconify/react";
+
 
 const NavbarComponent = () => {
 
 
       const [scrolled, setScrolled] = useState(false);
+      const navigate = useNavigate();
+        const [showSignin,setShowSignin] = useState(true);
+        const [showProfile,setShowProfile] = useState(false);
   
       useEffect(() => {
           const handleScroll = () => {
@@ -45,19 +52,14 @@ const NavbarComponent = () => {
               window.removeEventListener('scroll', handleScroll);
           };
       }, []);
-
-  const [showLocationModel, setShowLocationModel] = useState(false);
-  const locationRef = useRef(null);
   const [showPopover, setShowPopover] = useState(false);
   const targetRef = useRef(null);
 
   const [userLocation, setUserLocation] = useState("");
-  const [location, setLocation] = useState("");
-  const [showModal, setShowModal] = useState(false);
-  const [modalType, setModalType] = useState(null);
-  const closeModal = () => setModalType(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [showDragAndDrop, setShowDragAndDrop] = useState(false);
+  const [showHero,setShowHero]=useState(true);
+  const [showDashboard,setShowDashboard]=useState(false);
   const [clearPreview, setClearPreview] = useState(false);
   const [products] = useState([
     "iPhone 14",
@@ -71,6 +73,28 @@ const NavbarComponent = () => {
     "JBL Speakers",
     "HP Pavilion",
   ]);
+  const handleSignIn = () =>{
+    navigate('/signin')
+    setShowHero(false);
+    setShowDashboard(false);
+  }
+  const handleSigninSuccess = () =>{
+    setShowSignin(false);
+    setShowProfile(true);
+  }
+
+  const handleProfileIcon =() =>{
+    navigate('/viewprofile')
+
+  }
+
+  const handleCartIcon = () => {
+    navigate('/cart')
+
+  }
+
+
+
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
   const [listening, setListening] = useState(false);
@@ -104,7 +128,12 @@ const NavbarComponent = () => {
       setListening(false);
     };
   };
-
+    useEffect(()=>{
+      setTimeout(() => {
+            setShowHero(false);
+            setShowDashboard(true);
+          }, 3000);
+    },[]);
   return (
     <div className="hero-section">
       <Navbar variant="dark" expand="lg" className="navbar bg-transparent p-0">
@@ -296,31 +325,28 @@ const NavbarComponent = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-              <NavLink to='/signin'>
+              {showSignin&&
               <Button
                 variant="warning"
                 className=" w-35"
-                // onClick={()=>useNavigate('/signin')}
+                onClick={handleSignIn}
               >
                 Sign In
               </Button>
-              </NavLink>
-              {/* <SignInModel
-                show={modalType === "signin"}
-                onClose={closeModal}
-              />
-              <OtpModel
-                show={modalType === "otp"}
-                onClose={closeModal}
-              />
-              <Register
-                show={modalType === "register"}
-                onClose={closeModal}
-              />
-              <Success
-                show={modalType === "success"}
-                onClose={closeModal}
-              /> */}
+}
+{showProfile&&
+<div className="ProfileCon">
+  <div className="ProfileSection" onClick={handleProfileIcon}>
+<Icon icon="ix:user-profile" width="24" height="24"  style={{color: "#fff"}} />
+<p>User</p>
+</div>
+<div className="CartSection" onClick={handleCartIcon}>
+  <Icon icon="solar:bag-linear" width="24" height="24"  style={{color: "#fff"}} />
+  <p>Cart</p>
+</div>
+</div>
+}
+ 
             </div>
           </Navbar.Collapse>
         </Container>
@@ -370,6 +396,16 @@ const NavbarComponent = () => {
           </div>
         </div>
       )}
+      {showHero&&<Hero />}
+      {showDashboard&&<HomePage />}
+      {/* Routes */}
+      <Routes>
+        <Route path='signin' element={<SignInModel />}/>
+        <Route path='enterotp' element={<OtpModel onOtpSuccess={handleSigninSuccess}/>}/>
+        <Route path='registeruser' element={<Register />}/>
+        <Route path='success' element={<Success />}/>
+        <Route path='/dashboard' element={<HomePage />}/>
+      </Routes>
 
     </div>
   );

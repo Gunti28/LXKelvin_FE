@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Button, Container } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
-const OtpModel = () => {
+const OtpModel = ({onOtpSuccess}) => {
 
     const [otp, setOtp] = useState(['', '', '', '']);
     const [timer, setTimer] = useState();
@@ -43,16 +43,12 @@ const handleChange = (value, index) => {
       const enteredOtp = newOtp.join('');
       if (enteredOtp === '1234') {
         toast.success('OTP Verified!');
+        onOtpSuccess();
         setTimeout(() => {
-          navigate('/registeruser')
-          // onClose(); 
-          setTimeout(() => {
-            // onCreateAccount(); 
-          }, 300); 
-
+          navigate('/dashboard')
         }, 1000);
       } else {
-        toast.error('Invalid OTP');
+        toast.error('Invalid OTP!!');
       }
     }
   };

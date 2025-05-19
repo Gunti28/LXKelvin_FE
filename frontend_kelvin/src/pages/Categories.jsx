@@ -19,30 +19,33 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Navigation, Autoplay } from 'swiper/modules';
-import Vippaymentsucess from './Vippaymentsucess';
-import Paymentfaild from './PaymentFailed';
-import Pay1 from './payment';
-import Thankyou from './Thankyou';
-
-
-
+import { useNavigate } from 'react-router-dom';
 
 const categories = [
-  { title: 'Vegetables', image: vc },
-  { title: 'Fruits', image: fc },
-  { title: 'Seasonal Vegetables', image: svc },
-  { title: 'Seasonal Fruits', image: sfc },
-  { title: 'milk', image: milk },
+  { title: 'Vegetables', image: vc, to:'/products/vegetables' },
+  { title: 'Fruits', image: fc , to:'/products/fruits' },
+  { title: 'Seasonal Vegetables', image: svc ,to:'/products/seasonalvegetables' },
+  { title: 'Seasonal Fruits', image: sfc ,to:'/products/seasonalfruits'},
+  { title: 'milk', image: milk ,to:'/products/milkproducts'},
 
 ];
 
 const HomePage = () => {
-
   const [modelType, setModelType] = useState(null);
   const closeModel = () => setModelType(null);
+  const navigate= useNavigate();
+
+  const handleAllCategories = () => {
+    navigate('/products/all-categories')
+
+  }
+   
+  const handleCardClick = (to) => {
+    navigate(to);
+  };
 
   return (
-    <div className="container-fluid ">
+    <div className="container-fluid MainDashboard">
       <Swiper
         navigation={true}
         modules={[Navigation, Autoplay]}
@@ -59,18 +62,13 @@ const HomePage = () => {
                 maxHeight: '300px',
                 objectFit: 'cover',
                 borderRadius: '10px',
-              }}
-              onClick={()=> setModelType("payment")}
-            />
-            <Vippaymentsucess
-            show={modelType === "payment"}
-            onClose={closeModel}
-            />
+              }}/>
+          
             <div className="text-center p-4 text" style={{ background: 'transparent' }}>
               <h3 className='foont'>
                 Let's celebrate the goodness of <span style={{ color: 'green' }}>greens</span>
               </h3>
-              <Button  variant="outline-dark" className="mt-2 btn1"  href='https://i.scdn.co/image/ab67616d0000b2734e42de9a9d9888d50b99e8a7'>
+              <Button  variant="outline-dark" className="mt-2 btn1"  onClick={handleAllCategories}>
                 Up To <strong style={{ color: 'orange' }}>20%</strong> OFF
               </Button>
             </div>
@@ -82,30 +80,21 @@ const HomePage = () => {
     <img
       src={num}
       alt={`Slide ${index + 2}`}
-      style={{ width: '100%', maxHeight: '300px', objectFit: 'cover' }}
-      onClick={() => {
-        if (index === 2) {
-          setModelType("paymentfailed");
-        } else if (index === 1) {
-          setModelType("thankyou"); 
-        }
-      }}
+      style={{
+                width: '90%',
+                maxHeight: '300px',
+                objectFit: 'cover',
+                borderRadius: '10px',
+                marginLeft:'4rem'
+              }}
     />
   </SwiperSlide>
-))}
-
-          
+))}      
       </Swiper>
-                  <Thankyou
-            show={modelType === "thankyou"}
-            onClose={closeModel}
-            />
-      
-      {/* Category Section */}
       <Container  fluid className="mt-4 ">
-        <h4 className="text-center  mb-4">CATEGORIES</h4>
+        <h4 className="text-center  mb-4 CatText">CATEGORIES</h4>
         <div  className='text-end'>
-       <Button variant="primary" size="sm" href='https://www.google.com/search?q=product+category+list&sca_esv=caa5732678f1db22&hl=en&sxsrf=AHTn8zpatpLrBJy1PLqVsRS3Opb81HZlyQ:1746529967331&source=hp&biw=1280&bih=593&ei=r-4ZaJvwEarm1e8PlYfP4QE&iflsig=ACkRmUkAAAAAaBn8v2MaTaODCSN4pVviirRWFyCbETnX&oq=product+catego&gs_lp=EgNpbWciDnByb2R1Y3QgY2F0ZWdvKgIIATIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARI7FJQnwZYqUNwAXgAkAEAmAGqBaABjCGqAQwwLjEuMTAuMS4wLjK4AQHIAQD4AQGKAgtnd3Mtd2l6LWltZ5gCD6ACjyKoAgrCAgoQIxgnGMkCGOoCwgILEAAYgAQYsQMYgwHCAggQABiABBixA8ICDhAAGIAEGLEDGIMBGIoFwgIHEAAYgAQYCpgDGJIHDDEuMS4xMC4xLjEuMaAHsUeyBwwwLjEuMTAuMS4xLjG4B_Yh&sclient=img&udm=2'>All Categories</Button>
+       <button onClick={handleAllCategories} className='CatBtn'>All Categories</button>
         </div>
         <hr />
         <div className="category-scroll d-flex overflow-auto gap-3">
@@ -113,9 +102,10 @@ const HomePage = () => {
             <Col md={3} sm={6} xs={12}  className="mb-4">
               
           <div  key={idx} className='t1 mb-5  cardtotal'>
-              <Card className='cardimage' >
-                {/* <Card.Img variant="top" src={cat.image}  height="170" width="300"  style={{ objectFit: 'cover' }} /> */}
-                <Card.Img variant="top" src={cat.image} style={{ height: '170px', width: '100%', objectFit: 'cover' }} />
+              <Card className='cardimage' 
+              onClick={() => handleCardClick(cat.to)}
+              >
+                <Card.Img variant="top" src={cat.image} style={{ height: '150px', width: '100%', objectFit: 'cover' }} />
                 <Card.Body className='cardBody'>
                   <Card.Title className="text-center cardfont">{cat.title}</Card.Title>
                 </Card.Body>

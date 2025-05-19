@@ -25,11 +25,10 @@ const Listing = () => {
   const location = useLocation();
   const path = location.pathname.slice(1);
 
-  const filteredProducts = path === "all-categories" ? products : products.filter(p => p.category.toLowerCase() === path.toLowerCase());
-
+  const filteredProducts = path === "products/all-categories" ? products : products.filter(p => p.category.toLowerCase() === path.toLowerCase());
   return (
     <div className="listing-container">
-      <h1 className="page-title">{path === "all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}</h1>
+      <h1 className="page-title">{path === "products/all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}</h1>
       <div className="product-grid">
         {filteredProducts.map((product, index) => ( 
           <div key={index} className="product-card" style={{ backgroundColor: product.Colour, filter: product.stockCount === 0 ? "grayscale(100%)" : "none" }}>
