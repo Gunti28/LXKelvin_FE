@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {fetchProducts} from '../../lib/services/productsService';
+import {fetchProducts} from '../../lib/services/productsAsyncThunk';
 
 
 /**
@@ -18,10 +18,10 @@ const productsSlice = createSlice({
     name:"products",
     initialState,
     reducers:{
-        /**
-         * need to write the actions based on the usage
-         * 
-         */
+    /**
+     * need to write the actions based on the usage
+     * 
+     */
     },
     extraReducers: (builder) => {
     builder
