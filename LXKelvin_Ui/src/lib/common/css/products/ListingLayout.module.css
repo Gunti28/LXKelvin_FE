@@ -1,0 +1,70 @@
+.layoutContainer {
+  display: flex;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.hamburgerBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.sidebar a:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar a.active {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  font-weight: bold;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 30px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+ @media (min-width:768px  ) and (max-width: 1000px) {
+  .sidebar{
+    width: 170px;
+    font-size: 16px;
+  }
+
+}

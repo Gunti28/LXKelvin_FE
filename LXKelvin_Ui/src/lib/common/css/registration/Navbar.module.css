@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.heroSection {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-image: url("/src/lib/common/assets/Images/LandingPage.svg");
+  background-size: cover;
+  background-position: center;
+}
+.heroSection > * {
+  position: relative;
+  z-index: 1;
+}
+.navbar {
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
+  /* height: 100px; */
+}
+
+.searchContainer {
+  width: 500px;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  right: 40px;
+  top: 47%;
+  color: white;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.searchProducts {
+  position: absolute;
+  top: 45px;
+  width: 80%;
+  background: rgba(0, 0, 0,0.5);
+  color: #fff;
+  backdrop-filter: blur(25);
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+  border-radius: 10px;
+  z-index: 999;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.placeholder::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: white !important;
+  opacity: 1;
+}
+
+.searchBar ul {
+  z-index: 9999 !important;
+}
+
+.toggle {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.heroSection .navbar {
+  padding: 0.5rem 1rem;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+.whitePlaceholder::placeholder {
+  color: white;
+}
+
+@keyframes micPulse {
+  0% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #ff4d4d;
+  }
+  100% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+}
+
+.micAnimating {
+  animation: micPulse 1s infinite;
+}
+.ProfileCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-bottom: -0.5rem;
+  width: 7vw;
+  color: #ffffff;
+  font-size: 14px;
+}
+.ProfileSection {
+  cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  .searchBar {
+    width: 280px;
+  }
+  .lang {
+    margin-left: 25px;
+  }
+}
+@media (max-width: 1300px) {
+   .searchBar{
+    width: 280px;
+   }
+   .lang{
+    margin-left: 25px;
+   }
+  }
+ 
+  @media (max-width: 990px) {
+    .searchBar{
+margin-left: 200px;
+ 
+   }
+  }
+  @media (max-width: 690px) {
+    .searchBar{
+      margin-left: 100px;
+   }
+   .navbar{
+    padding: 0 !important;
+   }
+   }
+  @media (max-width: 500px) {
+    .searchBar{
+margin-left: 30px;
+   }
+  }
+ 
+  @media (max-width: 350px) {
+    .searchBar{
+margin-left: 0px;
+   }
+   .navbar{
+    padding: 0 !important;
+    margin: 0 !important;
+   }
+  }

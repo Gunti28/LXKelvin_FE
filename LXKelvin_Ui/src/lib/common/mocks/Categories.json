@@ -1,0 +1,29 @@
+{
+    "categories": [
+    {
+      "title": "Vegetables",
+      "image": "/src/lib/common/assets/Images/vegetables.svg",
+      "to": "/products/vegetables"
+    },
+    {
+      "title": "Fruits",
+      "image": "/src/lib/common/assets/Images/fruits.svg",
+      "to": "/products/fruits"
+    },
+    {
+      "title": "Seasonal Vegetables",
+      "image": "/src/lib/common/assets/Images/seasonal-vegetables.svg",
+      "to": "/products/seasonalvegetables"
+    },
+    {
+      "title": "Seasonal Fruits",
+      "image": "/src/lib/common/assets/Images/seasonal-fruits.svg",
+      "to": "/products/seasonalfruits"
+    },
+    {
+      "title": "milk",
+      "image": "/src/lib/common/assets/Images/main-milk-products.svg",
+      "to": "/products/milkproducts"
+    }
+  ]
+}
