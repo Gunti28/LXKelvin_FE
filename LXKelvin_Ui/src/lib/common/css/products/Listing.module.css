@@ -1,0 +1,178 @@
+
+.pageContainer {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.pageTitle {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+  gap: 1.5rem;
+}
+  
+.productCard {
+  display: inline-block;
+  width: calc(33.33% - 1rem); 
+  margin: 0.5rem;
+  background: #F4F6FB;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  vertical-align: top; 
+}
+  
+.productCard:hover {
+  transform: translateY(-5px);
+}
+.imgCon{
+  width: 100%;
+  height: 11rem;
+  padding: 3rem;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.productImage {
+  width: 120px;
+  height: 120px;
+}
+
+.productName {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.productQuantity {
+  padding: 0.5rem;
+  width: 15vw;
+  font-size: 14px;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.productPrice {
+  font-size: 16px;
+  margin-bottom: 0.75rem;
+  color: #222;
+}
+
+.originalPrice {
+  font-size: 14px;
+  color: #888;
+  text-decoration: line-through;
+  margin-left: 0.4rem;
+}
+
+.addToCart {
+  padding: 0.5rem 2rem;
+  font-size: 0.7rem;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #F9A502;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addToCart:hover {
+  background-color: #45a049;
+}
+
+.productMessage {
+  margin: 0.5rem 0;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: white;
+}
+
+.outOfStock {
+   padding: 0.5rem 1rem;
+   background-color: grey;
+   color: white;
+   transition: background-color 0.2s ease;
+   border: none;
+   border-radius: 6px;
+}
+
+.lowStock {
+  background-color: #ff9800;
+}
+
+.availableSoon {
+  background-color: #fbc02d;
+}
+
+.discount {
+  background-color: #4caf50;
+}
+
+@media (max-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: 2fr; 
+    gap: 1rem;
+  }
+
+  .pageTitle {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  .productCard {
+    padding: 0.75rem;
+  }
+
+  .productImage {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardsGrid {
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+
+  .pageTitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .productCard {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .productImage {
+    width: 90px;
+    height: 90px;
+  }
+  .productQuantity{
+    width: 100%;
+  }
+
+  .addToCart {
+    padding: 0.4rem 0.8rem;
+    font-size: 14px;
+  }
+}

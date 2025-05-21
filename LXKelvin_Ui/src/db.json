@@ -8,4 +8,4 @@
       { "id": 6, "name": "Milk", "category": "milkproducts", "price": 50, "isSeasonal": false },
       { "id": 7, "name": "Cheese", "category": "milkproducts", "price": 250, "isSeasonal": false }
     ]
-  }
+}

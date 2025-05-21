@@ -1,0 +1,160 @@
+{
+    "products": [
+    {
+      "id": 1,
+      "name": "Tomato",
+      "category": "vegetables",
+      "price": 40,
+      "originalPrice": 50,
+      "discount": 20,
+      "Colour": "#fbd7d7",
+      "image": "/src/lib/common/assets/Images/tomato.svg",
+      "stockCount": 5,
+      "isSeasonal": false
+    },
+    {
+      "id": 2,
+      "name": "Beans",
+      "category": "vegetables",
+      "price": 35,
+      "originalPrice": 45,
+      "discount": 10,
+      "Colour": "#c6f5c3",
+      "image": "/src/lib/common/assets/Images/beans.svg",
+      "stockCount": 5,
+      "isSeasonal": false
+    },
+    {
+      "id": 3,
+      "name": "Apple",
+      "category": "fruits",
+      "price": 120,
+      "originalPrice": 35,
+      "discount": 0,
+      "Colour": "#fbd7d7",
+      "image": "/src/lib/common/assets/Images/apple.svg",
+      "stockCount": 1,
+      "isSeasonal": false
+    },
+    {
+      "id": 4,
+      "name": "Cauliflower",
+      "category": "vegetables",
+      "price": 25,
+      "originalPrice": 35,
+      "discount": 5,
+      "Colour": "#e9f1d7",
+      "image": "/src/lib/common/assets/Images/cauliflower.svg",
+      "stockCount": 10,
+      "isSeasonal": false
+    },
+    {
+      "id": 5,
+      "name": "Banana",
+      "category": "fruits",
+      "price": 40,
+      "originalPrice": 35,
+      "discount": 0,
+      "Colour": "#EDD251",
+      "image": "/src/lib/common/assets/Images/banana.svg",
+      "stockCount": 20,
+      "isSeasonal": true
+    },
+    {
+      "id": 6,
+      "name": "Garlic",
+      "category": "vegetables",
+      "price": 30,
+      "originalPrice": 40,
+      "discount": 15,
+      "Colour": "#fef0dd",
+      "image": "/src/lib/common/assets/Images/garlic.svg",
+      "stockCount": 8,
+      "isSeasonal": false
+    },
+    {
+      "id": 7,
+      "name": "Watermelon",
+      "category": "fruits",
+      "price": 28,
+      "originalPrice": 35,
+      "discount": 0,
+      "Colour": "#E24C36",
+      "image": "/src/lib/common/assets/Images/watermelon.svg",
+      "stockCount": 3,
+      "isSeasonal": false
+    },
+    {
+      "id": 8,
+      "name": "Kiwi",
+      "category": "fruits",
+      "price": 28,
+      "originalPrice": 35,
+      "discount": 0,
+      "Colour": "#c6f5c3",
+      "image": "/src/lib/common/assets/Images/kiwi.svg",
+      "stockCount": 7,
+      "isSeasonal": false
+    },
+    {
+      "id": 9,
+      "name": "Capsicum",
+      "category": "vegetables",
+      "price": 60,
+      "originalPrice": 60,
+      "discount": 0,
+      "Colour": "#E24C36",
+      "image": "/src/lib/common/assets/Images/capsicum.svg",
+      "stockCount": 9,
+      "isSeasonal": true
+    },
+    {
+      "id": 10,
+      "name": "Onion",
+      "category": "vegetables",
+      "price": 150,
+      "originalPrice": 150,
+      "discount": 0,
+      "Colour": "#9B5366",
+      "image": "/src/lib/common/assets/Images/onion.svg",
+      "stockCount": 9,
+      "isSeasonal": false
+    },
+    {
+      "id": 11,
+      "name": "Strawberry",
+      "category": "fruits",
+      "price": 200,
+      "originalPrice": 200,
+      "discount": 0,
+      "Colour": "#F47775",
+      "image": "/src/lib/common/assets/Images/strawberry.svg",
+      "stockCount": 9,
+      "isSeasonal": true
+    },
+    {
+      "id": 12,
+      "name": "Milk",
+      "category": "milk-products",
+      "price": 50,
+      "originalPrice": 50,
+      "discount": 0,
+      "Colour": "#86AB85",
+      "image": "/src/lib/common/assets/Images/milk.svg",
+      "stockCount": 10,
+      "isSeasonal": false
+    },
+    {
+      "id": 13,
+      "name": "Cheese",
+      "category": "milk-products",
+      "price": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "Colour": "#DE8634",
+      "image": "/src/lib/common/assets/Images/cheese.svg",
+      "stockCount": 10,
+      "isSeasonal": false
+    }
+  ]
+}
