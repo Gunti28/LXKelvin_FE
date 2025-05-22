@@ -23,7 +23,7 @@
     {
       "title": "milk",
       "image": "/src/lib/common/assets/Images/main-milk-products.svg",
-      "to": "/products/milkproducts"
+      "to": "/products/milk-products"
     }
   ]
 }

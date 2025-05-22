@@ -46,7 +46,7 @@ const ProductList = () => {
 
   return (
     <div  className={styles.listingContainer}>
-            <h1 className={styles.pageTitle}>{path === "all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}</h1>
+    <h1 className={styles.pageTitle}>{path === "all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}</h1>
       <div className={styles.productGrid}>
         {products.map((product, index) => (
           <div
