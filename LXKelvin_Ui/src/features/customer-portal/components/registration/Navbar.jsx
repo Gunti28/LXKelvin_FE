@@ -6,7 +6,6 @@ import {
   Container,
   FormControl,
   Button,
-  InputGroup,
   Dropdown,
 } from "react-bootstrap";
 import { FaSearch, FaCamera, FaMicrophone } from "react-icons/fa";
@@ -17,24 +16,22 @@ import French from "../../../../lib/common/assets/Images/French.svg";
 import Spanish from "../../../../lib/common/assets/Images/Spanish.svg";
 import Greece from "../../../../lib/common/assets/Images/Greece.svg";
 import { MdOutlineCameraAlt } from "react-icons/md";
-import SignInModel from "./SignInModel";
-import OtpModel from "./OtpModel";
-import Register from "./Register";
-import Success from "./Success";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import Hero from "./OpeningScreen";
-import HomePage from "./Dashboard";
-import { Icon } from "@iconify/react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import productsData from "../../../../lib/common/mocks/products.json";
+import { Icon } from "@iconify/react";
 
-const NavbarComponent = () => {
+const NavbarComponent = ({ isLoggedIn }) => {
   const [, setScrolled] = useState(false);
+  const [showSigninBtn,setShowSigninBtn] = useState(true);
+  const [showProfile,setShowProfile] = useState(false);
+  const [showLanguage,setShowLanguage] = useState(true);
+  const [showDeals,setShowDeals] = useState(true);
 
-  const navigate = useNavigate();
-  const [showSignin, setShowSignin] = useState(true);
-  const [showProfile, setShowProfile] = useState(false);
+  const location = useLocation();
+  const path = location.pathname;
 
   const productNames = productsData.products.map(product => product.name);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,75 +49,41 @@ const NavbarComponent = () => {
     };
   }, []);
 
-  // const [showLocationModel, setShowLocationModel] = useState(false);
-  // const locationRef = useRef(null);
-  const [showPopover, setShowPopover] = useState(false);
-  // const targetRef = useRef(null);
-
-  const [userLocation] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-  // const [showDragAndDrop, setShowDragAndDrop] = useState(false);
-  const [showHero, setShowHero] = useState(true);
-  const [showDashboard, setShowDashboard] = useState(false);
-  // const [clearPreview, setClearPreview] = useState(false);
-
-  const handleSignIn = () => {
-    navigate("/signin");
-    setShowHero(false);
-    setShowDashboard(false);
-  };
-  const handleSigninSuccess = () => {
-    setShowSignin(false);
-    setShowProfile(true);
-  };
-
-  const SpeechRecognition =
-    window.SpeechRecognition || window.webkitSpeechRecognition;
-  const [listening, setListening] = useState(false);
-
-  const startListening = () => {
-    const SpeechRecognition =
-      window.SpeechRecognition || window.webkitSpeechRecognition;
-
-    if (!SpeechRecognition) {
-      alert("Speech Recognition not supported in this browser.");
-      return;
-    }
-
-    const recognition = new SpeechRecognition();
-    recognition.continuous = false;
-    recognition.interimResults = false;
-    recognition.lang = "en-US";
-    recognition.start();
-    setListening(true);
-    recognition.onresult = (event) => {
-      const transcript = event.results[0][0].transcript;
-      setSearchTerm(transcript);
-      setListening(false);
-    };
-
-    recognition.onerror = (event) => {
-      console.error("Speech recognition error:", event.error);
-      setListening(false);
-    };
-    recognition.onend = () => {
-      setListening(false);
-    };
-  };
-
+  const handleSignInBtn = () => {
+    navigate('/signin')
+  }
   useEffect(() => {
-    setTimeout(() => {
-      setShowHero(false);
-      setShowDashboard(true);
-    }, 3000);
-  }, []);
+    if(path !== "/"){
+      setShowProfile(true);
+      setShowSigninBtn(false);
+      setShowDeals(false);
+      setShowLanguage(false);
+    }else if (isLoggedIn){
+      setShowProfile(true);
+      setShowSigninBtn(false);
+      setShowDeals(true);
+      setShowLanguage(true);
+
+    }
+    else {return}
+}, [path, isLoggedIn]);
+
+  
+
+
+
 
   return (
-    <div className={NavbarCss.heroSection}>
+    <div className={NavbarCss.heroSection}
+    style={{
+      backgroundColor: path !== "/" ?"#fff":null
+    }}>
       <Navbar
         variant="dark"
         expand="lg"
-        className={`${NavbarCss.navbar} bg-transparent p-0  `}
+        className={`${NavbarCss.navbar} p-0  `}
+        style={{ backgroundColor:path !== "/"?"#fff":"transparent" }}
       >
         <Container fluid>
           <Navbar.Brand href="#">
@@ -130,39 +93,26 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
               <div
-                onClick={() => setShowPopover(!showPopover)}
-                // onMouseEnter={() => setShowPopover(true)}
-                // onMouseLeave={() => setShowPopover(false)}
-                // style={{ position: "relative", display: "inline-block" }}
               >
                 <Nav.Link
                   href="#"
-                  //   ref={targetRef}
-                  className="text-white"
+                  className= {path!=="/"?"text-secondary":"text-white"}
+                  //  styles={{color:path !== "dashboard"?"#5B5F62":"#fff"}}
                 >
-                  {userLocation
-                    ? `${userLocation.slice(0, 20)}...`
-                    : "Location"}
+                    Location
                 </Nav.Link>
-
-                {/* <LocationModel
-                  show={showPopover}
-                  onClose={() => setShowPopover(false)}
-                  target={targetRef.current}
-                  container={targetRef.current?.closest(".navbar")}
-                  onLocationSet={(location) => {
-                    setUserLocation(location);
-                    setShowPopover(false);
-                  }}
-                /> */}
               </div>
 
+              {showDeals&&(
+                <>
               <Nav.Link href="#" className="text-white">
                 Best Seller
               </Nav.Link>
               <Nav.Link href="#" className="text-white">
                 Today Deals
               </Nav.Link>
+              </>
+              )}
             </Nav>
 
             <div
@@ -175,7 +125,7 @@ const NavbarComponent = () => {
                     left: "15px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color: "white",
+                    color: path !== "/"?"#5B5F62":"#fff",
                     zIndex: 2,
                   }}
                 />
@@ -191,38 +141,37 @@ const NavbarComponent = () => {
                     paddingLeft: "40px",
                     paddingRight: "40px",
                     borderWidth: 1.5,
-                    borderColor: "white",
+                    borderColor: path !== "/"?"#5B5F62":"#fff",
                     backgroundColor: "transparent",
                     color: "white",
                   }}
                 />
 
                 <IoMic
-                  onClick={startListening}
-                  className={listening ? "mic-animating" : ""}
                   style={{
                     position: "absolute",
                     right: "50px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color: "white",
+                    color:  path !== "/"?"#5B5F62":"#fff",
                     zIndex: 2,
                     cursor: "pointer",
                   }}
                 />
                 <div
                   className={NavbarCss.line}
+                   style={{color:path !== "/"?"#5B5F62":"#fff"}}
                 >
                   |
                 </div>
                 <MdOutlineCameraAlt
-                  // onClick={() => setShowDragAndDrop(true)}
+                  
                   style={{
                     position: "absolute",
                     right: "15px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color: "white",
+                    color:  path !== "/"?"#5B5F62":"#fff",
                     zIndex: 2,
                     cursor: "pointer",
                   }}
@@ -262,7 +211,8 @@ const NavbarComponent = () => {
             </div>
 
             <div className="d-flex align-items-center gap-3">
-              
+
+              {showLanguage && (
               <Dropdown>
                 <Dropdown.Toggle
                   variant="light"
@@ -287,15 +237,18 @@ const NavbarComponent = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-              {showSignin && (
+              )}
+              {showSigninBtn && (
+              
                 <Button
                   variant="warning"
                   className=" w-35"
-                  onClick={handleSignIn}
+                  onClick={handleSignInBtn}
+                  
                 >
                   Sign In
                 </Button>
-              )}
+                )}
               {showProfile && (
                 <div className={NavbarCss.ProfileCon}>
                   <div className={NavbarCss.ProfileSection}>
@@ -303,18 +256,18 @@ const NavbarComponent = () => {
                       icon="ix:user-profile"
                       width="24"
                       height="24"
-                      style={{ color: "#fff" }}
+                      style={{ color:path !== "/"?"#5B5F62":"#fff" }}
                     />
-                    <p>User</p>
+                    <p style={{ color:path !== "/"?"#5B5F62":"#fff" }}>User</p>
                   </div>
                   <div className={NavbarCss.CartSection}>
                     <Icon
                       icon="solar:bag-linear"
                       width="24"
                       height="24"
-                      style={{ color: "#fff" }}
+                      style={{ color:path !== "/"?"#5B5F62":"#fff" }}
                     />
-                    <p>Cart</p>
+                    <p style={{ color:path !== "/"?"#5B5F62":"#fff" }}>Cart</p>
                   </div>
                 </div>
               )}
@@ -322,69 +275,9 @@ const NavbarComponent = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {/* {showDragAndDrop && (
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 3000,
-          }}
-          onClick={() => setShowDragAndDrop(false)}
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            style={{
-              backgroundColor: "#fff",
-              padding: "10px",
-              borderRadius: "10px",
-              width: "60%",
-              height: "40%",
-              overflow: "auto",
-            }}
-          >
-            <DragAndDrop clearPreview={clearPreview} />
-            <button
-              onClick={() => setShowDragAndDrop(false)}
-              style={{
-                marginTop: "10px",
-                background: "#929292",
-                color: "white",
-                border: "none",
-                padding: "6px 12px",
-                borderRadius: "6px",
-                cursor: "pointer",
-                align :"right",
-                float: "right",
-              }}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )} */}
-      {showHero && <Hero />}
-      {showDashboard && <HomePage />}
-      {/* Routes */}
-      <Routes>
-        <Route path="signin" element={<SignInModel />} />
-        <Route
-          path="enterotp"
-          element={<OtpModel onOtpSuccess={handleSigninSuccess} />}
-        />
-        <Route path="registeruser" element={<Register />} />
-        <Route path="success" element={<Success />} />
-        <Route path="/dashboard" element={<HomePage />} />
-      </Routes>
+      <Outlet />
     </div>
   );
 };
 
 export default NavbarComponent;
-<routerOutlet />

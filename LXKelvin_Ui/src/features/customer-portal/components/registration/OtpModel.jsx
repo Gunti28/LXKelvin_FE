@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
-const OtpModel = ({onOtpSuccess}) => {
+const OtpModel = ({setIsLoggedIn}) => {
 
     const [otp, setOtp] = useState(['', '', '', '']);
     const [timer, setTimer] = useState();
@@ -41,11 +41,12 @@ const handleChange = (value, index) => {
     if (index === 3 && value) {
       const enteredOtp = newOtp.join('');
       if (enteredOtp === '1234') {
+        setIsLoggedIn(true);
         toast.success('OTP Verified!');
-        onOtpSuccess();
         setTimeout(() => {
-          navigate('/dashboard')
+          navigate('/')
         }, 1000);
+        
       } else {
         toast.error('Invalid OTP!!');
       }
