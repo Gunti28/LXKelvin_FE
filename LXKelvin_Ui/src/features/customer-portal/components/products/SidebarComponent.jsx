@@ -1,51 +1,64 @@
-import React, { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { Offcanvas, Button, Breadcrumb } from 'react-bootstrap';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { Offcanvas, Button, Breadcrumb } from "react-bootstrap";
+import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "../../../../lib/common/css/products/ListingLayout.module.css";
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import allproducts from "../../../../lib/common/assets/Images/all-categories-sidebar.svg"
-import vegetables from "../../../../lib/common/assets/Images/vegetables-sidebar.svg"
-import fruits from "../../../../lib/common/assets/Images/fruits-sidebar.svg"
-import seasonalvegetables from "../../../../lib/common/assets/Images/seasonal-vegetables-sidebar.svg"
-import seasonalfruits from "../../../../lib/common/assets/Images/seasonal-fruits-sidebar.svg"
-import milkproducts from "../../../../lib/common/assets/Images/milk-products-sidebar.svg"
+import { Link, NavLink, useLocation } from "react-router-dom";
+// import allproducts from "../../../../lib/common/assets/Images/all-categories-sidebar.svg"
+// import vegetables from "../../../../lib/common/assets/Images/vegetables-sidebar.svg"
+// import fruits from "../../../../lib/common/assets/Images/fruits-sidebar.svg"
+// import seasonalvegetables from "../../../../lib/common/assets/Images/seasonal-vegetables-sidebar.svg"
+// import seasonalfruits from "../../../../lib/common/assets/Images/seasonal-fruits-sidebar.svg"
+// import milkproducts from "../../../../lib/common/assets/Images/milk-products-sidebar.svg"
+
+import {
+  ALL_PRODUCTS,
+  VEGETABLES,
+  FRUITS,
+  SEASONAL_VEGETABLES,
+  SEASONAL_FRUITS,
+  MILK_PRODUCTS,
+} from "../../../../lib/constants/Image_Constants/index";
 
 const SidebarComponent = () => {
-    const [show, setShow] = useState(false);
-    
-      const handleClose = () => setShow(false);
-      const handleShow = () => setShow(true);
-        const categoryIcons = {
-    'all-categories': allproducts,
-    'vegetables': vegetables,
-    'fruits': fruits,
-    'seasonalvegetables': seasonalvegetables,
-    'seasonalfruits': seasonalfruits,
-    'milk-products': milkproducts,
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const categoryIcons = {
+    "all-categories": ALL_PRODUCTS,
+    vegetables: VEGETABLES,
+    fruits: FRUITS,
+    seasonalVegetables: SEASONAL_VEGETABLES,
+    seasonalFruits: SEASONAL_FRUITS,
+    milkProducts: MILK_PRODUCTS,
   };
-    const formatName = (key) => {
+  const formatName = (key) => {
     const map = {
-      'all-categories': 'All Categories',
-      'vegetables': 'Vegetables',
-      'fruits': 'Fruits',
-      'seasonalvegetables': 'Seasonal Vegetables',
-      'seasonalfruits': 'Seasonal Fruits',
-      'milk-products': 'Milk Products',
+      "all-categories": "All Categories",
+      vegetables: "Vegetables",
+      fruits: "Fruits",
+      seasonalVegetables: "Seasonal Vegetables",
+      seasonalFruits: "Seasonal Fruits",
+      milkProducts: "Milk Products",
     };
     return map[key] || key;
   };
   const location = useLocation();
-  const pathnames = location.pathname.split('/').filter(x => x);
+  const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
     <div>
-        <Button className={`d-md-none mb-3 ${styles.hamburgerBtn}`} onClick={handleShow} variant="outline-primary">
+      <Button
+        className={`d-md-none mb-3 ${styles.hamburgerBtn}`}
+        onClick={handleShow}
+        variant="outline-primary"
+      >
         <GiHamburgerMenu size={24} />
       </Button>
       <aside className={`${styles.sidebar} d-none d-md-block`}>
-          {/* <Breadcrumb className={`mb-4 ${styles.BreadCrumbCon}`}>
+        {/* <Breadcrumb className={`mb-4 ${styles.BreadCrumbCon}`}>
           <Breadcrumb.Item className="text-black" active>Home</Breadcrumb.Item>
           {pathnames.map((name, index) => (
             <Breadcrumb.Item key={index} active className="text-black">
@@ -54,7 +67,11 @@ const SidebarComponent = () => {
           ))}
         </Breadcrumb> */}
         <Breadcrumb className="mb-4">
-          <Breadcrumb.Item linkAs={Link} linkProps={{ to: '/' }} className={`text-black ${styles.upperHome}`}>
+          <Breadcrumb.Item
+            linkAs={Link}
+            linkProps={{ to: "/" }}
+            className={`text-black ${styles.upperHome}`}
+          >
             Home
           </Breadcrumb.Item>
 
@@ -62,30 +79,43 @@ const SidebarComponent = () => {
             const isLast = index === pathnames.length - 1;
 
             return isLast ? (
-              <Breadcrumb.Item key={index} active className={`text-black ${styles.upperHome}`}>
-                {name.replace(/-/g, ' ')}
+              <Breadcrumb.Item
+                key={index}
+                active
+                className={`text-black ${styles.upperHome}`}
+              >
+                {name.replace(/-/g, " ")}
               </Breadcrumb.Item>
             ) : (
               <Breadcrumb.Item
                 key={index}
                 linkAs={Link}
-                linkProps={{ to: '/products/all-categories' }}
+                linkProps={{ to: "/products/all-categories" }}
                 className={`text-black ${styles.upperHome}`}
               >
-                {name.replace(/-/g, ' ')}
+                {name.replace(/-/g, " ")}
               </Breadcrumb.Item>
             );
           })}
         </Breadcrumb>
         <nav>
-                      {Object.keys(categoryIcons).map((key, index) => (
-              <li key={index}>
-                <NavLink to={`/products/${key}`} className={({ isActive }) => isActive ? `${styles.active}` : ''}>
-                  <img src={categoryIcons[key]} alt={key} className={styles.icon} />
-                  {formatName(key)}
-                </NavLink>
-              </li>
-            ))}
+          {Object.keys(categoryIcons).map((key, index) => (
+            <li key={index}>
+              <NavLink
+                to={`/products/${key}`}
+                className={({ isActive }) =>
+                  isActive ? `${styles.active}` : ""
+                }
+              >
+                <img
+                  src={categoryIcons[key]}
+                  alt={key}
+                  className={styles.icon}
+                />
+                {formatName(key)}
+              </NavLink>
+            </li>
+          ))}
         </nav>
       </aside>
 
@@ -97,8 +127,18 @@ const SidebarComponent = () => {
           <ul className={styles.sidebar}>
             {Object.keys(categoryIcons).map((key, index) => (
               <li key={index}>
-                <NavLink to={`/products/${key}`} onClick={handleClose} className={({ isActive }) => isActive ? `${styles.active}` : ''}>
-                  <img src={categoryIcons[key]} alt={key} className={styles.icon} />
+                <NavLink
+                  to={`/products/${key}`}
+                  onClick={handleClose}
+                  className={({ isActive }) =>
+                    isActive ? `${styles.active}` : ""
+                  }
+                >
+                  <img
+                    src={categoryIcons[key]}
+                    alt={key}
+                    className={styles.icon}
+                  />
                   {formatName(key)}
                 </NavLink>
               </li>
@@ -106,9 +146,8 @@ const SidebarComponent = () => {
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
-
     </div>
-  )
-}
+  );
+};
 
-export default SidebarComponent
+export default SidebarComponent;

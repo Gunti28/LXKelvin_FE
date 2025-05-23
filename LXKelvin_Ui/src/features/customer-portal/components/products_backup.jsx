@@ -1,11 +1,10 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../lib/services/productsAsyncThunk";
-
 
 /**
  *  to view the all products
- * @returns 
+ * @returns
  */
 const Products = () => {
   /**
@@ -14,20 +13,19 @@ const Products = () => {
   const dispatch = useDispatch();
   const { products, status, error } = useSelector((state) => state.products);
   let productsContent;
-  
+
   /**
-   * to get the initial page render 
+   * to get the initial page render
    */
   useEffect(() => {
-    if (status === 'init') {
+    if (status === "init") {
       dispatch(fetchProducts());
     }
   }, [dispatch, status]);
 
-
-  if (status === 'loading') {
+  if (status === "loading") {
     productsContent = <div>Loading...</div>;
-  } else if (status === 'succeeded') {
+  } else if (status === "succeeded") {
     productsContent = (
       <ul>
         {products.map((product) => (
@@ -35,13 +33,11 @@ const Products = () => {
         ))}
       </ul>
     );
-  } else if (status === 'failed') {
+  } else if (status === "failed") {
     productsContent = <div>{error}</div>;
   }
 
   return <div>{productsContent}</div>;
-
-}
+};
 
 export default Products;
-
