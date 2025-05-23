@@ -1,5 +1,5 @@
 import NavbarCss from "../../../../lib/common/css/registration/Navbar.module.css";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Navbar,
   Nav,
@@ -8,7 +8,7 @@ import {
   Button,
   Dropdown,
 } from "react-bootstrap";
-import { FaSearch, FaCamera, FaMicrophone } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { IoMic } from "react-icons/io5";
 import Logo from "../../../../lib/common/assets/Images/Logo.svg";
 import Italian from "../../../../lib/common/assets/Images/italian.svg";
@@ -17,20 +17,18 @@ import Spanish from "../../../../lib/common/assets/Images/Spanish.svg";
 import Greece from "../../../../lib/common/assets/Images/Greece.svg";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import productsData from "../../../../lib/common/mocks/products.json";
 import { Icon } from "@iconify/react";
 
 const NavbarComponent = ({ isLoggedIn }) => {
-  const [, setScrolled] = useState(false);
-  const [showSigninBtn,setShowSigninBtn] = useState(true);
-  const [showProfile,setShowProfile] = useState(false);
-  const [showLanguage,setShowLanguage] = useState(true);
-  const [showDeals,setShowDeals] = useState(true);
-
+  let contentWrapper;
+  const [setScrolled] = useState(false);
+  const [showSigninBtn, setShowSigninBtn] = useState(true);
+  const [showProfile, setShowProfile] = useState(false);
+  const [showLanguage, setShowLanguage] = useState(true);
+  const [showDeals, setShowDeals] = useState(true);
   const location = useLocation();
   const path = location.pathname;
-
-  const productNames = productsData.products.map(product => product.name);
+  //   const productNames = products?.map(product => product.name);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,7 +41,6 @@ const NavbarComponent = ({ isLoggedIn }) => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -51,39 +48,38 @@ const NavbarComponent = ({ isLoggedIn }) => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const handleSignInBtn = () => {
-    navigate('/signin')
-  }
+    navigate("/signin");
+  };
+
   useEffect(() => {
-    if(path !== "/"){
+    if (path !== "/") {
       setShowProfile(true);
       setShowSigninBtn(false);
       setShowDeals(false);
       setShowLanguage(false);
-    }else if (isLoggedIn){
+    } else if (isLoggedIn) {
       setShowProfile(true);
       setShowSigninBtn(false);
       setShowDeals(true);
       setShowLanguage(true);
-
+    } else {
+      return;
     }
-    else {return}
-}, [path, isLoggedIn]);
+  }, [path, isLoggedIn]);
 
-  
-
-
-
-
-  return (
-    <div className={NavbarCss.heroSection}
-    style={{
-      backgroundColor: path !== "/" ?"#fff":null
-    }}>
+  /**
+   * need split content for wrapping success and failed cases
+   */
+  contentWrapper = (
+    <div
+      className={NavbarCss.heroSection}
+      style={{ backgroundColor: path !== "/" ? "#fff" : null }}
+    >
       <Navbar
         variant="dark"
         expand="lg"
         className={`${NavbarCss.navbar} p-0  `}
-        style={{ backgroundColor:path !== "/"?"#fff":"transparent" }}
+        style={{ backgroundColor: path !== "/" ? "#fff" : "transparent" }}
       >
         <Container fluid>
           <Navbar.Brand href="#">
@@ -92,26 +88,24 @@ const NavbarComponent = ({ isLoggedIn }) => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
-              <div
-              >
+              <div>
                 <Nav.Link
                   href="#"
-                  className= {path!=="/"?"text-secondary":"text-white"}
-                  //  styles={{color:path !== "dashboard"?"#5B5F62":"#fff"}}
+                  className={path !== "/" ? "text-secondary" : "text-white"}
                 >
-                    Location
+                  Location
                 </Nav.Link>
               </div>
 
-              {showDeals&&(
+              {showDeals && (
                 <>
-              <Nav.Link href="#" className="text-white">
-                Best Seller
-              </Nav.Link>
-              <Nav.Link href="#" className="text-white">
-                Today Deals
-              </Nav.Link>
-              </>
+                  <Nav.Link href="#" className="text-white">
+                    Best Seller
+                  </Nav.Link>
+                  <Nav.Link href="#" className="text-white">
+                    Today Deals
+                  </Nav.Link>
+                </>
               )}
             </Nav>
 
@@ -125,7 +119,7 @@ const NavbarComponent = ({ isLoggedIn }) => {
                     left: "15px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color: path !== "/"?"#5B5F62":"#fff",
+                    color: path !== "/" ? "#5B5F62" : "#fff",
                     zIndex: 2,
                   }}
                 />
@@ -141,7 +135,7 @@ const NavbarComponent = ({ isLoggedIn }) => {
                     paddingLeft: "40px",
                     paddingRight: "40px",
                     borderWidth: 1.5,
-                    borderColor: path !== "/"?"#5B5F62":"#fff",
+                    borderColor: path !== "/" ? "#5B5F62" : "#fff",
                     backgroundColor: "transparent",
                     color: "white",
                   }}
@@ -153,31 +147,30 @@ const NavbarComponent = ({ isLoggedIn }) => {
                     right: "50px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color:  path !== "/"?"#5B5F62":"#fff",
+                    color: path !== "/" ? "#5B5F62" : "#fff",
                     zIndex: 2,
                     cursor: "pointer",
                   }}
                 />
                 <div
                   className={NavbarCss.line}
-                   style={{color:path !== "/"?"#5B5F62":"#fff"}}
+                  style={{ color: path !== "/" ? "#5B5F62" : "#fff" }}
                 >
                   |
                 </div>
                 <MdOutlineCameraAlt
-                  
                   style={{
                     position: "absolute",
                     right: "15px",
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color:  path !== "/"?"#5B5F62":"#fff",
+                    color: path !== "/" ? "#5B5F62" : "#fff",
                     zIndex: 2,
                     cursor: "pointer",
                   }}
                 />
               </div>
-              {searchTerm && (
+              {/* {searchTerm && (
                 <ul
                 className={NavbarCss.searchProducts}
                 >
@@ -207,48 +200,45 @@ const NavbarComponent = ({ isLoggedIn }) => {
                     <li style={{ color: "gray" }}>No products found</li>
                   )}
                 </ul>
-              )}
+              )} */}
             </div>
 
             <div className="d-flex align-items-center gap-3">
-
               {showLanguage && (
-              <Dropdown>
-                <Dropdown.Toggle
-                  variant="light"
-                  id="dropdown-language"
-                  className={`me-5 ${NavbarCss.lang}`}
-                >
-                  <img src={Italian} alt="Italian" width={20} />
-                  Italian
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item>
-                    <img src={Greece} alt="Italian" width={20} />
-                    Greece
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <img src={Spanish} alt="Italian" width={20} />
-                    Spanish
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <img src={French} alt="Italian" width={20} />
-                    French
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+                <Dropdown>
+                  <Dropdown.Toggle
+                    variant="light"
+                    id="dropdown-language"
+                    className={`me-5 ${NavbarCss.lang}`}
+                  >
+                    <img src={Italian} alt="Italian" width={20} />
+                    Italian
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item>
+                      <img src={Greece} alt="Italian" width={20} />
+                      Greece
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <img src={Spanish} alt="Italian" width={20} />
+                      Spanish
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <img src={French} alt="Italian" width={20} />
+                      French
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               )}
               {showSigninBtn && (
-              
                 <Button
                   variant="warning"
                   className=" w-35"
                   onClick={handleSignInBtn}
-                  
                 >
                   Sign In
                 </Button>
-                )}
+              )}
               {showProfile && (
                 <div className={NavbarCss.ProfileCon}>
                   <div className={NavbarCss.ProfileSection}>
@@ -256,18 +246,22 @@ const NavbarComponent = ({ isLoggedIn }) => {
                       icon="ix:user-profile"
                       width="24"
                       height="24"
-                      style={{ color:path !== "/"?"#5B5F62":"#fff" }}
+                      style={{ color: path !== "/" ? "#5B5F62" : "#fff" }}
                     />
-                    <p style={{ color:path !== "/"?"#5B5F62":"#fff" }}>User</p>
+                    <p style={{ color: path !== "/" ? "#5B5F62" : "#fff" }}>
+                      User
+                    </p>
                   </div>
                   <div className={NavbarCss.CartSection}>
                     <Icon
                       icon="solar:bag-linear"
                       width="24"
                       height="24"
-                      style={{ color:path !== "/"?"#5B5F62":"#fff" }}
+                      style={{ color: path !== "/" ? "#5B5F62" : "#fff" }}
                     />
-                    <p style={{ color:path !== "/"?"#5B5F62":"#fff" }}>Cart</p>
+                    <p style={{ color: path !== "/" ? "#5B5F62" : "#fff" }}>
+                      Cart
+                    </p>
                   </div>
                 </div>
               )}
@@ -278,6 +272,7 @@ const NavbarComponent = ({ isLoggedIn }) => {
       <Outlet />
     </div>
   );
+  return <>{contentWrapper}</>;
 };
 
 export default NavbarComponent;

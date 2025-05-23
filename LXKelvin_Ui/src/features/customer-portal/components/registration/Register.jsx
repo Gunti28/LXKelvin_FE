@@ -6,8 +6,7 @@ import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
-const Register =() => {
-
+const Register = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -28,8 +27,7 @@ const Register =() => {
       return;
     } else {
       setError("");
-      navigate('/success')
-
+      navigate("/success");
     }
   };
 
@@ -136,7 +134,6 @@ const Register =() => {
             >
               Continue
             </Button>
-            
           </Form>
         </Container>
       </Modal.Body>
@@ -150,6 +147,6 @@ const Register =() => {
       </Modal.Footer>
     </Modal>
   );
-}
+};
 
 export default Register;

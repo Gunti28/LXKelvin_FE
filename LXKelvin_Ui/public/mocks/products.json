@@ -1,5 +1,5 @@
 {
-    "products": [
+  "products": [
     {
       "id": 1,
       "name": "Tomato",
@@ -135,7 +135,7 @@
     {
       "id": 12,
       "name": "Milk",
-      "category": "milk-products",
+      "category": "milkProducts",
       "price": 50,
       "originalPrice": 50,
       "discount": 0,
@@ -147,7 +147,7 @@
     {
       "id": 13,
       "name": "Cheese",
-      "category": "milk-products",
+      "category": "milkProducts",
       "price": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -575,8 +575,7 @@
       "image": "/src/lib/common/assets/Images/jackfruit.svg",
       "stockCount": 10,
       "isSeasonal": true
-    }
-    ,
+    },
     {
       "id": 49,
       "name": "Lychee",
@@ -661,6 +660,5 @@
       "stockCount": 10,
       "isSeasonal": true
     }
-
   ]
 }

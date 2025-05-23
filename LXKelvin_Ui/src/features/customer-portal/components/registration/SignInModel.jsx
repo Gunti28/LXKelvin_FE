@@ -1,26 +1,23 @@
-
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Logo from "../../../../lib/common/assets/Images/Logo.svg";
 import FooterImg from "../../../../lib/common/assets/Images/footerimg.jpg";
-import  ModelPage from  "../../../../lib/common/css/registration/ModelPage.module.css";
+import ModelPage from "../../../../lib/common/css/registration/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 
-
 const SignInModel = () => {
-
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email submitted:", email);
-    navigate('/enterotp');
+    navigate("/enterotp");
   };
   const handleRegister = () => {
-    navigate('/registeruser')
-  }
+    navigate("/registeruser");
+  };
 
   return (
     <Modal
@@ -34,7 +31,9 @@ const SignInModel = () => {
           <img src={Logo} width={150} />
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body className={`border-0 d-flex justify-content-center align-items-center flex-column ${ModelPage.body}`} >
+      <Modal.Body
+        className={`border-0 d-flex justify-content-center align-items-center flex-column ${ModelPage.body}`}
+      >
         <div className="text-center">
           <p className="fs-5 texting ">Experience the Taste of Real Organic</p>
           <p className={ModelPage.textingsmall}>Login or SignUp</p>
@@ -49,27 +48,30 @@ const SignInModel = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className={ModelPage.formCont}
-                
               />
             </Form.Group>
             <Button variant="warning" type="submit" className="w-100 mt-3 mb-2">
               Continue
             </Button>
-            <p className={`${ModelPage.NewUserText} justify-content-center align-items-center d-flex `}>New User ?<span onClick={handleRegister} className={ModelPage.RegText}>&nbsp;Register now</span>
+            <p
+              className={`${ModelPage.NewUserText} justify-content-center align-items-center d-flex `}
+            >
+              New User ?
+              <span onClick={handleRegister} className={ModelPage.RegText}>
+                &nbsp;Register now
+              </span>
             </p>
-            
           </Form>
         </Container>
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
           src={FooterImg}
-          className={`image-fluid w-100 ${ ModelPage.footerImg}`}
-          
+          className={`image-fluid w-100 ${ModelPage.footerImg}`}
         />
       </Modal.Footer>
     </Modal>
   );
-}
+};
 
 export default SignInModel;
