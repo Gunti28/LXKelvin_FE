@@ -39,6 +39,17 @@ const NavbarComponent = () => {
   //   const productNames = products?.map(product => product.name);
   const navigate = useNavigate();
 
+  const [selectedLang, setSelectedLang] = useState({
+    name: "Italian",
+    icon: ITALIAN,
+  });
+
+  const languages = [
+    { name: "Greece", icon: GREECE },
+    { name: "Spanish", icon: SPANISH },
+    { name: "French", icon: FRENCH },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -129,36 +140,44 @@ const NavbarComponent = () => {
       >
         <Container fluid>
           <Navbar.Brand href="#">
-            <img src={LOGO} alt="LOGO" width={60} />
+            <img src={LOGO} alt="LOGO" className={NavbarCss.LogoImg} />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
+
+          <Navbar.Toggle
+            aria-controls="navbarScroll"
+            style={{
+              backgroundColor: text_color ? "#5B5F62" : "transparent",
+            }}
+          />
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
-              <div>
-                <Nav.Link
-                  href="#"
-                  className={text_color ? "text-secondary" : "text-white"}
-                >
-                  Location
-                </Nav.Link>
-              </div>
+              <div className={NavbarCss.DealsCon}>
+                <div>
+                  <Nav.Link
+                    href="#"
+                    className={text_color ? "text-secondary" : "text-white"}
+                  >
+                    Location
+                  </Nav.Link>
+                </div>
 
-              {showDeals && (
-                <>
-                  <Nav.Link
-                    href="#"
-                    className={text_color ? "text-secondary" : "text-white"}
-                  >
-                    Best Seller
-                  </Nav.Link>
-                  <Nav.Link
-                    href="#"
-                    className={text_color ? "text-secondary" : "text-white"}
-                  >
-                    Today Deals
-                  </Nav.Link>
-                </>
-              )}
+                {showDeals && (
+                  <>
+                    <Nav.Link
+                      href="#"
+                      className={text_color ? "text-secondary" : "text-white"}
+                    >
+                      Best Seller
+                    </Nav.Link>
+                    <Nav.Link
+                      href="#"
+                      className={text_color ? "text-secondary" : "text-white"}
+                    >
+                      Today Deals
+                    </Nav.Link>
+                  </>
+                )}
+              </div>
             </Nav>
 
             <div
@@ -257,37 +276,44 @@ const NavbarComponent = () => {
               )} */}
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div
+              className={`d-flex align-items-center gap-3 ${NavbarCss.langAndSignin}`}
+            >
               {showLanguage && (
                 <Dropdown>
                   <Dropdown.Toggle
                     variant="light"
                     id="dropdown-language"
-                    className={`me-5 ${NavbarCss.lang}`}
+                    className={NavbarCss.languageToggle}
                   >
-                    <img src={ITALIAN} alt="Italian" width={20} />
-                    Italian
+                    <div className={NavbarCss.langDisplay}>
+                      <img src={selectedLang.icon} alt={selectedLang.name} />
+                      <span>{selectedLang.name}</span>
+                    </div>
                   </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item>
-                      <img src={GREECE} alt="Greece" width={20} />
-                      Greece
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <img src={SPANISH} alt="Italian" width={20} />
-                      Spanish
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <img src={FRENCH} alt="Italian" width={20} />
-                      French
-                    </Dropdown.Item>
+
+                  <Dropdown.Menu className={NavbarCss.dropDownMenu}>
+                    {languages.map((lang) => (
+                      <Dropdown.Item
+                        key={lang.name}
+                        onClick={() => setSelectedLang(lang)}
+                        className={NavbarCss.languageItem}
+                      >
+                        <img
+                          src={lang.icon}
+                          alt={lang.name}
+                          className={NavbarCss.dropDownImg}
+                        />
+                        <span>{lang.name}</span>
+                      </Dropdown.Item>
+                    ))}
                   </Dropdown.Menu>
                 </Dropdown>
               )}
               {showSigninBtn && (
                 <Button
                   variant="warning"
-                  className=" w-35"
+                  className={NavbarCss.SigninBtn}
                   onClick={handleSignInBtn}
                 >
                   Sign In
@@ -304,13 +330,15 @@ const NavbarComponent = () => {
                         color: text_color ? "#5B5F62" : "#fff",
                       }}
                     />
-                    <p
-                      style={{
-                        color: text_color ? "#5B5F62" : "#fff",
-                      }}
-                    >
-                      {userData?.userName}
-                    </p>
+                    <div className={NavbarCss.profileNameContainer}>
+                      <p
+                        style={{
+                          color: text_color ? "#5B5F62" : "#fff",
+                        }}
+                      >
+                        {userData?.userName}
+                      </p>
+                    </div>
                   </div>
                   <div className={NavbarCss.CartSection}>
                     <Icon

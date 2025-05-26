@@ -27,7 +27,7 @@ const CategoriesComponent = () => {
         </button>
       </div>
       <hr />
-      <div className=" d-flex overflow-auto gap-3 ">
+      <div className={`d-flex overflow-auto gap-3 ${Category.CardWrapper}`}>
         {categoriesList.map((cat, idx) => (
           <Col md={3} sm={6} xs={12} key={idx} className="mb-4">
             <div key={idx} className={`t1 mb-5 ${Category.cardtotal}`}>
