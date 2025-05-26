@@ -140,7 +140,9 @@ const NavbarComponent = () => {
       >
         <Container fluid>
           <Navbar.Brand href="#">
+
             <img src={LOGO} alt="LOGO" className={NavbarCss.LogoImg} />
+
           </Navbar.Brand>
 
           <Navbar.Toggle
@@ -151,13 +153,17 @@ const NavbarComponent = () => {
           />
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
+
               <div className={NavbarCss.DealsCon}>
                 <div>
+
                   <Nav.Link
                     href="#"
                     className={text_color ? "text-secondary" : "text-white"}
                   >
+
                     Location
+
                   </Nav.Link>
                 </div>
 
@@ -286,6 +292,7 @@ const NavbarComponent = () => {
                     id="dropdown-language"
                     className={NavbarCss.languageToggle}
                   >
+
                     <div className={NavbarCss.langDisplay}>
                       <img src={selectedLang.icon} alt={selectedLang.name} />
                       <span>{selectedLang.name}</span>
@@ -307,6 +314,7 @@ const NavbarComponent = () => {
                         <span>{lang.name}</span>
                       </Dropdown.Item>
                     ))}
+
                   </Dropdown.Menu>
                 </Dropdown>
               )}
@@ -330,6 +338,7 @@ const NavbarComponent = () => {
                         color: text_color ? "#5B5F62" : "#fff",
                       }}
                     />
+
                     <div className={NavbarCss.profileNameContainer}>
                       <p
                         style={{
