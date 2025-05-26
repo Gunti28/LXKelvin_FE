@@ -59,6 +59,11 @@ const NavbarComponent = () => {
     navigate("/signIn");
   };
 
+    const handleAccountClick = () => {
+    navigate("/myaccount"); 
+  };
+
+
   useEffect(() => {
     if (isUserValid) {
       setShowProfile(true);
@@ -77,8 +82,8 @@ const NavbarComponent = () => {
   }, [isUserValid, userAuth]);
 
   useEffect(() => {
-    path.startsWith("/products") ? setTextColor(true) : setTextColor(false);
-  }, [path]);
+const isHighlightPath = path.startsWith("/products") || path.startsWith("/myaccount");
+setTextColor(isHighlightPath)});
 
   /**
    * need split content for wrapping success and failed cases
@@ -295,7 +300,10 @@ const NavbarComponent = () => {
               )}
               {showProfile && (
                 <div className={NavbarCss.ProfileCon}>
-                  <div className={NavbarCss.ProfileSection}>
+                  <div className={NavbarCss.ProfileSection}
+                      onClick={handleAccountClick}
+                     style={{ cursor: "pointer" }}
+                  >
                     <Icon
                       icon="ix:user-profile"
                       width="24"
