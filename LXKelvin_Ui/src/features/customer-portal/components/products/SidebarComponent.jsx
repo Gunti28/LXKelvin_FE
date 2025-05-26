@@ -5,12 +5,6 @@ import { Offcanvas, Button, Breadcrumb } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "../../../../lib/common/css/products/ListingLayout.module.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
-// import allproducts from "../../../../lib/common/assets/Images/all-categories-sidebar.svg"
-// import vegetables from "../../../../lib/common/assets/Images/vegetables-sidebar.svg"
-// import fruits from "../../../../lib/common/assets/Images/fruits-sidebar.svg"
-// import seasonalvegetables from "../../../../lib/common/assets/Images/seasonal-vegetables-sidebar.svg"
-// import seasonalfruits from "../../../../lib/common/assets/Images/seasonal-fruits-sidebar.svg"
-// import milkproducts from "../../../../lib/common/assets/Images/milk-products-sidebar.svg"
 
 import {
   ALL_PRODUCTS,
@@ -69,7 +63,7 @@ const SidebarComponent = () => {
         <Breadcrumb className="mb-4">
           <Breadcrumb.Item
             linkAs={Link}
-            linkProps={{ to: "/" }}
+            linkProps={{ to: "/dashBoard" }}
             className={`text-black ${styles.upperHome}`}
           >
             Home
