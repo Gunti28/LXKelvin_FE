@@ -2,13 +2,16 @@ import NavbarComponent from "../components/layOut/Navbar";
 import { fetchProducts } from "../../../lib/services/productsAsyncThunk";
 import { fetchCategories } from "../../../lib/services/categoriesAsyncThunk";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { setUserValid } from "../../../store/slice/otpAuthSlice";
 export default function LayoutContainerPage() {
+  const { userAuth, isUserValid } = useSelector((state) => state.userAuth);
   const dispatch = useDispatch();
   const { status, products } = useSelector((state) => state.products);
   const { categoriesStatus, categories } = useSelector(
     (state) => state.categories
   );
+  const [, setValidateAuthUser] = useState(false);
   /**
    * to get the initial page render
    */
@@ -23,6 +26,18 @@ export default function LayoutContainerPage() {
       dispatch(fetchCategories());
     }
   }, [categories, categoriesStatus]);
+
+  useEffect(() => {
+    if (userAuth?.length) {
+      dispatch(setUserValid(true));
+    } else {
+      dispatch(setUserValid(false));
+    }
+  }, [userAuth]);
+
+  useEffect(() => {
+    setValidateAuthUser(isUserValid);
+  }, [isUserValid]);
 
   return (
     <div>

@@ -5,14 +5,16 @@ import ModelPage from "../../../../lib/common/css/registration/ModelPage.module.
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-
-const OtpModel = ({ setIsLoggedIn }) => {
+import { useDispatch } from "react-redux";
+import { getOtpAuth } from "../../../../lib/services/otpAuthAsyncThunk";
+const OtpModel = ({ showOtpScreen }) => {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [timer, setTimer] = useState();
   const [resendDisabled, setResendDisabled] = useState(true);
+  const [isOptModalOpen, setOtpModal] = useState(false);
   const inputRefs = useRef([]);
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   useEffect(() => {
     if (timer > 0) {
       const interval = setInterval(() => {
@@ -23,6 +25,10 @@ const OtpModel = ({ setIsLoggedIn }) => {
       setResendDisabled(false);
     }
   }, [timer]);
+
+  useEffect(() => {
+    setOtpModal(showOtpScreen);
+  }, [showOtpScreen]);
 
   const handleChange = (value, index) => {
     if (!/^\d*$/.test(value)) return;
@@ -38,9 +44,10 @@ const OtpModel = ({ setIsLoggedIn }) => {
     if (index === 3 && value) {
       const enteredOtp = newOtp.join("");
       if (enteredOtp === "1234") {
-        setIsLoggedIn(true);
         toast.success("OTP Verified!");
         setTimeout(() => {
+          setOtpModal(false);
+          dispatch(getOtpAuth());
           navigate("/");
         }, 1000);
       } else {
@@ -64,7 +71,7 @@ const OtpModel = ({ setIsLoggedIn }) => {
 
   return (
     <Modal
-      show={true}
+      show={isOptModalOpen}
       size="medium"
       aria-labelledby="contained-modal-title-vcenter"
       centered
