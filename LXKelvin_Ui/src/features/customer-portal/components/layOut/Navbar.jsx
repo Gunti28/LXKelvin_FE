@@ -90,6 +90,18 @@ const NavbarComponent = () => {
   useEffect(() => {
     path.startsWith("/products") ? setTextColor(true) : setTextColor(false);
   }, [path]);
+  useEffect(()=>{
+    if(text_color){
+      setShowDeals(false);
+      setShowLanguage(false);
+
+    }else{
+      setShowDeals(true);
+      setShowLanguage(true);
+
+    }
+
+  },[text_color])
 
   /**
    * need split content for wrapping success and failed cases
@@ -152,13 +164,18 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
               <div className={NavbarCss.DealsCon}>
-                <div>
+                <div className={NavbarCss.locationContainer}>
                   <Nav.Link
                     href="#"
                     className={text_color ? "text-secondary" : "text-white"}
                   >
                     Location
                   </Nav.Link>
+                <div className={NavbarCss.locationIcon}>
+                    <Icon icon="mdi:arrow-down-drop" width="28" height="28"  style={{color: "#fff"}} 
+                    />
+                    </div>
+                      
                 </div>
 
                 {showDeals && (

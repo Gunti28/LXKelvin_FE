@@ -4,7 +4,6 @@ import { Container, Card, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 const CategoriesComponent = () => {
   const { categories } = useSelector((state) => state.categories);
   const [categoriesList, setCategories] = useState([]);
