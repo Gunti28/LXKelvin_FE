@@ -1,32 +1,17 @@
-
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../../../lib/common/css/profile/SaveForLater.module.css";
 import { Icon } from "@iconify/react";
-import tomato from "/src/lib/common/assets/images/tomato.svg";
-import banana from "/src/lib/common/assets/images/banana.svg";
-const savedItems = [
-  {
-    id: 1,
-    name: "Tomato",
-    bgColor: "#F7B18C",
-    image: tomato,
-    rating: 4.2,
-    price: 40,
-    originalPrice: 52,
-    discount: "28% OFF",
-  },
-  {
-    id: 2,
-    name: "Banana",
-    bgColor: "#EDD251",
-    image: banana,
-    rating: 4.1,
-    price: 40,
-    originalPrice: 52,
-    discount: "28% OFF",
-  },
-];
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSavedItems } from "../../../../lib/services/saveForLaterAsyncThunk";
+
 const SaveForLater = () => {
+  const dispatch = useDispatch();
+  const { items, loading } = useSelector((state) => state.saveForLater);
+
+  useEffect(() => {
+    dispatch(fetchSavedItems());
+  }, [dispatch]);
+
   const handleDelete = (id) => {
     console.log("Delete item:", id);
   };
@@ -34,6 +19,9 @@ const SaveForLater = () => {
   const handleMoveToCart = (id) => {
     console.log("Move to cart:", id);
   };
+
+  if (loading) return <p>Loading...</p>;
+
   return (
     <div className={styles.SaveCon}>
       <div className={styles.headerCon}>
@@ -51,15 +39,15 @@ const SaveForLater = () => {
         </div>
         <p className={styles.addNew}>items</p>
       </div>
-      {savedItems.map((item) => (
+
+      {items.map((item) => (
         <div key={item.id} className={styles.savedCard}>
           <div
             className={styles.imageCon}
             style={{ backgroundColor: item.bgColor }}
           >
-            
             <img
-              src={item.image}
+              src={`/src/lib/common/assets/images/${item.image}`}
               alt={item.name}
               className={styles.productImg}
             />

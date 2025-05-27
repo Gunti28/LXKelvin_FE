@@ -1,25 +1,41 @@
-
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import styles from "../../../../lib/common/css/profile/Profile.module.css";
 
 const MyProfile = () => {
-  const [profileName, setProfileName] = useState("Chukka Yaswanth Goud");
-  const [mobileNumber, setMobileNumber] = useState("9494216347");
-  const [emailAddress, setEmailAddress] = useState("Yashaswadh2002@gmail.com");
-  const [mainName, setMainName] = useState("Chukka Yaswanth Goud");
-  const [mainNumber, setMainNumber] = useState("9494216347");
   const [isGold, setIsGold] = useState(false);
   const [isEditable, setIsEditable] = useState(false);
+
+  const [userData, setUserData] = useState({
+    name: "Chukka Yaswanth Goud",
+    mobile: "9494216347",
+    email: "Yashaswadh2002@gmail.com",
+    mainName: "Chukka Yaswanth Goud",
+    mainNumber: "9494216347",
+  });
+
   const handleEdit = (e) => {
     e.preventDefault();
     setIsEditable((prev) => !prev);
   };
-  const handleSave = () => {
+
+  const handleSave = (e) => {
+    e.preventDefault();
     setIsEditable(false);
-    setMainName(profileName);
-    setMainNumber(mobileNumber);
+    setUserData((prev) => ({
+      ...prev,
+      mainName: prev.name,
+      mainNumber: prev.mobile,
+    }));
   };
+
+  const handleChange = (field, value) => {
+    setUserData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
   return (
     <div className={styles.ProfileCon}>
       <div className={styles.TopCon}>
@@ -36,26 +52,28 @@ const MyProfile = () => {
             />
           </button>
           <div className={styles.textPart}>
-            <p className={styles.proName}>{mainName}</p>
-            <p className={styles.proNo}>{mainNumber}</p>
+            <p className={styles.proName}>{userData.mainName}</p>
+            <p className={styles.proNo}>{userData.mainNumber}</p>
           </div>
         </div>
-        
+
         <div className={isGold ? styles.goldCard : styles.card}>
           <h2 className={styles.title}>{isGold ? "Gold" : "Premium"}</h2>
           <p className={styles.subtitle}>Subscription pass</p>
         </div>
       </div>
+
       <div className={styles.BottomCon}>
         <form className={styles.formCon}>
           <button className={styles.editText} onClick={handleEdit}>
             {isEditable ? "Cancel Edit" : "Edit Details +"}
           </button>
+
           <label className={styles.formLabel}>Name *</label>
           <input
             type="text"
-            value={profileName}
-            onChange={(e) => setProfileName(e.target.value)}
+            value={userData.name}
+            onChange={(e) => handleChange("name", e.target.value)}
             className={styles.formInput}
             disabled={!isEditable}
           />
@@ -63,8 +81,8 @@ const MyProfile = () => {
           <label className={styles.formLabel}>Mobile Number *</label>
           <input
             type="tel"
-            value={mobileNumber}
-            onChange={(e) => setMobileNumber(e.target.value)}
+            value={userData.mobile}
+            onChange={(e) => handleChange("mobile", e.target.value)}
             className={styles.formInput}
             disabled={!isEditable}
           />
@@ -72,11 +90,12 @@ const MyProfile = () => {
           <label className={styles.formLabel}>Email Address *</label>
           <input
             type="email"
-            value={emailAddress}
-            onChange={(e) => setEmailAddress(e.target.value)}
+            value={userData.email}
+            onChange={(e) => handleChange("email", e.target.value)}
             className={styles.formInput}
             disabled={!isEditable}
           />
+
           <button
             type="submit"
             className={styles.saveBut}

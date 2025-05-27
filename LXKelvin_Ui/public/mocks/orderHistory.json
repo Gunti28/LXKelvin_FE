@@ -1,0 +1,28 @@
+{
+  "orderHistory": [
+    {
+      "id": "AECB142GSEV2845",
+      "status": "Delivered",
+      "date": "Delivered on 30th Nov 2024, 4:20pm",
+      "items": ["tomato", "banana", "kiwi", "banana", "kiwi", "tomato", "kiwi", "banana", "kiwi"],
+      "price": "€ 106.30",
+      "showReorder": true
+    },
+    {
+      "id": "AECB142GSEV2B45-1",
+      "status": "Cancelled",
+      "date": "Cancelled on 30th Nov 2024, 4:20pm",
+      "items": ["tomato", "kiwi"],
+      "price": "€ 105.38",
+      "showReorder": false
+    },
+    {
+      "id": "AECB142GSEV2B45-2",
+      "status": "Refunded",
+      "date": "Your refund has been completed",
+      "items": ["banana"],
+      "price": "€ 105.40",
+      "showReorder": false
+    }
+  ]
+}
