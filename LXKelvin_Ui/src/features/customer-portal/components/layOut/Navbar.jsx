@@ -103,6 +103,7 @@ const NavbarComponent = () => {
 
   },[text_color])
 
+
   /**
    * need split content for wrapping success and failed cases
    */
@@ -163,7 +164,7 @@ const NavbarComponent = () => {
           />
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
-              <div className={NavbarCss.DealsCon}>
+                            <div className={NavbarCss.DealsCon}>
                 <div className={NavbarCss.locationContainer}>
                   <Nav.Link
                     href="#"
@@ -195,6 +196,7 @@ const NavbarComponent = () => {
                   </>
                 )}
               </div>
+
             </Nav>
 
             <div
@@ -324,6 +326,7 @@ const NavbarComponent = () => {
                         <span>{lang.name}</span>
                       </Dropdown.Item>
                     ))}
+
                   </Dropdown.Menu>
                 </Dropdown>
               )}

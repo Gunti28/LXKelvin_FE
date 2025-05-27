@@ -11,7 +11,6 @@ import ListingLayoutContainer from "./features/customer-portal/components/produc
 import DashBoard from "./features/customer-portal/components/layOut/Dashboard";
 import SignInPage from "./features/customer-portal/pages/SignInPage";
 import OpeningLayOut from "./features/customer-portal/components/openingLayOut/OpeningScreen";
-import ErrorPage from "./lib/helpers/Error";
 function App() {
   return (
     <Router>
