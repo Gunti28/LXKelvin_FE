@@ -1,16 +1,27 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Fetch all addresses
+// Can't cancel async requests inside slice reducers.
+// Cancellation must be handled inside the async thunk before dispatching.
+// By the time `.pending` is triggered, the request is already running.
+
+// Fetching all addresses with cancellation support
 export const fetchAddresses = createAsyncThunk(
   "addresses/fetchAddresses",
-  async () => {
-    const response = await axios.get("/mocks/addresses.json");
+  async (_, { signal }) => {
+    const source = axios.CancelToken.source();
+    signal.addEventListener("abort", () => {
+      source.cancel("Request cancelled");
+    });
+
+    const response = await axios.get("/mocks/address.json", {
+      cancelToken: source.token,
+    });
     return response.data.addresses;
   }
 );
 
-// Update an address
+// Updating address
 export const updateAddress = createAsyncThunk(
   "addresses/updateAddress",
   async (updatedAddress) => {
@@ -19,7 +30,7 @@ export const updateAddress = createAsyncThunk(
   }
 );
 
-// Delete an address
+// Deleting address
 export const deleteAddress = createAsyncThunk(
   "addresses/deleteAddress",
   async (id) => {

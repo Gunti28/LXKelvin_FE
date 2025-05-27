@@ -13,6 +13,12 @@ import Italian from "../../../lib/common/assets/Images/italian.svg";
 import French from "../../../lib/common/assets/Images/French.svg";
 import Spanish from "../../../lib/common/assets/Images/Spanish.svg";
 import Greece from "../../../lib/common/assets/Images/Greece.svg";
+
+export const ORDER_STATUS_COLORS = {
+  Cancelled: "#ff0000",
+  Delivered: "darkgreen",
+  Default: "#5B5F62",
+};
 /**
  * exports to use
  */
