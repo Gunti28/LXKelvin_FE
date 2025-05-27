@@ -153,13 +153,9 @@ const NavbarComponent = () => {
       >
         <Container fluid>
           <Navbar.Brand href="#">
-<<<<<<< HEAD
-            <img src={LOGO} alt="LOGO" className={NavbarCss.LogoImg} />
-=======
 
             <img src={LOGO} alt="LOGO" className={NavbarCss.LogoImg} />
 
->>>>>>> 262c63f113e176d029a2f7c2556e4ce2bda19a0e
           </Navbar.Brand>
 
           <Navbar.Toggle
@@ -170,15 +166,9 @@ const NavbarComponent = () => {
           />
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
-<<<<<<< HEAD
                             <div className={NavbarCss.DealsCon}>
                 <div className={NavbarCss.locationContainer}>
-=======
 
-              <div className={NavbarCss.DealsCon}>
-                <div>
-
->>>>>>> 262c63f113e176d029a2f7c2556e4ce2bda19a0e
                   <Nav.Link
                     href="#"
                     className={text_color ? "text-secondary" : "text-white"}
@@ -211,10 +201,6 @@ const NavbarComponent = () => {
                   </>
                 )}
               </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 262c63f113e176d029a2f7c2556e4ce2bda19a0e
             </Nav>
 
             <div
@@ -323,10 +309,7 @@ const NavbarComponent = () => {
                     id="dropdown-language"
                     className={NavbarCss.languageToggle}
                   >
-<<<<<<< HEAD
-=======
 
->>>>>>> 262c63f113e176d029a2f7c2556e4ce2bda19a0e
                     <div className={NavbarCss.langDisplay}>
                       <img src={selectedLang.icon} alt={selectedLang.name} />
                       <span>{selectedLang.name}</span>
@@ -372,10 +355,6 @@ const NavbarComponent = () => {
                         color: text_color ? "#5B5F62" : "#fff",
                       }}
                     />
-<<<<<<< HEAD
-=======
-
->>>>>>> 262c63f113e176d029a2f7c2556e4ce2bda19a0e
                     <div className={NavbarCss.profileNameContainer}>
                       <p
                         style={{
