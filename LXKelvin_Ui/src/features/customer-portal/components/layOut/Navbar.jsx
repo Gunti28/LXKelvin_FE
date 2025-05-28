@@ -14,7 +14,7 @@ import { IoMic } from "react-icons/io5";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { showNavBarDefaultTemplate } from "../../../../lib/helpers/index";
 import {
   LOGO,
@@ -23,6 +23,9 @@ import {
   SPANISH,
   GREECE,
 } from "../../../../lib/constants/Image_Constants/index";
+import { Const } from "../../../../lib/constants/index";
+import { setSelectedLang } from "../../../../store/slice/languageSlice";
+
 const NavbarComponent = () => {
   let contentNavWrapper;
   let contentWrapper;
@@ -39,17 +42,11 @@ const NavbarComponent = () => {
   //   const productNames = products?.map(product => product.name);
   const navigate = useNavigate();
 
-  const [selectedLang, setSelectedLang] = useState({
-    name: "Italian",
-    icon: ITALIAN,
-  });
+  const languages = Const?.LANGUAGES;
 
-  const languages = [
-    { name: "Greece", icon: GREECE },
-    { name: "Spanish", icon: SPANISH },
-    { name: "French", icon: FRENCH },
-  ];
+  const dispatch = useDispatch();
 
+  const selectedLang = useSelector((state) => state.language.selectedLang);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -90,19 +87,15 @@ const NavbarComponent = () => {
   useEffect(() => {
     path.startsWith("/products") ? setTextColor(true) : setTextColor(false);
   }, [path]);
-  useEffect(()=>{
-    if(text_color){
+  useEffect(() => {
+    if (text_color) {
       setShowDeals(false);
       setShowLanguage(false);
-
-    }else{
+    } else {
       setShowDeals(true);
       setShowLanguage(true);
-
     }
-
-  },[text_color])
-
+  }, [text_color]);
 
   /**
    * need split content for wrapping success and failed cases
@@ -153,9 +146,7 @@ const NavbarComponent = () => {
       >
         <Container fluid>
           <Navbar.Brand href="#">
-
             <img src={LOGO} alt="LOGO" className={NavbarCss.LogoImg} />
-
           </Navbar.Brand>
 
           <Navbar.Toggle
@@ -166,22 +157,22 @@ const NavbarComponent = () => {
           />
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
-                            <div className={NavbarCss.DealsCon}>
+              <div className={NavbarCss.DealsCon}>
                 <div className={NavbarCss.locationContainer}>
-
                   <Nav.Link
                     href="#"
                     className={text_color ? "text-secondary" : "text-white"}
                   >
-
                     Location
-
                   </Nav.Link>
-                <div className={NavbarCss.locationIcon}>
-                    <Icon icon="mdi:arrow-down-drop" width="28" height="28"  style={{color: "#fff"}} 
+                  <div className={NavbarCss.locationIcon}>
+                    <Icon
+                      icon="mdi:arrow-down-drop"
+                      width="28"
+                      height="28"
+                      style={{ color: "#fff" }}
                     />
-                    </div>
-                      
+                  </div>
                 </div>
 
                 {showDeals && (
@@ -309,7 +300,6 @@ const NavbarComponent = () => {
                     id="dropdown-language"
                     className={NavbarCss.languageToggle}
                   >
-
                     <div className={NavbarCss.langDisplay}>
                       <img src={selectedLang.icon} alt={selectedLang.name} />
                       <span>{selectedLang.name}</span>
@@ -320,7 +310,7 @@ const NavbarComponent = () => {
                     {languages.map((lang) => (
                       <Dropdown.Item
                         key={lang.name}
-                        onClick={() => setSelectedLang(lang)}
+                        onClick={() => dispatch(setSelectedLang(lang))}
                         className={NavbarCss.languageItem}
                       >
                         <img
@@ -331,7 +321,6 @@ const NavbarComponent = () => {
                         <span>{lang.name}</span>
                       </Dropdown.Item>
                     ))}
-
                   </Dropdown.Menu>
                 </Dropdown>
               )}
