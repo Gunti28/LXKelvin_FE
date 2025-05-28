@@ -30,7 +30,7 @@
 
 /* Card item inside cardtotal */
 .cardtotal .card {
-  flex: 0 0 calc(25% - 1rem); /* 4 cards per row */
+  flex: 0 0 calc(25% - 1rem);
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -166,10 +166,23 @@
     font-size: 10px !important;
     padding-bottom: 10px !important;
   }
+  .CardWrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .cd {
+    width: 100% !important;
+    height: 220px !important;
+    margin: 0 !important;
+  }
+  img {
+    height: 200px !important;
+  }
   .cardtotal {
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
+    flex-direction: column;
+    overflow-y: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding: 10px 0;

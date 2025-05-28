@@ -8,6 +8,7 @@ import Success from "./features/customer-portal/components/signIn/Success";
 
 import ListingComponent from "./features/customer-portal/components/products/ListingComponent";
 import ProductList from "./features/customer-portal/components/products/ProductList";
+import LayoutContainerPage from "./features/customer-portal/pages/LayoutContainerPage";
 import ListingLayoutContainer from "./features/customer-portal/components/products/ListingLayoutContainer";
 
 import LayoutContainerPage from "./features/customer-portal/pages/LayoutContainerPage";
@@ -52,6 +53,7 @@ function App() {
             <Route path="customersupport" element={<CustomerSupport />} />
           </Route>
         </Route>
+        
       </Routes>
     </Router>
   );
