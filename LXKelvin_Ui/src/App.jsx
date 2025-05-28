@@ -10,8 +10,6 @@ import ListingComponent from "./features/customer-portal/components/products/Lis
 import ProductList from "./features/customer-portal/components/products/ProductList";
 import LayoutContainerPage from "./features/customer-portal/pages/LayoutContainerPage";
 import ListingLayoutContainer from "./features/customer-portal/components/products/ListingLayoutContainer";
-
-import LayoutContainerPage from "./features/customer-portal/pages/LayoutContainerPage";
 import SignInPage from "./features/customer-portal/pages/SignInPage";
 
 import DashBoard from "./features/customer-portal/components/layOut/Dashboard";
