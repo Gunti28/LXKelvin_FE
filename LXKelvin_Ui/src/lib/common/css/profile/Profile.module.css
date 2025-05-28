@@ -1,0 +1,232 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.formCon {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-top: 1px solid #d9d9d9;
+}
+.ProfileCon::-webkit-scrollbar {
+  display: none;
+}
+.ProfileCon{
+  overflow: auto;
+  background-color: #fff;
+}
+.formLabel {
+  font-size: 14px;
+  color: #5b5f62;
+  font-family: "Montserrat";
+  font-weight: 500;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.formInput {
+  font-size: 13px;
+  color: #000000;
+  font-family: "Montserrat";
+  font-weight: 500;
+  padding: 0.8%;
+  width: 30rem;
+  border: 1px solid #979797;
+  border-radius: 5px;
+}
+
+.saveBut {
+  height: 2rem;
+  width: 6rem;
+  background-color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  color: #636363;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: 14rem;
+  margin-top: 2.5rem;
+  border: none;
+  cursor: pointer;
+}
+.editText {
+  margin-left: auto;
+  margin-right: 5rem;
+  margin-bottom: -1.6rem;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  color: #376aed;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem;
+}
+.profileImg {
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50%;
+  background-color: #ff99004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.detailsCon {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3rem;
+  margin-top: 1.2rem;
+}
+.proName {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  margin-top: 0.5rem;
+}
+.proNo {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  color: #979797;
+  margin-top: -0.5rem;
+}
+.textPart {
+  margin-left: 1rem;
+  width: auto;
+}
+
+.card {
+  width: 80%;
+  max-width: 35vw;
+  height: 24vh;
+  border-radius: 25px;
+  padding: 2%;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #666666 40%,
+    #000000 70%,
+    #666666 100%
+  );
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+}
+.goldCard {
+  max-width: 35vw;
+  height: 24vh;
+  border-radius: 25px;
+  padding: 2%;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #e8b919 0%,
+    #99742d 40%,
+    #e8b919 70%,
+    #99742d 100%
+  );
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  margin: 5px 0 0 0;
+}
+@media (max-width: 992px) {
+  .formInput {
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .saveBut {
+    width: 100%;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
+
+  .editText {
+    margin-right: 0;
+    text-align: right;
+  }
+
+  .detailsCon {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .textPart {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .card,
+  .goldCard {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    text-align: center;
+  }
+
+  .title,
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .formLabel {
+    font-size: 13px;
+  }
+
+  .formInput {
+    font-size: 12px;
+  }
+
+  .saveBut {
+    font-size: 13px;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .editText {
+    font-size: 13px;
+    padding: 0.5rem;
+  }
+
+  .profileImg {
+    height: 12vh;
+    width: 12vh;
+  }
+
+  .proName {
+    font-size: 18px;
+  }
+
+  .proNo {
+    font-size: 14px;
+  }
+
+  .card,
+  .goldCard {
+    padding: 1rem;
+  }
+}

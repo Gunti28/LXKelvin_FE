@@ -13,6 +13,22 @@ import Italian from "../../../lib/common/assets/Images/italian.svg";
 import French from "../../../lib/common/assets/Images/French.svg";
 import Spanish from "../../../lib/common/assets/Images/Spanish.svg";
 import Greece from "../../../lib/common/assets/Images/Greece.svg";
+import kiwi from "/src/lib/common/assets/images/kiwi.svg";
+import tomato from "/src/lib/common/assets/images/tomato.svg";
+import banana from "/src/lib/common/assets/images/banana.svg";
+
+export const imageMap = {
+  tomato,
+  banana,
+  kiwi,
+};
+
+export const imageBgColors = {
+  tomato: "#F7B18C",
+  banana: "#EDD251",
+  kiwi: "#929C69",
+};
+
 /**
  * exports to use
  */

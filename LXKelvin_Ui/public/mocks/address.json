@@ -1,0 +1,23 @@
+    {
+      "addresses" : [
+    {
+      "id": 1,
+      "houseNo": "90b",
+      "landMark": "near innovative multiplex",
+      "city": "Marathalli,Bangalore",
+      "state": "Karnataka",
+      "pincode": "560068",
+      "type": "home",
+      "isDefault": true
+    },
+    {
+      "id": 2,
+      "houseNo": "100b",
+      "landMark": "near pvr multiplex",
+      "city": "whitefield,Bangalore",
+      "state": "Karnataka",
+      "pincode": "560068",
+      "type": "office",
+      "isDefault": false
+    }
+    ]}
