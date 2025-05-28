@@ -550,3 +550,45 @@
     padding: 0.5rem 1rem;
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1092px) {
+  .DealsCon {
+    width: 18rem !important;
+    font-size: 0.9rem !important;
+    justify-content: space-between !important;
+  }
+ 
+  .langAndSignin {
+    margin-left: 1.5rem !important;
+    width: 70% !important;
+    justify-content: space-between !important;
+  }
+ 
+  .languageToggle {
+    font-size: 0.9rem !important;
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+ 
+  .SigninBtn {
+    padding: 0.4rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+ 
+  .ProfileCon {
+    font-size: 0.9rem !important;
+    margin-left: 2rem !important;
+    width: 100% !important;
+    justify-content: flex-end !important;
+  }
+ 
+  .searchBar {
+    width: 100% !important;
+  }
+ 
+  .searchContainer {
+    width: 90% !important;
+  }
+}
+ 

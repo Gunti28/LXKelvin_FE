@@ -3,7 +3,9 @@ import productsReducer from "./slice/productSlice";
 import categoriesReducer from "./slice/categoriesSlice";
 import signInReducer from "./slice/sigInSlice";
 import otpAuthReducer from "./slice/otpAuthSlice";
-import aLXK_1020ddressReducer from "./slice/addressSlice";
+
+import addressReducer from "./slice/addressSlice";
+
 import orderReducer from "./slice/orderSlice";
 import saveForLaterReducer from "./slice/saveForLaterSlice";
 
@@ -17,7 +19,8 @@ export const store = configureStore({
     userAuth: otpAuthReducer,
     addresses: addressReducer,
     orders: orderReducer,
-    saveForLater: saveForLaterReducer
+    saveForLater: saveForLaterReducer,
+
     language: languageReducer,
 
   },
