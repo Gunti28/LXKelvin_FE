@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Icon } from "@iconify/react";
 import styles from "../../../../lib/common/css/profile/Myorders.module.css";
 import { fetchOrders } from "../../../../lib/services/ordersAsyncThunk";
-import {imageMap, imageBgColors} from "../../../../lib/constants/index"
-import { ORDER_STATUS_COLORS } from "../../../../lib/constants/Image_Constants";
+import {imageMap, imageBgColors} from "../../../../lib/constants/Image_Constants"
+import { ORDER_STATUS_COLORS } from "../../../../lib/constants/index";
 
 const MyOrders = () => {
   const dispatch = useDispatch();
