@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Icon } from "@iconify/react";
@@ -41,6 +42,7 @@ const MyOrders = () => {
         orders.map((order, index) => {
           const statusColor =
             ORDER_STATUS_COLORS[order.status] || ORDER_STATUS_COLORS.Default;
+
           return (
             <div className={styles.orderCard} key={index}>
               <div className={styles.orderInfo}>

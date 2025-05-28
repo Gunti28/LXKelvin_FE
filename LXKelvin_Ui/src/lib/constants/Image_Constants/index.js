@@ -17,7 +17,6 @@ import kiwi from "/src/lib/common/assets/images/kiwi.svg";
 import tomato from "/src/lib/common/assets/images/tomato.svg";
 import banana from "/src/lib/common/assets/images/banana.svg";
 
-
 export const imageMap = {
   tomato,
   banana,
