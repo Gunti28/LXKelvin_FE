@@ -19,20 +19,20 @@
   grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
   gap: 1.5rem;
 }
-  
+
 .productCard {
   display: inline-block;
-  width: calc(33.33% - 1rem); 
+  width: calc(33.33% - 1rem);
   margin: 0.5rem;
-  background: #F4F6FB;
+  background: #f4f6fb;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   padding: 1rem;
   text-align: center;
   transition: transform 0.2s ease;
-  vertical-align: top; 
+  vertical-align: top;
 }
-  
+
 .productCard:hover {
   transform: translateY(-5px);
 }
@@ -87,7 +87,7 @@
   font-size: 0.7rem;
   background-color: transparent;
   color: #000;
-  border: 1px solid #F9A502;
+  border: 1px solid #f9a502;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -108,12 +108,12 @@
 }
 
 .outOfStock {
-   padding: 0.5rem 1rem;
-   background-color: grey;
-   color: white;
-   transition: background-color 0.2s ease;
-   border: none;
-   border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background-color: grey;
+  color: white;
+  transition: background-color 0.2s ease;
+  border: none;
+  border-radius: 6px;
 }
 
 .lowStock {
@@ -131,7 +131,7 @@
 /* Most media queries can be removed as they're handled by Tailwind responsive classes */
 /*@media (max-width: 768px) {
   .cardsGrid {
-    grid-template-columns: 2fr; 
+    grid-template-columns: 2fr;
     gap: 1rem;
   }
 

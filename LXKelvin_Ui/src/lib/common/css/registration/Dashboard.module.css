@@ -8,7 +8,7 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.CatText{
+.CatText {
   color: #fff;
   border-bottom: 1.5px solid;
   margin-left: auto;
@@ -36,7 +36,7 @@
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.CatBtn{
+.CatBtn {
   background-color: transparent;
   border: none;
   color: #fff;
@@ -63,10 +63,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2; 
-  color: #000; 
+  z-index: 2;
+  color: #000;
 }
-.cardimage{
+.cardimage {
   padding: 0.5rem;
   cursor: pointer;
 }
@@ -78,103 +78,95 @@
 .btn1 {
   margin-top: 10px;
 }
-.cardfont{
+.cardfont {
   font-size: 1.1rem !important;
 }
 
-
 .container {
   padding: 20px;
-  
 }
 .text {
   font-size: 24px;
-  
 }
 
-
- @media (min-width:768px  ) and (max-width: 1000px) {
-.foont{
-  font-size: 14px;
-}
-.btn1{
-  width: auto;
-  height: 30px;
-  text-align: center;
-  font-size: 11px !important;
-  margin-bottom: 10px !important;
-}
-.cardimage {
-  width: 100%;
-  max-width: 300px;
-  margin: auto;
-}
-.cardBody{
-  max-height: 60px !important;
-}
-.cardfont{
-  font-size: 1rem !important;
-}
-.cardtotal .card {
+@media (min-width: 768px) and (max-width: 1000px) {
+  .foont {
+    font-size: 14px;
+  }
+  .btn1 {
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 11px !important;
+    margin-bottom: 10px !important;
+  }
+  .cardimage {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+  .cardBody {
+    max-height: 60px !important;
+  }
+  .cardfont {
+    font-size: 1rem !important;
+  }
+  .cardtotal .card {
     flex: 0 0 calc(50% - 1rem);
   }
+}
 
-
+/* For small tablets and large phones */
+@media (min-width: 577px) and (max-width: 767px) {
+  .mySwiper1 .swiper-slide {
+    width: 90% !important;
   }
-  
 
-   /* For small tablets and large phones */
-  @media (min-width: 577px) and (max-width: 767px) {
-    .mySwiper1 .swiper-slide {
-      width: 90% !important; 
-    }
-  
-    .foont{
-      font-size: 12px !important;
-    }
-    .btn1{
-      width: auto;
-      height: 30px;
-      text-align: center;
-      font-size: 10px !important;
-      padding: auto !important;
-    }
-     img{
+  .foont {
+    font-size: 12px !important;
+  }
+  .btn1 {
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 10px !important;
+    padding: auto !important;
+  }
+  img {
     height: 200px !important;
-    }
-    .cardtotal {
+  }
+  .cardtotal {
     flex-direction: column;
     align-items: center;
   }
   .cardtotal .card {
     width: 90%;
   }
-  }
-  
-  @media screen and  (max-width: 576px) {
-    .mySwiper1 .swiper-slide {
-      width: 100% !important;
-    }
-  
-    .card-title {
-      font-size: 40px;
-    }
-  
+}
 
-    img{
-      height: 200px !important;
-      }
-      .foont{
-        font-size: 12px !important;
-      }
-      .btn1{
-        width: auto;
-        height: 30px;
-        text-align: center;
-        font-size: 10px !important;
-        padding-bottom: 10px !important;
-      }
-       .cardtotal {
+@media screen and (max-width: 576px) {
+  .mySwiper1 .swiper-slide {
+    width: 100% !important;
+  }
+
+  .card-title {
+    font-size: 40px;
+  }
+
+  img {
+    height: 200px !important;
+  }
+  .foont {
+    font-size: 12px !important;
+  }
+  .btn1 {
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .cardtotal {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -189,9 +181,7 @@
     width: 80%;
     scroll-snap-align: start;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     background-color: #fff;
   }
-      
-      
-  }
+}

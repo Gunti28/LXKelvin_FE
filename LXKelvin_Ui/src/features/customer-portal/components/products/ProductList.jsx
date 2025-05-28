@@ -1,49 +1,72 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import productsData from "../../../../lib/common/mocks/products.json";
+=======
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import styles from "../../../../lib/common/css/products/Listing.module.css";
+import { useSelector } from "react-redux";
+import { Const } from "../../../../lib/constants/index";
+>>>>>>> bfa53ab544020dd074e3a311dff8e0f8fe0483d0
 
 const ProductList = () => {
-  const [products, setProducts] = useState([]);
+  const [productsList, setProducts] = useState([]);
+  const { products } = useSelector((state) => state.products);
   const location = useLocation();
   const path = location.pathname.slice(10);
-  const quantityOptions = ["500g", "1kg", "2kg"];
+  const quantityOptions = Const?.QTY_OPTIONS;
 
   const getCategory = () => {
-    if (location.pathname.includes("vegetables") && location.pathname.includes("seasonal")) {
+    if (
+      location.pathname.includes("vegetables") &&
+      location.pathname.includes("seasonal")
+    ) {
       return { category: "vegetables", seasonal: true };
     } else if (location.pathname.includes("vegetables")) {
       return { category: "vegetables" };
-    } else if (location.pathname.includes("fruits") && location.pathname.includes("seasonal")) {
+    } else if (
+      location.pathname.includes("fruits") &&
+      location.pathname.includes("seasonal")
+    ) {
       return { category: "fruits", seasonal: true };
     } else if (location.pathname.includes("fruits")) {
       return { category: "fruits" };
-    } else if (location.pathname.includes("milk-products")) {
-      return { category: "milk-products" };
+    } else if (location.pathname.includes("milkProducts")) {
+      return { category: "milkProducts" };
     } else {
       return {};
     }
   };
 
   useEffect(() => {
-    const fetchData = () => {
-      const filter = getCategory();
-      let filteredProducts = productsData.products;
+    setProducts(products);
+    fetchData(products);
+  }, [products, location.pathname]);
 
-      if (filter.category) {
-        filteredProducts = filteredProducts.filter(p => p.category === filter.category);
-      }
-      if (filter.seasonal !== undefined) {
-        filteredProducts = filteredProducts.filter(p => p.isSeasonal === filter.seasonal);
-      }
+  /**
+   * This function is need to be change once BE end points are deployed on server
+   * @param {*} callByRef
+   */
+  const fetchData = (callByRef) => {
+    const filter = getCategory();
+    let filteredProducts = callByRef;
 
-      setProducts(filteredProducts);
-    };
-
-    fetchData();
-  }, [location.pathname]);
-
+    if (filter.category) {
+      filteredProducts = filteredProducts.filter(
+        (p) => p.category === filter.category
+      );
+    }
+    if (filter.seasonal !== undefined) {
+      filteredProducts = filteredProducts.filter(
+        (p) => p.isSeasonal === filter.seasonal
+      );
+    }
+    setProducts(filteredProducts);
+  };
 
   return (
+<<<<<<< HEAD
     <div className="p-8 bg-[#f7f7f7] min-h-screen font-sans">
       <h1 className="text-left text-2xl mb-8 text-[#333] font-bold">
         {path === "all-categories" ? "All Products" : `Get Fresh ${path} Delivered Online`}
@@ -66,6 +89,28 @@ const ProductList = () => {
                 src={product.image} 
                 alt={product.name}
                 className="w-[120px] h-[120px]"
+=======
+    <div className={styles.listingContainer}>
+      <h1 className={styles.pageTitle}>
+        {path === "all-categories"
+          ? "All Products"
+          : `Get Fresh ${path} Delivered Online`}
+      </h1>
+      <div className={styles.productGrid}>
+        {productsList.map((product, index) => (
+          <div key={index} className={styles.productCard}>
+            <div
+              className={styles.imgCon}
+              style={{
+                backgroundColor: product.Colour,
+                filter: product.stockCount === 0 ? "grayscale(100%)" : "none",
+              }}
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className={styles.productImage}
+>>>>>>> bfa53ab544020dd074e3a311dff8e0f8fe0483d0
               />
             </div>
             
@@ -79,10 +124,16 @@ const ProductList = () => {
                 <option key={i}>{q}</option>
               ))}
             </select>
+<<<<<<< HEAD
             
             <div className="mb-4">
               <span className="text-base font-medium">₹{product.price}</span>
               <span className="text-sm text-gray-500 line-through ml-2">
+=======
+            <div className={styles.priceSection}>
+              <span className={styles.discountPrice}>₹{product.price}</span>
+              <span className={styles.originalPrice}>
+>>>>>>> bfa53ab544020dd074e3a311dff8e0f8fe0483d0
                 ₹{product.originalPrice}
               </span>
             </div>
@@ -92,9 +143,13 @@ const ProductList = () => {
                 Add to cart
               </button>
             ) : (
+<<<<<<< HEAD
               <button className="px-4 py-2 bg-gray-500 text-white rounded-md cursor-not-allowed">
                 Out of Stock
               </button>
+=======
+              <button className={styles.outOfStock}>Out of Stock</button>
+>>>>>>> bfa53ab544020dd074e3a311dff8e0f8fe0483d0
             )}
           </div>
         ))}
