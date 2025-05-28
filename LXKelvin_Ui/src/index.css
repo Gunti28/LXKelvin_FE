@@ -66,4 +66,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
+}
+
+/* Add these styles */
+.nav-link-custom {
+  text-decoration: none !important;
+  color: #333 !important;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom:focus,
+.nav-link-custom:active {
+  color: #333 !important;
+  text-decoration: none !important;
+}

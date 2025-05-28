@@ -1,5 +1,5 @@
-
-.pageContainer {
+/* These classes are now handled by Tailwind */
+/*.pageContainer {
   padding: 2rem;
   background-color: #f7f7f7;
   min-height: 100vh;
@@ -36,6 +36,7 @@
 .productCard:hover {
   transform: translateY(-5px);
 }
+
 .imgCon{
   width: 100%;
   height: 11rem;
@@ -45,7 +46,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .productImage {
@@ -57,8 +57,9 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0.5rem;
-}
+}*/
 
+/* Keep this for mobile responsiveness */
 .productQuantity {
   padding: 0.5rem;
   width: 15vw;
@@ -68,7 +69,7 @@
   border: 1px solid #ccc;
 }
 
-.productPrice {
+/*.productPrice {
   font-size: 16px;
   margin-bottom: 0.75rem;
   color: #222;
@@ -94,8 +95,9 @@
 
 .addToCart:hover {
   background-color: #45a049;
-}
+}*/
 
+/* Keep these status-related classes as they might be needed */
 .productMessage {
   margin: 0.5rem 0;
   font-size: 14px;
@@ -126,7 +128,8 @@
   background-color: #4caf50;
 }
 
-@media (max-width: 768px) {
+/* Most media queries can be removed as they're handled by Tailwind responsive classes */
+/*@media (max-width: 768px) {
   .cardsGrid {
     grid-template-columns: 2fr; 
     gap: 1rem;
@@ -145,34 +148,16 @@
     width: 100px;
     height: 100px;
   }
-}
+}*/
 
+/* Keep this media query for the product quantity input */
 @media (max-width: 480px) {
-  .cardsGrid {
-    grid-template-columns: 1fr; 
-    gap: 1rem;
-  }
-
-  .pageTitle {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .productCard {
-    padding: 1rem;
+  .productQuantity {
     width: 100%;
   }
 
-  .productImage {
-    width: 90px;
-    height: 90px;
-  }
-  .productQuantity{
-    width: 100%;
-  }
-
-  .addToCart {
+  /*.addToCart {
     padding: 0.4rem 0.8rem;
     font-size: 14px;
-  }
+  }*/
 }
