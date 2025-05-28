@@ -5,6 +5,8 @@ import { Offcanvas, Button, Breadcrumb } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "../../../../lib/common/css/products/ListingLayout.module.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { Icon } from "@iconify/react";
+
 
 import {
   ALL_PRODUCTS,
@@ -49,7 +51,7 @@ const SidebarComponent = () => {
         onClick={handleShow}
         variant="outline-primary"
       >
-        <GiHamburgerMenu size={24} />
+        <Icon icon="weui:arrow-filled" width="14" height="28"  style={{color: "#5B5F62"}} />
       </Button>
       <aside className={`${styles.sidebar} d-none d-md-block`}>
         {/* <Breadcrumb className={`mb-4 ${styles.BreadCrumbCon}`}>
