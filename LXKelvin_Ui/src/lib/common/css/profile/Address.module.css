@@ -1,0 +1,208 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.container {
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.iconCircle {
+  width: 14vh;
+  height: 14vh;
+  border-radius: 50%;
+  background-color: #fcd9a2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeIcon {
+  color: #d16900;
+  font-size: 24px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.addNew {
+  color: #376aed;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 0;
+  margin: 0 3.5rem;
+}
+
+.cardLeft {
+  display: flex;
+  gap: 1rem;
+}
+
+.locationIcon {
+  color: orange;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #1e1e1e;
+}
+
+.editIcon {
+  font-size: 14px;
+  color: #5a5a5a;
+  cursor: pointer;
+}
+
+.cardText {
+  color: #979797;
+  margin: 0.25rem 0 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.deleteText {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.deleteIcon {
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+.editBut {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.delBut {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .titleSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .iconCircle {
+    width: 10vh;
+    height: 10vh;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .addNew {
+    font-size: 14px;
+    align-self: flex-end;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 1rem;
+    gap: 1rem;
+  }
+
+  .cardRight {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .iconCircle {
+    width: 8vh;
+    height: 8vh;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 1rem 0;
+    margin: 0;
+  }
+
+  .cardTitle {
+    font-size: 15px;
+  }
+
+  .cardText {
+    font-size: 13px;
+  }
+
+  .deleteText {
+    font-size: 14px;
+  }
+
+  .homeIcon,
+  .editIcon,
+  .deleteIcon {
+    font-size: 16px;
+  }
+}

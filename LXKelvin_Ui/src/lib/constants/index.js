@@ -18,3 +18,9 @@ export const Const = {
   QTY_OPTIONS: QTY_OPTIONS,
   LANGUAGES: LANGUAGES,
 };
+
+export const ORDER_STATUS_COLORS = {
+  Cancelled: "#ff0000",
+  Delivered: "darkgreen",
+  Default: "#5B5F62",
+};

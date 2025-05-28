@@ -60,11 +60,13 @@
   color: white !important;
   opacity: 1;
 }
+
 .locationContainer {
   display: flex;
   flex-direction: row;
 }
 .locationIcon {
+
   align-content: center;
 }
 
@@ -87,7 +89,9 @@
   padding: 0.3rem 0.8rem !important;
   height: 2.5rem;
   width: 6rem;
+
   font-size: 1rem !important;
+
   margin-right: 1rem;
   border-radius: 40px !important;
 }
@@ -358,10 +362,12 @@
     margin-left: -2rem !important;
     margin-right: 1rem !important;
   }
+
   .langAndSignin {
     margin-left: 1rem !important;
   }
   .navbar {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -382,7 +388,9 @@
     width: 20rem !important;
     margin: 0 auto;
   }
+
   .searchContainer {
+
     width: 80%;
   }
 
@@ -398,7 +406,9 @@
     font-size: 1rem;
     color: #ffffff;
   }
+
   .profileNameContainer {
+
     width: 5rem !important;
   }
 
@@ -413,12 +423,14 @@
   }
 }
 @media (min-width: 996px) and (max-width: 1092px) {
+
   .DealsCon {
     width: 18rem !important;
   }
   .langAndSignin {
     margin-left: 2rem !important;
   }
+
 }
 @media (max-width: 431px) {
   .searchBar {
@@ -500,7 +512,9 @@
   }
 
   .ProfileCon {
+
     width: 100% !important;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -589,3 +603,4 @@
     width: 90% !important;
   }
 }
+ 
