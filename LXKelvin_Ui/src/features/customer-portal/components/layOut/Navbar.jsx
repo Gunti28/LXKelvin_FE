@@ -39,7 +39,7 @@ const NavbarComponent = () => {
   const [text_color, setTextColor] = useState(true);
   const [userData, setUserData] = useState({});
   const { isUserValid, userAuth } = useSelector((state) => state.userAuth);
-  //   const productNames = products?.map(product => product.name);
+  // const productNames = products?.map(product => product.name);
   const navigate = useNavigate();
 
   const languages = Const?.LANGUAGES;
@@ -67,10 +67,9 @@ const NavbarComponent = () => {
     navigate("/signIn");
   };
 
-    const handleAccountClick = () => {
-    navigate("/myaccount"); 
+  const handleAccountClick = () => {
+    navigate("/myaccount");
   };
-
 
   useEffect(() => {
     if (isUserValid) {
@@ -90,9 +89,10 @@ const NavbarComponent = () => {
   }, [isUserValid, userAuth]);
 
   useEffect(() => {
-
-const isHighlightPath = path.startsWith("/products") || path.startsWith("/myaccount");
-setTextColor(isHighlightPath)});
+    const isHighlightPath =
+      path.startsWith("/products") || path.startsWith("/myaccount");
+    setTextColor(isHighlightPath);
+  });
   useEffect(() => {
     if (text_color) {
       setShowDeals(false);
@@ -102,7 +102,6 @@ setTextColor(isHighlightPath)});
       setShowLanguage(true);
     }
   }, [text_color]);
-
 
   /**
    * need split content for wrapping success and failed cases
@@ -342,9 +341,10 @@ setTextColor(isHighlightPath)});
               )}
               {showProfile && (
                 <div className={NavbarCss.ProfileCon}>
-                  <div className={NavbarCss.ProfileSection}
-                      onClick={handleAccountClick}
-                     style={{ cursor: "pointer" }}
+                  <div
+                    className={NavbarCss.ProfileSection}
+                    onClick={handleAccountClick}
+                    style={{ cursor: "pointer" }}
                   >
                     <Icon
                       icon="ix:user-profile"
