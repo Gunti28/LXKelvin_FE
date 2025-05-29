@@ -60,11 +60,11 @@
   color: white !important;
   opacity: 1;
 }
-.locationContainer{
+.locationContainer {
   display: flex;
   flex-direction: row;
 }
-.locationIcon{
+.locationIcon {
   align-content: center;
 }
 
@@ -87,7 +87,6 @@
   padding: 0.3rem 0.8rem !important;
   height: 2.5rem;
   width: 6rem;
-  font-size: 0.5rem !important;
   margin-right: 1rem;
   border-radius: 40px !important;
 }
@@ -98,6 +97,7 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  font-size: 0.8rem !important;
 }
 
 .langDisplay img {
@@ -158,6 +158,9 @@
   margin-right: 0.5rem;
   width: 25rem;
   justify-content: space-between;
+}
+.DealsCon.nav-link {
+  font-size: 0.8rem !important;
 }
 
 @keyframes micPulse {
@@ -238,13 +241,14 @@
   .SigninBtn {
     padding: 0.5rem 0.6rem !important;
     font-size: 0.8rem !important;
-    width: 40% !important;
+    width: 100% !important;
+    justify-content: flex-end;
     margin-top: 0.5rem;
     width: 5rem !important;
     font-size: 12px !important;
-    padding: 0.5rem 1rem !important;
-    margin-left: -10vw !important;
-    margin-right: 5vw !important;
+    /* padding: 0.5rem 1rem !important; */
+    /* margin-left: -10vw !important;
+    margin-right: 5vw !important; */
   }
 
   .ProfileCon {
@@ -284,7 +288,7 @@
 
   .DealsCon {
     padding: 0 !important;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 30vw;
     display: flex !important;
     align-items: center !important;
@@ -292,7 +296,7 @@
     flex-direction: row !important;
     margin-top: -2rem !important;
     margin-left: 2rem !important;
-    width: 35% !important;
+    width: 40% !important;
   }
 
   .langDisplay {
@@ -347,7 +351,7 @@
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .DealsCon {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
     width: 20rem !important;
   }
   .SigninBtn {
@@ -358,10 +362,10 @@
     margin-left: -2rem !important;
     margin-right: 1rem !important;
   }
-  .langAndSignin{
+  .langAndSignin {
     margin-left: 1rem !important;
   }
-   .navbar {
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -382,7 +386,7 @@
     width: 20rem !important;
     margin: 0 auto;
   }
-  .searchContainer{
+  .searchContainer {
     width: 80%;
   }
 
@@ -398,7 +402,7 @@
     font-size: 1rem;
     color: #ffffff;
   }
-  .profileNameContainer{
+  .profileNameContainer {
     width: 5rem !important;
   }
 
@@ -413,13 +417,12 @@
   }
 }
 @media (min-width: 996px) and (max-width: 1092px) {
-  .DealsCon{
+  .DealsCon {
     width: 18rem !important;
   }
-  .langAndSignin{
+  .langAndSignin {
     margin-left: 2rem !important;
   }
-
 }
 @media (max-width: 431px) {
   .searchBar {
@@ -456,10 +459,10 @@
     width: 5rem !important;
     font-size: 12px !important;
     padding: 0.5rem 1rem !important;
-    margin-left: -10vw !important;
+    /* margin-left: -10vw !important; */
     margin-right: 5vw !important;
   }
-  
+
   .languageToggle {
     width: 100% !important;
     justify-content: space-between;
@@ -501,7 +504,7 @@
   }
 
   .ProfileCon {
-    width:100% !important;
+    width: 100% !important;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -550,45 +553,43 @@
     padding: 0.5rem 1rem;
   }
 }
-
 @media (min-width: 1025px) and (max-width: 1092px) {
   .DealsCon {
     width: 18rem !important;
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
     justify-content: space-between !important;
   }
- 
+
   .langAndSignin {
     margin-left: 1.5rem !important;
     width: 70% !important;
     justify-content: space-between !important;
   }
- 
+
   .languageToggle {
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
     margin-left: 0 !important;
     margin-right: 1rem !important;
     padding: 0.4rem 0.8rem !important;
   }
- 
+
   .SigninBtn {
     padding: 0.4rem 1.2rem !important;
     font-size: 0.9rem !important;
   }
- 
+
   .ProfileCon {
     font-size: 0.9rem !important;
     margin-left: 2rem !important;
     width: 100% !important;
     justify-content: flex-end !important;
   }
- 
+
   .searchBar {
     width: 100% !important;
   }
- 
+
   .searchContainer {
     width: 90% !important;
   }
 }
- 
