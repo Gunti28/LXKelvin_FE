@@ -3,7 +3,7 @@
     {
       "userId": "1",
       "userName": "Mahesh_1",
-      "role": "user",
+      "role": "admin",
       "authToken": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTc0ODAwNDA0MywiaWF0IjoxNzQ4MDA0MDQzfQ.xJg4r_ZONWjCIcrNd3n6Jhva36P-Hzy7YGsL6qbRxbA"
     }
   ]

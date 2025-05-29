@@ -22,7 +22,9 @@ import MyOrders from "./features/customer-portal/components/Profile/MyOrders";
 import SaveForLater from "./features/customer-portal/components/Profile/SaveForLater";
 import CustomerSupport from "./features/customer-portal/components/Profile/CustomerSupport";
 import ProfileLayout from "./features/customer-portal/components/Profile/ProfileLayout";
-
+import CompanyLayOut from "./features/company-portal/pages/companyLayOut";
+import CompanyDashBoard from "./features/company-portal/components/layOut/CompanyDashBoard";
+import AuthGuard from "./lib/common/components/AuthGuard";
 function App() {
   return (
     <Router>
@@ -45,14 +47,59 @@ function App() {
           </Route>
 
           <Route path="myaccount" element={<ProfileLayout />}>
-            <Route index element={<MyProfile />} />
-            <Route path="myaddress" element={<MyAddress />} />
-            <Route path="myorders" element={<MyOrders />} />
-            <Route path="saveforlater" element={<SaveForLater />} />
-            <Route path="customersupport" element={<CustomerSupport />} />
+            <Route
+              index
+              element={
+                <AuthGuard>
+                  <MyProfile />
+                </AuthGuard>
+              }
+            />
+            <Route
+              path="myaddress"
+              element={
+                <AuthGuard>
+                  <MyAddress />
+                </AuthGuard>
+              }
+            />
+            <Route
+              path="myorders"
+              element={
+                <AuthGuard>
+                  <MyOrders />
+                </AuthGuard>
+              }
+            />
+            <Route
+              path="saveforlater"
+              element={
+                <AuthGuard>
+                  <SaveForLater />
+                </AuthGuard>
+              }
+            />
+            <Route
+              path="customersupport"
+              element={
+                <AuthGuard>
+                  <CustomerSupport />
+                </AuthGuard>
+              }
+            />
           </Route>
         </Route>
-        
+        <Route path="company_admin">
+          <Route index element={<CompanyLayOut />} />
+          <Route
+            path="dash_board"
+            element={
+              <AuthGuard>
+                <CompanyDashBoard />
+              </AuthGuard>
+            }
+          />
+        </Route>
       </Routes>
     </Router>
   );
