@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/LXKelvin_FE/LXKelvin_Ui",
+  base: "/LXKelvin_FE",
   server: {
     open: true,
     port: 3001,
