@@ -23,6 +23,8 @@ import ProfileLayout from "./features/customer-portal/components/Profile/Profile
 import CompanyLayOut from "./features/company-portal/pages/companyLayOut";
 import CompanyDashBoard from "./features/company-portal/components/layOut/CompanyDashBoard";
 import AuthGuard from "./lib/common/components/AuthGuard";
+import ProductDetailsPage from "./features/customer-portal/components/products/ProductDetails";
+
 function App() {
   return (
     <Router>
@@ -41,6 +43,7 @@ function App() {
             <Route path="seasonalFruits" element={<ProductList />} />
             <Route path="milkProducts" element={<ProductList />} />
           </Route>
+          <Route path="productDetails/:id" element={<ProductDetailsPage />} />
           <Route path="my_account" element={<ProfileLayout />}>
             <Route
               index
