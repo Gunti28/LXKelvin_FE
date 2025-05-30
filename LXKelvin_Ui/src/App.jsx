@@ -22,6 +22,7 @@ import MyOrders from "./features/customer-portal/components/Profile/MyOrders";
 import SaveForLater from "./features/customer-portal/components/Profile/SaveForLater";
 import CustomerSupport from "./features/customer-portal/components/Profile/CustomerSupport";
 import ProfileLayout from "./features/customer-portal/components/Profile/ProfileLayout";
+import ProductDetailsPage from "./features/customer-portal/components/products/ProductDetails";
 
 function App() {
   return (
@@ -51,8 +52,10 @@ function App() {
             <Route path="saveforlater" element={<SaveForLater />} />
             <Route path="customersupport" element={<CustomerSupport />} />
           </Route>
+
+          <Route path="productDetails/:id" element={<ProductDetailsPage />} />
+
         </Route>
-        
       </Routes>
     </Router>
   );

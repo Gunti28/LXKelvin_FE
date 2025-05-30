@@ -1,44 +1,38 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Row, Col, Button, Form } from "react-bootstrap";
 import ProductDetPage from "../../../../lib/common/css/products/ProductDetails.module.css";
-import feedbackData from "../../../../lib/common/mocks/feedback.json";
-import t1 from "../../../../lib/common/assets/Images/tomoto1_courosel.svg";
-import t2 from "../../../../lib/common/assets/Images/tomoto2_courosel.svg";
-import t3 from "../../../../lib/common/assets/Images/tomoto3_courosel.svg";
-import t4 from "../../../../lib/common/assets/Images/tomoto4_courosel.svg";
-import t5 from "../../../../lib/common/assets/Images/tomoto5_courosel.svg";
-import it1 from "../../../../lib/common/assets/Images/time-saving.svg";
-import it2 from "../../../../lib/common/assets/Images/promotions.svg";
-import it3 from "../../../../lib/common/assets/Images/price-alerts.svg";
+import feedbackData from "../../../../../public/mocks/feedback.json";
+
+import {
+  TIME_SAVING,
+  PROMOTIONS,
+  PRICE_ALERTS,
+} from "../../../../lib/constants/Image_Constants/index";
+import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProductDetails } from "../../../../lib/services/productDetailsAsyncThunk";
 
 const ProductDetailsPage = () => {
-  const [productName] = useState("Organic Tomato");
-  const [productFinalPrice] = useState("46");
-  const [productOldPrice] = useState("63");
-  const [productDiscount] = useState("26");
-  const [productHealthBenefits] = useState(
-    "High Vitamin C content strengthens the immune system."
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const { product, status, error } = useSelector(
+    (state) => state.productDetails
   );
-  const [productPackaging] = useState(
-    "Sold loose, in net bags, or in sealed packs for freshness"
-  );
-  const [productAbout] = useState(
-    "Tomatoes are versatile and widely used fruits (often treated as vegetables) in various cuisines worldwide. Known for their vibrant red color, juicy texture, and sweet-tangy flavor, tomatoes are a kitchen staple"
-  );
-  // const [productImage, setProductImage] = useState(t1);
-  const [curImages] = useState([t1, t2, t3, t4, t5]);
+
+  useEffect(() => {
+    dispatch(fetchProductDetails(id));
+  }, [dispatch, id]);
   const [liked, setLiked] = useState(false);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const totalImages = 5;
 
-  const images = [t1, t2, t3, t4, t5];
-
   const [feedback, setFeedback] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    setFeedback(feedbackData);
+    setFeedback(feedbackData.feedback);
   }, []);
 
   const handlePrevImage = () => {
@@ -53,12 +47,45 @@ const ProductDetailsPage = () => {
     setCurrentImageIndex(index);
   };
 
+  const handleHomeClick = () => {
+    navigate("/products/all-categories");
+  };
+  const handleCategoryClick = (cat_id) => {
+    if (cat_id === 1) {
+      navigate("/products/vegetables");
+    } else if (cat_id === 2) {
+      navigate("/products/fruits");
+    } else if (cat_id === 3) {
+      navigate("/products/seasonalVegetables");
+    } else if (cat_id === 4) {
+      navigate("/products/seasonalFruits");
+    } else {
+      navigate("/products/milkProducts");
+    }
+  };
+
   const toggleIcon = () => {
     setLiked((prev) => !prev);
   };
 
+  if (status === "loading") return <p>Loading...</p>;
+  if (status === "failed") return <p>Error: {error}</p>;
+  if (!product) return <p>No product found</p>;
+
+  const {
+    productName,
+    offerPrice,
+    originalPrice,
+    discount,
+    healthBenefits,
+    packing,
+    about,
+    images,
+    cat_id,
+  } = product;
+
   return (
-    <Container className={`${ProductDetPage.productPage} mt-4`}>
+    <div className={ProductDetPage.productPage}>
       <Row>
         <Col md={6} className={ProductDetPage.leftColumn}>
           <div className={ProductDetPage.mainImageContainer}>
@@ -87,7 +114,7 @@ const ProductDetailsPage = () => {
 
           {/* Row 2: Thumbnails */}
           <div className={ProductDetPage.thumbnailsRow}>
-            {curImages.map((src, i) => (
+            {images.map((src, i) => (
               <img
                 key={i}
                 src={src}
@@ -116,21 +143,21 @@ const ProductDetailsPage = () => {
               <p>
                 <strong>Health Benefits</strong>
               </p>
-              <p>{productHealthBenefits}</p>
+              <p>{healthBenefits}</p>
             </div>
 
             <div className={ProductDetPage.infoItem}>
               <p>
                 <strong>Packaging:</strong>
               </p>
-              <p>{productPackaging}</p>
+              <p>{packing}</p>
             </div>
 
             <div className={ProductDetPage.infoItem}>
               <p>
                 <strong>About:</strong>
               </p>
-              <p>{productAbout}</p>
+              <p>{about}</p>
             </div>
           </div>
         </Col>
@@ -138,15 +165,35 @@ const ProductDetailsPage = () => {
         {/* Right Column */}
         <Col md={6} className={ProductDetPage.rightColumn}>
           <div className={ProductDetPage.productDetailsSection}>
-            <div className={ProductDetPage.navigationPath}>
-              <span>Home</span>
+            <div className={ProductDetPage.breadCrumb}>
+              <span
+                className={ProductDetPage.HomeText}
+                onClick={handleHomeClick}
+              >
+                Home
+              </span>
               <span>/</span>
-              <span>Fresh Vegetables</span>
+              <span
+                className={ProductDetPage.CategoryText}
+                onClick={() => handleCategoryClick(cat_id)}
+              >
+                {cat_id === 1
+                  ? " Vegetables"
+                  : cat_id === 2
+                  ? " Fruits"
+                  : cat_id === 3
+                  ? " Seasonal Vegetables"
+                  : cat_id === 4
+                  ? " Seasonal Fruits"
+                  : "Milk Products"}
+              </span>
               <span>/</span>
-              <span>{productName}</span>
+              <span className={ProductDetPage.ProductText}>
+                &nbsp;{productName}
+              </span>
             </div>
 
-            <h2>{productName}</h2>
+            <p className={ProductDetPage.ProductTitle}>{productName}</p>
 
             <div className={ProductDetPage.quantityPriceSection}>
               <div className={ProductDetPage.quantityAddContainer}>
@@ -154,23 +201,21 @@ const ProductDetailsPage = () => {
                   <Form.Label>Quantity: </Form.Label>
                   <Form.Select className={ProductDetPage.quantityDropdown}>
                     <option>500 g</option>
+                    <option>1 kg</option>
+                    <option>2 kg</option>
                   </Form.Select>
                 </Form.Group>
-                <Button variant="warning" className={ProductDetPage.addButton}>
-                  Add
-                </Button>
+                <Button className={ProductDetPage.addButton}>Add</Button>
               </div>
 
               <div className={ProductDetPage.priceDisplay}>
                 <span className={ProductDetPage.currentPrice}>
-                  €{productFinalPrice}
+                  €{offerPrice}
                 </span>
                 <span className={ProductDetPage.pmdPrice}>
-                  PMD €{productOldPrice}
+                  PMD €{originalPrice}
                 </span>
-                <span className={ProductDetPage.discount}>
-                  {productDiscount}% OFF
-                </span>
+                <span className={ProductDetPage.discount}>{discount}% OFF</span>
                 {/* <div className="heart-icon">
                                 <Icon icon="solar:heart-linear" width="34" height="34" />
                                 </div> */}
@@ -218,11 +263,8 @@ const ProductDetailsPage = () => {
               <h4>Why Everyone Choose This App</h4>
               <div className={ProductDetPage.benefitsContainer}>
                 <div className={ProductDetPage.benefitItem}>
-                  <div
-                    className={ProductDetPage.benefitIcon}
-                    style={{ width: "100px", height: "80px" }}
-                  >
-                    <img src={it1} alt="Time Saving" />
+                  <div className={ProductDetPage.benefitIcon}>
+                    <img src={TIME_SAVING} alt="Time Saving" />
                   </div>
                   <div className={ProductDetPage.benefitContent}>
                     <h5>Time-Saving</h5>
@@ -234,11 +276,8 @@ const ProductDetailsPage = () => {
                 </div>
 
                 <div className={ProductDetPage.benefitItem}>
-                  <div
-                    className={ProductDetPage.benefitIcon}
-                    style={{ width: "100px", height: "80px" }}
-                  >
-                    <img src={it2} alt="Promotions" />
+                  <div className={ProductDetPage.benefitIcon}>
+                    <img src={PROMOTIONS} alt="Promotions" />
                   </div>
                   <div className={ProductDetPage.benefitContent}>
                     <h5>Promotions and Discounts</h5>
@@ -250,11 +289,8 @@ const ProductDetailsPage = () => {
                 </div>
 
                 <div className={ProductDetPage.benefitItem}>
-                  <div
-                    className={ProductDetPage.benefitIcon}
-                    style={{ width: "100px", height: "80px" }}
-                  >
-                    <img src={it3} alt="Price Alerts" />
+                  <div className={ProductDetPage.benefitIcon}>
+                    <img src={PRICE_ALERTS} alt="Price Alerts" />
                   </div>
                   <div className={ProductDetPage.benefitContent}>
                     <h5>Price Alerts</h5>
@@ -299,7 +335,7 @@ const ProductDetailsPage = () => {
           ))}
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
