@@ -12,14 +12,17 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductDetails } from "../../../../lib/services/productDetailsAsyncThunk";
-
+import {
+  getCategoryName,
+  handleCategoryClick,
+  handleHomeClick,
+} from "../../../../lib/helpers";
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { product, status, error } = useSelector(
     (state) => state.productDetails
   );
-
   useEffect(() => {
     dispatch(fetchProductDetails(id));
   }, [dispatch, id]);
@@ -45,23 +48,6 @@ const ProductDetailsPage = () => {
 
   const handleThumbnailClick = (index) => {
     setCurrentImageIndex(index);
-  };
-
-  const handleHomeClick = () => {
-    navigate("/products/all-categories");
-  };
-  const handleCategoryClick = (cat_id) => {
-    if (cat_id === 1) {
-      navigate("/products/vegetables");
-    } else if (cat_id === 2) {
-      navigate("/products/fruits");
-    } else if (cat_id === 3) {
-      navigate("/products/seasonalVegetables");
-    } else if (cat_id === 4) {
-      navigate("/products/seasonalFruits");
-    } else {
-      navigate("/products/milkProducts");
-    }
   };
 
   const toggleIcon = () => {
@@ -168,24 +154,16 @@ const ProductDetailsPage = () => {
             <div className={ProductDetPage.breadCrumb}>
               <span
                 className={ProductDetPage.HomeText}
-                onClick={handleHomeClick}
+                onClick={() => handleHomeClick(navigate)}
               >
                 Home
               </span>
               <span>/</span>
               <span
                 className={ProductDetPage.CategoryText}
-                onClick={() => handleCategoryClick(cat_id)}
+                onClick={() => handleCategoryClick(navigate, cat_id)}
               >
-                {cat_id === 1
-                  ? " Vegetables"
-                  : cat_id === 2
-                  ? " Fruits"
-                  : cat_id === 3
-                  ? " Seasonal Vegetables"
-                  : cat_id === 4
-                  ? " Seasonal Fruits"
-                  : "Milk Products"}
+                {getCategoryName(cat_id)}
               </span>
               <span>/</span>
               <span className={ProductDetPage.ProductText}>

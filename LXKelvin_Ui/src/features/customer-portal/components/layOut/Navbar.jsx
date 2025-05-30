@@ -33,7 +33,6 @@ const NavbarComponent = () => {
   const [text_color, setTextColor] = useState(true);
   const [userData, setUserData] = useState({});
   const { isUserValid, userAuth } = useSelector((state) => state.userAuth);
-  // const productNames = products?.map(product => product.name);
   const navigate = useNavigate();
 
   const languages = Const?.LANGUAGES;
