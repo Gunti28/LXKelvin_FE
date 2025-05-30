@@ -13,13 +13,13 @@ import Italian from "../../../lib/common/assets/Images/italian.svg";
 import French from "../../../lib/common/assets/Images/French.svg";
 import Spanish from "../../../lib/common/assets/Images/Spanish.svg";
 import Greece from "../../../lib/common/assets/Images/Greece.svg";
-import kiwi from "../../../lib/common/assets/images/kiwi.svg";
-import tomato from "../../../lib/common/assets/images/tomato.svg";
-import banana from "../../../lib/common/assets/images/banana.svg";
+import kiwi from "../../common/assets/Images/kiwi.svg";
+import tomato from "../../common/assets/images/tomato.svg";
+import banana from "../../common/assets/images/banana.svg";
 
-import TimeSaving from "../../../lib/common/assets/Images/time-saving.svg";
-import Promotions from "../../../lib/common/assets/Images/promotions.svg";
-import PriceAlerts from "../../../lib/common/assets/Images/price-alerts.svg";
+import TimeSaving from "../../common/assets/Images/time-saving.svg";
+import Promotions from "../../common/assets/Images/promotions.svg";
+import PriceAlerts from "../../common/assets/Images/price-alerts.svg";
 
 export const imageMap = {
   tomato,
