@@ -1,21 +1,19 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
-import SignInModel from "./features/customer-portal/components/signIn/SignInModel";
-import OtpModel from "./features/customer-portal/components/signIn/OtpModel";
 import Register from "./features/customer-portal/components/signUp/Register";
 import Success from "./features/customer-portal/components/signIn/Success";
-
 import ListingComponent from "./features/customer-portal/components/products/ListingComponent";
 import ProductList from "./features/customer-portal/components/products/ProductList";
 import LayoutContainerPage from "./features/customer-portal/pages/LayoutContainerPage";
 import ListingLayoutContainer from "./features/customer-portal/components/products/ListingLayoutContainer";
-
 import SignInPage from "./features/customer-portal/pages/SignInPage";
-
 import DashBoard from "./features/customer-portal/components/layOut/Dashboard";
-import OpeningLayOut from "./features/customer-portal/components/openingLayOut/OpeningScreen";
-
 import MyAddress from "./features/customer-portal/components/Profile/MyAddress";
 import MyProfile from "./features/customer-portal/components/Profile/MyProfile";
 import MyOrders from "./features/customer-portal/components/Profile/MyOrders";
@@ -31,11 +29,9 @@ function App() {
       <Routes>
         <Route path="/" element={<LayoutContainerPage />}>
           <Route path="dashBoard" element={<DashBoard />} />
-          {/* <Route index element={<OpeningLayOut />} /> */}
           <Route path="signIn" element={<SignInPage />} />
           <Route path="signUp" element={<Register />} />
           <Route path="success" element={<Success />} />
-
           <Route path="products" element={<ListingLayoutContainer />}>
             <Route index element={<ListingComponent />} />
             <Route path="all-categories" element={<ListingComponent />} />
@@ -45,8 +41,7 @@ function App() {
             <Route path="seasonalFruits" element={<ProductList />} />
             <Route path="milkProducts" element={<ProductList />} />
           </Route>
-
-          <Route path="myaccount" element={<ProfileLayout />}>
+          <Route path="my_account" element={<ProfileLayout />}>
             <Route
               index
               element={
@@ -56,7 +51,7 @@ function App() {
               }
             />
             <Route
-              path="myaddress"
+              path="my_address"
               element={
                 <AuthGuard>
                   <MyAddress />
@@ -64,7 +59,7 @@ function App() {
               }
             />
             <Route
-              path="myorders"
+              path="my_orders"
               element={
                 <AuthGuard>
                   <MyOrders />
@@ -72,7 +67,7 @@ function App() {
               }
             />
             <Route
-              path="saveforlater"
+              path="save_for_later"
               element={
                 <AuthGuard>
                   <SaveForLater />
@@ -80,7 +75,7 @@ function App() {
               }
             />
             <Route
-              path="customersupport"
+              path="customer_support"
               element={
                 <AuthGuard>
                   <CustomerSupport />
@@ -100,6 +95,7 @@ function App() {
             }
           />
         </Route>
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );

@@ -68,7 +68,7 @@ const NavbarComponent = () => {
   };
 
   const handleAccountClick = () => {
-    navigate("/myaccount");
+    navigate("/my_account");
   };
 
   useEffect(() => {
@@ -90,7 +90,7 @@ const NavbarComponent = () => {
 
   useEffect(() => {
     const isHighlightPath =
-      path.startsWith("/products") || path.startsWith("/myaccount");
+      path.startsWith("/products") || path.startsWith("/my_account");
     setTextColor(isHighlightPath);
   });
   useEffect(() => {
@@ -360,7 +360,8 @@ const NavbarComponent = () => {
                           color: text_color ? "#5B5F62" : "#fff",
                         }}
                       >
-                        {userData?.userName}
+                        {/* {userData?.userName} */}
+                        Logout
                       </p>
                     </div>
                   </div>
