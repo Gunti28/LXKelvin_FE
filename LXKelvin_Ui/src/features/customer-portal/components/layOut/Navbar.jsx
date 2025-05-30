@@ -90,6 +90,7 @@ const NavbarComponent = () => {
       path.startsWith("/products") ||
       path.startsWith("/myaccount") ||
       path.startsWith("/productDetails");
+
     setTextColor(isHighlightPath);
   });
   useEffect(() => {
