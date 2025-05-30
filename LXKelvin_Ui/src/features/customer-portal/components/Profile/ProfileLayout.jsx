@@ -5,12 +5,28 @@ import { Offcanvas, Button } from "react-bootstrap";
 import styles from "../../../../lib/common/css/profile/ProfileLayout.module.css";
 
 const navItems = [
-  { to: "/myaccount", icon: "healthicons:ui-user-profile-outline", label: "My Profile" },
-  { to: "/myaccount/myaddress", icon: "hugeicons:location-03", label: "My Address" },
-  { to: "/myaccount/myorders", icon: "solar:bag-4-linear", label: "My Orders" },
-  { to: "/myaccount/saveforlater", icon: "solar:heart-linear", label: "Save for Later" },
   {
-    to: "/myaccount/customersupport",
+    to: "/my_account",
+    icon: "healthicons:ui-user-profile-outline",
+    label: "My Profile",
+  },
+  {
+    to: "/my_account/my_address",
+    icon: "hugeicons:location-03",
+    label: "My Address",
+  },
+  {
+    to: "/my_account/my_orders",
+    icon: "solar:bag-4-linear",
+    label: "My Orders",
+  },
+  {
+    to: "/my_account/save_for_later",
+    icon: "solar:heart-linear",
+    label: "Save for Later",
+  },
+  {
+    to: "/my_account/customer_support",
     icon: "streamline:customer-support-1",
     label: "Customer Support",
   },
