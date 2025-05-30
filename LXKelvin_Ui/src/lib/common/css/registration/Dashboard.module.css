@@ -1,0 +1,200 @@
+.carousel {
+  position: relative;
+  width: 100%;
+}
+.MainDashboard {
+  overflow-y: auto;
+  z-index: 2;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.CatText {
+  color: #fff;
+  border-bottom: 1.5px solid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+}
+/* .cardtotal{
+  width: 21vw;
+} */
+.cardtotal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Card item inside cardtotal */
+.cardtotal .card {
+  flex: 0 0 calc(25% - 1rem);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.CatBtn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-bottom: 1.5px solid #fff;
+}
+.AllCatBtn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+
+.banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #000;
+}
+.cardimage {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.foont {
+  font-size: 24px;
+}
+
+.btn1 {
+  margin-top: 10px;
+}
+.cardfont {
+  font-size: 1.1rem !important;
+}
+
+.container {
+  padding: 20px;
+}
+.text {
+  font-size: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .foont {
+    font-size: 14px;
+  }
+  .btn1 {
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 11px !important;
+    margin-bottom: 10px !important;
+  }
+  .cardimage {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+  .cardBody {
+    max-height: 60px !important;
+  }
+  .cardfont {
+    font-size: 1rem !important;
+  }
+  .cardtotal .card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+/* For small tablets and large phones */
+@media (min-width: 577px) and (max-width: 767px) {
+  .mySwiper1 .swiper-slide {
+    width: 90% !important;
+  }
+
+  .foont {
+    font-size: 12px !important;
+  }
+  .btn1 {
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 10px !important;
+    padding: auto !important;
+  }
+  img {
+    height: 200px !important;
+  }
+  .cardtotal {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardtotal .card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mySwiper1 .swiper-slide {
+    width: 100% !important;
+  }
+
+  .card-title {
+    font-size: 40px;
+  }
+
+  img {
+    height: 200px !important;
+  }
+  .foont {
+    font-size: 12px !important;
+  }
+  .btn1 {
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .CardWrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .cd {
+    width: 100% !important;
+    height: 220px !important;
+    margin: 0 !important;
+  }
+  img {
+    height: 200px !important;
+  }
+  .cardtotal {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+    gap: 1rem;
+  }
+
+  .cardtotal .card {
+    flex: 0 0 auto;
+    width: 80%;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+  }
+}

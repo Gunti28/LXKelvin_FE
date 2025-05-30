@@ -1,0 +1,772 @@
+.productPage {
+  padding: 1rem;
+  overflow: auto;
+  background-color: #fff;
+  height: 100%;
+  width: 100% !important;
+}
+
+.productPage .breadcrumb {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Left Column Styles */
+.leftColumn {
+  padding-right: 2rem;
+}
+
+.mainImageContainer {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.mainPreviewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.thumbnailsRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #ffa500;
+}
+
+.thumbnail.active {
+  border-color: #ffa500;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+}
+
+.thumbnailContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 0 0.7rem;
+}
+
+/* Carousel Controls */
+.carouselControl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.carouselControl:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #ffa500;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carouselControl .prev {
+  left: 1rem;
+}
+
+.carousel-control .next {
+  right: 10rem;
+}
+
+/* Right Column Styles */
+.rightColumn {
+  padding-left: 2rem;
+}
+
+.productDetailsSection {
+  margin-bottom: 3rem;
+}
+
+.breadCrumb {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.HomeText{
+  cursor: pointer;
+
+}
+.HomeText:hover{
+  color:#ff9900
+}
+.CategoryText{
+  cursor: pointer;
+  margin-left: 0.1rem;
+
+}
+.CategoryText:hover{
+  color:#ff9900
+}
+.ProductText{
+  cursor: pointer;
+  margin-left: 0.1rem;
+
+}
+.ProductText:hover{
+  color:#ff9900
+}
+
+.ProductTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0;
+  /* Override previous margin */
+}
+
+.quantityAddContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.addButton {
+  min-width: 120px;
+  height: 2.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: #ff9900 !important;
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #e69500 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 165, 0, 0.2);
+}
+
+.addToCartBtn {
+  background-color: #ffa500 !important;
+  border: none !important;
+  padding: 12px !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  width: 100%;
+}
+
+.quantityPriceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.priceDetails {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.priceSection {
+  margin-bottom: 2rem;
+}
+
+.discountedPrice {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.originalPrice {
+  color: #666;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.discountPercent {
+  color: #28a745;
+  margin-left: 0.6rem;
+}
+
+.priceDisplay {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.currentPrice {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.pmdPrice {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.discount {
+  color: #22c55e;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.heartIcon {
+  color: #ef7f24;
+  float: right;
+  margin-left: auto;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.heartIcon:hover {
+  color: #e73434;
+}
+
+.subscriptionContainer {
+  background-color: #fff8e1;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.subscriptionBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.subscriptionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subscriptionContent h6 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.offerText {
+  font-size: 1rem;
+  color: #333;
+}
+
+.viewPlansBtn {
+  color: #ff9900 !important;
+  background: white !important;
+  margin-top: 10px;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #ff9900;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.viewPlansBtn:hover {
+  background-color: #ff9900 !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 165, 0, 0.2);
+}
+
+/* Subscription Offer Banner */
+.subscriptionOffer {
+  margin: 1.2rem 0;
+}
+
+.offerBanner {
+  background: linear-gradient(to right, #99742d, #ffc14b);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offerBanner p {
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.vipTag {
+  background: #7f1d1d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 0 4px;
+}
+
+.offText {
+  font-weight: 600;
+}
+
+.offerBanner:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Choose Section */
+.whyChooseSection {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.whyChooseSection h4 {
+  margin-bottom: 1.4rem;
+  font-size: 1.1rem;
+}
+
+.benefitsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.benefitItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-color: #ffa500;
+  background: #fff;
+}
+
+.benefitIcon {
+  width: 5rem;
+  height: 5rem;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.benefitIcon img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.benefitContent h5 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.benefitContent p {
+  color: #666;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.productBenefitsContainer {
+  display: flex;
+  gap: 1.9rem;
+  margin-top: 2.8rem;
+}
+
+.benefitsHeading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+  padding-left: 10px;
+}
+
+.benefitCard {
+  border: none;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+}
+
+.productInfoSection {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.detailsHeading {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  margin-bottom: 20px;
+}
+
+.infoItem p {
+  margin-bottom: 5px;
+}
+
+.infoItem strong {
+  color: #333;
+}
+
+/* Customer Feedback Section */
+.customerFeedback {
+  margin-top: 2.5rem;
+  padding: 1.3rem;
+}
+
+.customerFeedback h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.feedbackContainer {
+  height: 70vh;
+  overflow-y: auto;
+  padding-right: 0.8rem;
+}
+
+.feedbackContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.feedbackContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.feedbackContainer::-webkit-scrollbar-thumb {
+  background: #ffa500;
+  border-radius: 10px;
+}
+
+.feedbackItem {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.feedbackHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.feedbackAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.feedbackAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feedbackUser {
+  flex-grow: 1;
+}
+
+.feedbackUser h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.feedbackDate {
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.feedbackRating {
+  color: #ffa500;
+  font-size: 18px;
+}
+
+.feedbackContent {
+  margin-top: 10px;
+  color: #333;
+  font-size: 15px;
+}
+
+.detailsHeading {
+  font-weight: bolder;
+  size: 35px;
+}
+
+@media (max-width: 991.98px) {
+  .productPage {
+    padding: 16px;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    /* flex: 0 0 100%; */
+    width: 50%;
+  }
+
+  .mainImageContainer {
+    width: 100%;
+    height: auto;
+  }
+
+  .mainPreviewImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnailsRow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .thumbnail {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .productInfoSection,
+  .productDetailsSection {
+    padding: 2rem;
+  }
+
+  .breadCrumb {
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .ProductTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .quantityPriceSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .quantityAddContainer {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .addButton {
+    width: auto;
+    margin-left: 8px;
+  }
+
+  .priceDisplay {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .subscriptionPlanSection h3 {
+    font-size: 1rem;
+  }
+
+  .benefitsContainer {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .benefitItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .benefitIcon {
+    width: 10rem;
+    height: 4rem;
+  }
+
+  .benefitIcon img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .customerFeedback {
+    padding-bottom: 1rem;
+    padding-top: -1rem;
+    margin-top: -1rem;
+  }
+
+  .feedbackItem {
+    margin-bottom: 0.5rem;
+  }
+
+  .feedbackHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feedbackRating {
+    margin-top: 4px;
+  }
+  .viewPlansBtn {
+    font-size: 0.8rem;
+    padding: 2% 3%;
+    margin-bottom: 2rem;
+  }
+  .offerBanner p {
+    font-size: 0.7rem;
+  }
+  .currentPrice {
+    font-size: 1.6rem;
+  }
+  .pmdPrice {
+    font-size: 0.7rem;
+  }
+  .discount {
+    font-size: 0.7rem;
+  }
+  .heartIcon {
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 574px) {
+  .leftColumn,
+  .rightColumn {
+    /* flex: 0 0 100%; */
+    width: 100%;
+  }
+  .mainImageContainer {
+    width: 100%;
+  }
+  .mainPreviewImage {
+    width: 100%;
+    height: 100%;
+  }
+  .thumbnail {
+    width: 20%;
+    height: 4% !important;
+  }
+  .ProductTitle {
+    font-size: 20px;
+  }
+
+  .offText {
+    font-size: 14px;
+  }
+
+  .viewPlansBtn {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .heartIcon {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .benefitIcon {
+    padding: 0%;
+  }
+  .benefitIcon img {
+    height: 60px !important;
+    width: 100%;
+  }
+}
+@media (min-width: 575px) and (max-width: 766px) {
+  .leftColumn,
+  .rightColumn {
+    /* flex: 0 0 100%; */
+    width: 50%;
+  }
+  .mainImageContainer {
+    width: 100%;
+    height: auto;
+  }
+  .mainPreviewImage {
+    object-fit: cover;
+    height: auto;
+  }
+  .thumbnail {
+    width: 20%;
+    height: 4% !important;
+  }
+  .breadCrumb {
+    font-size: 10px;
+  }
+  .priceDisplay {
+    justify-content: flex-start;
+  }
+  .heartIcon {
+    margin-left: auto;
+  }
+  .benefitIcon img {
+    height: 50px !important;
+    width: 100%;
+  }
+}

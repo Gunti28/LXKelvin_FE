@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.heroSection {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-image: url("/src/lib/common/assets/Images/LandingPage.svg");
+  background-size: cover;
+  background-position: center;
+}
+.heroSection > * {
+  position: relative;
+  z-index: 1;
+}
+.navbar {
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
+  /* height: 100px; */
+}
+
+.searchContainer {
+  width: 400px;
+  position: relative;
+}
+.content {
+  width: 100%;
+  height: 80vh;
+}
+
+.line {
+  position: absolute;
+  right: 40px;
+  top: 47%;
+  color: white;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.searchProducts {
+  position: absolute;
+  top: 45px;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  backdrop-filter: blur(25);
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+  border-radius: 10px;
+  z-index: 999;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.placeholder::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: white !important;
+  opacity: 1;
+}
+.locationContainer {
+  display: flex;
+  flex-direction: row;
+}
+.locationIcon {
+  align-content: center;
+}
+
+.searchBar ul {
+  z-index: 9999 !important;
+}
+.LogoImg {
+  width: 5rem;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.toggle {
+  background-color: transparent !important;
+  border: none !important;
+}
+.languageToggle {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem !important;
+  height: 2.5rem;
+  width: 6rem;
+  margin-right: 1rem;
+  border-radius: 40px !important;
+}
+.languageToggle::after {
+  display: none !important;
+}
+.langDisplay {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem !important;
+}
+
+.langDisplay img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.languageItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  height: auto;
+  padding: 0.25rem 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.languageItem img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.languageToggle dropdown-item {
+  display: flex !important;
+}
+
+.SigninBtn {
+  background-color: #e1712b !important;
+  border-color: #e1712b !important;
+  width: 10vw !important;
+  padding: 0.5rem !important;
+  color: #fff !important;
+  font-size: 0.8rem !important;
+  margin-right: 3rem !important;
+}
+
+.heroSection .navbar {
+  padding: 0.5rem 1rem;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+.whitePlaceholder::placeholder {
+  color: white;
+}
+.DealsCon {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem !important;
+  margin-right: 0.5rem;
+  width: 25rem;
+  justify-content: space-between;
+}
+.DealsCon.nav-link {
+  font-size: 0.8rem !important;
+}
+
+@keyframes micPulse {
+  0% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #ff4d4d;
+  }
+  100% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+}
+
+.micAnimating {
+  animation: micPulse 1s infinite;
+}
+.ProfileCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-bottom: -0.5rem;
+  width: 7vw;
+  margin-right: 1rem;
+  color: #ffffff;
+  font-size: 12px;
+  gap: 0.5rem !important;
+}
+.ProfileSection {
+  cursor: pointer;
+}
+.profileNameContainer {
+  height: auto;
+  width: 3rem;
+}
+
+@media (max-width: 1300px) {
+  .searchBar {
+    width: 280px;
+  }
+  .lang {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 990px) {
+  .ProfileCon {
+    width: 10vw;
+  }
+  .SigninBtn {
+    width: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0rem !important;
+    height: auto;
+    padding-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchBar {
+    margin: 0.5rem 0 !important;
+    width: 90vw;
+  }
+
+  .searchContainer {
+    width: 90% !important;
+    font-size: 10px !important;
+  }
+
+  .SigninBtn {
+    padding: 0.5rem 0.6rem !important;
+    font-size: 0.8rem !important;
+    width: 100% !important;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+    width: 5rem !important;
+    font-size: 12px !important;
+    /* padding: 0.5rem 1rem !important; */
+    /* margin-left: -10vw !important;
+    margin-right: 5vw !important; */
+  }
+
+  .ProfileCon {
+    width: 38% !important;
+    margin-top: 0 !important;
+    justify-content: flex-end;
+    margin-bottom: -1rem !important;
+    /* margin-right: auto; */
+    margin-left: 48vw;
+    font-size: 0.7rem !important;
+    gap: 1rem !important;
+  }
+
+  .ProfileSection,
+  .CartSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .languageToggle {
+    width: 100% !important;
+    justify-content: space-between;
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 12px !important;
+    margin-top: 0.6rem !important;
+  }
+
+  .heroSection .navbar {
+    padding: 0.5rem 1rem !important;
+  }
+
+  .navbar .navbar-brand img {
+    width: 40px !important;
+  }
+
+  .DealsCon {
+    padding: 0 !important;
+    font-size: 0.9rem;
+    width: 30vw;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between;
+    flex-direction: row !important;
+    margin-top: -2rem !important;
+    margin-left: 2rem !important;
+    width: 40% !important;
+  }
+
+  .langDisplay {
+    height: 1rem !important;
+    font-size: 10px !important;
+  }
+
+  .languageItem {
+    display: flex;
+    flex-direction: row;
+    padding: 4% !important;
+    margin: 0% !important;
+    font-size: 14px;
+  }
+
+  .dropDownMenu {
+    max-height: 10rem !important;
+    overflow-y: auto !important;
+  }
+
+  .dropDownImg {
+    padding: 0 !important;
+    width: 25px !important;
+    height: 25px !important;
+    display: inline;
+    margin-right: 5% !important;
+  }
+
+  .LogoImg {
+    position: absolute;
+    top: -4rem;
+    left: 0%;
+    width: 4rem;
+    z-index: 1000;
+  }
+
+  .langAndSignin {
+    position: relative;
+    margin-left: 5vw;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .TopContainer {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: relative;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .DealsCon {
+    font-size: 0.9rem !important;
+    width: 20rem !important;
+  }
+  .SigninBtn {
+    font-size: 1rem !important;
+  }
+  .languageToggle {
+    font-size: 1rem !important;
+    margin-left: -2rem !important;
+    margin-right: 1rem !important;
+  }
+  .langAndSignin {
+    margin-left: 1rem !important;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+  }
+
+  .navbar .navbar-toggler {
+    display: none;
+  }
+
+  .TopContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .searchBar {
+    width: 20rem !important;
+    margin: 0 auto;
+  }
+  .searchContainer {
+    width: 80%;
+  }
+
+  .ProfileCon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 5rem;
+    padding-top: 10;
+    margin-bottom: 0;
+    margin-left: 3rem;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  .profileNameContainer {
+    width: 5rem !important;
+  }
+
+  .SigninBtn {
+    width: auto;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .lang {
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 996px) and (max-width: 1092px) {
+  .DealsCon {
+    width: 18rem !important;
+  }
+  .langAndSignin {
+    margin-left: 2rem !important;
+  }
+}
+@media (max-width: 431px) {
+  .searchBar {
+    width: 90vw !important;
+    margin-top: 0 !important;
+    justify-content: center;
+  }
+
+  .ProfileCon {
+    position: relative;
+    width: 100% !important;
+    margin-top: 0 !important;
+    justify-content: flex-end;
+    margin-bottom: -1rem !important;
+    margin-left: 1vw;
+    font-size: 0.7rem !important;
+  }
+
+  .langAndSignin {
+    position: relative;
+    margin-left: 5vw !important;
+    width: 90% !important;
+    justify-content: space-between;
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; */
+  }
+
+  .SigninBtn {
+    padding: 0.5rem 0.6rem !important;
+    font-size: 0.8rem !important;
+    width: 40% !important;
+    margin-top: 0.5rem;
+    width: 5rem !important;
+    font-size: 12px !important;
+    padding: 0.5rem 1rem !important;
+    /* margin-left: -10vw !important; */
+    margin-right: 5vw !important;
+  }
+
+  .languageToggle {
+    width: 100% !important;
+    justify-content: space-between;
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 12px !important;
+    margin-top: 0.6rem !important;
+  }
+
+  .DealsCon {
+    width: 14rem !important;
+    font-size: 12px !important;
+    justify-content: space-around !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .navbar {
+    padding: 0.5rem 1rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .searchBar {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .searchContainer {
+    width: 100%;
+  }
+
+  .SigninBtn {
+    width: 6rem;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+    margin-left: -20vw !important;
+  }
+
+  .ProfileCon {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem !important;
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 0;
+    /* margin-left: 2rem; */
+    padding-top: 1rem;
+  }
+
+  .DealsCon {
+    width: 20rem;
+    font-size: 0.9rem !important;
+    margin-left: 3rem;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center !important;
+  }
+
+  .languageToggle {
+    font-size: 0.9rem !important;
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+    padding: 0.3rem 0.8rem !important;
+  }
+
+  .langAndSignin {
+    margin-left: 2rem !important;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .LogoImg {
+    width: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .TopContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1092px) {
+  .DealsCon {
+    width: 18rem !important;
+    font-size: 0.8rem !important;
+    justify-content: space-between !important;
+  }
+
+  .langAndSignin {
+    margin-left: 1.5rem !important;
+    width: 70% !important;
+    justify-content: space-between !important;
+  }
+
+  .languageToggle {
+    font-size: 0.8rem !important;
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+
+  .SigninBtn {
+    padding: 0.4rem 1.2rem !important;
+    font-size: 0.9rem !important;
+    margin-left: 8vw;
+  }
+
+  .ProfileCon {
+    font-size: 0.9rem !important;
+    margin-left: 2rem !important;
+    width: 100% !important;
+    justify-content: flex-end !important;
+  }
+
+  .searchBar {
+    width: 100% !important;
+  }
+
+  .searchContainer {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "savedItems": [
+    {
+      "id": 1,
+      "name": "Tomato",
+      "bgColor": "#F7B18C",
+      "image": "tomato.svg",
+      "rating": 4.2,
+      "price": 40,
+      "originalPrice": 52,
+      "discount": "28% OFF"
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "bgColor": "#EDD251",
+      "image": "banana.svg",
+      "rating": 4.1,
+      "price": 40,
+      "originalPrice": 52,
+      "discount": "28% OFF"
+    }
+  ]
+}

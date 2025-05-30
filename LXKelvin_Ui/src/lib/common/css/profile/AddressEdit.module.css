@@ -1,0 +1,120 @@
+
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 18px !important;
+  color: #333;
+  text-align: center;
+}
+
+.inputBox {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  max-width: 25rem;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #000 !important;
+  padding: 0.4rem 0.6rem !important;
+  box-sizing: border-box;
+}
+
+
+.checkbox {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  color: #000 !important;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.radioCon {
+  padding: 0.3rem 0;
+  border-bottom: 1.5px dotted #d8d8d8;
+}
+
+.label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #666;
+  margin-top: 1rem;
+}
+
+
+.Addresslabel {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.saveButton {
+  background-color: #ff9900 !important;
+  border: none !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px !important;
+  padding: 0.5rem 1.5rem; 
+  min-width: 160px;
+  display: block;
+  margin: 0 auto; 
+}
+
+.saveBtnWrap {
+  text-align: center; 
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .inputBox {
+    width: 100%;
+    font-size: 13px; 
+    max-width: 100%;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .checkbox {
+    font-size: 12px;
+  }
+
+  .saveButton {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    min-width: 140px;
+  }
+  .saveBtnWrap {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
+  .inputBox {
+    font-size: 12px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+
+  .saveButton {
+    font-size: 11px;
+    padding: 0.5rem 0.8rem;
+  }
+  .modal-body {
+    padding: 1rem 0.5rem;
+  }
+}
