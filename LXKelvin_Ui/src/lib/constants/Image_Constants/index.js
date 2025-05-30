@@ -17,6 +17,11 @@ import kiwi from "/src/lib/common/assets/images/kiwi.svg";
 import tomato from "/src/lib/common/assets/images/tomato.svg";
 import banana from "/src/lib/common/assets/images/banana.svg";
 
+import TimeSaving from "../../../lib/common/assets/Images/time-saving.svg";
+import Promotions from "../../../lib/common/assets/Images/promotions.svg";
+import PriceAlerts from "../../../lib/common/assets/Images/price-alerts.svg";
+
+
 export const imageMap = {
   tomato,
   banana,
@@ -44,3 +49,7 @@ export const ITALIAN = Italian;
 export const FRENCH = French;
 export const SPANISH = Spanish;
 export const GREECE = Greece;
+
+export const TIME_SAVING = TimeSaving;
+export const PROMOTIONS = Promotions;
+export const PRICE_ALERTS = PriceAlerts;

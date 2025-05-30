@@ -10,6 +10,7 @@ import orderReducer from "./slice/orderSlice";
 import saveForLaterReducer from "./slice/saveForLaterSlice";
 
 import languageReducer from "./slice/languageSlice";
+import productDetailsReducer from "./slice/productDetailsSlice"
 
 export const store = configureStore({
   reducer: {
@@ -22,6 +23,7 @@ export const store = configureStore({
     saveForLater: saveForLaterReducer,
 
     language: languageReducer,
+    productDetails: productDetailsReducer,
 
   },
 });

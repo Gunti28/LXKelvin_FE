@@ -16,13 +16,7 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { useDispatch, useSelector } from "react-redux";
 import { showNavBarDefaultTemplate } from "../../../../lib/helpers/index";
-import {
-  LOGO,
-  ITALIAN,
-  FRENCH,
-  SPANISH,
-  GREECE,
-} from "../../../../lib/constants/Image_Constants/index";
+import { LOGO } from "../../../../lib/constants/Image_Constants/index";
 import { Const } from "../../../../lib/constants/index";
 import { setSelectedLang } from "../../../../store/slice/languageSlice";
 
@@ -39,7 +33,6 @@ const NavbarComponent = () => {
   const [text_color, setTextColor] = useState(true);
   const [userData, setUserData] = useState({});
   const { isUserValid, userAuth } = useSelector((state) => state.userAuth);
-  // const productNames = products?.map(product => product.name);
   const navigate = useNavigate();
 
   const languages = Const?.LANGUAGES;
@@ -70,6 +63,9 @@ const NavbarComponent = () => {
   const handleAccountClick = () => {
     navigate("/myaccount");
   };
+  const handleLogoClick = () => {
+    navigate("/dashBoard");
+  }
 
   useEffect(() => {
     if (isUserValid) {
@@ -90,7 +86,10 @@ const NavbarComponent = () => {
 
   useEffect(() => {
     const isHighlightPath =
-      path.startsWith("/products") || path.startsWith("/myaccount");
+      path.startsWith("/products") ||
+      path.startsWith("/myaccount") ||
+      path.startsWith("/productDetails");
+
     setTextColor(isHighlightPath);
   });
   useEffect(() => {
@@ -126,7 +125,8 @@ const NavbarComponent = () => {
       }}
     >
       <div className={` ${HeroStyles.heroText} text-center`}>
-        <img style={{ margin: "auto" }} src={LOGO} width={150} alt="Logo" />
+        <img style={{ margin: "auto",cursor:"pointer" }} src={LOGO} width={150} alt="Logo" 
+        />
         <div className={HeroStyles.organicText}>ORGANIC</div>
         <div className={HeroStyles.vegetableText}>VEGETABLE & FRUITS</div>
         <div className={HeroStyles.subtitleText}>
@@ -152,7 +152,8 @@ const NavbarComponent = () => {
       >
         <Container fluid>
           <Navbar.Brand href="#">
-            <img src={LOGO} alt="LOGO" className={NavbarCss.LogoImg} />
+            <img src={LOGO} alt="LOGO" className={NavbarCss.LogoImg} 
+            onClick={()=>handleLogoClick()}/>
           </Navbar.Brand>
 
           <Navbar.Toggle
