@@ -14,8 +14,8 @@ import French from "../../../lib/common/assets/Images/French.svg";
 import Spanish from "../../../lib/common/assets/Images/Spanish.svg";
 import Greece from "../../../lib/common/assets/Images/Greece.svg";
 import kiwi from "../../common/assets/Images/kiwi.svg";
-import tomato from "../../common/assets/images/tomato.svg";
-import banana from "../../common/assets/images/banana.svg";
+import tomato from "../../common/assets/Images/tomato.svg";
+import banana from "../../common/assets/Images/banana.svg";
 
 import TimeSaving from "../../common/assets/Images/time-saving.svg";
 import Promotions from "../../common/assets/Images/promotions.svg";
