@@ -9,7 +9,6 @@ export const showNavBarDefaultTemplate = (path) => {
       : "#fff");
 };
 
-// productDetails helpers
 
 export const handleHomeClick = (navigate) => {
   return navigate("/products/all-categories");
