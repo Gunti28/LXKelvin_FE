@@ -16,10 +16,10 @@ import Greece from "../../../lib/common/assets/Images/Greece.svg";
 import kiwi from "../../common/assets/Images/kiwi.svg";
 import tomato from "../../common/assets/Images/tomato.svg";
 import banana from "../../common/assets/Images/banana.svg";
-
 import TimeSaving from "../../common/assets/Images/time-saving.svg";
 import Promotions from "../../common/assets/Images/promotions.svg";
 import PriceAlerts from "../../common/assets/Images/price-alerts.svg";
+
 
 export const imageMap = {
   tomato,
@@ -42,13 +42,12 @@ export const FRUITS = fruits;
 export const SEASONAL_VEGETABLES = seasonalVegetables;
 export const SEASONAL_FRUITS = seasonalFruits;
 export const MILK_PRODUCTS = milkProducts;
-
 export const LOGO = Logo;
 export const ITALIAN = Italian;
 export const FRENCH = French;
 export const SPANISH = Spanish;
 export const GREECE = Greece;
-
 export const TIME_SAVING = TimeSaving;
 export const PROMOTIONS = Promotions;
 export const PRICE_ALERTS = PriceAlerts;
+
