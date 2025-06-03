@@ -5,6 +5,7 @@ import { Offcanvas, Button, Breadcrumb } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "../../../../lib/common/css/products/ListingLayout.module.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 import {
   ALL_PRODUCTS,
@@ -19,7 +20,10 @@ const SidebarComponent = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    const handleShow = (e) => {
+    e.preventDefault();
+    setShow(true);
+  };
   const categoryIcons = {
     "all-categories": ALL_PRODUCTS,
     vegetables: VEGETABLES,
@@ -45,21 +49,18 @@ const SidebarComponent = () => {
   return (
     <div>
       <Button
-        className={`d-md-none mb-3 ${styles.hamburgerBtn}`}
+        className={`d-lg-none mb-3 ${styles.hamburgerBtn}`}
         onClick={handleShow}
-        variant="outline-primary"
+        variant="outline-secondary"
       >
-        <GiHamburgerMenu size={24} />
+        <Icon
+          icon="weui:arrow-filled"
+          width="14"
+          height="28"
+          style={{ color: "#5B5F62" }}
+        />
       </Button>
-      <aside className={`${styles.sidebar} d-none d-md-block`}>
-        {/* <Breadcrumb className={`mb-4 ${styles.BreadCrumbCon}`}>
-          <Breadcrumb.Item className="text-black" active>Home</Breadcrumb.Item>
-          {pathnames.map((name, index) => (
-            <Breadcrumb.Item key={index} active className="text-black">
-              {name.replace(/-/g, ' ')}
-            </Breadcrumb.Item>
-          ))}
-        </Breadcrumb> */}
+      <aside className={`${styles.sidebar} d-none d-lg-block`}>
         <Breadcrumb className="mb-4">
           <Breadcrumb.Item
             linkAs={Link}
@@ -113,7 +114,7 @@ const SidebarComponent = () => {
         </nav>
       </aside>
 
-      <Offcanvas show={show} onHide={handleClose} className="d-md-none">
+      <Offcanvas show={show} onHide={handleClose} className="d-lg-none">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Categories</Offcanvas.Title>
         </Offcanvas.Header>

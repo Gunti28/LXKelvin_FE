@@ -4,7 +4,6 @@ import { Container, Card, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 const CategoriesComponent = () => {
   const { categories } = useSelector((state) => state.categories);
   const [categoriesList, setCategories] = useState([]);
@@ -27,7 +26,7 @@ const CategoriesComponent = () => {
         </button>
       </div>
       <hr />
-      <div className=" d-flex overflow-auto gap-3 ">
+      <div className={`d-flex overflow-auto gap-3 ${Category.CardWrapper}`}>
         {categoriesList.map((cat, idx) => (
           <Col md={3} sm={6} xs={12} key={idx} className="mb-4">
             <div key={idx} className={`t1 mb-5 ${Category.cardtotal}`}>

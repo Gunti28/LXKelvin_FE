@@ -1,0 +1,1095 @@
+{
+  "productDetails": [
+    {
+      "id": 1,
+      "images": [
+        "/src/lib/common/assets/Images/tomoto1_courosel.svg",
+        "/src/lib/common/assets/Images/tomoto2_courosel.svg",
+        "/src/lib/common/assets/Images/tomoto3_courosel.svg",
+        "/src/lib/common/assets/Images/tomoto4_courosel.svg",
+        "/src/lib/common/assets/Images/tomoto5_courosel.svg"
+      ],
+      "productName": "Tomato",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 40,
+      "originalPrice": 50,
+      "discount": 20,
+      "healthBenefits": "Rich in essential vitamins (A, C, and K) and antioxidants that support heart health.",
+      "packing": "Packaged in a ventilated, eco-friendly plastic bag to retain freshness.",
+      "about": "Freshly harvested tomatoes perfect for salads, sauces, and cooking with unmatched flavor."
+    },
+    {
+      "id": 2,
+      "images": [
+        "/src/lib/common/assets/Images/beans.svg",
+        "/src/lib/common/assets/Images/beans.svg",
+        "/src/lib/common/assets/Images/beans.svg",
+        "/src/lib/common/assets/Images/beans.svg",
+        "/src/lib/common/assets/Images/beans.svg"
+      ],
+      "productName": "Beans",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 35,
+      "originalPrice": 45,
+      "discount": 10,
+      "healthBenefits": "A great source of protein and fiber that aids in digestion.",
+      "packing": "Packaged in a reusable, breathable pouch to maintain quality.",
+      "about": "Crisp and fresh beans ideal for stir-fries and healthy diets."
+    },
+    {
+      "id": 3,
+      "images": [
+        "/src/lib/common/assets/Images/apple.svg",
+        "/src/lib/common/assets/Images/apple.svg",
+        "/src/lib/common/assets/Images/apple.svg",
+        "/src/lib/common/assets/Images/apple.svg",
+        "/src/lib/common/assets/Images/apple.svg"
+      ],
+      "productName": "Apple",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 120,
+      "originalPrice": 35,
+      "discount": 0,
+      "healthBenefits": "Loaded with dietary fiber and vitamin C to boost immunity.",
+      "packing": "Carefully packed in a fruit tray with protective padding.",
+      "about": "Crisp, juicy apples that are perfect as a healthy snack or dessert ingredient."
+    },
+    {
+      "id": 4,
+      "images": [
+        "/src/lib/common/assets/Images/cauliflower.svg",
+        "/src/lib/common/assets/Images/cauliflower.svg",
+        "/src/lib/common/assets/Images/cauliflower.svg",
+        "/src/lib/common/assets/Images/cauliflower.svg",
+        "/src/lib/common/assets/Images/cauliflower.svg"
+      ],
+      "productName": "Cauliflower",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 25,
+      "originalPrice": 35,
+      "discount": 5,
+      "healthBenefits": "An excellent source of vitamins and minerals that support overall health.",
+      "packing": "Packaged in an eco-friendly, ventilated plastic bag.",
+      "about": "Freshly harvested cauliflower ideal for cooking, salads, and healthy recipes."
+    },
+    {
+      "id": 5,
+      "images": [
+        "/src/lib/common/assets/Images/banana.svg",
+        "/src/lib/common/assets/Images/banana.svg",
+        "/src/lib/common/assets/Images/banana.svg",
+        "/src/lib/common/assets/Images/banana.svg",
+        "/src/lib/common/assets/Images/banana.svg"
+      ],
+      "productName": "Banana",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 40,
+      "originalPrice": 35,
+      "discount": 0,
+      "healthBenefits": "Rich in potassium and natural sugars that provide quick energy.",
+      "packing": "Packaged in a biodegradable net to maintain freshness and allow airflow.",
+      "about": "Naturally sweet bananas that are perfect for snacking, baking, and smoothies."
+    },
+    {
+      "id": 6,
+      "images": [
+        "/src/lib/common/assets/Images/garlic.svg",
+        "/src/lib/common/assets/Images/garlic.svg",
+        "/src/lib/common/assets/Images/garlic.svg",
+        "/src/lib/common/assets/Images/garlic.svg",
+        "/src/lib/common/assets/Images/garlic.svg"
+      ],
+      "productName": "Garlic",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 30,
+      "originalPrice": 40,
+      "discount": 15,
+      "healthBenefits": "Contains compounds known to boost immunity and support heart health.",
+      "packing": "Packaged in a sealed, recyclable bag to preserve aroma and flavor.",
+      "about": "Fresh garlic bulbs that add a burst of flavor and health benefits to your dishes."
+    },
+    {
+      "id": 7,
+      "images": [
+        "/src/lib/common/assets/Images/watermelon.svg",
+        "/src/lib/common/assets/Images/watermelon.svg",
+        "/src/lib/common/assets/Images/watermelon.svg",
+        "/src/lib/common/assets/Images/watermelon.svg",
+        "/src/lib/common/assets/Images/watermelon.svg"
+      ],
+      "productName": "Watermelon",
+      "cat_id":2,
+      "category": "fruits",
+      "offerPrice": 28,
+      "originalPrice": 35,
+      "discount": 0,
+      "healthBenefits": "Hydrating and rich in vitamins, promoting healthy skin and digestion.",
+      "packing": "Packaged in a sturdy, transparent container to protect the fruit during transport.",
+      "about": "Juicy watermelons known for their refreshing taste and high water content."
+    },
+    {
+      "id": 8,
+      "images": [
+        "/src/lib/common/assets/Images/kiwi.svg",
+        "/src/lib/common/assets/Images/kiwi.svg",
+        "/src/lib/common/assets/Images/kiwi.svg",
+        "/src/lib/common/assets/Images/kiwi.svg",
+        "/src/lib/common/assets/Images/kiwi.svg"
+      ],
+      "productName": "Kiwi",
+      "category": "fruits",
+      "cat_id":3,
+      "offerPrice": 28,
+      "originalPrice": 35,
+      "discount": 0,
+      "healthBenefits": "Packed with vitamin C and fiber, beneficial for immune health.",
+      "packing": "Packaged in a tray with individual compartments to avoid bruising.",
+      "about": "Delicious and tangy kiwis that are a perfect addition to your fruit salad."
+    },
+    {
+      "id": 9,
+      "images": [
+        "/src/lib/common/assets/Images/capsicum.svg",
+        "/src/lib/common/assets/Images/capsicum.svg",
+        "/src/lib/common/assets/Images/capsicum.svg",
+        "/src/lib/common/assets/Images/capsicum.svg",
+        "/src/lib/common/assets/Images/capsicum.svg"
+      ],
+      "productName": "Capsicum",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 60,
+      "originalPrice": 60,
+      "discount": 0,
+      "healthBenefits": "A great source of antioxidants and vitamins that help boost immunity.",
+      "packing": "Packaged in a perforated plastic bag for maximum freshness.",
+      "about": "Crisp capsicums that lend color and flavor to a variety of dishes."
+    },
+    {
+      "id": 10,
+      "image": "/src/lib/common/assets/Images/onion.svg",
+      "images": [
+        "/src/lib/common/assets/Images/onion.svg",
+        "/src/lib/common/assets/Images/onion.svg",
+        "/src/lib/common/assets/Images/onion.svg",
+        "/src/lib/common/assets/Images/onion.svg",
+        "/src/lib/common/assets/Images/onion.svg"
+      ],
+      "productName": "Onion",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 150,
+      "originalPrice": 150,
+      "discount": 0,
+      "healthBenefits": "Rich in antioxidants and beneficial compounds that support health.",
+      "packing": "Packaged in a mesh bag to ensure proper air circulation.",
+      "about": "Fresh onions known for their robust flavor and culinary versatility."
+    },
+    {
+      "id": 11,
+      "image": "/src/lib/common/assets/Images/strawberry.svg",
+      "images": [
+        "/src/lib/common/assets/Images/strawberry.svg",
+        "/src/lib/common/assets/Images/strawberry.svg",
+        "/src/lib/common/assets/Images/strawberry.svg",
+        "/src/lib/common/assets/Images/strawberry.svg",
+        "/src/lib/common/assets/Images/strawberry.svg"
+      ],
+      "productName": "Strawberry",
+      "category": "fruits",
+      "cat_id":3,
+      "offerPrice": 200,
+      "originalPrice": 200,
+      "discount": 0,
+      "healthBenefits": "Loaded with antioxidants and vitamin C, promoting skin and immune health.",
+      "packing": "Packaged in a clamshell with protective padding to prevent damage.",
+      "about": "Luscious strawberries that are both delicious and nutritionally rewarding."
+    },
+    {
+      "id": 12,
+      "image": "/src/lib/common/assets/Images/milk.svg",
+      "images": [
+        "/src/lib/common/assets/Images/milk.svg",
+        "/src/lib/common/assets/Images/milk.svg",
+        "/src/lib/common/assets/Images/milk.svg",
+        "/src/lib/common/assets/Images/milk.svg",
+        "/src/lib/common/assets/Images/milk.svg"
+      ],
+      "productName": "Milk",
+      "category": "milkProducts",
+      "cat_id":5,
+      "offerPrice": 50,
+      "originalPrice": 50,
+      "discount": 0,
+      "healthBenefits": "Provides quality protein and calcium essential for strong bones.",
+      "packing": "Sealed in a recyclable carton to maintain optimal freshness.",
+      "about": "Premium milk processed under stringent quality standards to deliver superior taste."
+    },
+    {
+      "id": 13,
+      "image": "/src/lib/common/assets/Images/cheese.svg",
+      "images": [
+        "/src/lib/common/assets/Images/cheese.svg",
+        "/src/lib/common/assets/Images/cheese.svg",
+        "/src/lib/common/assets/Images/cheese.svg",
+        "/src/lib/common/assets/Images/cheese.svg",
+        "/src/lib/common/assets/Images/cheese.svg"
+      ],
+      "productName": "Cheese",
+      "category": "milkProducts",
+      "cat_id":5,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Rich in protein and calcium, contributing to a balanced diet.",
+      "packing": "Packaged in airtight wrappers to preserve flavor and texture.",
+      "about": "Delicious cheese crafted with care to bring you an exceptional dairy experience."
+    },
+    {
+      "id": 14,
+      "image": "/src/lib/common/assets/Images/Artichoke.svg",
+      "images": [
+        "/src/lib/common/assets/Images/Artichoke.svg",
+        "/src/lib/common/assets/Images/Artichoke.svg",
+        "/src/lib/common/assets/Images/Artichoke.svg",
+        "/src/lib/common/assets/Images/Artichoke.svg",
+        "/src/lib/common/assets/Images/Artichoke.svg"
+      ],
+      "productName": "Artichoke",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 350,
+      "originalPrice": 550,
+      "discount": 20,
+      "healthBenefits": "High in fiber and antioxidants, supporting digestion and overall health.",
+      "packing": "Packaged in a ventilated box to maintain freshness during transit.",
+      "about": "Fresh artichokes known for their unique flavor and nutritional richness."
+    },
+    {
+      "id": 15,
+      "image": "/src/lib/common/assets/Images/Arugula.svg",
+      "images": [
+        "/src/lib/common/assets/Images/Arugula.svg",
+        "/src/lib/common/assets/Images/Arugula.svg",
+        "/src/lib/common/assets/Images/Arugula.svg",
+        "/src/lib/common/assets/Images/Arugula.svg",
+        "/src/lib/common/assets/Images/Arugula.svg"
+      ],
+      "productName": "Arugula",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 350,
+      "originalPrice": 550,
+      "discount": 20,
+      "healthBenefits": "Packed with vitamins and phytonutrients that promote a healthy diet.",
+      "packing": "Packaged in a protective bag that maintains its crisp texture.",
+      "about": "Fresh arugula leaves offering a peppery taste ideal for salads and garnishes."
+    },
+    {
+      "id": 16,
+      "image": "/src/lib/common/assets/Images/asparagus.svg",
+      "images": [
+        "/src/lib/common/assets/Images/asparagus.svg",
+        "/src/lib/common/assets/Images/asparagus.svg",
+        "/src/lib/common/assets/Images/asparagus.svg",
+        "/src/lib/common/assets/Images/asparagus.svg",
+        "/src/lib/common/assets/Images/asparagus.svg"
+      ],
+      "productName": "Asparagus",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 150,
+      "originalPrice": 250,
+      "discount": 20,
+      "healthBenefits": "Provides essential nutrients and antioxidants that aid detoxification.",
+      "packing": "Packaged in a moisture-controlled bag to keep stalks fresh.",
+      "about": "Tender asparagus perfect for grilling, steaming, or adding to gourmet dishes."
+    },
+    {
+      "id": 17,
+      "image": "/src/lib/common/assets/Images/french-beans.svg",
+      "images": [
+        "/src/lib/common/assets/Images/french-beans.svg",
+        "/src/lib/common/assets/Images/french-beans.svg",
+        "/src/lib/common/assets/Images/french-beans.svg",
+        "/src/lib/common/assets/Images/french-beans.svg",
+        "/src/lib/common/assets/Images/french-beans.svg"
+      ],
+      "productName": "French Beans",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "A good source of vitamins and fiber that supports digestive health.",
+      "packing": "Packaged in a reusable, ventilated bag.",
+      "about": "Crisp French beans ideal for stir-fries, salads, and healthy recipes."
+    },
+    {
+      "id": 18,
+      "image": "/src/lib/common/assets/Images/cucumber.svg",
+      "images": [
+        "/src/lib/common/assets/Images/cucumber.svg",
+        "/src/lib/common/assets/Images/cucumber.svg",
+        "/src/lib/common/assets/Images/cucumber.svg",
+        "/src/lib/common/assets/Images/cucumber.svg",
+        "/src/lib/common/assets/Images/cucumber.svg"
+      ],
+      "productName": "Cucumber",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Hydrating and rich in vitamins that support skin health.",
+      "packing": "Packaged in a cool, protective bag to ensure long-lasting freshness.",
+      "about": "Fresh cucumbers perfect for salads, pickling, and refreshing drinks."
+    },
+    {
+      "id": 19,
+      "image": "/src/lib/common/assets/Images/chives.svg",
+      "images": [
+        "/src/lib/common/assets/Images/chives.svg",
+        "/src/lib/common/assets/Images/chives.svg",
+        "/src/lib/common/assets/Images/chives.svg",
+        "/src/lib/common/assets/Images/chives.svg",
+        "/src/lib/common/assets/Images/chives.svg"
+      ],
+      "productName": "Chives",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Contain antioxidants and vitamins beneficial for overall wellness.",
+      "packing": "Packaged in a small clamshell to protect delicate leaves.",
+      "about": "Fresh chives that add a mild onion flavor, perfect for garnishing and seasoning."
+    },
+    {
+      "id": 20,
+      "image": "/src/lib/common/assets/Images/eggplant.svg",
+      "images": [
+        "/src/lib/common/assets/Images/eggplant.svg",
+        "/src/lib/common/assets/Images/eggplant.svg",
+        "/src/lib/common/assets/Images/eggplant.svg",
+        "/src/lib/common/assets/Images/eggplant.svg",
+        "/src/lib/common/assets/Images/eggplant.svg"
+      ],
+      "productName": "Eggplant",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Low in calories and rich in fiber and antioxidants.",
+      "packing": "Packaged in a cushioned, recyclable container to minimize bruising.",
+      "about": "Fresh eggplants ideal for grilling, baking, or cooking in diverse cuisines."
+    },
+    {
+      "id": 21,
+      "image": "/src/lib/common/assets/Images/beetroot.svg",
+      "images": [
+        "/src/lib/common/assets/Images/beetroot.svg",
+        "/src/lib/common/assets/Images/beetroot.svg",
+        "/src/lib/common/assets/Images/beetroot.svg",
+        "/src/lib/common/assets/Images/beetroot.svg",
+        "/src/lib/common/assets/Images/beetroot.svg"
+      ],
+      "productName": "Beetroot",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Rich in dietary nitrates and antioxidants, which support heart health.",
+      "packing": "Packaged in a breathable bag to keep roots crisp and fresh.",
+      "about": "Fresh beetroot that adds vibrant color and earthy sweetness to your meals."
+    },
+    {
+      "id": 22,
+      "image": "/src/lib/common/assets/Images/blacksalsify.svg",
+      "images": [
+        "/src/lib/common/assets/Images/blacksalsify.svg",
+        "/src/lib/common/assets/Images/blacksalsify.svg",
+        "/src/lib/common/assets/Images/blacksalsify.svg",
+        "/src/lib/common/assets/Images/blacksalsify.svg",
+        "/src/lib/common/assets/Images/blacksalsify.svg"
+      ],
+      "productName": "Black Salsify",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "A unique source of fiber and minerals essential for well-being.",
+      "packing": "Packaged in eco-friendly packaging that maintains product integrity.",
+      "about": "Distinctive black salsify known for its nutty flavor and nutritious profile."
+    },
+    {
+      "id": 23,
+      "image": "/src/lib/common/assets/Images/broccoli.svg",
+      "images": [
+        "/src/lib/common/assets/Images/broccoli.svg",
+        "/src/lib/common/assets/Images/broccoli.svg",
+        "/src/lib/common/assets/Images/broccoli.svg",
+        "/src/lib/common/assets/Images/broccoli.svg",
+        "/src/lib/common/assets/Images/broccoli.svg"
+      ],
+      "productName": "Broccoli",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Packed with vitamins C, K and fiber that support immunity and digestion.",
+      "packing": "Packaged in a ventilated, recyclable bag to lock in freshness.",
+      "about": "Fresh broccoli ideal for steaming, stir-frying, or adding to nutritious soups."
+    },
+    {
+      "id": 24,
+      "image": "/src/lib/common/assets/Images/brusselsprouts.svg",
+      "images": [
+        "/src/lib/common/assets/Images/brusselsprouts.svg",
+        "/src/lib/common/assets/Images/brusselsprouts.svg",
+        "/src/lib/common/assets/Images/brusselsprouts.svg",
+        "/src/lib/common/assets/Images/brusselsprouts.svg",
+        "/src/lib/common/assets/Images/brusselsprouts.svg"
+      ],
+      "productName": "Brussel Sprouts",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "High in fiber and antioxidants, supporting detoxification and health.",
+      "packing": "Packaged in a secure, perforated bag for optimal ventilation.",
+      "about": "Crisp brussel sprouts perfect for roasting or as a healthy side dish."
+    },
+    {
+      "id": 25,
+      "image": "/src/lib/common/assets/Images/corn.svg",
+      "images": [
+        "/src/lib/common/assets/Images/corn.svg",
+        "/src/lib/common/assets/Images/corn.svg",
+        "/src/lib/common/assets/Images/corn.svg",
+        "/src/lib/common/assets/Images/corn.svg",
+        "/src/lib/common/assets/Images/corn.svg"
+      ],
+      "productName": "Corn",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "A good source of fiber and essential nutrients that boost energy.",
+      "packing": "Packaged in a sealed bag to prevent moisture loss.",
+      "about": "Sweet, farm-fresh corn ideal for grilling, boiling, or making delicious salads."
+    },
+    {
+      "id": 26,
+      "image": "/src/lib/common/assets/Images/chineesecabbage.svg",
+      "images": [
+        "/src/lib/common/assets/Images/chineesecabbage.svg",
+        "/src/lib/common/assets/Images/chineesecabbage.svg",
+        "/src/lib/common/assets/Images/chineesecabbage.svg",
+        "/src/lib/common/assets/Images/chineesecabbage.svg",
+        "/src/lib/common/assets/Images/chineesecabbage.svg"
+      ],
+      "productName": "Chineese cabbage",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Rich in vitamins and minerals that support a robust immune system.",
+      "packing": "Packaged in a lightweight, ventilated bag for extra freshness.",
+      "about": "Crisp Chinese cabbage offering a delicate crunch for salads and stir-fries."
+    },
+    {
+      "id": 27,
+      "image": "/src/lib/common/assets/Images/endive.svg",
+      "images": [
+        "/src/lib/common/assets/Images/endive.svg",
+        "/src/lib/common/assets/Images/endive.svg",
+        "/src/lib/common/assets/Images/endive.svg",
+        "/src/lib/common/assets/Images/endive.svg",
+        "/src/lib/common/assets/Images/endive.svg"
+      ],
+      "productName": "Endive",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Provides dietary fiber and nutrients vital for digestion.",
+      "packing": "Packaged in a moisture-controlled bag to extend shelf life.",
+      "about": "Fresh endive with a slightly bitter taste, perfect for gourmet salads."
+    },
+    {
+      "id": 28,
+      "image": "/src/lib/common/assets/Images/carrot.svg",
+      "images": [
+        "/src/lib/common/assets/Images/carrot.svg",
+        "/src/lib/common/assets/Images/carrot.svg",
+        "/src/lib/common/assets/Images/carrot.svg",
+        "/src/lib/common/assets/Images/carrot.svg",
+        "/src/lib/common/assets/Images/carrot.svg"
+      ],
+      "productName": "Carrot",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "High in beta-carotene and fiber, beneficial for eye and skin health.",
+      "packing": "Packaged in a recyclable bag that maintains crispness.",
+      "about": "Crunchy carrots that are perfect for snacking, juicing, or cooking."
+    },
+    {
+      "id": 29,
+      "image": "/src/lib/common/assets/Images/cauliflower.svg",
+      "images": [
+        "/src/lib/common/assets/Images/cauliflower.svg",
+        "/src/lib/common/assets/Images/cauliflower.svg",
+        "/src/lib/common/assets/Images/cauliflower.svg",
+        "/src/lib/common/assets/Images/cauliflower.svg",
+        "/src/lib/common/assets/Images/cauliflower.svg"
+      ],
+      "productName": "Cauliflower",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Rich in vitamins and antioxidants that support overall well-being.",
+      "packing": "Packaged in an eco-friendly bag to lock in freshness.",
+      "about": "Premium quality cauliflower, perfect for healthy recipes and a low-carb lifestyle."
+    },
+    {
+      "id": 30,
+      "image": "/src/lib/common/assets/Images/celeraic.svg",
+      "images": [
+        "/src/lib/common/assets/Images/celeraic.svg",
+        "/src/lib/common/assets/Images/celeraic.svg",
+        "/src/lib/common/assets/Images/celeraic.svg",
+        "/src/lib/common/assets/Images/celeraic.svg",
+        "/src/lib/common/assets/Images/celeraic.svg"
+      ],
+      "productName": "Celeraic",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Contains essential vitamins and minerals that promote vitality.",
+      "packing": "Packaged with care in a protective, recyclable wrap.",
+      "about": "Fresh celery offering a crisp texture and a burst of natural flavor."
+    },
+    {
+      "id": 31,
+      "image": "/src/lib/common/assets/Images/mushroom.svg",
+      "images": [
+        "/src/lib/common/assets/Images/mushroom.svg",
+        "/src/lib/common/assets/Images/mushroom.svg",
+        "/src/lib/common/assets/Images/mushroom.svg",
+        "/src/lib/common/assets/Images/mushroom.svg",
+        "/src/lib/common/assets/Images/mushroom.svg"
+      ],
+      "productName": "Mushroom",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Low in calories and rich in vitamins, supporting a balanced diet.",
+      "packing": "Packaged in a moisture-controlled container to preserve freshness.",
+      "about": "Fresh mushrooms perfect for adding an earthy flavor to a variety of dishes."
+    },
+    {
+      "id": 32,
+      "image": "/src/lib/common/assets/Images/chicory.svg",
+      "images": [
+        "/src/lib/common/assets/Images/chicory.svg",
+        "/src/lib/common/assets/Images/chicory.svg",
+        "/src/lib/common/assets/Images/chicory.svg",
+        "/src/lib/common/assets/Images/chicory.svg",
+        "/src/lib/common/assets/Images/chicory.svg"
+      ],
+      "productName": "Chicory",
+      "category": "vegetables",
+      "cat_id":3,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Loaded with inulin and antioxidants that support digestive health.",
+      "packing": "Packaged in a sturdy, eco-friendly pouch for lasting freshness.",
+      "about": "Delicate chicory known for its slightly bitter taste and nutritious benefits."
+    },
+    {
+      "id": 33,
+      "image": "/src/lib/common/assets/Images/chilli.svg",
+      "images": [
+        "/src/lib/common/assets/Images/chilli.svg",
+        "/src/lib/common/assets/Images/chilli.svg",
+        "/src/lib/common/assets/Images/chilli.svg",
+        "/src/lib/common/assets/Images/chilli.svg",
+        "/src/lib/common/assets/Images/chilli.svg"
+      ],
+      "productName": "Chilli",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Rich in capsaicin, which may help boost metabolism and reduce inflammation.",
+      "packing": "Packaged in a secure, moisture-resistant bag to maintain potency.",
+      "about": "Fresh chillies that add a spicy kick and a burst of flavor to every meal."
+    },
+    {
+      "id": 34,
+      "image": "/src/lib/common/assets/Images/white radish.svg",
+      "images": [
+        "/src/lib/common/assets/Images/white radish.svg",
+        "/src/lib/common/assets/Images/white radish.svg",
+        "/src/lib/common/assets/Images/white radish.svg",
+        "/src/lib/common/assets/Images/white radish.svg",
+        "/src/lib/common/assets/Images/white radish.svg"
+      ],
+      "productName": "White radish",
+      "category": "vegetables",
+      "cat_id":1,
+      "offerPrice": 50,
+      "originalPrice": 150,
+      "discount": 60,
+      "healthBenefits": "Contains compounds that promote digestion and support detoxification.",
+      "packing": "Packaged in a ventilated container to preserve crispness.",
+      "about": "Fresh white radish with a mild flavor ideal for salads, soups, and stir-fries."
+    },
+    {
+      "id": 35,
+      "image": "/src/lib/common/assets/Images/cherry.svg",
+      "images": [
+        "/src/lib/common/assets/Images/cherry.svg",
+        "/src/lib/common/assets/Images/cherry.svg",
+        "/src/lib/common/assets/Images/cherry.svg",
+        "/src/lib/common/assets/Images/cherry.svg",
+        "/src/lib/common/assets/Images/cherry.svg"
+      ],
+      "productName": "Cherry",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Rich in antioxidants and vitamins that help fight inflammation.",
+      "packing": "Packaged in a protective clamshell to prevent bruising.",
+      "about": "Juicy cherries known for their sweet taste and high nutritional value."
+    },
+    {
+      "id": 36,
+      "image": "/src/lib/common/assets/Images/pomelo.svg",
+      "images": [
+        "/src/lib/common/assets/Images/pomelo.svg",
+        "/src/lib/common/assets/Images/pomelo.svg",
+        "/src/lib/common/assets/Images/pomelo.svg",
+        "/src/lib/common/assets/Images/pomelo.svg",
+        "/src/lib/common/assets/Images/pomelo.svg"
+      ],
+      "productName": "Pomelo",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Packed with vitamin C and fiber, promoting healthy digestion and immunity.",
+      "packing": "Carefully packed in a padded box to protect the delicate fruit.",
+      "about": "Refreshing pomelo offering a tangy flavor and a boost of essential nutrients."
+    },
+    {
+      "id": 37,
+      "image": "/src/lib/common/assets/Images/grapes.svg",
+      "images": [
+        "/src/lib/common/assets/Images/grapes.svg",
+        "/src/lib/common/assets/Images/grapes.svg",
+        "/src/lib/common/assets/Images/grapes.svg",
+        "/src/lib/common/assets/Images/grapes.svg",
+        "/src/lib/common/assets/Images/grapes.svg"
+      ],
+      "productName": "Grapes",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Bursting with antioxidants and vitamins that support heart health.",
+      "packing": "Packaged in a clamshell with individual slots to prevent damage.",
+      "about": "Delicious grapes with a natural sweetness perfect for snacking or making juice."
+    },
+    {
+      "id": 38,
+      "image": "/src/lib/common/assets/Images/plum.svg",
+      "images": [
+        "/src/lib/common/assets/Images/plum.svg",
+        "/src/lib/common/assets/Images/plum.svg",
+        "/src/lib/common/assets/Images/plum.svg",
+        "/src/lib/common/assets/Images/plum.svg",
+        "/src/lib/common/assets/Images/plum.svg"
+      ],
+      "productName": "Plum",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Rich in dietary fiber and antioxidants that aid digestion.",
+      "packing": "Packaged in a protective fruit tray to maintain optimal freshness.",
+      "about": "Juicy plums that offer a perfect blend of sweet and tart flavors."
+    },
+    {
+      "id": 39,
+      "image": "/src/lib/common/assets/Images/amla.svg",
+      "images": [
+        "/src/lib/common/assets/Images/amla.svg",
+        "/src/lib/common/assets/Images/amla.svg",
+        "/src/lib/common/assets/Images/amla.svg",
+        "/src/lib/common/assets/Images/amla.svg",
+        "/src/lib/common/assets/Images/amla.svg"
+      ],
+      "productName": "Amla",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "High in vitamin C and antioxidants that boost immunity.",
+      "packing": "Packaged in a sealed pouch to protect its nutritional value.",
+      "about": "Fresh amla known for its tangy taste and powerful health benefits."
+    },
+    {
+      "id": 40,
+      "image": "/src/lib/common/assets/Images/custurd apple.svg",
+      "images": [
+        "/src/lib/common/assets/Images/custurd apple.svg",
+        "/src/lib/common/assets/Images/custurd apple.svg",
+        "/src/lib/common/assets/Images/custurd apple.svg",
+        "/src/lib/common/assets/Images/custurd apple.svg",
+        "/src/lib/common/assets/Images/custurd apple.svg"
+      ],
+      "productName": "Custurd Apple",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "A nutrient-rich fruit loaded with fiber and vitamins for overall wellness.",
+      "packing": "Packaged in a protective box to prevent bruising during transport.",
+      "about": "Unique custurd apples celebrated for their crisp texture and delightful taste."
+    },
+    {
+      "id": 41,
+      "image": "/src/lib/common/assets/Images/avacado.svg",
+      "images": [
+        "/src/lib/common/assets/Images/avacado.svg",
+        "/src/lib/common/assets/Images/avacado.svg",
+        "/src/lib/common/assets/Images/avacado.svg",
+        "/src/lib/common/assets/Images/avacado.svg",
+        "/src/lib/common/assets/Images/avacado.svg"
+      ],
+      "productName": "Avocado",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Packed with healthy fats, fiber, and potassium that aid heart health.",
+      "packing": "Packaged in a cushioned, recyclable box that protects delicate skin.",
+      "about": "Creamy avocados perfect for salads, spreads, and a nutrient-packed diet."
+    },
+    {
+      "id": 42,
+      "image": "/src/lib/common/assets/Images/strawberry-new.svg",
+      "images": [
+        "/src/lib/common/assets/Images/strawberry-new.svg",
+        "/src/lib/common/assets/Images/strawberry-new.svg",
+        "/src/lib/common/assets/Images/strawberry-new.svg",
+        "/src/lib/common/assets/Images/strawberry-new.svg",
+        "/src/lib/common/assets/Images/strawberry-new.svg"
+      ],
+      "productName": "Strawberry",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Bursting with antioxidants and vitamin C to enhance skin and immune health.",
+      "packing": "Packaged in a clamshell with padding to avoid damage.",
+      "about": "Premium strawberries known for their vibrant color and deliciously sweet taste."
+    },
+    {
+      "id": 43,
+      "image": "/src/lib/common/assets/Images/pears.svg",
+      "images": [
+        "/src/lib/common/assets/Images/pears.svg",
+        "/src/lib/common/assets/Images/pears.svg",
+        "/src/lib/common/assets/Images/pears.svg",
+        "/src/lib/common/assets/Images/pears.svg",
+        "/src/lib/common/assets/Images/pears.svg"
+      ],
+      "productName": "Pears",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Rich in dietary fiber and vitamins that promote good digestion.",
+      "packing": "Packaged in a protective tray designed to minimize bruising.",
+      "about": "Fresh pears celebrated for their soft texture and naturally sweet flavor."
+    },
+    {
+      "id": 44,
+      "image": "/src/lib/common/assets/Images/green-apple.svg",
+      "images": [
+        "/src/lib/common/assets/Images/green-apple.svg",
+        "/src/lib/common/assets/Images/green-apple.svg",
+        "/src/lib/common/assets/Images/green-apple.svg",
+        "/src/lib/common/assets/Images/green-apple.svg",
+        "/src/lib/common/assets/Images/green-apple.svg"
+      ],
+      "productName": "Green Apple",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "High in fiber and vitamin C, ideal for boosting overall health.",
+      "packing": "Packaged in a ventilated, eco-friendly container for optimal freshness.",
+      "about": "Tart and crisp green apples that add a refreshing tang to your diet."
+    },
+    {
+      "id": 45,
+      "image": "/src/lib/common/assets/Images/rambutan.svg",
+      "images": [
+        "/src/lib/common/assets/Images/rambutan.svg",
+        "/src/lib/common/assets/Images/rambutan.svg",
+        "/src/lib/common/assets/Images/rambutan.svg",
+        "/src/lib/common/assets/Images/rambutan.svg",
+        "/src/lib/common/assets/Images/rambutan.svg"
+      ],
+      "productName": "Rambutan",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Rich in vitamin C and antioxidants that support immune health.",
+      "packing": "Packaged in a protective netted bag to prevent damage.",
+      "about": "Exotic rambutan fruits with a sweet, tangy flavor and unique texture."
+    },
+    {
+      "id": 46,
+      "image": "/src/lib/common/assets/Images/orange.svg",
+      "images": [
+        "/src/lib/common/assets/Images/orange.svg",
+        "/src/lib/common/assets/Images/orange.svg",
+        "/src/lib/common/assets/Images/orange.svg",
+        "/src/lib/common/assets/Images/orange.svg",
+        "/src/lib/common/assets/Images/orange.svg"
+      ],
+      "productName": "Orange",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Loaded with vitamin C and essential nutrients to boost immunity.",
+      "packing": "Packaged in a sturdy, ventilated box to protect against bruising.",
+      "about": "Juicy oranges that are naturally sweet and perfect for a refreshing snack."
+    },
+    {
+      "id": 47,
+      "image": "/src/lib/common/assets/Images/starfruit.svg",
+      "images": [
+        "/src/lib/common/assets/Images/starfruit.svg",
+        "/src/lib/common/assets/Images/starfruit.svg",
+        "/src/lib/common/assets/Images/starfruit.svg",
+        "/src/lib/common/assets/Images/starfruit.svg",
+        "/src/lib/common/assets/Images/starfruit.svg"
+      ],
+      "productName": "Star Friut",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Packed with vitamins and antioxidants that enhance overall well-being.",
+      "packing": "Packaged in an attractive, sturdy box for safe transport.",
+      "about": "Exotic star fruit known for its unique shape, tangy flavor, and high nutritional value."
+    },
+    {
+      "id": 48,
+      "image": "/src/lib/common/assets/Images/jackfruit.svg",
+      "images": [
+        "/src/lib/common/assets/Images/jackfruit.svg",
+        "/src/lib/common/assets/Images/jackfruit.svg",
+        "/src/lib/common/assets/Images/jackfruit.svg",
+        "/src/lib/common/assets/Images/jackfruit.svg",
+        "/src/lib/common/assets/Images/jackfruit.svg"
+      ],
+      "productName": "Jack Fruit",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Rich in fiber and essential vitamins, great for boosting energy.",
+      "packing": "Packaged in a moisture-resistant container to maintain its freshness.",
+      "about": "Versatile jack fruit ideal for both savory dishes and sweet desserts."
+    },
+    {
+      "id": 49,
+      "image": "/src/lib/common/assets/Images/lychee.svg",
+      "images": [
+        "/src/lib/common/assets/Images/lychee.svg",
+        "/src/lib/common/assets/Images/lychee.svg",
+        "/src/lib/common/assets/Images/lychee.svg",
+        "/src/lib/common/assets/Images/lychee.svg",
+        "/src/lib/common/assets/Images/lychee.svg"
+      ],
+      "productName": "Lychee",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Contains vitamins and antioxidants that support skin and immune health.",
+      "packing": "Packaged in a cooled box with padding for delicate handling.",
+      "about": "Succulent lychees with a floral aroma and refreshing taste."
+    },
+    {
+      "id": 50,
+      "image": "/src/lib/common/assets/Images/chalisa-fig.svg",
+      "images": [
+        "/src/lib/common/assets/Images/chalisa-fig.svg",
+        "/src/lib/common/assets/Images/chalisa-fig.svg",
+        "/src/lib/common/assets/Images/chalisa-fig.svg",
+        "/src/lib/common/assets/Images/chalisa-fig.svg",
+        "/src/lib/common/assets/Images/chalisa-fig.svg"
+      ],
+      "productName": "Chalisa Fig",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "High in fiber and minerals, aiding in digestion and overall health.",
+      "packing": "Packaged in a recycled, cushioned box to safeguard its delicate structure.",
+      "about": "Premium Chalisa figs known for their unique sweetness and chewy texture."
+    },
+    {
+      "id": 51,
+      "image": "/src/lib/common/assets/Images/musk-melon.svg",
+      "images": [
+        "/src/lib/common/assets/Images/musk-melon.svg",
+        "/src/lib/common/assets/Images/musk-melon.svg",
+        "/src/lib/common/assets/Images/musk-melon.svg",
+        "/src/lib/common/assets/Images/musk-melon.svg",
+        "/src/lib/common/assets/Images/musk-melon.svg"
+      ],
+      "productName": "Musk Melon",
+      "cat_id":2,
+      "category": "fruits",
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Packed with vitamins and antioxidants that refresh and hydrate the body.",
+      "packing": "Packaged in a ventilated, secure container for optimal freshness.",
+      "about": "Juicy musk melons renowned for their aromatic sweetness and nutritional benefits."
+    },
+    {
+      "id": 52,
+      "image": "/src/lib/common/assets/Images/black-berry.svg",
+      "images": [
+        "/src/lib/common/assets/Images/black-berry.svg",
+        "/src/lib/common/assets/Images/black-berry.svg",
+        "/src/lib/common/assets/Images/black-berry.svg",
+        "/src/lib/common/assets/Images/black-berry.svg",
+        "/src/lib/common/assets/Images/black-berry.svg"
+      ],
+      "productName": "Black Berry",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Rich in antioxidants and vitamin C that help fight free radicals.",
+      "packing": "Packaged in a protective clamshell to reduce bruising and damage.",
+      "about": "Tasty black berries that provide a burst of flavor along with key nutrients."
+    },
+    {
+      "id": 53,
+      "image": "/src/lib/common/assets/Images/pomegranate.svg",
+      "images": [
+        "/src/lib/common/assets/Images/pomegranate.svg",
+        "/src/lib/common/assets/Images/pomegranate.svg",
+        "/src/lib/common/assets/Images/pomegranate.svg",
+        "/src/lib/common/assets/Images/pomegranate.svg",
+        "/src/lib/common/assets/Images/pomegranate.svg"
+      ],
+      "productName": "Pomegranate",
+      "category": "fruits",
+      "cat_id":2,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Packed with antioxidants, vitamins, and fiber to support heart health.",
+      "packing": "Packaged in a carefully secured box designed to minimize damage.",
+      "about": "Vibrant pomegranates known for their delicious seeds and numerous health benefits."
+    },
+    {
+      "id": 54,
+      "image": "/src/lib/common/assets/Images/watermelon.svg",
+      "images": [
+        "/src/lib/common/assets/Images/watermelon.svg",
+        "/src/lib/common/assets/Images/watermelon.svg",
+        "/src/lib/common/assets/Images/watermelon.svg",
+        "/src/lib/common/assets/Images/watermelon.svg",
+        "/src/lib/common/assets/Images/watermelon.svg"
+      ],
+      "productName": "Watermelon",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "Hydrating and full of vitamins that are essential for maintaining good health.",
+      "packing": "Packaged in a robust, insulated container to preserve freshness.",
+      "about": "Refreshing watermelons celebrated for their juicy sweetness and high water content."
+    },
+    {
+      "id": 55,
+      "image": "/src/lib/common/assets/Images/banana.svg",
+      "images": [
+        "/src/lib/common/assets/Images/banana.svg",
+        "/src/lib/common/assets/Images/banana.svg",
+        "/src/lib/common/assets/Images/banana.svg",
+        "/src/lib/common/assets/Images/banana.svg",
+        "/src/lib/common/assets/Images/banana.svg"
+      ],
+      "productName": "Robusto Banana",
+      "category": "fruits",
+      "cat_id":4,
+      "offerPrice": 250,
+      "originalPrice": 250,
+      "discount": 0,
+      "healthBenefits": "High in potassium and natural sugars, providing a quick energy boost.",
+      "packing": "Packaged in a biodegradable net that allows air circulation.",
+      "about": "Robusto bananas known for their rich flavor and superior nutritional benefits."
+    }
+  ]
+}

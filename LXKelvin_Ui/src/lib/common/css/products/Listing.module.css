@@ -49,6 +49,7 @@
 .productImage {
   width: 120px;
   height: 120px;
+  cursor: pointer;
 }
 
 .productName {
@@ -133,6 +134,7 @@
   .pageTitle {
     font-size: 20px;
     margin-bottom: 1.5rem;
+    text-align: center;
   }
 
   .productCard {
@@ -152,8 +154,9 @@
   }
 
   .pageTitle {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
+    margin-left: 2rem;
   }
 
   .productCard {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../../../../lib/common/css/products/Listing.module.css";
 import { useSelector } from "react-redux";
 import { Const } from "../../../../lib/constants/index";
@@ -10,18 +10,17 @@ const ProductList = () => {
   const location = useLocation();
   const path = location.pathname.slice(10);
   const quantityOptions = Const?.QTY_OPTIONS;
+  const navigate = useNavigate();
 
   const getCategory = () => {
     if (
-      location.pathname.includes("vegetables") &&
-      location.pathname.includes("seasonal")
+      location.pathname.includes("seasonalVegetables")
     ) {
       return { category: "vegetables", seasonal: true };
     } else if (location.pathname.includes("vegetables")) {
       return { category: "vegetables" };
     } else if (
-      location.pathname.includes("fruits") &&
-      location.pathname.includes("seasonal")
+      location.pathname.includes("seasonalFruits")
     ) {
       return { category: "fruits", seasonal: true };
     } else if (location.pathname.includes("fruits")) {
@@ -59,6 +58,10 @@ const ProductList = () => {
     setProducts(filteredProducts);
   };
 
+  const handleProductClick = (id) => {
+    navigate(`/productDetails/${id}`);
+  };
+
   return (
     <div className={styles.listingContainer}>
       <h1 className={styles.pageTitle}>
@@ -80,6 +83,7 @@ const ProductList = () => {
                 src={product.image}
                 alt={product.name}
                 className={styles.productImage}
+                onClick={() => handleProductClick(product.id)}
               />
             </div>
             <h2 className={styles.productName}>{product.name}</h2>
@@ -89,9 +93,11 @@ const ProductList = () => {
               ))}
             </select>
             <div className={styles.priceSection}>
-              <span className={styles.discountPrice}>₹{product.price}</span>
+              <span className={styles.discountPrice}>
+                &#8364;{product.price}
+              </span>
               <span className={styles.originalPrice}>
-                ₹{product.originalPrice}
+                &#8364;{product.originalPrice}
               </span>
             </div>
             {product.stockCount > 0 ? (
