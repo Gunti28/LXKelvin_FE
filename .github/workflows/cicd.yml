@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - deploye-ec2
+      - main
+      - develop
 
 jobs:
   build:
