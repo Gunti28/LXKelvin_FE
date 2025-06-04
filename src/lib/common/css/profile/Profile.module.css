@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .formCon {
   display: flex;
@@ -9,9 +8,10 @@
 .ProfileCon::-webkit-scrollbar {
   display: none;
 }
-.ProfileCon{
+.ProfileCon {
   overflow: auto;
   background-color: #fff;
+  height: 85%;
 }
 .formLabel {
   font-size: 14px;
@@ -95,13 +95,16 @@
   width: auto;
 }
 
-.card {
+.premiumCard {
   width: 80%;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
   max-width: 35vw;
   height: 24vh;
   border-radius: 25px;
   padding: 2%;
-  color: white;
+  color: #fff;
   background: linear-gradient(
     135deg,
     #000000 0%,
@@ -118,6 +121,9 @@
 }
 .goldCard {
   max-width: 35vw;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
   height: 24vh;
   border-radius: 25px;
   padding: 2%;
@@ -135,6 +141,63 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4%;
+}
+.basicCard {
+  max-width: 35vw;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  height: 24vh;
+  border-radius: 25px;
+  padding: 2%;
+  color: #e1712b;
+  background: #e1712b40;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+}
+.standardCard {
+  max-width: 35vw;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  height: 24vh;
+  border-radius: 25px;
+  padding: 2%;
+  color: #2dc937;
+  background: #00eb0040;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+}
+.emptyCard {
+  max-width: 35vw;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  height: 24vh;
+  border-radius: 25px;
+  padding: 2%;
+  color: #000;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+}
+.UpgradeBtn {
+  border: 2px solid white;
+  font-weight: 600;
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
 }
 
 .title {
@@ -178,8 +241,11 @@
     text-align: center;
   }
 
-  .card,
-  .goldCard {
+  .premiumCard,
+  .goldCard,
+  .emptyCard,
+  .basicCard,
+  .standardCard {
     width: 90%;
     max-width: 90%;
     height: auto;
@@ -225,8 +291,11 @@
     font-size: 14px;
   }
 
-  .card,
-  .goldCard {
+  .premiumCard,
+  .goldCard,
+  .emptyCard,
+  .basicCard,
+  .standardCard {
     padding: 1rem;
   }
 }

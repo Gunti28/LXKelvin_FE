@@ -31,7 +31,7 @@ const NavbarComponent = () => {
   const location = useLocation();
   const path = location.pathname;
   const [text_color, setTextColor] = useState(true);
-  const [userData, setUserData] = useState({});
+  const [, setUserData] = useState({});
   const { isUserValid, userAuth } = useSelector((state) => state.userAuth);
   const navigate = useNavigate();
 
@@ -65,7 +65,7 @@ const NavbarComponent = () => {
   };
   const handleLogoClick = () => {
     navigate("/dashBoard");
-  }
+  };
 
   useEffect(() => {
     if (isUserValid) {
@@ -87,7 +87,12 @@ const NavbarComponent = () => {
   useEffect(() => {
     const isHighlightPath =
       path.startsWith("/products") ||
-      path.startsWith("/myaccount") ||
+      path.startsWith("/my_account") ||
+      path.startsWith("/subscriptions") ||
+      path.startsWith("/choosePayment") ||
+      path.startsWith("/upiPayment") ||
+      path.startsWith("/confirmUpi") ||
+      path.startsWith("/cardPayment") ||
       path.startsWith("/productDetails");
     setTextColor(isHighlightPath);
   });
@@ -124,7 +129,11 @@ const NavbarComponent = () => {
       }}
     >
       <div className={` ${HeroStyles.heroText} text-center`}>
-        <img style={{ margin: "auto",cursor:"pointer" }} src={LOGO} width={150} alt="Logo" 
+        <img
+          style={{ margin: "auto", cursor: "pointer" }}
+          src={LOGO}
+          width={150}
+          alt="Logo"
         />
         <div className={HeroStyles.organicText}>ORGANIC</div>
         <div className={HeroStyles.vegetableText}>VEGETABLE & FRUITS</div>
@@ -151,8 +160,12 @@ const NavbarComponent = () => {
       >
         <Container fluid>
           <Navbar.Brand href="#">
-            <img src={LOGO} alt="LOGO" className={NavbarCss.LogoImg} 
-            onClick={()=>handleLogoClick()}/>
+            <img
+              src={LOGO}
+              alt="LOGO"
+              className={NavbarCss.LogoImg}
+              onClick={() => handleLogoClick()}
+            />
           </Navbar.Brand>
 
           <Navbar.Toggle

@@ -1,0 +1,127 @@
+.listed {
+  align-items: start;
+  justify-content: right;
+}
+.MainContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.custombutton:hover {
+  transform: scale(1.03);
+}
+.card:hover {
+  border-color: blue;
+}
+.content {
+  text-overflow: hidden;
+  text-justify: auto;
+}
+.fonttt {
+  font-size: 14px;
+}
+.CardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+  height: 75vh;
+  width: 20%;
+}
+.cardPrice {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  align-items: center;
+}
+.listed {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contentFont {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.custombutton {
+  border-radius: 8px;
+  padding: 10px 0;
+}
+@media (max-width: 480px) {
+  .MainContainer {
+    overflow-y: auto;
+  }
+  .CardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 95%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .cardPrice {
+    font-size: 1.8rem;
+  }
+
+  .custombutton {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .fonttt {
+    font-size: 12px;
+  }
+
+  .contentFont {
+    font-size: 0.7rem;
+  }
+
+  .listed {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .MainContainer {
+    overflow-y: auto;
+  }
+  .CardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 85%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .cardPrice {
+    font-size: 2.2rem;
+  }
+
+  .custombutton {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .fonttt {
+    font-size: 13px;
+  }
+
+  .contentFont {
+    font-size: 0.75rem;
+  }
+
+  .listed {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

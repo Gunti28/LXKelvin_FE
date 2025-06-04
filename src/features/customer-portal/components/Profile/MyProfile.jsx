@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import styles from "../../../../lib/common/css/profile/Profile.module.css";
+import { handleViewPlansClick } from "../../../../lib/helpers";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { planNames } from "../../../../lib/constants";
 
 const MyProfile = () => {
   const [isGold, setIsGold] = useState(false);
   const [isEditable, setIsEditable] = useState(false);
+  const navigate = useNavigate();
+
+  const { selectedPlanId, isConfirmed } = useSelector(
+    (state) => state.subscription
+  );
+  // if (!isConfirmed) return <p>No active subscription.</p>;
 
   const [userData, setUserData] = useState({
     name: "Chukka Yaswanth Goud",
@@ -57,9 +67,47 @@ const MyProfile = () => {
           </div>
         </div>
 
-        <div className={isGold ? styles.goldCard : styles.card}>
-          <h2 className={styles.title}>{isGold ? "Gold" : "Premium"}</h2>
-          <p className={styles.subtitle}>Subscription pass</p>
+        <div
+          className={
+            selectedPlanId === 1
+              ? styles.basicCard
+              : selectedPlanId === 2
+              ? styles.standardCard
+              : selectedPlanId === 3
+              ? styles.premiumCard
+              : selectedPlanId === 4
+              ? styles.goldCard
+              : styles.emptyCard
+          }
+        >
+          <div>
+            <h2 className={styles.title}>
+              {isConfirmed ? planNames[selectedPlanId] : "No active plans"}
+            </h2>
+            <p className={styles.subtitle}>
+              {isConfirmed ? "Subscription pass" : null}
+            </p>
+          </div>
+          <div>
+            <button
+              className={styles.UpgradeBtn}
+              onClick={() => handleViewPlansClick(navigate)}
+              style={{
+                borderColor:
+                  selectedPlanId === 1
+                    ? "#E1712B"
+                    : selectedPlanId === 2
+                    ? "#2DC937"
+                    : selectedPlanId === 3
+                    ? "#fff"
+                    : selectedPlanId === 4
+                    ? "#fff"
+                    : "#000",
+              }}
+            >
+              Upgrade
+            </button>
+          </div>
         </div>
       </div>
 

@@ -24,6 +24,11 @@ import CompanyLayOut from "./features/company-portal/pages/CompanyLayOut";
 import CompanyDashBoard from "./features/company-portal/components/layOut/CompanyDashBoard";
 import AuthGuard from "./lib/common/components/AuthGuard";
 import ProductDetailsPage from "./features/customer-portal/components/products/ProductDetails";
+import SubscriptionCards from "./features/customer-portal/components/subscriptions/SubscriptionCard";
+import ChoosePayment from "./features/customer-portal/components/subscriptions/ChoosePayment";
+import SelectUpi from "./features/customer-portal/components/subscriptions/SelectUpi";
+import ConfirmUpi from "./features/customer-portal/components/subscriptions/ConfirmUpi";
+import CardPayment from "./features/customer-portal/components/subscriptions/CardPayment";
 
 function App() {
   return (
@@ -44,6 +49,11 @@ function App() {
             <Route path="milkProducts" element={<ProductList />} />
           </Route>
           <Route path="productDetails/:id" element={<ProductDetailsPage />} />
+          <Route path="subscriptions" element={<SubscriptionCards />} />
+          <Route path="choosePayment" element={<ChoosePayment />} />
+          <Route path="upiPayment" element={<SelectUpi />} />
+          <Route path="confirmUpi" element={<ConfirmUpi />} />
+          <Route path="cardPayment" element={<CardPayment />} />
           <Route path="my_account" element={<ProfileLayout />}>
             <Route
               index
