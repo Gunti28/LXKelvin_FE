@@ -2,7 +2,7 @@ name: CICD
 on:
   push:
     branches:
-      - deploye-ec2
+      - dev2_AWS_images
       - main
       - develop
 
