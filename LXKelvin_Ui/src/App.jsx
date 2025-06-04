@@ -20,7 +20,7 @@ import MyOrders from "./features/customer-portal/components/Profile/MyOrders";
 import SaveForLater from "./features/customer-portal/components/Profile/SaveForLater";
 import CustomerSupport from "./features/customer-portal/components/Profile/CustomerSupport";
 import ProfileLayout from "./features/customer-portal/components/Profile/ProfileLayout";
-import CompanyLayOut from "./features/company-portal/pages/companyLayOut";
+import CompanyLayOut from "./features/company-portal/pages/CompanyLayOut";
 import CompanyDashBoard from "./features/company-portal/components/layOut/CompanyDashBoard";
 import AuthGuard from "./lib/common/components/AuthGuard";
 import ProductDetailsPage from "./features/customer-portal/components/products/ProductDetails";
