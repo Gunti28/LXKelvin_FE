@@ -3,31 +3,31 @@
     {
       "id": "1",
       "title": "Vegetables",
-      "image": "/src/lib/common/assets/Images/vegetables.svg",
+      "image": "/assets/Images/vegetables.svg",
       "to": "/products/vegetables"
     },
     {
       "id": "2",
       "title": "Fruits",
-      "image": "/src/lib/common/assets/Images/fruits.svg",
+      "image": "/assets/Images/fruits.svg",
       "to": "/products/fruits"
     },
     {
       "id": "3",
       "title": "Seasonal Vegetables",
-      "image": "/src/lib/common/assets/Images/seasonal-vegetables.svg",
+      "image": "/assets/Images/seasonal-vegetables.svg",
       "to": "/products/seasonalVegetables"
     },
     {
       "id": "4",
       "title": "Seasonal Fruits",
-      "image": "/src/lib/common/assets/Images/seasonal-fruits.svg",
+      "image": "/assets/Images/seasonal-fruits.svg",
       "to": "/products/seasonalFruits"
     },
     {
       "id": "5",
       "title": "milk",
-      "image": "/src/lib/common/assets/Images/main-milk-products.svg",
+      "image": "/assets/Images/main-milk-products.svg",
       "to": "/products/milkProducts"
     }
   ]
