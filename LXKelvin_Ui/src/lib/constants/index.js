@@ -24,3 +24,12 @@ export const ORDER_STATUS_COLORS = {
   Delivered: "darkgreen",
   Default: "#5B5F62",
 };
+
+//subscription plans
+
+export const planNames = {
+  1: "Basic",
+  2: "Standard",
+  3: "Premium",
+  4: "Gold",
+};

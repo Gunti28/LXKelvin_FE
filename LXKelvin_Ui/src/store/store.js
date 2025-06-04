@@ -10,7 +10,9 @@ import orderReducer from "./slice/orderSlice";
 import saveForLaterReducer from "./slice/saveForLaterSlice";
 
 import languageReducer from "./slice/languageSlice";
-import productDetailsReducer from "./slice/productDetailsSlice"
+import productDetailsReducer from "./slice/productDetailsSlice";
+import plansReducer from "./slice/SubscriptionCardSlice";
+import subscriptionReducer from "./slice/subscriptionPaySlice";
 
 export const store = configureStore({
   reducer: {
@@ -24,7 +26,8 @@ export const store = configureStore({
 
     language: languageReducer,
     productDetails: productDetailsReducer,
-
+    plans: plansReducer,
+    subscription: subscriptionReducer,
   },
 });
 export default store;

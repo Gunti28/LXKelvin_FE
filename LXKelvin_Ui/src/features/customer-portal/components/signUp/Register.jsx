@@ -5,6 +5,7 @@ import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import RegStyles from "../../../../lib/common/css/registration/ModelPage.module.css"
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -141,8 +142,7 @@ const Register = () => {
         <img
           src={FooterImg}
           alt="FooterImg"
-          className="image-fluid w-100 "
-          style={{ objectFit: "cover" }}
+          className={RegStyles.footerImg}
         />
       </Modal.Footer>
     </Modal>

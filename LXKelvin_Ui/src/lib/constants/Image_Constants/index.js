@@ -21,6 +21,15 @@ import TimeSaving from "../../../lib/common/assets/Images/time-saving.svg";
 import Promotions from "../../../lib/common/assets/Images/promotions.svg";
 import PriceAlerts from "../../../lib/common/assets/Images/price-alerts.svg";
 
+import Visa from "../../../lib/common/assets/Images/Visa.svg";
+import Amex from "../../../lib/common/assets/Images/Amex.svg";
+import ApplePay from "../../../lib/common/assets/Images/Applepay.svg";
+import Paypal from "../../../lib/common/assets/Images/Paypal.svg";
+import SecuredPayment from "../../../lib/common/assets/Images/Secured.svg";
+import MasterCard from "../../../lib/common/assets/Images/MasterCard.svg";
+
+
+
 
 export const imageMap = {
   tomato,
@@ -53,3 +62,12 @@ export const GREECE = Greece;
 export const TIME_SAVING = TimeSaving;
 export const PROMOTIONS = Promotions;
 export const PRICE_ALERTS = PriceAlerts;
+
+// choose payment
+
+export const VISA = Visa;
+export const AMEX = Amex;
+export const APPLE_PAY = ApplePay;
+export const PAYPAL = Paypal;
+export const MASTER_CARD = MasterCard;
+export const SECURED_PAYMENT = SecuredPayment;

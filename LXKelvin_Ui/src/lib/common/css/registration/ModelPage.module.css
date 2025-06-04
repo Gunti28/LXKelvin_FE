@@ -4,6 +4,15 @@
 .texting {
   font-weight: bold;
 }
+.LogoImg {
+  height: 5rem;
+  width: 10rem;
+  margin-bottom: 4rem;
+}
+.footerImg {
+  width: 100%;
+  height: 4rem;
+}
 .textingsmall {
   margin-top: -10px;
 }

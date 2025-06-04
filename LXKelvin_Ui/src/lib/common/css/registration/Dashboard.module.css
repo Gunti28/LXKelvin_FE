@@ -5,7 +5,7 @@
 .MainDashboard {
   overflow-y: auto;
   z-index: 2;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .CatText {
@@ -15,9 +15,6 @@
   margin-right: auto;
   margin-top: 4rem;
 }
-/* .cardtotal{
-  width: 21vw;
-} */
 .cardtotal {
   display: flex;
   flex-wrap: wrap;
@@ -26,6 +23,9 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+}
+.productImg {
+  height: 10rem;
 }
 
 /* Card item inside cardtotal */
@@ -53,7 +53,7 @@
 
 .banner {
   width: 100%;
-  max-height: 300px;
+  height: 20rem;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -116,7 +116,6 @@
   }
 }
 
-/* For small tablets and large phones */
 @media (min-width: 577px) and (max-width: 767px) {
   .mySwiper1 .swiper-slide {
     width: 90% !important;
@@ -131,9 +130,6 @@
     text-align: center;
     font-size: 10px !important;
     padding: auto !important;
-  }
-  img {
-    height: 200px !important;
   }
   .cardtotal {
     flex-direction: column;
@@ -151,10 +147,6 @@
 
   .card-title {
     font-size: 40px;
-  }
-
-  img {
-    height: 200px !important;
   }
   .foont {
     font-size: 12px !important;

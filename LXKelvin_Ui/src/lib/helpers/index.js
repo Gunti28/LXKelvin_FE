@@ -48,3 +48,10 @@ export const getCategoryName = (cat_id) => {
       return "Milk Products";
   }
 };
+
+export const handleViewPlansClick = (navigate) => {
+  return navigate("/subscriptions");
+};
+
+// card & upi payments
+

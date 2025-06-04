@@ -48,7 +48,7 @@ const SignInModel = () => {
       >
         <Modal.Header className="border-0 justify-content-center">
           <Modal.Title id="contained-modal-title-vcenter">
-            <img src={Logo} width={150} />
+            <img src={Logo} className={ModelPage.LogoImg} />
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
@@ -91,10 +91,7 @@ const SignInModel = () => {
           </Container>
         </Modal.Body>
         <Modal.Footer className=" p-0 border-0 ps-1  ">
-          <img
-            src={FooterImg}
-            className={`image-fluid w-100 ${ModelPage.footerImg}`}
-          />
+          <img src={FooterImg} className={ModelPage.footerImg} />
         </Modal.Footer>
       </Modal>
       <div>

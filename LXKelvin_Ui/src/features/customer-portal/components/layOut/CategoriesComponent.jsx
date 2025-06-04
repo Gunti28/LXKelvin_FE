@@ -39,7 +39,7 @@ const CategoriesComponent = () => {
                 <Card.Img
                   variant="top"
                   src={cat.image}
-                  className={Category.cd}
+                  className={Category.productImg}
                 />
                 <Card.Body className={Category.cardBody}>
                   <Card.Title className={`text-center ${Category.cardfont}`}>

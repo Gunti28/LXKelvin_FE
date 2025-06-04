@@ -16,6 +16,7 @@ import {
   getCategoryName,
   handleCategoryClick,
   handleHomeClick,
+  handleViewPlansClick,
 } from "../../../../lib/helpers";
 const ProductDetailsPage = () => {
   const { id } = useParams();
@@ -231,6 +232,7 @@ const ProductDetailsPage = () => {
               <Button
                 variant="outline-warning"
                 className={ProductDetPage.viewPlansBtn}
+                onClick={() => handleViewPlansClick(navigate)}
               >
                 View Plans
               </Button>

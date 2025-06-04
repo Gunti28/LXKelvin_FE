@@ -1,0 +1,82 @@
+.ConfirmContainer {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow-y: auto;
+}
+.font {
+  font-size: 14px;
+  text-align: start;
+}
+.Btn {
+  font-size: 28px;
+}
+
+.font {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.cardWrapper {
+  width: 50%;
+}
+.Para {
+  font-size: 14px;
+  text-align: start;
+  justify-content: start;
+  width: 50%;
+}
+
+.buttonResponsive {
+  width: 15rem;
+  height: 3rem;
+  font-size: 20px;
+  background-color: #ff9900;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 7rem;
+}
+.buttonResponsive:hover {
+  background-color: #dc8502;
+}
+.checkboxLabel {
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+.agree {
+  margin-right: 30%;
+}
+
+@media (max-width: 768px) {
+  .font {
+    font-size: 14px;
+    text-align: start;
+  }
+  .cardWrapper {
+    width: 90% !important;
+  }
+  .buttonResponsive {
+    width: 50% !important;
+    height: 45px;
+    font-size: 16px;
+  }
+  .checkboxLabel {
+    font-size: 0.9rem;
+  }
+  .Para {
+    width: 90% !important;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  .agree {
+    margin-right: -7px;
+  }
+}
+@media (max-width: 322px) {
+  .agree {
+    margin-right: 40%;
+  }
+}
