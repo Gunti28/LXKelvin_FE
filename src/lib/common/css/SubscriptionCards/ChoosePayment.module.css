@@ -1,0 +1,91 @@
+.ChoosePayContainer {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.Arrow {
+  justify-content: space-between;
+  margin-left: 20%;
+  align-items: end;
+}
+.vector {
+  color: #979797;
+  display: flex;
+  margin-top: 40px;
+}
+.imgContainer {
+  display: flex;
+  width: 5rem;
+  justify-content: space-around;
+}
+.imgContainer img {
+  height: 2rem;
+}
+.nameContainer {
+  width: 20rem;
+}
+
+.cardWrapper {
+  width: 75%;
+  margin: 1rem auto 0 auto;
+}
+
+.encryptedNote {
+  font-size: 13px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.termsLabel {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  flex: 1;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .cardWrapper {
+    width: 95%;
+  }
+  .nameContainer {
+    width: 15rem;
+  }
+
+  .encryptedNote {
+    justify-content: flex-end;
+    font-size: 12px;
+  }
+
+  .termsLabel {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nameContainer {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .imgContainer img {
+    height: 1rem !important;
+  }
+  .vector img {
+    height: 3rem !important;
+  }
+}

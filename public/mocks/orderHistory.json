@@ -4,7 +4,17 @@
       "id": "AECB142GSEV2845",
       "status": "Delivered",
       "date": "Delivered on 30th Nov 2024, 4:20pm",
-      "items": ["tomato", "banana", "kiwi", "banana", "kiwi", "tomato", "kiwi", "banana", "kiwi"],
+      "items": [
+        "tomato",
+        "banana",
+        "kiwi",
+        "banana",
+        "kiwi",
+        "tomato",
+        "kiwi",
+        "banana",
+        "kiwi"
+      ],
       "price": "€ 106.30",
       "showReorder": true
     },

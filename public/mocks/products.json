@@ -8,7 +8,7 @@
       "originalPrice": 50,
       "discount": 20,
       "Colour": "#fbd7d7",
-      "image": "/src/lib/common/assets/Images/tomato.svg",
+      "image": "/assets/Images/tomato.svg",
       "stockCount": 5,
       "isSeasonal": false
     },
@@ -20,7 +20,7 @@
       "originalPrice": 45,
       "discount": 10,
       "Colour": "#c6f5c3",
-      "image": "/src/lib/common/assets/Images/beans.svg",
+      "image": "/assets/Images/beans.svg",
       "stockCount": 5,
       "isSeasonal": false
     },
@@ -32,7 +32,7 @@
       "originalPrice": 35,
       "discount": 0,
       "Colour": "#fbd7d7",
-      "image": "/src/lib/common/assets/Images/apple.svg",
+      "image": "/assets/Images/apple.svg",
       "stockCount": 1,
       "isSeasonal": false
     },
@@ -44,7 +44,7 @@
       "originalPrice": 35,
       "discount": 5,
       "Colour": "#e9f1d7",
-      "image": "/src/lib/common/assets/Images/cauliflower.svg",
+      "image": "/assets/Images/cauliflower.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -56,7 +56,7 @@
       "originalPrice": 35,
       "discount": 0,
       "Colour": "#EDD251",
-      "image": "/src/lib/common/assets/Images/banana.svg",
+      "image": "/assets/Images/banana.svg",
       "stockCount": 20,
       "isSeasonal": true
     },
@@ -68,7 +68,7 @@
       "originalPrice": 40,
       "discount": 15,
       "Colour": "#fef0dd",
-      "image": "/src/lib/common/assets/Images/garlic.svg",
+      "image": "/assets/Images/garlic.svg",
       "stockCount": 8,
       "isSeasonal": false
     },
@@ -80,7 +80,7 @@
       "originalPrice": 35,
       "discount": 0,
       "Colour": "#E24C36",
-      "image": "/src/lib/common/assets/Images/watermelon.svg",
+      "image": "/assets/Images/watermelon.svg",
       "stockCount": 3,
       "isSeasonal": false
     },
@@ -92,7 +92,7 @@
       "originalPrice": 35,
       "discount": 0,
       "Colour": "#c6f5c3",
-      "image": "/src/lib/common/assets/Images/kiwi.svg",
+      "image": "/assets/Images/kiwi.svg",
       "stockCount": 7,
       "isSeasonal": false
     },
@@ -104,7 +104,7 @@
       "originalPrice": 60,
       "discount": 0,
       "Colour": "#E24C36",
-      "image": "/src/lib/common/assets/Images/capsicum.svg",
+      "image": "/assets/Images/capsicum.svg",
       "stockCount": 9,
       "isSeasonal": true
     },
@@ -116,7 +116,7 @@
       "originalPrice": 150,
       "discount": 0,
       "Colour": "#9B5366",
-      "image": "/src/lib/common/assets/Images/onion.svg",
+      "image": "/assets/Images/onion.svg",
       "stockCount": 9,
       "isSeasonal": false
     },
@@ -128,7 +128,7 @@
       "originalPrice": 200,
       "discount": 0,
       "Colour": "#F47775",
-      "image": "/src/lib/common/assets/Images/strawberry.svg",
+      "image": "/assets/Images/strawberry.svg",
       "stockCount": 9,
       "isSeasonal": true
     },
@@ -140,7 +140,7 @@
       "originalPrice": 50,
       "discount": 0,
       "Colour": "#86AB85",
-      "image": "/src/lib/common/assets/Images/milk.svg",
+      "image": "/assets/Images/milk.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -152,7 +152,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#DE8634",
-      "image": "/src/lib/common/assets/Images/cheese.svg",
+      "image": "/assets/Images/cheese.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -164,7 +164,7 @@
       "originalPrice": 550,
       "discount": 20,
       "Colour": "#A7DD94",
-      "image": "/src/lib/common/assets/Images/Artichoke.svg",
+      "image": "/assets/Images/Artichoke.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -176,7 +176,7 @@
       "originalPrice": 550,
       "discount": 20,
       "Colour": "#AADBA2",
-      "image": "/src/lib/common/assets/Images/Arugula.svg",
+      "image": "/assets/Images/Arugula.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -188,7 +188,7 @@
       "originalPrice": 250,
       "discount": 20,
       "Colour": "#DDED97",
-      "image": "/src/lib/common/assets/Images/asparagus.svg",
+      "image": "/assets/Images/asparagus.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -200,7 +200,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#9CDA52",
-      "image": "/src/lib/common/assets/Images/french-beans.svg",
+      "image": "/assets/Images/french-beans.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -212,7 +212,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#ABC25C",
-      "image": "/src/lib/common/assets/Images/cucumber.svg",
+      "image": "/assets/Images/cucumber.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -224,7 +224,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#86AB85",
-      "image": "/src/lib/common/assets/Images/chives.svg",
+      "image": "/assets/Images/chives.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -236,7 +236,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#B6B3BF",
-      "image": "/src/lib/common/assets/Images/eggplant.svg",
+      "image": "/assets/Images/eggplant.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -248,7 +248,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#F0728B",
-      "image": "/src/lib/common/assets/Images/beetroot.svg",
+      "image": "/assets/Images/beetroot.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -260,7 +260,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#E9C886",
-      "image": "/src/lib/common/assets/Images/blacksalsify.svg",
+      "image": "/assets/Images/blacksalsify.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -272,7 +272,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#94CF7D",
-      "image": "/src/lib/common/assets/Images/broccoli.svg",
+      "image": "/assets/Images/broccoli.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -284,7 +284,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#ADD76C",
-      "image": "/src/lib/common/assets/Images/brusselsprouts.svg",
+      "image": "/assets/Images/brusselsprouts.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -296,7 +296,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#F0C861",
-      "image": "/src/lib/common/assets/Images/corn.svg",
+      "image": "/assets/Images/corn.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -308,7 +308,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#97C764",
-      "image": "/src/lib/common/assets/Images/chineesecabbage.svg",
+      "image": "/assets/Images/chineesecabbage.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -320,7 +320,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#C3CE72",
-      "image": "/src/lib/common/assets/Images/endive.svg",
+      "image": "/assets/Images/endive.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -332,7 +332,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#F7B18C",
-      "image": "/src/lib/common/assets/Images/carrot.svg",
+      "image": "/assets/Images/carrot.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -344,7 +344,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#A3DDD6",
-      "image": "/src/lib/common/assets/Images/cauliflower.svg",
+      "image": "/assets/Images/cauliflower.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -356,7 +356,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#E3B984",
-      "image": "/src/lib/common/assets/Images/celeraic.svg",
+      "image": "/assets/Images/celeraic.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -368,7 +368,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#DDCEB7",
-      "image": "/src/lib/common/assets/Images/mushroom.svg",
+      "image": "/assets/Images/mushroom.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -380,7 +380,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#EEE28E",
-      "image": "/src/lib/common/assets/Images/chicory.svg",
+      "image": "/assets/Images/chicory.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -392,7 +392,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#F47775",
-      "image": "/src/lib/common/assets/Images/chilli.svg",
+      "image": "/assets/Images/chilli.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -404,7 +404,7 @@
       "originalPrice": 150,
       "discount": 60,
       "Colour": "#BBB4A2",
-      "image": "/src/lib/common/assets/Images/white radish.svg",
+      "image": "/assets/Images/white radish.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -416,7 +416,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#FF8F8D",
-      "image": "/src/lib/common/assets/Images/cherry.svg",
+      "image": "/assets/Images/cherry.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -428,7 +428,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#AADBA2",
-      "image": "/src/lib/common/assets/Images/pomelo.svg",
+      "image": "/assets/Images/pomelo.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -440,7 +440,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#DDED97",
-      "image": "/src/lib/common/assets/Images/grapes.svg",
+      "image": "/assets/Images/grapes.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -452,7 +452,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#DFA013",
-      "image": "/src/lib/common/assets/Images/plum.svg",
+      "image": "/assets/Images/plum.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -464,7 +464,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#ABC25C",
-      "image": "/src/lib/common/assets/Images/amla.svg",
+      "image": "/assets/Images/amla.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -476,7 +476,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#86AB85",
-      "image": "/src/lib/common/assets/Images/custurd apple.svg",
+      "image": "/assets/Images/custurd apple.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -488,7 +488,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#B6B3BF",
-      "image": "/src/lib/common/assets/Images/avacado.svg",
+      "image": "/assets/Images/avacado.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -500,7 +500,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#F0728B",
-      "image": "/src/lib/common/assets/Images/strawberry-new.svg",
+      "image": "/assets/Images/strawberry-new.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -512,7 +512,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#E9C886",
-      "image": "/src/lib/common/assets/Images/pears.svg",
+      "image": "/assets/Images/pears.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -524,7 +524,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#94CF7D",
-      "image": "/src/lib/common/assets/Images/green-apple.svg",
+      "image": "/assets/Images/green-apple.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -536,7 +536,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#D84A4C",
-      "image": "/src/lib/common/assets/Images/rambutan.svg",
+      "image": "/assets/Images/rambutan.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -548,7 +548,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#F0C861",
-      "image": "/src/lib/common/assets/Images/orange.svg",
+      "image": "/assets/Images/orange.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -560,7 +560,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#C8C460",
-      "image": "/src/lib/common/assets/Images/starfruit.svg",
+      "image": "/assets/Images/starfruit.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -572,7 +572,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#A75720",
-      "image": "/src/lib/common/assets/Images/jackfruit.svg",
+      "image": "/assets/Images/jackfruit.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -584,7 +584,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#CA4858",
-      "image": "/src/lib/common/assets/Images/lychee.svg",
+      "image": "/assets/Images/lychee.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -596,7 +596,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#FEF2D1",
-      "image": "/src/lib/common/assets/Images/chalisa-fig.svg",
+      "image": "/assets/Images/chalisa-fig.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -608,7 +608,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#E3B984",
-      "image": "/src/lib/common/assets/Images/musk-melon.svg",
+      "image": "/assets/Images/musk-melon.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -620,7 +620,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#DDCEB7",
-      "image": "/src/lib/common/assets/Images/black-berry.svg",
+      "image": "/assets/Images/black-berry.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -632,7 +632,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#F7E2CA",
-      "image": "/src/lib/common/assets/Images/pomegranate.svg",
+      "image": "/assets/Images/pomegranate.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -644,7 +644,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#F47775",
-      "image": "/src/lib/common/assets/Images/watermelon.svg",
+      "image": "/assets/Images/pomegranate.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -656,7 +656,7 @@
       "originalPrice": 250,
       "discount": 0,
       "Colour": "#EDD251",
-      "image": "/src/lib/common/assets/Images/banana.svg",
+      "image": "/assets/Images/banana.svg",
       "stockCount": 10,
       "isSeasonal": true
     }

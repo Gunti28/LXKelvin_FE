@@ -1,16 +1,13 @@
 import Category from "../../../../lib/common/css/registration/Dashboard.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
-import slid1 from "../../../../lib/common/assets/Images/dashboard_corosel.svg";
-import slid2 from "../../../../lib/common/assets/Images/dashboard_corosel.svg";
-import slid3 from "../../../../lib/common/assets/Images/dashboard_corosel.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Navigation, Autoplay } from "swiper/modules";
-
+import { DASHBOARD_CAROUSEL } from "../../../../lib/constants/Image_Constants";
 const FlashScreens = () => {
   return (
     <div>
@@ -24,7 +21,7 @@ const FlashScreens = () => {
             className={`${Category.carousel} d-flex align-items-center justify-content-center`}
           >
             <img
-              src={slid1}
+              src={DASHBOARD_CAROUSEL}
               alt="Fruits and Vegetables"
               className={Category.banner}
             />
@@ -44,7 +41,11 @@ const FlashScreens = () => {
           <div
             className={`${Category.carousel} d-flex align-items-center justify-content-center`}
           >
-            <img src={slid2} alt="Banner Slide 2" className={Category.banner} />
+            <img
+              src={DASHBOARD_CAROUSEL}
+              alt="Banner Slide 2"
+              className={Category.banner}
+            />
             <div className={`${Category.text} text-center p-4`}>
               <h3 className={Category.foont}>
                 Freshness at your{" "}
@@ -61,7 +62,11 @@ const FlashScreens = () => {
           <div
             className={`${Category.carousel} d-flex align-items-center justify-content-center`}
           >
-            <img src={slid3} alt="Banner Slide 3" className={Category.banner} />
+            <img
+              src={DASHBOARD_CAROUSEL}
+              alt="Banner Slide 3"
+              className={Category.banner}
+            />
             <div className={`${Category.text} text-center p-4`}>
               <h3 className={Category.foont}>
                 Daily Deals on{" "}

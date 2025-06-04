@@ -1,0 +1,58 @@
+{
+  "plans": [
+    {
+      "title": "Monthly",
+      "plan_id": 1,
+      "price": 7,
+      "Name": "user",
+      "features": ["Get extra (10% OFF)", "Free delivery", "Timely delivery"],
+      "buttonColor": "#E1712B40 ",
+      "buttonTextColor": "#E1712B"
+    },
+    {
+      "title": "3 Months",
+      "plan_id": 2,
+      "price": 9,
+      "Name": "user",
+      "features": [
+        "Get extra (15% OFF)",
+        "Free delivery",
+        "Timely delivery",
+        "Chat Support"
+      ],
+      "buttonColor": "#00EB0040",
+      "buttonTextColor": "#2DC937"
+    },
+    {
+      "title": "6 Months",
+      "plan_id": 3,
+      "price": 10,
+      "Name": "user",
+      "features": [
+        "Get extra (20% OFF)",
+        "Free delivery",
+        "Timely delivery",
+        "Chat Support",
+        "Earn cashback"
+      ],
+      "buttonColor": "linear-gradient(90deg, #979797 0%, #313131 50%, #727272 100%)",
+      "buttonTextColor": "white"
+    },
+    {
+      "title": "Annual",
+      "plan_id": 4,
+      "price": 22,
+      "Name": "user",
+      "features": [
+        "Get extra (25% OFF)",
+        "Free delivery",
+        "Timely delivery",
+        "Chat Support",
+        "Earn cashback",
+        "Get coupon codes"
+      ],
+      "buttonColor": "linear-gradient(90deg, #E8B919 0%, #82680E 100%)",
+      "buttonTextColor": "white"
+    }
+  ]
+}

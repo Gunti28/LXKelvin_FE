@@ -3,15 +3,15 @@
     {
       "id": 1,
       "images": [
-        "/src/lib/common/assets/Images/tomoto1_courosel.svg",
-        "/src/lib/common/assets/Images/tomoto2_courosel.svg",
-        "/src/lib/common/assets/Images/tomoto3_courosel.svg",
-        "/src/lib/common/assets/Images/tomoto4_courosel.svg",
-        "/src/lib/common/assets/Images/tomoto5_courosel.svg"
+        "/assets/Images/tomoto1_courosel.svg",
+        "/assets/Images/tomoto2_courosel.svg",
+        "/assets/Images/tomoto3_courosel.svg",
+        "/assets/Images/tomoto4_courosel.svg",
+        "/assets/Images/tomoto5_courosel.svg"
       ],
       "productName": "Tomato",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 40,
       "originalPrice": 50,
       "discount": 20,
@@ -22,15 +22,15 @@
     {
       "id": 2,
       "images": [
-        "/src/lib/common/assets/Images/beans.svg",
-        "/src/lib/common/assets/Images/beans.svg",
-        "/src/lib/common/assets/Images/beans.svg",
-        "/src/lib/common/assets/Images/beans.svg",
-        "/src/lib/common/assets/Images/beans.svg"
+        "/assets/Images/beans.svg",
+        "/assets/Images/beans.svg",
+        "/assets/Images/beans.svg",
+        "/assets/Images/beans.svg",
+        "/assets/Images/beans.svg"
       ],
       "productName": "Beans",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 35,
       "originalPrice": 45,
       "discount": 10,
@@ -41,15 +41,15 @@
     {
       "id": 3,
       "images": [
-        "/src/lib/common/assets/Images/apple.svg",
-        "/src/lib/common/assets/Images/apple.svg",
-        "/src/lib/common/assets/Images/apple.svg",
-        "/src/lib/common/assets/Images/apple.svg",
-        "/src/lib/common/assets/Images/apple.svg"
+        "/assets/Images/apple.svg",
+        "/assets/Images/apple.svg",
+        "/assets/Images/apple.svg",
+        "/assets/Images/apple.svg",
+        "/assets/Images/apple.svg"
       ],
       "productName": "Apple",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 120,
       "originalPrice": 35,
       "discount": 0,
@@ -60,15 +60,15 @@
     {
       "id": 4,
       "images": [
-        "/src/lib/common/assets/Images/cauliflower.svg",
-        "/src/lib/common/assets/Images/cauliflower.svg",
-        "/src/lib/common/assets/Images/cauliflower.svg",
-        "/src/lib/common/assets/Images/cauliflower.svg",
-        "/src/lib/common/assets/Images/cauliflower.svg"
+        "/assets/Images/cauliflower.svg",
+        "/assets/Images/cauliflower.svg",
+        "/assets/Images/cauliflower.svg",
+        "/assets/Images/cauliflower.svg",
+        "/assets/Images/cauliflower.svg"
       ],
       "productName": "Cauliflower",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 25,
       "originalPrice": 35,
       "discount": 5,
@@ -79,15 +79,15 @@
     {
       "id": 5,
       "images": [
-        "/src/lib/common/assets/Images/banana.svg",
-        "/src/lib/common/assets/Images/banana.svg",
-        "/src/lib/common/assets/Images/banana.svg",
-        "/src/lib/common/assets/Images/banana.svg",
-        "/src/lib/common/assets/Images/banana.svg"
+        "/assets/Images/banana.svg",
+        "/assets/Images/banana.svg",
+        "/assets/Images/banana.svg",
+        "/assets/Images/banana.svg",
+        "/assets/Images/banana.svg"
       ],
       "productName": "Banana",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 40,
       "originalPrice": 35,
       "discount": 0,
@@ -98,15 +98,15 @@
     {
       "id": 6,
       "images": [
-        "/src/lib/common/assets/Images/garlic.svg",
-        "/src/lib/common/assets/Images/garlic.svg",
-        "/src/lib/common/assets/Images/garlic.svg",
-        "/src/lib/common/assets/Images/garlic.svg",
-        "/src/lib/common/assets/Images/garlic.svg"
+        "/assets/Images/garlic.svg",
+        "/assets/Images/garlic.svg",
+        "/assets/Images/garlic.svg",
+        "/assets/Images/garlic.svg",
+        "/assets/Images/garlic.svg"
       ],
       "productName": "Garlic",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 30,
       "originalPrice": 40,
       "discount": 15,
@@ -117,14 +117,14 @@
     {
       "id": 7,
       "images": [
-        "/src/lib/common/assets/Images/watermelon.svg",
-        "/src/lib/common/assets/Images/watermelon.svg",
-        "/src/lib/common/assets/Images/watermelon.svg",
-        "/src/lib/common/assets/Images/watermelon.svg",
-        "/src/lib/common/assets/Images/watermelon.svg"
+        "/assets/Images/watermelon.svg",
+        "/assets/Images/watermelon.svg",
+        "/assets/Images/watermelon.svg",
+        "/assets/Images/watermelon.svg",
+        "/assets/Images/watermelon.svg"
       ],
       "productName": "Watermelon",
-      "cat_id":2,
+      "cat_id": 2,
       "category": "fruits",
       "offerPrice": 28,
       "originalPrice": 35,
@@ -136,15 +136,15 @@
     {
       "id": 8,
       "images": [
-        "/src/lib/common/assets/Images/kiwi.svg",
-        "/src/lib/common/assets/Images/kiwi.svg",
-        "/src/lib/common/assets/Images/kiwi.svg",
-        "/src/lib/common/assets/Images/kiwi.svg",
-        "/src/lib/common/assets/Images/kiwi.svg"
+        "/assets/Images/kiwi.svg",
+        "/assets/Images/kiwi.svg",
+        "/assets/Images/kiwi.svg",
+        "/assets/Images/kiwi.svg",
+        "/assets/Images/kiwi.svg"
       ],
       "productName": "Kiwi",
       "category": "fruits",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 28,
       "originalPrice": 35,
       "discount": 0,
@@ -155,15 +155,15 @@
     {
       "id": 9,
       "images": [
-        "/src/lib/common/assets/Images/capsicum.svg",
-        "/src/lib/common/assets/Images/capsicum.svg",
-        "/src/lib/common/assets/Images/capsicum.svg",
-        "/src/lib/common/assets/Images/capsicum.svg",
-        "/src/lib/common/assets/Images/capsicum.svg"
+        "/assets/Images/capsicum.svg",
+        "/assets/Images/capsicum.svg",
+        "/assets/Images/capsicum.svg",
+        "/assets/Images/capsicum.svg",
+        "/assets/Images/capsicum.svg"
       ],
       "productName": "Capsicum",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 60,
       "originalPrice": 60,
       "discount": 0,
@@ -173,17 +173,17 @@
     },
     {
       "id": 10,
-      "image": "/src/lib/common/assets/Images/onion.svg",
+      "image": "/assets/Images/onion.svg",
       "images": [
-        "/src/lib/common/assets/Images/onion.svg",
-        "/src/lib/common/assets/Images/onion.svg",
-        "/src/lib/common/assets/Images/onion.svg",
-        "/src/lib/common/assets/Images/onion.svg",
-        "/src/lib/common/assets/Images/onion.svg"
+        "/assets/Images/onion.svg",
+        "/assets/Images/onion.svg",
+        "/assets/Images/onion.svg",
+        "/assets/Images/onion.svg",
+        "/assets/Images/onion.svg"
       ],
       "productName": "Onion",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 150,
       "originalPrice": 150,
       "discount": 0,
@@ -193,17 +193,17 @@
     },
     {
       "id": 11,
-      "image": "/src/lib/common/assets/Images/strawberry.svg",
+      "image": "/assets/Images/strawberry.svg",
       "images": [
-        "/src/lib/common/assets/Images/strawberry.svg",
-        "/src/lib/common/assets/Images/strawberry.svg",
-        "/src/lib/common/assets/Images/strawberry.svg",
-        "/src/lib/common/assets/Images/strawberry.svg",
-        "/src/lib/common/assets/Images/strawberry.svg"
+        "/assets/Images/strawberry.svg",
+        "/assets/Images/strawberry.svg",
+        "/assets/Images/strawberry.svg",
+        "/assets/Images/strawberry.svg",
+        "/assets/Images/strawberry.svg"
       ],
       "productName": "Strawberry",
       "category": "fruits",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 200,
       "originalPrice": 200,
       "discount": 0,
@@ -213,17 +213,17 @@
     },
     {
       "id": 12,
-      "image": "/src/lib/common/assets/Images/milk.svg",
+      "image": "/assets/Images/milk.svg",
       "images": [
-        "/src/lib/common/assets/Images/milk.svg",
-        "/src/lib/common/assets/Images/milk.svg",
-        "/src/lib/common/assets/Images/milk.svg",
-        "/src/lib/common/assets/Images/milk.svg",
-        "/src/lib/common/assets/Images/milk.svg"
+        "/assets/Images/milk.svg",
+        "/assets/Images/milk.svg",
+        "/assets/Images/milk.svg",
+        "/assets/Images/milk.svg",
+        "/assets/Images/milk.svg"
       ],
       "productName": "Milk",
       "category": "milkProducts",
-      "cat_id":5,
+      "cat_id": 5,
       "offerPrice": 50,
       "originalPrice": 50,
       "discount": 0,
@@ -233,17 +233,17 @@
     },
     {
       "id": 13,
-      "image": "/src/lib/common/assets/Images/cheese.svg",
+      "image": "/assets/Images/cheese.svg",
       "images": [
-        "/src/lib/common/assets/Images/cheese.svg",
-        "/src/lib/common/assets/Images/cheese.svg",
-        "/src/lib/common/assets/Images/cheese.svg",
-        "/src/lib/common/assets/Images/cheese.svg",
-        "/src/lib/common/assets/Images/cheese.svg"
+        "/assets/Images/cheese.svg",
+        "/assets/Images/cheese.svg",
+        "/assets/Images/cheese.svg",
+        "/assets/Images/cheese.svg",
+        "/assets/Images/cheese.svg"
       ],
       "productName": "Cheese",
       "category": "milkProducts",
-      "cat_id":5,
+      "cat_id": 5,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -253,17 +253,17 @@
     },
     {
       "id": 14,
-      "image": "/src/lib/common/assets/Images/Artichoke.svg",
+      "image": "/assets/Images/Artichoke.svg",
       "images": [
-        "/src/lib/common/assets/Images/Artichoke.svg",
-        "/src/lib/common/assets/Images/Artichoke.svg",
-        "/src/lib/common/assets/Images/Artichoke.svg",
-        "/src/lib/common/assets/Images/Artichoke.svg",
-        "/src/lib/common/assets/Images/Artichoke.svg"
+        "/assets/Images/Artichoke.svg",
+        "/assets/Images/Artichoke.svg",
+        "/assets/Images/Artichoke.svg",
+        "/assets/Images/Artichoke.svg",
+        "/assets/Images/Artichoke.svg"
       ],
       "productName": "Artichoke",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 350,
       "originalPrice": 550,
       "discount": 20,
@@ -273,17 +273,17 @@
     },
     {
       "id": 15,
-      "image": "/src/lib/common/assets/Images/Arugula.svg",
+      "image": "/assets/Images/Arugula.svg",
       "images": [
-        "/src/lib/common/assets/Images/Arugula.svg",
-        "/src/lib/common/assets/Images/Arugula.svg",
-        "/src/lib/common/assets/Images/Arugula.svg",
-        "/src/lib/common/assets/Images/Arugula.svg",
-        "/src/lib/common/assets/Images/Arugula.svg"
+        "/assets/Images/Arugula.svg",
+        "/assets/Images/Arugula.svg",
+        "/assets/Images/Arugula.svg",
+        "/assets/Images/Arugula.svg",
+        "/assets/Images/Arugula.svg"
       ],
       "productName": "Arugula",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 350,
       "originalPrice": 550,
       "discount": 20,
@@ -293,17 +293,17 @@
     },
     {
       "id": 16,
-      "image": "/src/lib/common/assets/Images/asparagus.svg",
+      "image": "/assets/Images/asparagus.svg",
       "images": [
-        "/src/lib/common/assets/Images/asparagus.svg",
-        "/src/lib/common/assets/Images/asparagus.svg",
-        "/src/lib/common/assets/Images/asparagus.svg",
-        "/src/lib/common/assets/Images/asparagus.svg",
-        "/src/lib/common/assets/Images/asparagus.svg"
+        "/assets/Images/asparagus.svg",
+        "/assets/Images/asparagus.svg",
+        "/assets/Images/asparagus.svg",
+        "/assets/Images/asparagus.svg",
+        "/assets/Images/asparagus.svg"
       ],
       "productName": "Asparagus",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 150,
       "originalPrice": 250,
       "discount": 20,
@@ -313,17 +313,17 @@
     },
     {
       "id": 17,
-      "image": "/src/lib/common/assets/Images/french-beans.svg",
+      "image": "/assets/Images/french-beans.svg",
       "images": [
-        "/src/lib/common/assets/Images/french-beans.svg",
-        "/src/lib/common/assets/Images/french-beans.svg",
-        "/src/lib/common/assets/Images/french-beans.svg",
-        "/src/lib/common/assets/Images/french-beans.svg",
-        "/src/lib/common/assets/Images/french-beans.svg"
+        "/assets/Images/french-beans.svg",
+        "/assets/Images/french-beans.svg",
+        "/assets/Images/french-beans.svg",
+        "/assets/Images/french-beans.svg",
+        "/assets/Images/french-beans.svg"
       ],
       "productName": "French Beans",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -333,17 +333,17 @@
     },
     {
       "id": 18,
-      "image": "/src/lib/common/assets/Images/cucumber.svg",
+      "image": "/assets/Images/cucumber.svg",
       "images": [
-        "/src/lib/common/assets/Images/cucumber.svg",
-        "/src/lib/common/assets/Images/cucumber.svg",
-        "/src/lib/common/assets/Images/cucumber.svg",
-        "/src/lib/common/assets/Images/cucumber.svg",
-        "/src/lib/common/assets/Images/cucumber.svg"
+        "/assets/Images/cucumber.svg",
+        "/assets/Images/cucumber.svg",
+        "/assets/Images/cucumber.svg",
+        "/assets/Images/cucumber.svg",
+        "/assets/Images/cucumber.svg"
       ],
       "productName": "Cucumber",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -353,17 +353,17 @@
     },
     {
       "id": 19,
-      "image": "/src/lib/common/assets/Images/chives.svg",
+      "image": "/assets/Images/chives.svg",
       "images": [
-        "/src/lib/common/assets/Images/chives.svg",
-        "/src/lib/common/assets/Images/chives.svg",
-        "/src/lib/common/assets/Images/chives.svg",
-        "/src/lib/common/assets/Images/chives.svg",
-        "/src/lib/common/assets/Images/chives.svg"
+        "/assets/Images/chives.svg",
+        "/assets/Images/chives.svg",
+        "/assets/Images/chives.svg",
+        "/assets/Images/chives.svg",
+        "/assets/Images/chives.svg"
       ],
       "productName": "Chives",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -373,17 +373,17 @@
     },
     {
       "id": 20,
-      "image": "/src/lib/common/assets/Images/eggplant.svg",
+      "image": "/assets/Images/eggplant.svg",
       "images": [
-        "/src/lib/common/assets/Images/eggplant.svg",
-        "/src/lib/common/assets/Images/eggplant.svg",
-        "/src/lib/common/assets/Images/eggplant.svg",
-        "/src/lib/common/assets/Images/eggplant.svg",
-        "/src/lib/common/assets/Images/eggplant.svg"
+        "/assets/Images/eggplant.svg",
+        "/assets/Images/eggplant.svg",
+        "/assets/Images/eggplant.svg",
+        "/assets/Images/eggplant.svg",
+        "/assets/Images/eggplant.svg"
       ],
       "productName": "Eggplant",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -393,17 +393,17 @@
     },
     {
       "id": 21,
-      "image": "/src/lib/common/assets/Images/beetroot.svg",
+      "image": "/assets/Images/beetroot.svg",
       "images": [
-        "/src/lib/common/assets/Images/beetroot.svg",
-        "/src/lib/common/assets/Images/beetroot.svg",
-        "/src/lib/common/assets/Images/beetroot.svg",
-        "/src/lib/common/assets/Images/beetroot.svg",
-        "/src/lib/common/assets/Images/beetroot.svg"
+        "/assets/Images/beetroot.svg",
+        "/assets/Images/beetroot.svg",
+        "/assets/Images/beetroot.svg",
+        "/assets/Images/beetroot.svg",
+        "/assets/Images/beetroot.svg"
       ],
       "productName": "Beetroot",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -413,17 +413,17 @@
     },
     {
       "id": 22,
-      "image": "/src/lib/common/assets/Images/blacksalsify.svg",
+      "image": "/assets/Images/blacksalsify.svg",
       "images": [
-        "/src/lib/common/assets/Images/blacksalsify.svg",
-        "/src/lib/common/assets/Images/blacksalsify.svg",
-        "/src/lib/common/assets/Images/blacksalsify.svg",
-        "/src/lib/common/assets/Images/blacksalsify.svg",
-        "/src/lib/common/assets/Images/blacksalsify.svg"
+        "/assets/Images/blacksalsify.svg",
+        "/assets/Images/blacksalsify.svg",
+        "/assets/Images/blacksalsify.svg",
+        "/assets/Images/blacksalsify.svg",
+        "/assets/Images/blacksalsify.svg"
       ],
       "productName": "Black Salsify",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -433,17 +433,17 @@
     },
     {
       "id": 23,
-      "image": "/src/lib/common/assets/Images/broccoli.svg",
+      "image": "/assets/Images/broccoli.svg",
       "images": [
-        "/src/lib/common/assets/Images/broccoli.svg",
-        "/src/lib/common/assets/Images/broccoli.svg",
-        "/src/lib/common/assets/Images/broccoli.svg",
-        "/src/lib/common/assets/Images/broccoli.svg",
-        "/src/lib/common/assets/Images/broccoli.svg"
+        "/assets/Images/broccoli.svg",
+        "/assets/Images/broccoli.svg",
+        "/assets/Images/broccoli.svg",
+        "/assets/Images/broccoli.svg",
+        "/assets/Images/broccoli.svg"
       ],
       "productName": "Broccoli",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -453,17 +453,17 @@
     },
     {
       "id": 24,
-      "image": "/src/lib/common/assets/Images/brusselsprouts.svg",
+      "image": "/assets/Images/brusselsprouts.svg",
       "images": [
-        "/src/lib/common/assets/Images/brusselsprouts.svg",
-        "/src/lib/common/assets/Images/brusselsprouts.svg",
-        "/src/lib/common/assets/Images/brusselsprouts.svg",
-        "/src/lib/common/assets/Images/brusselsprouts.svg",
-        "/src/lib/common/assets/Images/brusselsprouts.svg"
+        "/assets/Images/brusselsprouts.svg",
+        "/assets/Images/brusselsprouts.svg",
+        "/assets/Images/brusselsprouts.svg",
+        "/assets/Images/brusselsprouts.svg",
+        "/assets/Images/brusselsprouts.svg"
       ],
       "productName": "Brussel Sprouts",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -473,17 +473,17 @@
     },
     {
       "id": 25,
-      "image": "/src/lib/common/assets/Images/corn.svg",
+      "image": "/assets/Images/corn.svg",
       "images": [
-        "/src/lib/common/assets/Images/corn.svg",
-        "/src/lib/common/assets/Images/corn.svg",
-        "/src/lib/common/assets/Images/corn.svg",
-        "/src/lib/common/assets/Images/corn.svg",
-        "/src/lib/common/assets/Images/corn.svg"
+        "/assets/Images/corn.svg",
+        "/assets/Images/corn.svg",
+        "/assets/Images/corn.svg",
+        "/assets/Images/corn.svg",
+        "/assets/Images/corn.svg"
       ],
       "productName": "Corn",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -493,17 +493,17 @@
     },
     {
       "id": 26,
-      "image": "/src/lib/common/assets/Images/chineesecabbage.svg",
+      "image": "/assets/Images/chineesecabbage.svg",
       "images": [
-        "/src/lib/common/assets/Images/chineesecabbage.svg",
-        "/src/lib/common/assets/Images/chineesecabbage.svg",
-        "/src/lib/common/assets/Images/chineesecabbage.svg",
-        "/src/lib/common/assets/Images/chineesecabbage.svg",
-        "/src/lib/common/assets/Images/chineesecabbage.svg"
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg"
       ],
       "productName": "Chineese cabbage",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -513,17 +513,17 @@
     },
     {
       "id": 27,
-      "image": "/src/lib/common/assets/Images/endive.svg",
+      "image": "/assets/Images/endive.svg",
       "images": [
-        "/src/lib/common/assets/Images/endive.svg",
-        "/src/lib/common/assets/Images/endive.svg",
-        "/src/lib/common/assets/Images/endive.svg",
-        "/src/lib/common/assets/Images/endive.svg",
-        "/src/lib/common/assets/Images/endive.svg"
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg"
       ],
       "productName": "Endive",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -533,17 +533,17 @@
     },
     {
       "id": 28,
-      "image": "/src/lib/common/assets/Images/carrot.svg",
+      "image": "/assets/Images/carrot.svg",
       "images": [
-        "/src/lib/common/assets/Images/carrot.svg",
-        "/src/lib/common/assets/Images/carrot.svg",
-        "/src/lib/common/assets/Images/carrot.svg",
-        "/src/lib/common/assets/Images/carrot.svg",
-        "/src/lib/common/assets/Images/carrot.svg"
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg",
+        "/assets/Images/chineesecabbage.svg"
       ],
       "productName": "Carrot",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -553,17 +553,17 @@
     },
     {
       "id": 29,
-      "image": "/src/lib/common/assets/Images/cauliflower.svg",
+      "image": "/assets/Images/cauliflower.svg",
       "images": [
-        "/src/lib/common/assets/Images/cauliflower.svg",
-        "/src/lib/common/assets/Images/cauliflower.svg",
-        "/src/lib/common/assets/Images/cauliflower.svg",
-        "/src/lib/common/assets/Images/cauliflower.svg",
-        "/src/lib/common/assets/Images/cauliflower.svg"
+        "/assets/Images/cauliflower.svg",
+        "/assets/Images/cauliflower.svg",
+        "/assets/Images/cauliflower.svg",
+        "/assets/Images/cauliflower.svg",
+        "/assets/Images/cauliflower.svg"
       ],
       "productName": "Cauliflower",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -573,17 +573,17 @@
     },
     {
       "id": 30,
-      "image": "/src/lib/common/assets/Images/celeraic.svg",
+      "image": "/assets/Images/celeraic.svg",
       "images": [
-        "/src/lib/common/assets/Images/celeraic.svg",
-        "/src/lib/common/assets/Images/celeraic.svg",
-        "/src/lib/common/assets/Images/celeraic.svg",
-        "/src/lib/common/assets/Images/celeraic.svg",
-        "/src/lib/common/assets/Images/celeraic.svg"
+        "/assets/Images/celeraic.svg",
+        "/assets/Images/celeraic.svg",
+        "/assets/Images/celeraic.svg",
+        "/assets/Images/celeraic.svg",
+        "/assets/Images/celeraic.svg"
       ],
       "productName": "Celeraic",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -593,17 +593,17 @@
     },
     {
       "id": 31,
-      "image": "/src/lib/common/assets/Images/mushroom.svg",
+      "image": "/assets/Images/mushroom.svg",
       "images": [
-        "/src/lib/common/assets/Images/mushroom.svg",
-        "/src/lib/common/assets/Images/mushroom.svg",
-        "/src/lib/common/assets/Images/mushroom.svg",
-        "/src/lib/common/assets/Images/mushroom.svg",
-        "/src/lib/common/assets/Images/mushroom.svg"
+        "/assets/Images/mushroom.svg",
+        "/assets/Images/mushroom.svg",
+        "/assets/Images/mushroom.svg",
+        "/assets/Images/mushroom.svg",
+        "/assets/Images/mushroom.svg"
       ],
       "productName": "Mushroom",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -613,17 +613,17 @@
     },
     {
       "id": 32,
-      "image": "/src/lib/common/assets/Images/chicory.svg",
+      "image": "/assets/Images/chicory.svg",
       "images": [
-        "/src/lib/common/assets/Images/chicory.svg",
-        "/src/lib/common/assets/Images/chicory.svg",
-        "/src/lib/common/assets/Images/chicory.svg",
-        "/src/lib/common/assets/Images/chicory.svg",
-        "/src/lib/common/assets/Images/chicory.svg"
+        "/assets/Images/chicory.svg",
+        "/assets/Images/chicory.svg",
+        "/assets/Images/chicory.svg",
+        "/assets/Images/chicory.svg",
+        "/assets/Images/chicory.svg"
       ],
       "productName": "Chicory",
       "category": "vegetables",
-      "cat_id":3,
+      "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -633,17 +633,17 @@
     },
     {
       "id": 33,
-      "image": "/src/lib/common/assets/Images/chilli.svg",
+      "image": "/assets/Images/chilli.svg",
       "images": [
-        "/src/lib/common/assets/Images/chilli.svg",
-        "/src/lib/common/assets/Images/chilli.svg",
-        "/src/lib/common/assets/Images/chilli.svg",
-        "/src/lib/common/assets/Images/chilli.svg",
-        "/src/lib/common/assets/Images/chilli.svg"
+        "/assets/Images/chilli.svg",
+        "/assets/Images/chilli.svg",
+        "/assets/Images/chilli.svg",
+        "/assets/Images/chilli.svg",
+        "/assets/Images/chilli.svg"
       ],
       "productName": "Chilli",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -653,17 +653,17 @@
     },
     {
       "id": 34,
-      "image": "/src/lib/common/assets/Images/white radish.svg",
+      "image": "/assets/Images/white radish.svg",
       "images": [
-        "/src/lib/common/assets/Images/white radish.svg",
-        "/src/lib/common/assets/Images/white radish.svg",
-        "/src/lib/common/assets/Images/white radish.svg",
-        "/src/lib/common/assets/Images/white radish.svg",
-        "/src/lib/common/assets/Images/white radish.svg"
+        "/assets/Images/white radish.svg",
+        "/assets/Images/white radish.svg",
+        "/assets/Images/white radish.svg",
+        "/assets/Images/white radish.svg",
+        "/assets/Images/white radish.svg"
       ],
       "productName": "White radish",
       "category": "vegetables",
-      "cat_id":1,
+      "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
       "discount": 60,
@@ -673,17 +673,17 @@
     },
     {
       "id": 35,
-      "image": "/src/lib/common/assets/Images/cherry.svg",
+      "image": "/assets/Images/cherry.svg",
       "images": [
-        "/src/lib/common/assets/Images/cherry.svg",
-        "/src/lib/common/assets/Images/cherry.svg",
-        "/src/lib/common/assets/Images/cherry.svg",
-        "/src/lib/common/assets/Images/cherry.svg",
-        "/src/lib/common/assets/Images/cherry.svg"
+        "/assets/Images/cherry.svg",
+        "/assets/Images/cherry.svg",
+        "/assets/Images/cherry.svg",
+        "/assets/Images/cherry.svg",
+        "/assets/Images/cherry.svg"
       ],
       "productName": "Cherry",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -693,17 +693,17 @@
     },
     {
       "id": 36,
-      "image": "/src/lib/common/assets/Images/pomelo.svg",
+      "image": "/assets/Images/pomelo.svg",
       "images": [
-        "/src/lib/common/assets/Images/pomelo.svg",
-        "/src/lib/common/assets/Images/pomelo.svg",
-        "/src/lib/common/assets/Images/pomelo.svg",
-        "/src/lib/common/assets/Images/pomelo.svg",
-        "/src/lib/common/assets/Images/pomelo.svg"
+        "/assets/Images/pomelo.svg",
+        "/assets/Images/pomelo.svg",
+        "/assets/Images/pomelo.svg",
+        "/assets/Images/pomelo.svg",
+        "/assets/Images/pomelo.svg"
       ],
       "productName": "Pomelo",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -713,17 +713,17 @@
     },
     {
       "id": 37,
-      "image": "/src/lib/common/assets/Images/grapes.svg",
+      "image": "/assets/Images/grapes.svg",
       "images": [
-        "/src/lib/common/assets/Images/grapes.svg",
-        "/src/lib/common/assets/Images/grapes.svg",
-        "/src/lib/common/assets/Images/grapes.svg",
-        "/src/lib/common/assets/Images/grapes.svg",
-        "/src/lib/common/assets/Images/grapes.svg"
+        "/assets/Images/grapes.svg",
+        "/assets/Images/grapes.svg",
+        "/assets/Images/grapes.svg",
+        "/assets/Images/grapes.svg",
+        "/assets/Images/grapes.svg"
       ],
       "productName": "Grapes",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -733,17 +733,17 @@
     },
     {
       "id": 38,
-      "image": "/src/lib/common/assets/Images/plum.svg",
+      "image": "/assets/Images/plum.svg",
       "images": [
-        "/src/lib/common/assets/Images/plum.svg",
-        "/src/lib/common/assets/Images/plum.svg",
-        "/src/lib/common/assets/Images/plum.svg",
-        "/src/lib/common/assets/Images/plum.svg",
-        "/src/lib/common/assets/Images/plum.svg"
+        "/assets/Images/plum.svg",
+        "/assets/Images/plum.svg",
+        "/assets/Images/plum.svg",
+        "/assets/Images/plum.svg",
+        "/assets/Images/plum.svg"
       ],
       "productName": "Plum",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -753,17 +753,17 @@
     },
     {
       "id": 39,
-      "image": "/src/lib/common/assets/Images/amla.svg",
+      "image": "/assets/Images/amla.svg",
       "images": [
-        "/src/lib/common/assets/Images/amla.svg",
-        "/src/lib/common/assets/Images/amla.svg",
-        "/src/lib/common/assets/Images/amla.svg",
-        "/src/lib/common/assets/Images/amla.svg",
-        "/src/lib/common/assets/Images/amla.svg"
+        "/assets/Images/amla.svg",
+        "/assets/Images/amla.svg",
+        "/assets/Images/amla.svg",
+        "/assets/Images/amla.svg",
+        "/assets/Images/amla.svg"
       ],
       "productName": "Amla",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -773,17 +773,17 @@
     },
     {
       "id": 40,
-      "image": "/src/lib/common/assets/Images/custurd apple.svg",
+      "image": "/assets/Images/custurd apple.svg",
       "images": [
-        "/src/lib/common/assets/Images/custurd apple.svg",
-        "/src/lib/common/assets/Images/custurd apple.svg",
-        "/src/lib/common/assets/Images/custurd apple.svg",
-        "/src/lib/common/assets/Images/custurd apple.svg",
-        "/src/lib/common/assets/Images/custurd apple.svg"
+        "/assets/Images/custurd apple.svg",
+        "/assets/Images/custurd apple.svg",
+        "/assets/Images/custurd apple.svg",
+        "/assets/Images/custurd apple.svg",
+        "/assets/Images/custurd apple.svg"
       ],
       "productName": "Custurd Apple",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -793,17 +793,17 @@
     },
     {
       "id": 41,
-      "image": "/src/lib/common/assets/Images/avacado.svg",
+      "image": "/assets/Images/avacado.svg",
       "images": [
-        "/src/lib/common/assets/Images/avacado.svg",
-        "/src/lib/common/assets/Images/avacado.svg",
-        "/src/lib/common/assets/Images/avacado.svg",
-        "/src/lib/common/assets/Images/avacado.svg",
-        "/src/lib/common/assets/Images/avacado.svg"
+        "/assets/Images/avacado.svg",
+        "/assets/Images/avacado.svg",
+        "/assets/Images/avacado.svg",
+        "/assets/Images/avacado.svg",
+        "/assets/Images/avacado.svg"
       ],
       "productName": "Avocado",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -813,17 +813,17 @@
     },
     {
       "id": 42,
-      "image": "/src/lib/common/assets/Images/strawberry-new.svg",
+      "image": "/assets/Images/strawberry-new.svg",
       "images": [
-        "/src/lib/common/assets/Images/strawberry-new.svg",
-        "/src/lib/common/assets/Images/strawberry-new.svg",
-        "/src/lib/common/assets/Images/strawberry-new.svg",
-        "/src/lib/common/assets/Images/strawberry-new.svg",
-        "/src/lib/common/assets/Images/strawberry-new.svg"
+        "/assets/Images/strawberry-new.svg",
+        "/assets/Images/strawberry-new.svg",
+        "/assets/Images/strawberry-new.svg",
+        "/assets/Images/strawberry-new.svg",
+        "/assets/Images/strawberry-new.svg"
       ],
       "productName": "Strawberry",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -833,17 +833,17 @@
     },
     {
       "id": 43,
-      "image": "/src/lib/common/assets/Images/pears.svg",
+      "image": "/assets/Images/pears.svg",
       "images": [
-        "/src/lib/common/assets/Images/pears.svg",
-        "/src/lib/common/assets/Images/pears.svg",
-        "/src/lib/common/assets/Images/pears.svg",
-        "/src/lib/common/assets/Images/pears.svg",
-        "/src/lib/common/assets/Images/pears.svg"
+        "/assets/Images/pears.svg",
+        "/assets/Images/pears.svg",
+        "/assets/Images/pears.svg",
+        "/assets/Images/pears.svg",
+        "/assets/Images/pears.svg"
       ],
       "productName": "Pears",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -853,17 +853,17 @@
     },
     {
       "id": 44,
-      "image": "/src/lib/common/assets/Images/green-apple.svg",
+      "image": "/public/assets/Images/green-apple.svg",
       "images": [
-        "/src/lib/common/assets/Images/green-apple.svg",
-        "/src/lib/common/assets/Images/green-apple.svg",
-        "/src/lib/common/assets/Images/green-apple.svg",
-        "/src/lib/common/assets/Images/green-apple.svg",
-        "/src/lib/common/assets/Images/green-apple.svg"
+        "/assets/Images/green-apple.svg",
+        "/assets/Images/green-apple.svg",
+        "/assets/Images/green-apple.svg",
+        "/assets/Images/green-apple.svg",
+        "/assets/Images/green-apple.svg"
       ],
       "productName": "Green Apple",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -873,17 +873,17 @@
     },
     {
       "id": 45,
-      "image": "/src/lib/common/assets/Images/rambutan.svg",
+      "image": "/assets/Images/rambutan.svg",
       "images": [
-        "/src/lib/common/assets/Images/rambutan.svg",
-        "/src/lib/common/assets/Images/rambutan.svg",
-        "/src/lib/common/assets/Images/rambutan.svg",
-        "/src/lib/common/assets/Images/rambutan.svg",
-        "/src/lib/common/assets/Images/rambutan.svg"
+        "/assets/Images/rambutan.svg",
+        "/assets/Images/rambutan.svg",
+        "/assets/Images/rambutan.svg",
+        "/assets/Images/rambutan.svg",
+        "/assets/Images/rambutan.svg"
       ],
       "productName": "Rambutan",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -893,17 +893,17 @@
     },
     {
       "id": 46,
-      "image": "/src/lib/common/assets/Images/orange.svg",
+      "image": "/assets/Images/orange.svg",
       "images": [
-        "/src/lib/common/assets/Images/orange.svg",
-        "/src/lib/common/assets/Images/orange.svg",
-        "/src/lib/common/assets/Images/orange.svg",
-        "/src/lib/common/assets/Images/orange.svg",
-        "/src/lib/common/assets/Images/orange.svg"
+        "/assets/Images/orange.svg",
+        "/assets/Images/orange.svg",
+        "/assets/Images/orange.svg",
+        "/assets/Images/orange.svg",
+        "/assets/Images/orange.svg"
       ],
       "productName": "Orange",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -913,17 +913,17 @@
     },
     {
       "id": 47,
-      "image": "/src/lib/common/assets/Images/starfruit.svg",
+      "image": "/assets/Images/starfruit.svg",
       "images": [
-        "/src/lib/common/assets/Images/starfruit.svg",
-        "/src/lib/common/assets/Images/starfruit.svg",
-        "/src/lib/common/assets/Images/starfruit.svg",
-        "/src/lib/common/assets/Images/starfruit.svg",
-        "/src/lib/common/assets/Images/starfruit.svg"
+        "/assets/Images/starfruit.svg",
+        "/assets/Images/starfruit.svg",
+        "/assets/Images/starfruit.svg",
+        "/assets/Images/starfruit.svg",
+        "/assets/Images/starfruit.svg"
       ],
       "productName": "Star Friut",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -933,17 +933,17 @@
     },
     {
       "id": 48,
-      "image": "/src/lib/common/assets/Images/jackfruit.svg",
+      "image": "/assets/Images/jackfruit.svg",
       "images": [
-        "/src/lib/common/assets/Images/jackfruit.svg",
-        "/src/lib/common/assets/Images/jackfruit.svg",
-        "/src/lib/common/assets/Images/jackfruit.svg",
-        "/src/lib/common/assets/Images/jackfruit.svg",
-        "/src/lib/common/assets/Images/jackfruit.svg"
+        "/assets/Images/jackfruit.svg",
+        "/assets/Images/jackfruit.svg",
+        "/assets/Images/jackfruit.svg",
+        "/assets/Images/jackfruit.svg",
+        "/assets/Images/jackfruit.svg"
       ],
       "productName": "Jack Fruit",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -953,17 +953,17 @@
     },
     {
       "id": 49,
-      "image": "/src/lib/common/assets/Images/lychee.svg",
+      "image": "/assets/Images/lychee.svg",
       "images": [
-        "/src/lib/common/assets/Images/lychee.svg",
-        "/src/lib/common/assets/Images/lychee.svg",
-        "/src/lib/common/assets/Images/lychee.svg",
-        "/src/lib/common/assets/Images/lychee.svg",
-        "/src/lib/common/assets/Images/lychee.svg"
+        "/assets/Images/lychee.svg",
+        "/assets/Images/lychee.svg",
+        "/assets/Images/lychee.svg",
+        "/assets/Images/lychee.svg",
+        "/assets/Images/lychee.svg"
       ],
       "productName": "Lychee",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -973,17 +973,17 @@
     },
     {
       "id": 50,
-      "image": "/src/lib/common/assets/Images/chalisa-fig.svg",
+      "image": "/assets/Images/chalisa-fig.svg",
       "images": [
-        "/src/lib/common/assets/Images/chalisa-fig.svg",
-        "/src/lib/common/assets/Images/chalisa-fig.svg",
-        "/src/lib/common/assets/Images/chalisa-fig.svg",
-        "/src/lib/common/assets/Images/chalisa-fig.svg",
-        "/src/lib/common/assets/Images/chalisa-fig.svg"
+        "/assets/Images/chalisa-fig.svg",
+        "/assets/Images/chalisa-fig.svg",
+        "/assets/Images/chalisa-fig.svg",
+        "/assets/Images/chalisa-fig.svg",
+        "/assets/Images/chalisa-fig.svg"
       ],
       "productName": "Chalisa Fig",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -993,16 +993,16 @@
     },
     {
       "id": 51,
-      "image": "/src/lib/common/assets/Images/musk-melon.svg",
+      "image": "/assets/Images/musk-melon.svg",
       "images": [
-        "/src/lib/common/assets/Images/musk-melon.svg",
-        "/src/lib/common/assets/Images/musk-melon.svg",
-        "/src/lib/common/assets/Images/musk-melon.svg",
-        "/src/lib/common/assets/Images/musk-melon.svg",
-        "/src/lib/common/assets/Images/musk-melon.svg"
+        "/assets/Images/musk-melon.svg",
+        "/assets/Images/musk-melon.svg",
+        "/assets/Images/musk-melon.svg",
+        "/assets/Images/musk-melon.svg",
+        "/assets/Images/musk-melon.svg"
       ],
       "productName": "Musk Melon",
-      "cat_id":2,
+      "cat_id": 2,
       "category": "fruits",
       "offerPrice": 250,
       "originalPrice": 250,
@@ -1013,17 +1013,17 @@
     },
     {
       "id": 52,
-      "image": "/src/lib/common/assets/Images/black-berry.svg",
+      "image": "/assets/Images/black-berry.svg",
       "images": [
-        "/src/lib/common/assets/Images/black-berry.svg",
-        "/src/lib/common/assets/Images/black-berry.svg",
-        "/src/lib/common/assets/Images/black-berry.svg",
-        "/src/lib/common/assets/Images/black-berry.svg",
-        "/src/lib/common/assets/Images/black-berry.svg"
+        "/assets/Images/black-berry.svg",
+        "/assets/Images/black-berry.svg",
+        "/assets/Images/black-berry.svg",
+        "/assets/Images/black-berry.svg",
+        "/assets/Images/black-berry.svg"
       ],
       "productName": "Black Berry",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -1033,17 +1033,17 @@
     },
     {
       "id": 53,
-      "image": "/src/lib/common/assets/Images/pomegranate.svg",
+      "image": "/assets/Images/pomegranate.svg",
       "images": [
-        "/src/lib/common/assets/Images/pomegranate.svg",
-        "/src/lib/common/assets/Images/pomegranate.svg",
-        "/src/lib/common/assets/Images/pomegranate.svg",
-        "/src/lib/common/assets/Images/pomegranate.svg",
-        "/src/lib/common/assets/Images/pomegranate.svg"
+        "/assets/Images/pomegranate.svg",
+        "/assets/Images/pomegranate.svg",
+        "/assets/Images/pomegranate.svg",
+        "/assets/Images/pomegranate.svg",
+        "/assets/Images/pomegranate.svg"
       ],
       "productName": "Pomegranate",
       "category": "fruits",
-      "cat_id":2,
+      "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -1053,17 +1053,17 @@
     },
     {
       "id": 54,
-      "image": "/src/lib/common/assets/Images/watermelon.svg",
+      "image": "/assets/Images/watermelon.svg",
       "images": [
-        "/src/lib/common/assets/Images/watermelon.svg",
-        "/src/lib/common/assets/Images/watermelon.svg",
-        "/src/lib/common/assets/Images/watermelon.svg",
-        "/src/lib/common/assets/Images/watermelon.svg",
-        "/src/lib/common/assets/Images/watermelon.svg"
+        "/assets/Images/watermelon.svg",
+        "/assets/Images/watermelon.svg",
+        "/assets/Images/watermelon.svg",
+        "/assets/Images/watermelon.svg",
+        "/assets/Images/watermelon.svg"
       ],
       "productName": "Watermelon",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
@@ -1073,17 +1073,17 @@
     },
     {
       "id": 55,
-      "image": "/src/lib/common/assets/Images/banana.svg",
+      "image": "/assets/Images/banana.svg",
       "images": [
-        "/src/lib/common/assets/Images/banana.svg",
-        "/src/lib/common/assets/Images/banana.svg",
-        "/src/lib/common/assets/Images/banana.svg",
-        "/src/lib/common/assets/Images/banana.svg",
-        "/src/lib/common/assets/Images/banana.svg"
+        "/assets/Images/banana.svg",
+        "/assets/Images/banana.svg",
+        "/assets/Images/banana.svg",
+        "/assets/Images/banana.svg",
+        "/assets/Images/banana.svg"
       ],
       "productName": "Robusto Banana",
       "category": "fruits",
-      "cat_id":4,
+      "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
       "discount": 0,
