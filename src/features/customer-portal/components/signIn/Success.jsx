@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
-import FooterImg from "../../../../lib/common/assets/Images/footerimg.jpg";
 import ModelPage from "../../../../lib/common/css/registration/ModelPage.module.css";
 import { Button } from "react-bootstrap";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import { FOOTER_IMG } from "../../../../lib/constants/Image_Constants";
 
 const Success = () => {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ const Success = () => {
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
-          src={FooterImg}
+          src={FOOTER_IMG}
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

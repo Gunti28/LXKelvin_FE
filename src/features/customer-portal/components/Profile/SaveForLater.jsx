@@ -47,7 +47,7 @@ const SaveForLater = () => {
             style={{ backgroundColor: item.bgColor }}
           >
             <img
-              src={`/src/lib/common/assets/images/${item.image}`}
+              src={item.image}
               alt={item.name}
               className={styles.productImg}
             />

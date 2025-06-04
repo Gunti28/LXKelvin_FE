@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
-import Logo from "../../../../lib/common/assets/Images/Logo.svg";
-import FooterImg from "../../../../lib/common/assets/Images/footerimg.jpg";
 import ModelPage from "../../../../lib/common/css/registration/ModelPage.module.css";
 import { Form, Button, Container } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getOtp } from "../../../../lib/services/signInAsyncThunk";
 import OtpModel from "./OtpModel";
+import { FOOTER_IMG, LOGO } from "../../../../lib/constants/Image_Constants";
 
 const SignInModel = () => {
   const [email, setEmail] = useState("");
@@ -48,7 +47,7 @@ const SignInModel = () => {
       >
         <Modal.Header className="border-0 justify-content-center">
           <Modal.Title id="contained-modal-title-vcenter">
-            <img src={Logo} width={150} />
+            <img src={LOGO} width={150} />
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
@@ -92,7 +91,7 @@ const SignInModel = () => {
         </Modal.Body>
         <Modal.Footer className=" p-0 border-0 ps-1  ">
           <img
-            src={FooterImg}
+            src={FOOTER_IMG}
             className={`image-fluid w-100 ${ModelPage.footerImg}`}
           />
         </Modal.Footer>

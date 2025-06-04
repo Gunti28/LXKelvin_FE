@@ -291,7 +291,7 @@ const ProductDetailsPage = () => {
               <div className={ProductDetPage.feedbackHeader}>
                 <div className={ProductDetPage.feedbackAvatar}>
                   <img
-                    src={`../assets/${feedback.avatar}`}
+                    src={feedback.avatar}
                     alt={feedback.name}
                   />
                 </div>

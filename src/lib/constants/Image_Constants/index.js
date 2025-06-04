@@ -1,25 +1,27 @@
 /**
  * imports to set as const
  */
-import allProducts from "../../../lib/common/assets/Images/all-categories-sidebar.svg";
-import vegetables from "../../../lib/common/assets/Images/vegetables-sidebar.svg";
-import fruits from "../../../lib/common/assets/Images/fruits-sidebar.svg";
-import seasonalVegetables from "../../../lib/common/assets/Images/seasonal-vegetables-sidebar.svg";
-import seasonalFruits from "../../../lib/common/assets/Images/seasonal-fruits-sidebar.svg";
-import milkProducts from "../../../lib/common/assets/Images/milk-products-sidebar.svg";
+import allProducts from "/assets/Images/all-categories-sidebar.svg";
+import vegetables from "/assets/Images/vegetables-sidebar.svg";
+import fruits from "/assets/Images/fruits-sidebar.svg";
+import seasonalVegetables from "/assets/Images/seasonal-vegetables-sidebar.svg";
+import seasonalFruits from "/assets/Images/seasonal-fruits-sidebar.svg";
+import milkProducts from "/assets/Images/milk-products-sidebar.svg";
 
-import Logo from "../../../lib/common/assets/Images/Logo.svg";
-import Italian from "../../../lib/common/assets/Images/italian.svg";
-import French from "../../../lib/common/assets/Images/French.svg";
-import Spanish from "../../../lib/common/assets/Images/Spanish.svg";
-import Greece from "../../../lib/common/assets/Images/Greece.svg";
-import kiwi from "../../common/assets/Images/kiwi.svg";
-import tomato from "../../common/assets/Images/tomato.svg";
-import banana from "../../common/assets/Images/banana.svg";
-import TimeSaving from "../../common/assets/Images/time-saving.svg";
-import Promotions from "../../common/assets/Images/promotions.svg";
-import PriceAlerts from "../../common/assets/Images/price-alerts.svg";
+import Logo from "/assets/Images/Logo.svg";
+import Italian from "/assets/Images/italian.svg";
+import French from "/assets/Images/French.svg";
+import Spanish from "/assets/Images/Spanish.svg";
+import Greece from "/assets/Images/Greece.svg";
+import kiwi from "/assets/Images/kiwi.svg";
+import tomato from "/assets/Images/tomato.svg";
+import banana from "/assets/Images/banana.svg";
+import TimeSaving from "/assets/Images/time-saving.svg";
+import Promotions from "/assets/Images/promotions.svg";
+import PriceAlerts from "/assets/Images/price-alerts.svg";
+import Footer_Img from "/assets/Images/footerimg.jpg";
 
+import Dashboard_carousel1 from "/assets/Images/dashboard_corosel.svg";
 
 export const imageMap = {
   tomato,
@@ -50,4 +52,5 @@ export const GREECE = Greece;
 export const TIME_SAVING = TimeSaving;
 export const PROMOTIONS = Promotions;
 export const PRICE_ALERTS = PriceAlerts;
-
+export const DASHBOARD_CAROUSEL = Dashboard_carousel1;
+export const FOOTER_IMG = Footer_Img;
