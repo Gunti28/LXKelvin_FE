@@ -5,11 +5,7 @@ import SetupCardStyle from "../../../../lib/common/css/SubscriptionCards/CardPay
 import Form from "react-bootstrap/Form";
 import { CiCircleQuestion } from "react-icons/ci";
 import { HiOutlineCreditCard } from "react-icons/hi";
-import {
-  VISA,
-  AMEX,
-  MASTER_CARD,
-} from "../../../../lib/constants/Image_Constants";
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 import { useDispatch, useSelector } from "react-redux";
 import { planNames } from "../../../../lib/constants";
 import {
@@ -63,10 +59,10 @@ const CardPayment = () => {
           </h4>
 
           <div className={`d-flex gap-2 mt-3 ${SetupCardStyle.imgs}`}>
-            <img src={VISA} alt="Visa" style={{ height: "100%" }} />
-            <img src={AMEX} alt="AMEX" style={{ height: "100%" }} />
+            <img src={IMAGES.visa} alt="Visa" style={{ height: "100%" }} />
+            <img src={IMAGES.amex} alt="AMEX" style={{ height: "100%" }} />
             <img
-              src={MASTER_CARD}
+              src={IMAGES.masterCard}
               alt="MasterCard"
               style={{ height: "100%" }}
             />
