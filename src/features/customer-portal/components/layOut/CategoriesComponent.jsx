@@ -4,9 +4,11 @@ import { Container, Card, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
+import OverLayLoader from "../overLayLoader/OverLayLoader";
 const CategoriesComponent = () => {
   const { categories } = useSelector((state) => state.categories);
   const [categoriesList, setCategories] = useState([]);
+  const [loaderCategories, serLoaderCategories] = useState(true);
   const navigate = useNavigate();
   const handleAllCategories = () => {
     navigate("/products/all-categories");
@@ -15,10 +17,14 @@ const CategoriesComponent = () => {
     navigate(to);
   };
   useEffect(() => {
-    setCategories(categories);
+    setTimeout(() => {
+      serLoaderCategories(false);
+      setCategories(categories);
+    }, 1000);
   }, [categories]);
   return (
     <Container fluid className="mt-4 ">
+      <OverLayLoader isLoader={loaderCategories} />
       <h4 className={`text-center mb-4 ${Category.CatText}`}>CATEGORIES</h4>
       <div className="text-end">
         <button className={Category.AllCatBtn} onClick={handleAllCategories}>
