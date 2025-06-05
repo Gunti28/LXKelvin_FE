@@ -3,31 +3,31 @@
     {
       "id": "1",
       "title": "Vegetables",
-      "image": "https://lxkelvin.s3.us-east-1.amazonaws.com/Images/vegetables.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/vegetables.svg",
       "to": "/products/vegetables"
     },
     {
       "id": "2",
       "title": "Fruits",
-      "image": "https://lxkelvin.s3.us-east-1.amazonaws.com/Images/fruits.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/fruits.svg",
       "to": "/products/fruits"
     },
     {
       "id": "3",
       "title": "Seasonal Vegetables",
-      "image": "https://lxkelvin.s3.us-east-1.amazonaws.com/Images/seasonal-vegetables.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/seasonal-vegetables.svg",
       "to": "/products/seasonalVegetables"
     },
     {
       "id": "4",
       "title": "Seasonal Fruits",
-      "image": "https://lxkelvin.s3.us-east-1.amazonaws.com/Images/seasonal-fruits.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/seasonal-fruits.svg",
       "to": "/products/seasonalFruits"
     },
     {
       "id": "5",
       "title": "milk",
-      "image": "https://lxkelvin.s3.us-east-1.amazonaws.com/Images/main-milk-products.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/main-milk-products.svg",
       "to": "/products/milkProducts"
     }
   ]
