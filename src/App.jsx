@@ -20,8 +20,6 @@ import MyOrders from "./features/customer-portal/components/Profile/MyOrders";
 import SaveForLater from "./features/customer-portal/components/Profile/SaveForLater";
 import CustomerSupport from "./features/customer-portal/components/Profile/CustomerSupport";
 import ProfileLayout from "./features/customer-portal/components/Profile/ProfileLayout";
-import CompanyLayOut from "./features/company-portal/pages/CompanyLayOut";
-import CompanyDashBoard from "./features/company-portal/components/layOut/CompanyDashBoard";
 import AuthGuard from "./lib/common/components/AuthGuard";
 import ProductDetailsPage from "./features/customer-portal/components/products/ProductDetails";
 import SubscriptionCards from "./features/customer-portal/components/subscriptions/SubscriptionCard";
@@ -29,6 +27,22 @@ import ChoosePayment from "./features/customer-portal/components/subscriptions/C
 import SelectUpi from "./features/customer-portal/components/subscriptions/SelectUpi";
 import ConfirmUpi from "./features/customer-portal/components/subscriptions/ConfirmUpi";
 import CardPayment from "./features/customer-portal/components/subscriptions/CardPayment";
+
+// Admin-portal Navigation
+
+import CompanyLayout from "./features/company-portal/pages/CompanyLayOut";
+import MainDashboard from "./features/company-portal/components/Dashboard/Dashboard";
+import OrderPage from "./features/company-portal/components/Orders/Orders";
+import ProductPage from "./features/company-portal/components/Products/Products";
+import InventoryPage from "./features/company-portal/components/Inventory/Inventory";
+import CustomerPage from "./features/company-portal/components/Customers/Customer";
+import PromotionPage from "./features/company-portal/components/Promotions/Promotions";
+import ReportPage from "./features/company-portal/components/Reports/Reports";
+import ContentPage from "./features/company-portal/components/Content/Content";
+import SettingPage from "./features/company-portal/components/Settings/Settings";
+import NotificationPage from "./features/company-portal/components/Notifications/Notification";
+import AdminRegister from "./features/company-portal/components/Registration/Registration";
+import AdminSignIn from "./features/company-portal/components/Registration/SignIn";
 
 function App() {
   return (
@@ -97,20 +111,35 @@ function App() {
             />
           </Route>
         </Route>
-        <Route path="company_admin">
-          <Route index element={<CompanyLayOut />} />
-          <Route
-            path="dash_board"
-            element={
-              <AuthGuard>
-                <CompanyDashBoard />
-              </AuthGuard>
-            }
-          />
+
+        <Route path="/company_signin" element={<AdminSignIn />} />
+        <Route path="/company_register" element={<AdminRegister />} />
+
+        <Route
+          path="company_admin"
+          element={
+            <AuthGuard>
+              <CompanyLayout />
+            </AuthGuard>
+          }
+        >
+          <Route index element={<Navigate to="company_dashboard" />} />
+          <Route path="company_dashboard" element={<MainDashboard />} />
+          <Route path="company_orders" element={<OrderPage />} />
+          <Route path="company_products" element={<ProductPage />} />
+          <Route path="company_inventory" element={<InventoryPage />} />
+          <Route path="company_customers" element={<CustomerPage />} />
+          <Route path="company_promotions" element={<PromotionPage />} />
+          <Route path="company_reports" element={<ReportPage />} />
+          <Route path="company_content" element={<ContentPage />} />
+          <Route path="company_settings" element={<SettingPage />} />
+          <Route path="company_notifications" element={<NotificationPage />} />
         </Route>
+        
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
+
   );
 }
 
