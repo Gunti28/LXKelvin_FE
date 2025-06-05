@@ -4,7 +4,7 @@ import { Form, Button, Container } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import { FOOTER_IMG } from "../../../../lib/constants/Image_Constants";
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -139,7 +139,7 @@ const Register = () => {
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
-          src={FOOTER_IMG}
+          src={IMAGES.footer_Img}
           alt="FooterImg"
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}

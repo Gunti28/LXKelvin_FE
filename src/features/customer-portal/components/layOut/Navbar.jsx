@@ -16,7 +16,7 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { useDispatch, useSelector } from "react-redux";
 import { showNavBarDefaultTemplate } from "../../../../lib/helpers/index";
-import { LOGO } from "../../../../lib/constants/Image_Constants/index";
+import { IMAGES } from "../../../../lib/constants/Image_Constants/index";
 import { Const } from "../../../../lib/constants/index";
 import { setSelectedLang } from "../../../../store/slice/languageSlice";
 
@@ -131,7 +131,7 @@ const NavbarComponent = () => {
       <div className={` ${HeroStyles.heroText} text-center`}>
         <img
           style={{ margin: "auto", cursor: "pointer" }}
-          src={LOGO}
+          src={IMAGES.logo}
           width={150}
           alt="Logo"
         />
@@ -161,7 +161,7 @@ const NavbarComponent = () => {
         <Container fluid>
           <Navbar.Brand href="#">
             <img
-              src={LOGO}
+              src={IMAGES?.logo}
               alt="LOGO"
               className={NavbarCss.LogoImg}
               onClick={() => handleLogoClick()}

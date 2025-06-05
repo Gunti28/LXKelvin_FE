@@ -7,30 +7,31 @@ import styles from "../../../../lib/common/css/products/ListingLayout.module.css
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-import {
-  ALL_PRODUCTS,
-  VEGETABLES,
-  FRUITS,
-  SEASONAL_VEGETABLES,
-  SEASONAL_FRUITS,
-  MILK_PRODUCTS,
-} from "../../../../lib/constants/Image_Constants/index";
+// import {
+//   VEGETABLES,
+//   FRUITS,
+//   SEASONAL_VEGETABLES,
+//   SEASONAL_FRUITS,
+//   MILK_PRODUCTS,
+// } from "../../../../lib/constants/Image_Constants/index";
+import { IMAGES } from "../../../../lib/constants/Image_Constants/index";
+// import { ALL_PRODUCTS } from "https://lxkelvin.s3.us-east-1.amazonaws.com/Images/all-categories-sidebar.svg";
 
 const SidebarComponent = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-    const handleShow = (e) => {
+  const handleShow = (e) => {
     e.preventDefault();
     setShow(true);
   };
   const categoryIcons = {
-    "all-categories": ALL_PRODUCTS,
-    vegetables: VEGETABLES,
-    fruits: FRUITS,
-    seasonalVegetables: SEASONAL_VEGETABLES,
-    seasonalFruits: SEASONAL_FRUITS,
-    milkProducts: MILK_PRODUCTS,
+    "all-categories": IMAGES?.allProduct,
+    vegetables: IMAGES?.vegetables,
+    fruits: IMAGES?.fruits,
+    seasonalVegetables: IMAGES?.seasonalVegetables,
+    seasonalFruits: IMAGES?.seasonalFruits,
+    milkProducts: IMAGES?.milkProducts,
   };
   const formatName = (key) => {
     const map = {

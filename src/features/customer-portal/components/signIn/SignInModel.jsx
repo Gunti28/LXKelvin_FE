@@ -6,7 +6,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getOtp } from "../../../../lib/services/signInAsyncThunk";
 import OtpModel from "./OtpModel";
-import { FOOTER_IMG, LOGO } from "../../../../lib/constants/Image_Constants";
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 
 const SignInModel = () => {
   const [email, setEmail] = useState("");
@@ -47,7 +47,7 @@ const SignInModel = () => {
       >
         <Modal.Header className="border-0 justify-content-center">
           <Modal.Title id="contained-modal-title-vcenter">
-            <img src={LOGO} width={150} />
+            <img src={IMAGES.logo} width={150} />
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
@@ -91,7 +91,7 @@ const SignInModel = () => {
         </Modal.Body>
         <Modal.Footer className=" p-0 border-0 ps-1  ">
           <img
-            src={FOOTER_IMG}
+            src={IMAGES.footer_Img}
             className={`image-fluid w-100 ${ModelPage.footerImg}`}
           />
         </Modal.Footer>

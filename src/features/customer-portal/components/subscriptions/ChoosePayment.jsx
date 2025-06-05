@@ -6,14 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import Paymentstyles from "../../../../lib/common/css/SubscriptionCards/ChoosePayment.module.css";
 
-import {
-  VISA,
-  AMEX,
-  APPLE_PAY,
-  PAYPAL,
-  MASTER_CARD,
-  SECURED_PAYMENT,
-} from "../../../../lib/constants/Image_Constants";
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setPaymentMethod } from "../../../../store/slice/subscriptionPaySlice";
@@ -45,17 +38,17 @@ const ChoosePayment = () => {
               </div>
               <div className={Paymentstyles.imgContainer}>
                 <img
-                  src={VISA}
+                  src={IMAGES.visa}
                   alt="Encrypted Icon"
                   style={{ marginLeft: "8px" }}
                 />
                 <img
-                  src={AMEX}
+                  src={IMAGES.amex}
                   alt="American Express Logo"
                   className="image-fluid ms-2"
                 />
                 <img
-                  src={MASTER_CARD}
+                  src={IMAGES.masterCard}
                   alt="Group Illustration"
                   className="ms-2"
                 />
@@ -79,9 +72,9 @@ const ChoosePayment = () => {
             <div className="d-flex flex-row">
               <div className={Paymentstyles.nameContainer}>Net banking</div>
               <div className={Paymentstyles.imgContainer}>
-                <img src={PAYPAL} alt="paypal" className="ms-2" />
+                <img src={IMAGES.paypal} alt="paypal" className="ms-2" />
                 <img
-                  src={APPLE_PAY}
+                  src={IMAGES.applePay}
                   alt="Apple Pay"
                   className={`ms-2 ${Paymentstyles.AppleImg}`}
                 />
@@ -121,7 +114,7 @@ const ChoosePayment = () => {
 
         <div className={`${Paymentstyles.vector} `}>
           <img
-            src={SECURED_PAYMENT}
+            src={IMAGES.securedPayment}
             alt="Vector Icon"
             style={{ marginRight: "8px" }}
           />
