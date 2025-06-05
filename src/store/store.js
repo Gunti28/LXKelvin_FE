@@ -15,6 +15,8 @@ import productDetailsReducer from "./slice/productDetailsSlice";
 import plansReducer from "./slice/SubscriptionCardSlice";
 import subscriptionReducer from "./slice/subscriptionPaySlice";
 
+import authReducer from "./slice/admin-signinSlice";
+
 export const store = configureStore({
   reducer: {
     products: productsReducer,
@@ -24,11 +26,11 @@ export const store = configureStore({
     addresses: addressReducer,
     orders: orderReducer,
     saveForLater: saveForLaterReducer,
-
     language: languageReducer,
     productDetails: productDetailsReducer,
     plans: plansReducer,
     subscription: subscriptionReducer,
+    auth: authReducer
   },
 });
 export default store;
