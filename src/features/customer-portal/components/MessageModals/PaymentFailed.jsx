@@ -1,8 +1,6 @@
-import React from "react";
 import Modal from "react-bootstrap/Modal";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
-import { FOOTER_IMG, PAYMENT_FAILED } from "../../../../lib/constants/Image_Constants";
-
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 
 const PaymentFailed = () => {
   return (
@@ -14,7 +12,7 @@ const PaymentFailed = () => {
     >
       <Modal.Body className="border-0 d-flex justify-content-center align-items-center flex-column gap-3 mt-5 ">
         <img
-          src={PAYMENT_FAILED}
+          src={IMAGES.PaymentFailed}
           className="image-fluid w-25 H-25 "
           alt="FooterImg"
         />
@@ -27,7 +25,7 @@ const PaymentFailed = () => {
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
-          src={FOOTER_IMG}
+          src={IMAGES.footer_Img}
           className="image-fluid w-100 "
           alt="FooterImg"
           style={{ objectFit: "cover" }}
