@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Setupcardstyle from "../../../../lib/common/css/SubscriptionCards/CardPayment.module.css";
+import SetupCardStyle from "../../../../lib/common/css/SubscriptionCards/CardPayment.module.css";
 import Form from "react-bootstrap/Form";
 import { CiCircleQuestion } from "react-icons/ci";
 import { HiOutlineCreditCard } from "react-icons/hi";
@@ -12,12 +12,20 @@ import {
 } from "../../../../lib/constants/Image_Constants";
 import { useDispatch, useSelector } from "react-redux";
 import { planNames } from "../../../../lib/constants";
-import { confirmSubscription } from "../../../../store/slice/subscriptionPaySlice";
+import {
+  confirmSubscription,
+  setCardDetails,
+} from "../../../../store/slice/subscriptionPaySlice";
 import { useNavigate } from "react-router-dom";
 
 const CardPayment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
+  const [cvv, setCvv] = useState("");
+  const [nameOnCard, setNameOnCard] = useState("");
+
   const { selectedPlanId, price } = useSelector((state) => state.subscription);
 
   const [validated, setValidated] = useState(false);
@@ -30,6 +38,15 @@ const CardPayment = () => {
     if (form.checkValidity() === false || !acceptedTerms) {
       e.stopPropagation();
     } else {
+      dispatch(
+        setCardDetails({
+          number: cardNumber,
+          expiry: expiryDate,
+          cvv: cvv,
+          name: nameOnCard,
+        })
+      );
+
       dispatch(confirmSubscription());
       navigate("/my_account");
     }
@@ -38,14 +55,14 @@ const CardPayment = () => {
   };
 
   return (
-    <div className={Setupcardstyle.CardContainer}>
+    <div className={SetupCardStyle.CardContainer}>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
-        <div className={Setupcardstyle.cardSection}>
-          <h4 className={`text-center mb-4 fw-bold ${Setupcardstyle.heading} `}>
+        <div className={SetupCardStyle.cardSection}>
+          <h4 className={`text-center mb-4 fw-bold ${SetupCardStyle.heading} `}>
             Set Up your Credit Card or debit card
           </h4>
 
-          <div className={`d-flex gap-2 mt-3 ${Setupcardstyle.imgs}`}>
+          <div className={`d-flex gap-2 mt-3 ${SetupCardStyle.imgs}`}>
             <img src={VISA} alt="Visa" style={{ height: "100%" }} />
             <img src={AMEX} alt="AMEX" style={{ height: "100%" }} />
             <img
@@ -66,25 +83,29 @@ const CardPayment = () => {
               pattern="[0-9]*"
               maxLength={16}
               placeholder="Credit or Debit Card"
-              className={`border-1 ${Setupcardstyle.card}`}
+              value={cardNumber}
+              onChange={(e) => setCardNumber(e.target.value)}
+              className={`border-1 ${SetupCardStyle.card}`}
             />
-            <HiOutlineCreditCard className={Setupcardstyle.cardIcon} />
+            <HiOutlineCreditCard className={SetupCardStyle.cardIcon} />
             <Form.Control.Feedback
               type="invalid"
-              className={Setupcardstyle.WarningMessages}
+              className={SetupCardStyle.WarningMessages}
             >
               Please enter a valid card number.
             </Form.Control.Feedback>
           </Form.Group>
 
-          <div className={`d-flex flex-row gap-2 mt-2 ${Setupcardstyle.cards}`}>
+          <div className={`d-flex flex-row gap-2 mt-2 ${SetupCardStyle.cards}`}>
             <Form.Group className="w-50" controlId="expiryDate">
               <Form.Control
                 required
                 type="number"
                 maxLength={5}
                 placeholder="Expiry date"
-                className={`border-1 ${Setupcardstyle.ExpiryContainer}`}
+                value={expiryDate}
+                onChange={(e) => setExpiryDate(e.target.value)}
+                className={`border-1 ${SetupCardStyle.ExpiryContainer}`}
               />
               <Form.Control.Feedback type="invalid">
                 Enter expiry date (MM/YY).
@@ -99,9 +120,11 @@ const CardPayment = () => {
                 pattern="[0-9]*"
                 placeholder="CVV"
                 maxLength={3}
-                className={`border-1 w-100 ${Setupcardstyle.ExpiryContainer}`}
+                value={cvv}
+                onChange={(e) => setCvv(e.target.value)}
+                className={`border-1 w-100 ${SetupCardStyle.ExpiryContainer}`}
               />
-              <CiCircleQuestion className={Setupcardstyle.CircleIcon} />
+              <CiCircleQuestion className={SetupCardStyle.CircleIcon} />
               <Form.Control.Feedback type="invalid">
                 Enter 3-digit CVV.
               </Form.Control.Feedback>
@@ -116,18 +139,20 @@ const CardPayment = () => {
               required
               type="text"
               placeholder="Name on Card"
-              className={`border-1 ${Setupcardstyle.card}`}
+              value={nameOnCard}
+              onChange={(e) => setNameOnCard(e.target.value)}
+              className={`border-1 ${SetupCardStyle.card}`}
             />
             <Form.Control.Feedback
               type="invalid"
-              className={Setupcardstyle.WarningMessages}
+              className={SetupCardStyle.WarningMessages}
             >
               Please enter the cardholder's name.
             </Form.Control.Feedback>
           </Form.Group>
 
           <Card
-            className={`mt-2 border-1 ${Setupcardstyle.cardWrapper}`}
+            className={`mt-2 border-1 ${SetupCardStyle.cardWrapper}`}
             style={{ borderRadius: "1px", background: "#D4E7F380" }}
           >
             <Card.Body>
@@ -143,7 +168,7 @@ const CardPayment = () => {
           </Card>
 
           <Form.Group
-            className={`mt-4 d-flex align-items-start gap-2 ${Setupcardstyle.checkboxLabel}`}
+            className={`mt-4 d-flex align-items-start gap-2 ${SetupCardStyle.checkboxLabel}`}
             controlId="termsCheck"
           >
             <Form.Check
@@ -155,7 +180,7 @@ const CardPayment = () => {
               style={{ width: "20px", height: "20px" }}
               isInvalid={!acceptedTerms && validated}
             />
-            <Form.Label htmlFor="confirmCheck" className={Setupcardstyle.text}>
+            <Form.Label htmlFor="confirmCheck" className={SetupCardStyle.text}>
               I accept{" "}
               <span style={{ color: "blue" }}>terms and conditions</span>
             </Form.Label>
@@ -165,7 +190,7 @@ const CardPayment = () => {
           </Form.Group>
 
           <div>
-            <button type="submit" className={Setupcardstyle.buttonResponsive}>
+            <button type="submit" className={SetupCardStyle.buttonResponsive}>
               Continue
             </button>
           </div>

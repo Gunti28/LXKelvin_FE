@@ -7,6 +7,12 @@ const initialState = {
   isConfirmed: false,
   selectedUpiApp: null,
   upiId: "",
+  cardDetails: {
+    number: "",
+    expiry: "",
+    cvv: "",
+    name: "",
+  },
 };
 
 const subscriptionSlice = createSlice({
@@ -31,6 +37,9 @@ const subscriptionSlice = createSlice({
     setUpiId: (state, action) => {
       state.upiId = action.payload;
     },
+    setCardDetails: (state, action) => {
+      state.cardDetails = action.payload;
+    },
 
     confirmSubscription: (state) => {
       state.isConfirmed = true;
@@ -46,6 +55,7 @@ export const {
   confirmSubscription,
   setSelectedUpiApp,
   setUpiId,
+  setCardDetails,
   resetSubscription,
 } = subscriptionSlice.actions;
 
