@@ -42,7 +42,7 @@ const SubscriptionCards = () => {
         {plans.map((plan, index) => (
           <div className={CardStyle.card} key={index}>
             <Card
-              className={`me-1 mb-1 h-100 text-center border-2 shadow-lg rounded-3 d-flex flex-column pt-4 ${
+              className={`me-1 mb-1 text-center border-2 shadow-lg rounded-3 d-flex flex-column pt-4 ${
                 CardStyle.CardHover
               } ${index === highlightIndex ? CardStyle.highlight : ""}`}
             >
@@ -58,7 +58,7 @@ const SubscriptionCards = () => {
                   {plan.price}
                 </Card.Title>
                 <Card.Text className="text-muted">{plan.Name}</Card.Text>
-                <Card.Text className="flex-grow-1">
+                <div className="flex-grow-1">
                   <ul className={`${CardStyle.listed} text-start content`}>
                     {plan.features.map((feature, i) => (
                       <li
@@ -73,7 +73,7 @@ const SubscriptionCards = () => {
                       </li>
                     ))}
                   </ul>
-                </Card.Text>
+                </div>
 
                 <Button
                   className={`${CardStyle.custombutton} w-100`}
