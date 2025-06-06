@@ -14,14 +14,28 @@ import {
   handleHomeClick,
   handleViewPlansClick,
 } from "../../../../lib/helpers";
+
+import OverLayLoader from "../overLayLoader/OverLayLoader";
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { product, status, error } = useSelector(
     (state) => state.productDetails
   );
+
+  /**
+   * we need to add changes on loaderCategories once service is placed
+   */
+  const [loaderCategories, serLoaderCategories] = useState(true);
   useEffect(() => {
     dispatch(fetchProductDetails(id));
+    /**
+     * this TimeOut function we need to re-wramp once service is in place
+     */
+    serLoaderCategories(true);
+    setTimeout(() => {
+      serLoaderCategories(false);
+    }, 1500);
   }, [dispatch, id]);
   const [liked, setLiked] = useState(false);
 
@@ -49,7 +63,7 @@ const ProductDetailsPage = () => {
 
   const handleOfferBanner = () => {
     navigate("/subscriptions", {
-      state: { highlightIndex: 3 }  
+      state: { highlightIndex: 3 },
     });
   };
 
@@ -75,6 +89,7 @@ const ProductDetailsPage = () => {
 
   return (
     <div className={ProductDetPage.productPage}>
+      <OverLayLoader isLoader={loaderCategories} />
       <Row>
         <Col md={6} className={ProductDetPage.leftColumn}>
           <div className={ProductDetPage.mainImageContainer}>
@@ -298,7 +313,6 @@ const ProductDetailsPage = () => {
             <div key={index} className={ProductDetPage.feedbackItem}>
               <div className={ProductDetPage.feedbackHeader}>
                 <div className={ProductDetPage.feedbackAvatar}>
-
                   <img src={`${feedback.avatar}`} alt={feedback.name} />
                 </div>
                 <div className={ProductDetPage.feedbackUser}>

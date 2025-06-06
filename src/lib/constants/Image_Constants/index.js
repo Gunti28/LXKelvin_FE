@@ -36,6 +36,8 @@ export const IMAGES = {
   securedPayment: `${BASE}/Images/Secured.svg`,
   masterCard: `${BASE}/Images/MasterCard.svg`,
   dashboard_carousel: `${BASE}/Images/dashboard_corosel.svg`,
+  thankYou: `${BASE}/Images/ThanksVector.svg`,
+  vip_payment: `${BASE}/Images/Vip_Payment.svg`,
 };
 
 export const imageMap = {

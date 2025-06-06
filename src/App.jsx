@@ -34,7 +34,6 @@ import Pay1 from "./features/customer-portal/components/MessageModals/PaymentSuc
 import Thankyou from "./features/customer-portal/components/MessageModals/ThankYou";
 import VipSuccess from "./features/customer-portal/components/MessageModals/VipSuccess";
 
-
 function App() {
   return (
     <Router>
@@ -46,7 +45,7 @@ function App() {
           <Route path="success" element={<Success />} />
           <Route path="products" element={<ListingLayoutContainer />}>
             <Route index element={<ListingComponent />} />
-            <Route path="all-categories" element={<ListingComponent />} />
+            <Route path="all-categories" element={<ProductList />} />
             <Route path="vegetables" element={<ProductList />} />
             <Route path="fruits" element={<ProductList />} />
             <Route path="seasonalVegetables" element={<ProductList />} />
