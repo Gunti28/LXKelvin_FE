@@ -5,7 +5,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.1) !important;
-  background-image: url("/assets/Images/LandingPage.svg");
+  background-image: url("https://d1p5ayh0d7heww.cloudfront.net/Images/LandingPage.svg");
   background-size: cover;
   background-position: center;
 }
