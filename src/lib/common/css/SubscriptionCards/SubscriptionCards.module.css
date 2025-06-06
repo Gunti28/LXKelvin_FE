@@ -25,6 +25,10 @@
   flex-direction: row;
   justify-content: space-around;
 }
+.CardHover {
+  height: auto;
+  min-height: 100%;
+}
 .CardHover:hover {
   border: 1px solid #376aed;
   box-shadow: 1px 20px 20px rgba(55, 106, 109, 0.5);

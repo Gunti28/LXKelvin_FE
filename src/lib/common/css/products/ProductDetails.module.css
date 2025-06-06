@@ -22,7 +22,6 @@
   position: relative;
   width: 100%;
   height: 60vh;
-  border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -30,10 +29,10 @@
   justify-content: center;
   background: #fff;
 }
-
 .mainPreviewImage {
-  width: 100%;
+  width: 70%;
   height: 100%;
+  border-radius: 4px;
   /* object-fit: cover; */
   transition: transform 0.3s ease;
 }
@@ -79,10 +78,10 @@
 /* Carousel Controls */
 .carouselControl {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
   background: rgba(255, 255, 255, 0.8);
-  border: none;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -92,14 +91,11 @@
   justify-content: center;
   cursor: pointer;
   color: #333;
-  transition: all 0.3s ease-in-out;
 }
 
 .carouselControl:hover {
   background: rgba(255, 255, 255, 1);
   color: #ffa500;
-  transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carouselControl .prev {
@@ -249,6 +245,7 @@
 .pmdPrice {
   color: #666;
   font-size: 0.8rem;
+  text-decoration: line-through;
 }
 
 .discount {
