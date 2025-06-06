@@ -29,6 +29,11 @@ import ChoosePayment from "./features/customer-portal/components/subscriptions/C
 import SelectUpi from "./features/customer-portal/components/subscriptions/SelectUpi";
 import ConfirmUpi from "./features/customer-portal/components/subscriptions/ConfirmUpi";
 import CardPayment from "./features/customer-portal/components/subscriptions/CardPayment";
+import CartPage from "./features/customer-portal/components/cart/cartPage";
+import DeliveryAddress from "./features/customer-portal/components/deliveryaddress/DeliveryAddress";
+// import CardPayment from "./features/customer-portal/components/payment/cardpayment";
+import OrderSummery from "./features/customer-portal/components/cart/orderSummary";
+// import ChoosePayment from "./features/customer-portal/components/payment/choosepayment";
 
 function App() {
   return (
@@ -54,6 +59,11 @@ function App() {
           <Route path="upiPayment" element={<SelectUpi />} />
           <Route path="confirmUpi" element={<ConfirmUpi />} />
           <Route path="cardPayment" element={<CardPayment />} />
+          <Route path="cart" element={<CartPage />} />
+          <Route path="deliveryaddress" element={<DeliveryAddress />} />
+          {/* <Route path="cardpayment" element={<CardPayment />} /> */}
+          <Route path="ordersummary" element={<OrderSummery />} />
+          {/* <Route path="choosepayment" element={<ChoosePayment />} /> */}
           <Route path="my_account" element={<ProfileLayout />}>
             <Route
               index

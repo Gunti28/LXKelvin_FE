@@ -12,7 +12,7 @@ import {
 import { FaSearch } from "react-icons/fa";
 import { IoMic } from "react-icons/io5";
 import { MdOutlineCameraAlt } from "react-icons/md";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate, Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { useDispatch, useSelector } from "react-redux";
 import { showNavBarDefaultTemplate } from "../../../../lib/helpers/index";
@@ -67,6 +67,9 @@ const NavbarComponent = () => {
     navigate("/dashBoard");
   };
 
+  const cartItemCount = useSelector((state) =>
+    (state.cart?.items ?? []).reduce((total, item) => total + item.quantity, 0)
+  );
   useEffect(() => {
     if (isUserValid) {
       setShowProfile(true);
@@ -90,7 +93,10 @@ const NavbarComponent = () => {
       path.startsWith("/my_account") ||
       path.startsWith("/subscriptions") ||
       path.startsWith("/choosePayment") ||
-      path.startsWith("/upiPayment") ||
+      path.startsWith("/cart") ||
+      path.startsWith("/deliveryaddress") ||
+      path.startsWith("/ordersummary");
+    path.startsWith("/upiPayment") ||
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
       path.startsWith("/productDetails");
@@ -379,21 +385,33 @@ const NavbarComponent = () => {
                     </div>
                   </div>
                   <div className={NavbarCss.CartSection}>
-                    <Icon
-                      icon="solar:bag-linear"
-                      width="24"
-                      height="24"
-                      style={{
-                        color: text_color ? "#5B5F62" : "#fff",
-                      }}
-                    />
-                    <p
-                      style={{
-                        color: text_color ? "#5B5F62" : "#fff",
-                      }}
-                    >
-                      Cart
-                    </p>
+                    <Link to="/cart" className={NavbarCss.cartLink}>
+                      <Icon
+                        icon="solar:bag-linear"
+                        width="24"
+                        height="24"
+                        style={{
+                          color: text_color ? "#5B5F62" : "#fff",
+                        }}
+                        className={
+                          text_color
+                            ? NavbarCss.cartIconLight
+                            : NavbarCss.cartIconDark
+                        }
+                      />
+                      <p
+                        style={{
+                          color: text_color ? "#5B5F62" : "#fff",
+                        }}
+                      >
+                        Cart
+                      </p>
+                      {cartItemCount > 0 && (
+                        <span className={NavbarCss.cartBadge}>
+                          {cartItemCount}
+                        </span>
+                      )}
+                    </Link>
                   </div>
                 </div>
               )}
