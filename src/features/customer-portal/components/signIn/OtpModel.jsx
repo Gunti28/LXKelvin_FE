@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getOtpAuth } from "../../../../lib/services/otpAuthAsyncThunk";
+
 import { IMAGES } from "../../../../lib/constants/Image_Constants";
 const OtpModel = ({ showOtpScreen }) => {
   const [otp, setOtp] = useState(["", "", "", ""]);
@@ -117,6 +118,7 @@ const OtpModel = ({ showOtpScreen }) => {
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
+
           src={IMAGES.footer_Img}
           alt="FooterImg"
           className="image-fluid w-100 "

@@ -93,6 +93,8 @@ const NavbarComponent = () => {
       path.startsWith("/upiPayment") ||
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
+      path.startsWith("/vipSuccess") ||
+
       path.startsWith("/productDetails");
     setTextColor(isHighlightPath);
   });
@@ -131,7 +133,9 @@ const NavbarComponent = () => {
       <div className={` ${HeroStyles.heroText} text-center`}>
         <img
           style={{ margin: "auto", cursor: "pointer" }}
+
           src={IMAGES.logo}
+
           width={150}
           alt="Logo"
         />
@@ -161,7 +165,9 @@ const NavbarComponent = () => {
         <Container fluid>
           <Navbar.Brand href="#">
             <img
+
               src={IMAGES?.logo}
+
               alt="LOGO"
               className={NavbarCss.LogoImg}
               onClick={() => handleLogoClick()}

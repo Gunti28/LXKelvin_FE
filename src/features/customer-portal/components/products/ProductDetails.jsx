@@ -26,7 +26,7 @@ const ProductDetailsPage = () => {
   const [liked, setLiked] = useState(false);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const totalImages = 5;
+  const totalImages = 4;
 
   const [feedback, setFeedback] = useState([]);
   const navigate = useNavigate();
@@ -45,6 +45,12 @@ const ProductDetailsPage = () => {
 
   const handleThumbnailClick = (index) => {
     setCurrentImageIndex(index);
+  };
+
+  const handleOfferBanner = () => {
+    navigate("/subscriptions", {
+      state: { highlightIndex: 3 }  
+    });
   };
 
   const toggleIcon = () => {
@@ -214,11 +220,15 @@ const ProductDetailsPage = () => {
             </div>
 
             <div className={ProductDetPage.subscriptionOffer}>
-              <div className={ProductDetPage.offerBanner}>
+              <div
+                className={ProductDetPage.offerBanner}
+                onClick={handleOfferBanner}
+              >
                 <p>
                   Get extra{" "}
-                  <span className={ProductDetPage.offText}>(15% OFF)</span> with{" "}
-                  <span className="vip-tag">VIP</span> Subscription
+                  <span className={ProductDetPage.offText}>(25% OFF)</span> with{" "}
+                  <span className={ProductDetPage.vipTag}>VIP</span>{" "}
+                  Subscription
                 </p>
               </div>
             </div>
@@ -288,6 +298,7 @@ const ProductDetailsPage = () => {
             <div key={index} className={ProductDetPage.feedbackItem}>
               <div className={ProductDetPage.feedbackHeader}>
                 <div className={ProductDetPage.feedbackAvatar}>
+
                   <img src={`${feedback.avatar}`} alt={feedback.name} />
                 </div>
                 <div className={ProductDetPage.feedbackUser}>

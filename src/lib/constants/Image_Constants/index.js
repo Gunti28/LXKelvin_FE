@@ -1,6 +1,7 @@
 /**
  * importing VITE_IMAGE_BASE_URL from .env
  */
+
 const BASE = import.meta.env.VITE_IMAGE_BASE_URL;
 
 export const imageBgColors = {

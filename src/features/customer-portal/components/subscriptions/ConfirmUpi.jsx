@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
@@ -14,10 +15,17 @@ const ConfirmUpi = () => {
     (state) => state.subscription
   );
 
+  const [agreed, setAgreed] = useState(false);
+  const [validated, setValidated] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!agreed) {
+      setValidated(true);
+      return;
+    }
     dispatch(confirmSubscription());
-    navigate("/my_account");
+    navigate("/vipSuccess");
   };
   const handleEditPlan = () => {
     navigate("/subscriptions");
@@ -77,11 +85,20 @@ const ConfirmUpi = () => {
             fees.
           </p>
         </div>
-
+        <Form
+          noValidate
+          validated={validated}
+          onSubmit={handleSubmit}
+          className="w-100 d-flex flex-column align-items-center"
+        ></Form>
         <div className={`${confirmstyle.agree} mt-3 d-flex`}>
           <Form.Check
+            required
             type="checkbox"
             id="confirmCheck"
+            checked={agreed}
+            onChange={(e) => setAgreed(e.target.checked)}
+            isInvalid={validated && !agreed}
             style={{ width: "34px", height: "34px", marginTop: "5px" }}
           />
           <Form.Label

@@ -29,6 +29,11 @@ import ChoosePayment from "./features/customer-portal/components/subscriptions/C
 import SelectUpi from "./features/customer-portal/components/subscriptions/SelectUpi";
 import ConfirmUpi from "./features/customer-portal/components/subscriptions/ConfirmUpi";
 import CardPayment from "./features/customer-portal/components/subscriptions/CardPayment";
+import PaymentFailed from "./features/customer-portal/components/MessageModals/PaymentFailed";
+import Pay1 from "./features/customer-portal/components/MessageModals/PaymentSuccess";
+import Thankyou from "./features/customer-portal/components/MessageModals/ThankYou";
+import VipSuccess from "./features/customer-portal/components/MessageModals/VipSuccess";
+
 
 function App() {
   return (
@@ -54,6 +59,11 @@ function App() {
           <Route path="upiPayment" element={<SelectUpi />} />
           <Route path="confirmUpi" element={<ConfirmUpi />} />
           <Route path="cardPayment" element={<CardPayment />} />
+          <Route path="vipSuccess" element={<VipSuccess />} />
+          <Route path="paymentFailed" element={<PaymentFailed />} />
+          <Route path="paymentSuccess" element={<Pay1 />} />
+          <Route path="thankYou" element={<Thankyou />} />
+
           <Route path="my_account" element={<ProfileLayout />}>
             <Route
               index

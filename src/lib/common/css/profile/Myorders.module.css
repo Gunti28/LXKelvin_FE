@@ -1,8 +1,8 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .OrderCon {
   padding: 2rem;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 3rem !important;
 }
 .headerCon {
   display: flex;
@@ -54,8 +54,8 @@
 }
 
 .imageCon {
-  width: 7vw; 
-  height: 14vh; 
+  width: 7vw;
+  height: 14vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,14 +63,10 @@
   flex-shrink: 0;
 }
 
-
 .productImg {
   height: 75%;
   width: 75%;
 }
-
-
-
 
 .orderCard {
   border: 1px solid #ddd;
@@ -138,13 +134,11 @@
 }
 @media (max-width: 1439px) {
   .itemsRow {
-  width: 80%;
-}
-.orderRight{
-  margin-left: -2rem;
-}
-
-
+    width: 80%;
+  }
+  .orderRight {
+    margin-left: -2rem;
+  }
 }
 @media (max-width: 992px) {
   .OrderCon {
