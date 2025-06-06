@@ -14,7 +14,7 @@ const Pay1 = () => {
     >
       <Modal.Body className="border-0 d-flex justify-content-center align-items-center flex-column mt-5 gap-3 ">
         <img
-          src={IMAGES.pay}
+          src={IMAGES.paymentSuccess}
           className="image-fluid w-25 H-25  "
           alt="pay1Img"
           style={{ width: "100px", height: "100px", objectFit: "cover" }}
