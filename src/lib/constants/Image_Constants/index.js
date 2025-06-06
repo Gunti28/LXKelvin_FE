@@ -20,6 +20,10 @@ import TimeSaving from "/assets/Images/time-saving.svg";
 import Promotions from "/assets/Images/promotions.svg";
 import PriceAlerts from "/assets/Images/price-alerts.svg";
 import Footer_Img from "/assets/Images/footerimg.jpg";
+import payment_success from "/assets/Images/Payment success vector.svg";
+import thankYou from "/assets/Images/Thanks Vector.svg";
+import Vip_success from "/assets/Images/Vip_Payment.svg";
+import Payment_failed from "/assets/Images/Payment_failed.svg";
 
 import Dashboard_carousel1 from "/assets/Images/dashboard_corosel.svg";
 
@@ -68,3 +72,8 @@ export const APPLE_PAY = ApplePay;
 export const PAYPAL = Paypal;
 export const MASTER_CARD = MasterCard;
 export const SECURED_PAYMENT = SecuredPayment;
+
+export const PAYMENT_SUCCESS = payment_success;
+export const THANK_YOU = thankYou;
+export const VIP_PAYMENT = Vip_success;
+export const PAYMENT_FAILED = Payment_failed;

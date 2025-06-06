@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import { CiLock } from "react-icons/ci";
 import Form from "react-bootstrap/Form";
@@ -21,7 +21,14 @@ const ChoosePayment = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const [validated, setValidated] = useState(false);
+  const [agreed, setAgreed] = useState(false);
+
   const handlePaymentSelect = (method) => {
+    if (!agreed) {
+      setValidated(true);
+      return;
+    }
     dispatch(setPaymentMethod(method));
     if (method === "upi") {
       navigate("/upiPayment");
@@ -30,6 +37,14 @@ const ChoosePayment = () => {
     }
   };
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (agreed) {
+      setValidated(true);
+    } else {
+      setValidated(true);
+    }
+  };
   return (
     <div className={Paymentstyles.ChoosePayContainer}>
       <h5 className="text-center mb-4">Choose Your Payment Method</h5>
@@ -104,9 +119,21 @@ const ChoosePayment = () => {
             <CiLock size={14} className="ms-1 mb-1" />
           </div>
 
-          <Form className={`mt-3 ${Paymentstyles.form}`}>
+          <Form
+            noValidate
+            validated={validated}
+            onSubmit={handleFormSubmit}
+            className={`mt-3 ${Paymentstyles.form}`}
+          >
             <div className={`d-flex ${Paymentstyles.check}`}>
-              <Form.Check type="checkbox" id="confirmCheck" />
+              <Form.Check
+                type="checkbox"
+                id="confirmCheck"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
+                isInvalid={validated && !agreed}
+                required
+              />
               <Form.Label
                 htmlFor="confirmCheck"
                 className={`${Paymentstyles.termsLabel}`}

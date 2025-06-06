@@ -93,6 +93,7 @@ const NavbarComponent = () => {
       path.startsWith("/upiPayment") ||
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
+      path.startsWith("/vipSuccess") ||
       path.startsWith("/productDetails");
     setTextColor(isHighlightPath);
   });

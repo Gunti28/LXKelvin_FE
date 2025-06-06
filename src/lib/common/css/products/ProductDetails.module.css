@@ -4,6 +4,7 @@
   background-color: #fff;
   height: 100%;
   width: 100% !important;
+  margin-bottom: 5rem !important;
 }
 
 .productPage .breadcrumb {
@@ -33,7 +34,7 @@
 .mainPreviewImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   transition: transform 0.3s ease;
 }
 
@@ -123,28 +124,25 @@
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
-.HomeText{
+.HomeText {
   cursor: pointer;
-
 }
-.HomeText:hover{
-  color:#ff9900
+.HomeText:hover {
+  color: #ff9900;
 }
-.CategoryText{
-  cursor: pointer;
-  margin-left: 0.1rem;
-
-}
-.CategoryText:hover{
-  color:#ff9900
-}
-.ProductText{
+.CategoryText {
   cursor: pointer;
   margin-left: 0.1rem;
-
 }
-.ProductText:hover{
-  color:#ff9900
+.CategoryText:hover {
+  color: #ff9900;
+}
+.ProductText {
+  cursor: pointer;
+  margin-left: 0.1rem;
+}
+.ProductText:hover {
+  color: #ff9900;
 }
 
 .ProductTitle {
@@ -327,7 +325,7 @@
 }
 
 .offerBanner {
-  background: linear-gradient(to right, #99742d, #ffc14b);
+  background: linear-gradient(to right, #99742d, #ffc14b, #e8b919);
   padding: 0.8rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
@@ -343,11 +341,11 @@
 }
 
 .vipTag {
-  background: #7f1d1d;
-  color: white;
-  padding: 2px 8px;
+  background: #880e4f;
+  color: #ffc14b;
+  padding: 0.5rem 0.3rem;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 0.8rem;
   margin: 0 4px;
 }
 
@@ -469,6 +467,7 @@
 .customerFeedback {
   margin-top: 2.5rem;
   padding: 1.3rem;
+  margin-bottom: 3rem !important;
 }
 
 .customerFeedback h3 {

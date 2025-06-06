@@ -1,8 +1,6 @@
-.pageContainer {
-  padding: 2rem;
+.listingContainer {
   background-color: #f7f7f7;
-  min-height: 100vh;
-  font-family: sans-serif;
+  margin-bottom: 5rem !important;
 }
 
 .pageTitle {

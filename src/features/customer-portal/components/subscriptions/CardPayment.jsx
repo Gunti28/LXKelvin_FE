@@ -48,7 +48,7 @@ const CardPayment = () => {
       );
 
       dispatch(confirmSubscription());
-      navigate("/my_account");
+      navigate("/vipSuccess");
     }
 
     setValidated(true);
