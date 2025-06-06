@@ -34,6 +34,7 @@ import Pay1 from "./features/customer-portal/components/MessageModals/PaymentSuc
 import Thankyou from "./features/customer-portal/components/MessageModals/ThankYou";
 import VipSuccess from "./features/customer-portal/components/MessageModals/VipSuccess";
 
+
 function App() {
   return (
     <Router>
@@ -62,6 +63,7 @@ function App() {
           <Route path="paymentFailed" element={<PaymentFailed />} />
           <Route path="paymentSuccess" element={<Pay1 />} />
           <Route path="thankYou" element={<Thankyou />} />
+
           <Route path="my_account" element={<ProfileLayout />}>
             <Route
               index

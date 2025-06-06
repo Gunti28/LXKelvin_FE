@@ -16,8 +16,10 @@ const SubscriptionCards = () => {
   const dispatch = useDispatch();
   const { plans, loading, error } = useSelector((state) => state.plans);
   const navigate = useNavigate();
+
   const location = useLocation();
   const highlightIndex = location.state?.highlightIndex;
+
 
   useEffect(() => {
     dispatch(fetchPlans());
@@ -44,6 +46,7 @@ const SubscriptionCards = () => {
                 CardStyle.CardHover
               } ${index === highlightIndex ? CardStyle.highlight : ""}`}
             >
+
               <div className="d-flex justify-content-center mb-3">
                 <Button className="bg-white text-dark fw-400 border-dark px-4">
                   {plan.title}

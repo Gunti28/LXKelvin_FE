@@ -3,25 +3,25 @@ import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../../../../lib/common/css/products/Listing.module.css";
 import { useSelector } from "react-redux";
 import { Const } from "../../../../lib/constants/index";
-
+import OverLayLoader from "../overLayLoader/OverLayLoader";
 const ProductList = () => {
   const [productsList, setProducts] = useState([]);
   const { products } = useSelector((state) => state.products);
+  /**
+   * we need to add changes on loaderCategories once service is placed
+   */
+  const [loaderCategories, serLoaderCategories] = useState(true);
   const location = useLocation();
   const path = location.pathname.slice(10);
   const quantityOptions = Const?.QTY_OPTIONS;
   const navigate = useNavigate();
 
   const getCategory = () => {
-    if (
-      location.pathname.includes("seasonalVegetables")
-    ) {
+    if (location.pathname.includes("seasonalVegetables")) {
       return { category: "vegetables", seasonal: true };
     } else if (location.pathname.includes("vegetables")) {
       return { category: "vegetables" };
-    } else if (
-      location.pathname.includes("seasonalFruits")
-    ) {
+    } else if (location.pathname.includes("seasonalFruits")) {
       return { category: "fruits", seasonal: true };
     } else if (location.pathname.includes("fruits")) {
       return { category: "fruits" };
@@ -35,6 +35,13 @@ const ProductList = () => {
   useEffect(() => {
     setProducts(products);
     fetchData(products);
+    /**
+     * this TimeOut function we need to re-wramp once service is in place
+     */
+    serLoaderCategories(true);
+    setTimeout(() => {
+      serLoaderCategories(false);
+    }, 1500);
   }, [products, location.pathname]);
 
   /**
@@ -64,6 +71,7 @@ const ProductList = () => {
 
   return (
     <div className={styles.listingContainer}>
+      <OverLayLoader isLoader={loaderCategories} />
       <h1 className={styles.pageTitle}>
         {path === "all-categories"
           ? "All Products"

@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import ListingStyle from "../../../../lib/common/css/products/Listing.module.css";
 import { useSelector } from "react-redux";
 import { Const } from "../../../../lib/constants/index";
-
+import OverLayLoader from "../overLayLoader/OverLayLoader";
 const ListingComponent = () => {
   /**
    * call store object with using of selectors
@@ -14,9 +14,20 @@ const ListingComponent = () => {
   const [productsList, setProducts] = useState([]);
   const quantityOptions = Const?.QTY_OPTIONS;
   const navigate = useNavigate();
+  /**
+   * we need to add changes on loaderCategories once service is placed
+   */
+  const [loaderCategories, serLoaderCategories] = useState(true);
 
   useEffect(() => {
     setProducts(products);
+    /**
+     * this TimeOut function we need to re-wramp once service is in place
+     */
+    serLoaderCategories(true);
+    setTimeout(() => {
+      serLoaderCategories(false);
+    }, 1500);
   }, [products]);
 
   const filteredProducts =
@@ -31,6 +42,7 @@ const ListingComponent = () => {
 
   return (
     <div className={ListingStyle.listingContainer}>
+      <OverLayLoader isLoader={loaderCategories} />
       <h1 className={ListingStyle.pageTitle}>
         {path === "all-categories"
           ? "All Products"

@@ -4,11 +4,7 @@ import { Row, Col, Button, Form } from "react-bootstrap";
 import ProductDetPage from "../../../../lib/common/css/products/ProductDetails.module.css";
 import feedbackData from "../../../../../public/mocks/feedback.json";
 
-import {
-  TIME_SAVING,
-  PROMOTIONS,
-  PRICE_ALERTS,
-} from "../../../../lib/constants/Image_Constants/index";
+import { IMAGES } from "../../../../lib/constants/Image_Constants/index";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductDetails } from "../../../../lib/services/productDetailsAsyncThunk";
@@ -254,7 +250,7 @@ const ProductDetailsPage = () => {
               <div className={ProductDetPage.benefitsContainer}>
                 <div className={ProductDetPage.benefitItem}>
                   <div className={ProductDetPage.benefitIcon}>
-                    <img src={TIME_SAVING} alt="Time Saving" />
+                    <img src={IMAGES.timeSaving} alt="Time Saving" />
                   </div>
                   <div className={ProductDetPage.benefitContent}>
                     <h5>Time-Saving</h5>
@@ -267,7 +263,7 @@ const ProductDetailsPage = () => {
 
                 <div className={ProductDetPage.benefitItem}>
                   <div className={ProductDetPage.benefitIcon}>
-                    <img src={PROMOTIONS} alt="Promotions" />
+                    <img src={IMAGES.promotions} alt="Promotions" />
                   </div>
                   <div className={ProductDetPage.benefitContent}>
                     <h5>Promotions and Discounts</h5>
@@ -280,7 +276,7 @@ const ProductDetailsPage = () => {
 
                 <div className={ProductDetPage.benefitItem}>
                   <div className={ProductDetPage.benefitIcon}>
-                    <img src={PRICE_ALERTS} alt="Price Alerts" />
+                    <img src={IMAGES.priceAlerts} alt="Price Alerts" />
                   </div>
                   <div className={ProductDetPage.benefitContent}>
                     <h5>Price Alerts</h5>
@@ -302,7 +298,8 @@ const ProductDetailsPage = () => {
             <div key={index} className={ProductDetPage.feedbackItem}>
               <div className={ProductDetPage.feedbackHeader}>
                 <div className={ProductDetPage.feedbackAvatar}>
-                  <img src={feedback.avatar} alt={feedback.name} />
+
+                  <img src={`${feedback.avatar}`} alt={feedback.name} />
                 </div>
                 <div className={ProductDetPage.feedbackUser}>
                   <h4>{feedback.name}</h4>
