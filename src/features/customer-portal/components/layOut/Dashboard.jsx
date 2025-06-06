@@ -6,8 +6,6 @@ import OverLayLoader from "../overLayLoader/OverLayLoader";
 const DashBoard = () => {
   return (
     <div className={`container-fluid ${Category.MainDashboard}`}>
-      {/* <OverLayLoader isLoader={true} /> */}
-      {/* <OverLayLoader isLoader={true} /> */}
       <FlashScreens />
       <CategoriesComponent />
     </div>

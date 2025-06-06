@@ -20,7 +20,7 @@ const CategoriesComponent = () => {
     setTimeout(() => {
       serLoaderCategories(false);
       setCategories(categories);
-    }, 1000);
+    }, 1500);
   }, [categories]);
   return (
     <Container fluid className="mt-4 ">

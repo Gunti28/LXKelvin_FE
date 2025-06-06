@@ -7,15 +7,7 @@ import styles from "../../../../lib/common/css/products/ListingLayout.module.css
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-// import {
-//   VEGETABLES,
-//   FRUITS,
-//   SEASONAL_VEGETABLES,
-//   SEASONAL_FRUITS,
-//   MILK_PRODUCTS,
-// } from "../../../../lib/constants/Image_Constants/index";
 import { IMAGES } from "../../../../lib/constants/Image_Constants/index";
-// import { ALL_PRODUCTS } from "https://lxkelvin.s3.us-east-1.amazonaws.com/Images/all-categories-sidebar.svg";
 
 const SidebarComponent = () => {
   const [show, setShow] = useState(false);
