@@ -14,7 +14,7 @@ const VipSuccess = () => {
   useEffect(() => {
     setTimeout(() => {
       navigate("/my_account");
-    }, 10000);
+    }, 1000);
   }, []);
   return (
     <Modal
