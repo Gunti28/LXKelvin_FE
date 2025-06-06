@@ -1,4 +1,4 @@
-import { GREECE, SPANISH, FRENCH, ITALIAN } from "./Image_Constants/index.js";
+import { IMAGES } from "./Image_Constants/index.js";
 
 /**
  * declarations
@@ -6,10 +6,10 @@ import { GREECE, SPANISH, FRENCH, ITALIAN } from "./Image_Constants/index.js";
 const QTY_OPTIONS = ["500g", "1kg", "2kg"];
 
 const LANGUAGES = [
-  { name: "Italian", icon: ITALIAN },
-  { name: "Greece", icon: GREECE },
-  { name: "Spanish", icon: SPANISH },
-  { name: "French", icon: FRENCH },
+  { name: "Italian", icon: IMAGES.italian },
+  { name: "Greece", icon: IMAGES.greece },
+  { name: "Spanish", icon: IMAGES.Spanish },
+  { name: "French", icon: IMAGES.french },
 ];
 /**
  * exports to get the const value
