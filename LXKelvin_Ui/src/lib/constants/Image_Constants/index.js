@@ -13,13 +13,12 @@ import Italian from "../../../lib/common/assets/Images/italian.svg";
 import French from "../../../lib/common/assets/Images/French.svg";
 import Spanish from "../../../lib/common/assets/Images/Spanish.svg";
 import Greece from "../../../lib/common/assets/Images/Greece.svg";
-import kiwi from "/src/lib/common/assets/images/kiwi.svg";
-import tomato from "/src/lib/common/assets/images/tomato.svg";
-import banana from "/src/lib/common/assets/images/banana.svg";
-
-import TimeSaving from "../../../lib/common/assets/Images/time-saving.svg";
-import Promotions from "../../../lib/common/assets/Images/promotions.svg";
-import PriceAlerts from "../../../lib/common/assets/Images/price-alerts.svg";
+import kiwi from "../../common/assets/Images/kiwi.svg";
+import tomato from "../../common/assets/Images/tomato.svg";
+import banana from "../../common/assets/Images/banana.svg";
+import TimeSaving from "../../common/assets/Images/time-saving.svg";
+import Promotions from "../../common/assets/Images/promotions.svg";
+import PriceAlerts from "../../common/assets/Images/price-alerts.svg";
 
 import Visa from "../../../lib/common/assets/Images/Visa.svg";
 import Amex from "../../../lib/common/assets/Images/Amex.svg";
@@ -52,18 +51,14 @@ export const FRUITS = fruits;
 export const SEASONAL_VEGETABLES = seasonalVegetables;
 export const SEASONAL_FRUITS = seasonalFruits;
 export const MILK_PRODUCTS = milkProducts;
-
 export const LOGO = Logo;
 export const ITALIAN = Italian;
 export const FRENCH = French;
 export const SPANISH = Spanish;
 export const GREECE = Greece;
-
 export const TIME_SAVING = TimeSaving;
 export const PROMOTIONS = Promotions;
 export const PRICE_ALERTS = PriceAlerts;
-
-// choose payment
 
 export const VISA = Visa;
 export const AMEX = Amex;
@@ -71,3 +66,4 @@ export const APPLE_PAY = ApplePay;
 export const PAYPAL = Paypal;
 export const MASTER_CARD = MasterCard;
 export const SECURED_PAYMENT = SecuredPayment;
+
