@@ -1,10 +1,12 @@
-
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Icon } from "@iconify/react";
 import styles from "../../../../lib/common/css/profile/Myorders.module.css";
 import { fetchOrders } from "../../../../lib/services/ordersAsyncThunk";
-import {imageMap, imageBgColors} from "../../../../lib/constants/Image_Constants"
+import {
+  imageMap,
+  imageBgColors,
+} from "../../../../lib/constants/Image_Constants";
 import { ORDER_STATUS_COLORS } from "../../../../lib/constants/index";
 
 const MyOrders = () => {
@@ -54,27 +56,42 @@ const MyOrders = () => {
                     </span>
                   </div>
                   <div className={styles.itemsRow}>
-                    {order.items.map((itemName, idx) => (
-                      <div
-                        className={styles.imageCon}
-                        key={idx}
-                        style={{
-                          backgroundColor:
-                            imageBgColors[itemName] || "#f0f0f0",
-                        }}
-                      >
-                        <img
-                          src={imageMap[itemName]}
-                          alt={`item-${itemName}`}
-                          className={styles.productImg}
-                        />
-                      </div>
-                    ))}
+                    {order.items.map((item, idx) => {
+                      const itemName =
+                        typeof item === "string" ? item : item.name;
+                      const imageSrc =
+                        typeof item === "object" && item.image
+                          ? item.image
+                          : imageMap[itemName];
+
+                      return (
+                        <div
+                          className={styles.imageCon}
+                          key={idx}
+                          style={{
+                            backgroundColor:
+                              imageBgColors[itemName] || "#f0f0f0",
+                          }}
+                        >
+                          <img
+                            src={imageSrc}
+                            alt={`item-${itemName}`}
+                            className={styles.productImg}
+                          />
+                        </div>
+                      );
+                    })}
                   </div>
-                  <div className={styles.statusText} style={{ color: statusColor }}>
+                  <div
+                    className={styles.statusText}
+                    style={{ color: statusColor }}
+                  >
                     {order.status}
                   </div>
-                  <div className={styles.dateText} style={{ color: statusColor }}>
+                  <div
+                    className={styles.dateText}
+                    style={{ color: statusColor }}
+                  >
                     {order.date}
                   </div>
                 </div>

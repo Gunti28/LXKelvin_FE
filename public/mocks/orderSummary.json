@@ -1,0 +1,14 @@
+{
+  "address": {
+    "name": "Rakesh chappali",
+    "address": "tirumala pg for gents",
+    "landmark": "2nd cross, kondapur",
+    "city": "Hyderbad",
+    "state": "Telangana"
+  },
+  "selectedPaymentMethod": "",
+  "itemsPrice": 250.76,
+  "deliveryCharges": 50.06,
+  "vatRate": 14,
+  "promotionDiscount": 50.76
+}
