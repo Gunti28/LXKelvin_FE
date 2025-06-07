@@ -10,6 +10,11 @@ const ProductList = () => {
   const [selectedQuantities, setSelectedQuantities] = useState({});
   const [selectedWeights, setSelectedWeights] = useState({});
 
+import OverLayLoader from "../overLayLoader/OverLayLoader";
+const ListingComponent = () => {
+  /**
+   * call store object with using of selectors
+   */
   const { products } = useSelector((state) => state.products);
   const { items: cartItems } = useSelector((state) => state.cart);
 
@@ -18,6 +23,10 @@ const ProductList = () => {
   const path = location.pathname.slice(10);
   // const quantityOptions = Const?.QTY_OPTIONS || ["1", "2", "3", "4", "5"];
   const navigate = useNavigate();
+  /**
+   * we need to add changes on loaderCategories once service is placed
+   */
+  const [loaderCategories, serLoaderCategories] = useState(true);
 
   const getCategory = () => {
     if (location.pathname.includes("seasonalVegetables")) {
@@ -89,7 +98,21 @@ const ProductList = () => {
     );
     return item ? item.quantity : 0;
   };
+    /**
+     * this TimeOut function we need to re-wramp once service is in place
+     */
+    serLoaderCategories(true);
+    setTimeout(() => {
+      serLoaderCategories(false);
+    }, 1500);
+  }, [products]);
 
+  const filteredProducts =
+    path === "products/all-categories"
+      ? productsList
+      : productsList.filter(
+          (p) => p.category.toLowerCase() === path.toLowerCase()
+        );
   const handleProductClick = (id) => {
     navigate(`/productDetails/${id}`);
   };
@@ -97,6 +120,9 @@ const ProductList = () => {
   return (
     <div className={styles.listingContainer}>
       <h1 className={styles.pageTitle}>
+    <div className={ListingStyle.listingContainer}>
+      <OverLayLoader isLoader={loaderCategories} />
+      <h1 className={ListingStyle.pageTitle}>
         {path === "all-categories"
           ? "All Products"
           : `Get Fresh ${path} Delivered Online`}

@@ -1,3 +1,4 @@
+
 import {
   GREECE,
   SPANISH,
@@ -9,15 +10,16 @@ import {
   PAYPAL,
   VISA,
 } from "./Image_Constants";
+import { IMAGES } from "./Image_Constants/index.js";
 
 /**
  * Language dropdown options
  */
 const LANGUAGES = [
-  { name: "Italian", icon: ITALIAN },
-  { name: "Greece", icon: GREECE },
-  { name: "Spanish", icon: SPANISH },
-  { name: "French", icon: FRENCH },
+  { name: "Italian", icon: IMAGES.italian },
+  { name: "Greece", icon: IMAGES.greece },
+  { name: "Spanish", icon: IMAGES.Spanish },
+  { name: "French", icon: IMAGES.french },
 ];
 
 /**

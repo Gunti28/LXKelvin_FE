@@ -3,11 +3,10 @@
     {
       "id": 1,
       "images": [
-        "/assets/Images/tomoto1_courosel.svg",
-        "/assets/Images/tomoto2_courosel.svg",
-        "/assets/Images/tomoto3_courosel.svg",
-        "/assets/Images/tomoto4_courosel.svg",
-        "/assets/Images/tomoto5_courosel.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/newtomato_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/newtomato_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/newtomato_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/newtomato_corousal4.png"
       ],
       "productName": "Tomato",
       "category": "vegetables",
@@ -22,11 +21,9 @@
     {
       "id": 2,
       "images": [
-        "/assets/Images/beans.svg",
-        "/assets/Images/beans.svg",
-        "/assets/Images/beans.svg",
-        "/assets/Images/beans.svg",
-        "/assets/Images/beans.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/beans_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/beans_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/beans_corousal3.png"
       ],
       "productName": "Beans",
       "category": "vegetables",
@@ -41,11 +38,10 @@
     {
       "id": 3,
       "images": [
-        "/assets/Images/apple.svg",
-        "/assets/Images/apple.svg",
-        "/assets/Images/apple.svg",
-        "/assets/Images/apple.svg",
-        "/assets/Images/apple.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/apple_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/apple_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/apple_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/apple_corousal4.png"
       ],
       "productName": "Apple",
       "category": "fruits",
@@ -60,11 +56,10 @@
     {
       "id": 4,
       "images": [
-        "/assets/Images/cauliflower.svg",
-        "/assets/Images/cauliflower.svg",
-        "/assets/Images/cauliflower.svg",
-        "/assets/Images/cauliflower.svg",
-        "/assets/Images/cauliflower.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower_corousal4.png"
       ],
       "productName": "Cauliflower",
       "category": "vegetables",
@@ -79,11 +74,10 @@
     {
       "id": 5,
       "images": [
-        "/assets/Images/banana.svg",
-        "/assets/Images/banana.svg",
-        "/assets/Images/banana.svg",
-        "/assets/Images/banana.svg",
-        "/assets/Images/banana.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/banana_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/banana_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/banana_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/banana_corousal4.png"
       ],
       "productName": "Banana",
       "category": "fruits",
@@ -98,11 +92,10 @@
     {
       "id": 6,
       "images": [
-        "/assets/Images/garlic.svg",
-        "/assets/Images/garlic.svg",
-        "/assets/Images/garlic.svg",
-        "/assets/Images/garlic.svg",
-        "/assets/Images/garlic.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/garlic_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/garlic_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/garlic_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/garlic_corousal4.png"
       ],
       "productName": "Garlic",
       "category": "vegetables",
@@ -117,11 +110,10 @@
     {
       "id": 7,
       "images": [
-        "/assets/Images/watermelon.svg",
-        "/assets/Images/watermelon.svg",
-        "/assets/Images/watermelon.svg",
-        "/assets/Images/watermelon.svg",
-        "/assets/Images/watermelon.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon_corousal4.png"
       ],
       "productName": "Watermelon",
       "cat_id": 2,
@@ -136,11 +128,10 @@
     {
       "id": 8,
       "images": [
-        "/assets/Images/kiwi.svg",
-        "/assets/Images/kiwi.svg",
-        "/assets/Images/kiwi.svg",
-        "/assets/Images/kiwi.svg",
-        "/assets/Images/kiwi.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/kiwi_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/kiwi_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/kiwi_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/kiwi_corousal4.png"
       ],
       "productName": "Kiwi",
       "category": "fruits",
@@ -155,11 +146,10 @@
     {
       "id": 9,
       "images": [
-        "/assets/Images/capsicum.svg",
-        "/assets/Images/capsicum.svg",
-        "/assets/Images/capsicum.svg",
-        "/assets/Images/capsicum.svg",
-        "/assets/Images/capsicum.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/capsicum_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/capsicum_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/capsicum_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/capsicum_corousal4.png"
       ],
       "productName": "Capsicum",
       "category": "vegetables",
@@ -173,13 +163,12 @@
     },
     {
       "id": 10,
-      "image": "/assets/Images/onion.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/onion.svg",
       "images": [
-        "/assets/Images/onion.svg",
-        "/assets/Images/onion.svg",
-        "/assets/Images/onion.svg",
-        "/assets/Images/onion.svg",
-        "/assets/Images/onion.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/onion_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/onion_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/onion_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/onion_corousal4.png"
       ],
       "productName": "Onion",
       "category": "vegetables",
@@ -193,13 +182,12 @@
     },
     {
       "id": 11,
-      "image": "/assets/Images/strawberry.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberry.svg",
       "images": [
-        "/assets/Images/strawberry.svg",
-        "/assets/Images/strawberry.svg",
-        "/assets/Images/strawberry.svg",
-        "/assets/Images/strawberry.svg",
-        "/assets/Images/strawberry.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberry_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberry_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberry_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberry_corousal4.png"
       ],
       "productName": "Strawberry",
       "category": "fruits",
@@ -213,13 +201,12 @@
     },
     {
       "id": 12,
-      "image": "/assets/Images/milk.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/milk.svg",
       "images": [
-        "/assets/Images/milk.svg",
-        "/assets/Images/milk.svg",
-        "/assets/Images/milk.svg",
-        "/assets/Images/milk.svg",
-        "/assets/Images/milk.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/milk_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/milk_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/milk_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/milk_corousal4.png"
       ],
       "productName": "Milk",
       "category": "milkProducts",
@@ -233,13 +220,12 @@
     },
     {
       "id": 13,
-      "image": "/assets/Images/cheese.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cheese.svg",
       "images": [
-        "/assets/Images/cheese.svg",
-        "/assets/Images/cheese.svg",
-        "/assets/Images/cheese.svg",
-        "/assets/Images/cheese.svg",
-        "/assets/Images/cheese.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cheese_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cheese_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cheese_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cheese_corousal4.png"
       ],
       "productName": "Cheese",
       "category": "milkProducts",
@@ -253,13 +239,12 @@
     },
     {
       "id": 14,
-      "image": "/assets/Images/Artichoke.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/Artichoke.svg",
       "images": [
-        "/assets/Images/Artichoke.svg",
-        "/assets/Images/Artichoke.svg",
-        "/assets/Images/Artichoke.svg",
-        "/assets/Images/Artichoke.svg",
-        "/assets/Images/Artichoke.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/artichoke_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/artichoke_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/artichoke_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/artichoke_corousal4.png"
       ],
       "productName": "Artichoke",
       "category": "vegetables",
@@ -273,13 +258,12 @@
     },
     {
       "id": 15,
-      "image": "/assets/Images/Arugula.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/Arugula.svg",
       "images": [
-        "/assets/Images/Arugula.svg",
-        "/assets/Images/Arugula.svg",
-        "/assets/Images/Arugula.svg",
-        "/assets/Images/Arugula.svg",
-        "/assets/Images/Arugula.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/arugula_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/arugula_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/arugula_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/arugula_corousal4.png"
       ],
       "productName": "Arugula",
       "category": "vegetables",
@@ -293,13 +277,12 @@
     },
     {
       "id": 16,
-      "image": "/assets/Images/asparagus.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/asparagus.svg",
       "images": [
-        "/assets/Images/asparagus.svg",
-        "/assets/Images/asparagus.svg",
-        "/assets/Images/asparagus.svg",
-        "/assets/Images/asparagus.svg",
-        "/assets/Images/asparagus.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/asparagus_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/asparagus_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/asparagus_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/asparagus_corousal4.png"
       ],
       "productName": "Asparagus",
       "category": "vegetables",
@@ -313,13 +296,12 @@
     },
     {
       "id": 17,
-      "image": "/assets/Images/french-beans.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/french-beans.svg",
       "images": [
-        "/assets/Images/french-beans.svg",
-        "/assets/Images/french-beans.svg",
-        "/assets/Images/french-beans.svg",
-        "/assets/Images/french-beans.svg",
-        "/assets/Images/french-beans.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/frenchbeans_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/frenchbeans_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/frenchbeans_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/frenchbeans_corousal4.png"
       ],
       "productName": "French Beans",
       "category": "vegetables",
@@ -333,13 +315,12 @@
     },
     {
       "id": 18,
-      "image": "/assets/Images/cucumber.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cucumber.svg",
       "images": [
-        "/assets/Images/cucumber.svg",
-        "/assets/Images/cucumber.svg",
-        "/assets/Images/cucumber.svg",
-        "/assets/Images/cucumber.svg",
-        "/assets/Images/cucumber.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cucumber_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cucumber_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cucumber_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cucumber_corousal4.png"
       ],
       "productName": "Cucumber",
       "category": "vegetables",
@@ -353,13 +334,12 @@
     },
     {
       "id": 19,
-      "image": "/assets/Images/chives.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chives.svg",
       "images": [
-        "/assets/Images/chives.svg",
-        "/assets/Images/chives.svg",
-        "/assets/Images/chives.svg",
-        "/assets/Images/chives.svg",
-        "/assets/Images/chives.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chives_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chives_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chives_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chives_corousal4.png"
       ],
       "productName": "Chives",
       "category": "vegetables",
@@ -373,13 +353,11 @@
     },
     {
       "id": 20,
-      "image": "/assets/Images/eggplant.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/eggplant.svg",
       "images": [
-        "/assets/Images/eggplant.svg",
-        "/assets/Images/eggplant.svg",
-        "/assets/Images/eggplant.svg",
-        "/assets/Images/eggplant.svg",
-        "/assets/Images/eggplant.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/eggplant_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/eggplant_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/eggplant_corousal3.png"
       ],
       "productName": "Eggplant",
       "category": "vegetables",
@@ -393,13 +371,12 @@
     },
     {
       "id": 21,
-      "image": "/assets/Images/beetroot.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/beetroot.svg",
       "images": [
-        "/assets/Images/beetroot.svg",
-        "/assets/Images/beetroot.svg",
-        "/assets/Images/beetroot.svg",
-        "/assets/Images/beetroot.svg",
-        "/assets/Images/beetroot.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/beetroot_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/beetroot_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/beetroot_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/beetroot_corousal4.png"
       ],
       "productName": "Beetroot",
       "category": "vegetables",
@@ -413,13 +390,12 @@
     },
     {
       "id": 22,
-      "image": "/assets/Images/blacksalsify.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/blacksalsify.svg",
       "images": [
-        "/assets/Images/blacksalsify.svg",
-        "/assets/Images/blacksalsify.svg",
-        "/assets/Images/blacksalsify.svg",
-        "/assets/Images/blacksalsify.svg",
-        "/assets/Images/blacksalsify.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/blacksalasy_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/blacksalasy_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/blacksalasy_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/blacksalasy_corousal4.png"
       ],
       "productName": "Black Salsify",
       "category": "vegetables",
@@ -433,13 +409,12 @@
     },
     {
       "id": 23,
-      "image": "/assets/Images/broccoli.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/broccoli.svg",
       "images": [
-        "/assets/Images/broccoli.svg",
-        "/assets/Images/broccoli.svg",
-        "/assets/Images/broccoli.svg",
-        "/assets/Images/broccoli.svg",
-        "/assets/Images/broccoli.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/broccoli_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/broccoli_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/broccoli_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/broccoli_corousal4.png"
       ],
       "productName": "Broccoli",
       "category": "vegetables",
@@ -453,13 +428,12 @@
     },
     {
       "id": 24,
-      "image": "/assets/Images/brusselsprouts.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/brusselsprouts.svg",
       "images": [
-        "/assets/Images/brusselsprouts.svg",
-        "/assets/Images/brusselsprouts.svg",
-        "/assets/Images/brusselsprouts.svg",
-        "/assets/Images/brusselsprouts.svg",
-        "/assets/Images/brusselsprouts.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/brusselsprouts_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/brusselsprouts_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/brusselsprouts_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/brusselsprouts_corousal4.png"
       ],
       "productName": "Brussel Sprouts",
       "category": "vegetables",
@@ -473,13 +447,12 @@
     },
     {
       "id": 25,
-      "image": "/assets/Images/corn.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/corn.svg",
       "images": [
-        "/assets/Images/corn.svg",
-        "/assets/Images/corn.svg",
-        "/assets/Images/corn.svg",
-        "/assets/Images/corn.svg",
-        "/assets/Images/corn.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/corn_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/corn_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/corn_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/corn_corousal4.png"
       ],
       "productName": "Corn",
       "category": "vegetables",
@@ -493,13 +466,12 @@
     },
     {
       "id": 26,
-      "image": "/assets/Images/chineesecabbage.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chineesecabbage.svg",
       "images": [
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chineesecabbage_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chineesecabbage_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chineesecabbage_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chineesecabbage_corousal4.png"
       ],
       "productName": "Chineese cabbage",
       "category": "vegetables",
@@ -513,13 +485,13 @@
     },
     {
       "id": 27,
-      "image": "/assets/Images/endive.svg",
+
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/endive_corousal1.png",
       "images": [
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/endive_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/endive_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/endive_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/endive_corousal4.png"
       ],
       "productName": "Endive",
       "category": "vegetables",
@@ -533,13 +505,13 @@
     },
     {
       "id": 28,
-      "image": "/assets/Images/carrot.svg",
+
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/carrot_corousal1.png",
       "images": [
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg",
-        "/assets/Images/chineesecabbage.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/carrot_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/carrot_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/carrot_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/carrot_corousal4.png"
       ],
       "productName": "Carrot",
       "category": "vegetables",
@@ -553,13 +525,12 @@
     },
     {
       "id": 29,
-      "image": "/assets/Images/cauliflower.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower.svg",
       "images": [
-        "/assets/Images/cauliflower.svg",
-        "/assets/Images/cauliflower.svg",
-        "/assets/Images/cauliflower.svg",
-        "/assets/Images/cauliflower.svg",
-        "/assets/Images/cauliflower.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower2_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower2_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower2_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower2_corousal4.png"
       ],
       "productName": "Cauliflower",
       "category": "vegetables",
@@ -573,13 +544,12 @@
     },
     {
       "id": 30,
-      "image": "/assets/Images/celeraic.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/celeraic.svg",
       "images": [
-        "/assets/Images/celeraic.svg",
-        "/assets/Images/celeraic.svg",
-        "/assets/Images/celeraic.svg",
-        "/assets/Images/celeraic.svg",
-        "/assets/Images/celeraic.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/celeraic_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/celeraic_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/celeraic_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/celeraic_corousal4.png"
       ],
       "productName": "Celeraic",
       "category": "vegetables",
@@ -593,13 +563,12 @@
     },
     {
       "id": 31,
-      "image": "/assets/Images/mushroom.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/mushroom.svg",
       "images": [
-        "/assets/Images/mushroom.svg",
-        "/assets/Images/mushroom.svg",
-        "/assets/Images/mushroom.svg",
-        "/assets/Images/mushroom.svg",
-        "/assets/Images/mushroom.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/mushroom_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/mushroom_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/mushroom_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/mushroom_corousal4.png"
       ],
       "productName": "Mushroom",
       "category": "vegetables",
@@ -613,13 +582,12 @@
     },
     {
       "id": 32,
-      "image": "/assets/Images/chicory.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chicory.svg",
       "images": [
-        "/assets/Images/chicory.svg",
-        "/assets/Images/chicory.svg",
-        "/assets/Images/chicory.svg",
-        "/assets/Images/chicory.svg",
-        "/assets/Images/chicory.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chicory_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chicory_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chicory_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chicory_corousal4.png"
       ],
       "productName": "Chicory",
       "category": "vegetables",
@@ -633,13 +601,12 @@
     },
     {
       "id": 33,
-      "image": "/assets/Images/chilli.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chilli.svg",
       "images": [
-        "/assets/Images/chilli.svg",
-        "/assets/Images/chilli.svg",
-        "/assets/Images/chilli.svg",
-        "/assets/Images/chilli.svg",
-        "/assets/Images/chilli.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chilli_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chilli_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chilli_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/chilli_corousal4.png"
       ],
       "productName": "Chilli",
       "category": "vegetables",
@@ -653,13 +620,12 @@
     },
     {
       "id": 34,
-      "image": "/assets/Images/white radish.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/white radish.svg",
       "images": [
-        "/assets/Images/white radish.svg",
-        "/assets/Images/white radish.svg",
-        "/assets/Images/white radish.svg",
-        "/assets/Images/white radish.svg",
-        "/assets/Images/white radish.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/whiteRadish_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/whiteRadish_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/whiteRadish_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/whiteRadish_corousal4.png"
       ],
       "productName": "White radish",
       "category": "vegetables",
@@ -673,13 +639,12 @@
     },
     {
       "id": 35,
-      "image": "/assets/Images/cherry.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cherry.svg",
       "images": [
-        "/assets/Images/cherry.svg",
-        "/assets/Images/cherry.svg",
-        "/assets/Images/cherry.svg",
-        "/assets/Images/cherry.svg",
-        "/assets/Images/cherry.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cherry_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cherry_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cherry_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/cherry_corousal4.png"
       ],
       "productName": "Cherry",
       "category": "fruits",
@@ -693,13 +658,12 @@
     },
     {
       "id": 36,
-      "image": "/assets/Images/pomelo.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pomelo.svg",
       "images": [
-        "/assets/Images/pomelo.svg",
-        "/assets/Images/pomelo.svg",
-        "/assets/Images/pomelo.svg",
-        "/assets/Images/pomelo.svg",
-        "/assets/Images/pomelo.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/pomelo_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/pomelo_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/pomelo_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/pomelo_corousal4.png"
       ],
       "productName": "Pomelo",
       "category": "fruits",
@@ -713,13 +677,12 @@
     },
     {
       "id": 37,
-      "image": "/assets/Images/grapes.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/grapes.svg",
       "images": [
-        "/assets/Images/grapes.svg",
-        "/assets/Images/grapes.svg",
-        "/assets/Images/grapes.svg",
-        "/assets/Images/grapes.svg",
-        "/assets/Images/grapes.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/grapes_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/grapes_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/grapes_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/grapes_corousal4.png"
       ],
       "productName": "Grapes",
       "category": "fruits",
@@ -733,13 +696,12 @@
     },
     {
       "id": 38,
-      "image": "/assets/Images/plum.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/plum.svg",
       "images": [
-        "/assets/Images/plum.svg",
-        "/assets/Images/plum.svg",
-        "/assets/Images/plum.svg",
-        "/assets/Images/plum.svg",
-        "/assets/Images/plum.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/plum_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/plum_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/plum_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/plum_corousal4.png"
       ],
       "productName": "Plum",
       "category": "fruits",
@@ -753,13 +715,12 @@
     },
     {
       "id": 39,
-      "image": "/assets/Images/amla.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/amla.svg",
       "images": [
-        "/assets/Images/amla.svg",
-        "/assets/Images/amla.svg",
-        "/assets/Images/amla.svg",
-        "/assets/Images/amla.svg",
-        "/assets/Images/amla.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/amla_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/amla_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/amla_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/amla_corousal4.png"
       ],
       "productName": "Amla",
       "category": "fruits",
@@ -773,13 +734,12 @@
     },
     {
       "id": 40,
-      "image": "/assets/Images/custurd apple.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/custurd apple.svg",
       "images": [
-        "/assets/Images/custurd apple.svg",
-        "/assets/Images/custurd apple.svg",
-        "/assets/Images/custurd apple.svg",
-        "/assets/Images/custurd apple.svg",
-        "/assets/Images/custurd apple.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/custurdApple_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/custurdApple_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/custurdApple_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/custurdApple_corousal4.png"
       ],
       "productName": "Custurd Apple",
       "category": "fruits",
@@ -793,13 +753,12 @@
     },
     {
       "id": 41,
-      "image": "/assets/Images/avacado.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/avacado.svg",
       "images": [
-        "/assets/Images/avacado.svg",
-        "/assets/Images/avacado.svg",
-        "/assets/Images/avacado.svg",
-        "/assets/Images/avacado.svg",
-        "/assets/Images/avacado.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/avacado_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/avacado_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/avacado_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/avacado_corousal4.png"
       ],
       "productName": "Avocado",
       "category": "fruits",
@@ -813,13 +772,12 @@
     },
     {
       "id": 42,
-      "image": "/assets/Images/strawberry-new.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberry-new.svg",
       "images": [
-        "/assets/Images/strawberry-new.svg",
-        "/assets/Images/strawberry-new.svg",
-        "/assets/Images/strawberry-new.svg",
-        "/assets/Images/strawberry-new.svg",
-        "/assets/Images/strawberry-new.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberrynew_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberrynew_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberrynew_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberrynew_corousal4.png"
       ],
       "productName": "Strawberry",
       "category": "fruits",
@@ -833,13 +791,12 @@
     },
     {
       "id": 43,
-      "image": "/assets/Images/pears.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pears.svg",
       "images": [
-        "/assets/Images/pears.svg",
-        "/assets/Images/pears.svg",
-        "/assets/Images/pears.svg",
-        "/assets/Images/pears.svg",
-        "/assets/Images/pears.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/pear_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/pear_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/pear_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/pear_corousal4.png"
       ],
       "productName": "Pears",
       "category": "fruits",
@@ -853,13 +810,12 @@
     },
     {
       "id": 44,
-      "image": "/public/assets/Images/green-apple.svg",
+      "image": "/publichttps://d1p5ayh0d7heww.cloudfront.net/Images/green-apple.svg",
       "images": [
-        "/assets/Images/green-apple.svg",
-        "/assets/Images/green-apple.svg",
-        "/assets/Images/green-apple.svg",
-        "/assets/Images/green-apple.svg",
-        "/assets/Images/green-apple.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/greenApple_corousal1.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/greenApple_corousal2.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/greenApple_corousal3.png",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/greenApple_corousal4.png"
       ],
       "productName": "Green Apple",
       "category": "fruits",
@@ -873,13 +829,12 @@
     },
     {
       "id": 45,
-      "image": "/assets/Images/rambutan.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/rambutan.svg",
       "images": [
-        "/assets/Images/rambutan.svg",
-        "/assets/Images/rambutan.svg",
-        "/assets/Images/rambutan.svg",
-        "/assets/Images/rambutan.svg",
-        "/assets/Images/rambutan.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Rambutan-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Rambutan-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Rambutan-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Rambutan4.jpg"
       ],
       "productName": "Rambutan",
       "category": "fruits",
@@ -893,13 +848,12 @@
     },
     {
       "id": 46,
-      "image": "/assets/Images/orange.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/orange.svg",
       "images": [
-        "/assets/Images/orange.svg",
-        "/assets/Images/orange.svg",
-        "/assets/Images/orange.svg",
-        "/assets/Images/orange.svg",
-        "/assets/Images/orange.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Orange-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Orange-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Orange-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Orange-4.jpg"
       ],
       "productName": "Orange",
       "category": "fruits",
@@ -913,13 +867,12 @@
     },
     {
       "id": 47,
-      "image": "/assets/Images/starfruit.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/starfruit.svg",
       "images": [
-        "/assets/Images/starfruit.svg",
-        "/assets/Images/starfruit.svg",
-        "/assets/Images/starfruit.svg",
-        "/assets/Images/starfruit.svg",
-        "/assets/Images/starfruit.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Star Fruit-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Star Fruit-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Star Fruit-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Star Fruit-4.jpg"
       ],
       "productName": "Star Friut",
       "category": "fruits",
@@ -933,13 +886,12 @@
     },
     {
       "id": 48,
-      "image": "/assets/Images/jackfruit.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/jackfruit.svg",
       "images": [
-        "/assets/Images/jackfruit.svg",
-        "/assets/Images/jackfruit.svg",
-        "/assets/Images/jackfruit.svg",
-        "/assets/Images/jackfruit.svg",
-        "/assets/Images/jackfruit.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Jack Fruit-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Jack Fruit-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Jack Fruit-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Jack Fruit-4.jpg"
       ],
       "productName": "Jack Fruit",
       "category": "fruits",
@@ -953,13 +905,12 @@
     },
     {
       "id": 49,
-      "image": "/assets/Images/lychee.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/lychee.svg",
       "images": [
-        "/assets/Images/lychee.svg",
-        "/assets/Images/lychee.svg",
-        "/assets/Images/lychee.svg",
-        "/assets/Images/lychee.svg",
-        "/assets/Images/lychee.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Lychee-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Lychee-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Lychee-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Lychee-4.jpg"
       ],
       "productName": "Lychee",
       "category": "fruits",
@@ -973,13 +924,12 @@
     },
     {
       "id": 50,
-      "image": "/assets/Images/chalisa-fig.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chalisa-fig.svg",
       "images": [
-        "/assets/Images/chalisa-fig.svg",
-        "/assets/Images/chalisa-fig.svg",
-        "/assets/Images/chalisa-fig.svg",
-        "/assets/Images/chalisa-fig.svg",
-        "/assets/Images/chalisa-fig.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Chalisa Fig-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Chalisa Fig-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Chalisa Fig-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Chalisa Fig-4.jpg"
       ],
       "productName": "Chalisa Fig",
       "category": "fruits",
@@ -993,13 +943,12 @@
     },
     {
       "id": 51,
-      "image": "/assets/Images/musk-melon.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/musk-melon.svg",
       "images": [
-        "/assets/Images/musk-melon.svg",
-        "/assets/Images/musk-melon.svg",
-        "/assets/Images/musk-melon.svg",
-        "/assets/Images/musk-melon.svg",
-        "/assets/Images/musk-melon.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Musk Melon-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Musk Melon-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Musk Melon-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Musk Melon-4.jpg"
       ],
       "productName": "Musk Melon",
       "cat_id": 2,
@@ -1013,13 +962,12 @@
     },
     {
       "id": 52,
-      "image": "/assets/Images/black-berry.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/black-berry.svg",
       "images": [
-        "/assets/Images/black-berry.svg",
-        "/assets/Images/black-berry.svg",
-        "/assets/Images/black-berry.svg",
-        "/assets/Images/black-berry.svg",
-        "/assets/Images/black-berry.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Black Berry-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Black Berry-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Black Berry-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Black Berry-4.jpg"
       ],
       "productName": "Black Berry",
       "category": "fruits",
@@ -1033,13 +981,12 @@
     },
     {
       "id": 53,
-      "image": "/assets/Images/pomegranate.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pomegranate.svg",
       "images": [
-        "/assets/Images/pomegranate.svg",
-        "/assets/Images/pomegranate.svg",
-        "/assets/Images/pomegranate.svg",
-        "/assets/Images/pomegranate.svg",
-        "/assets/Images/pomegranate.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Pomegranate-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Pomegranate-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Pomegranate-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Pomegranate-4.jpg"
       ],
       "productName": "Pomegranate",
       "category": "fruits",
@@ -1053,13 +1000,12 @@
     },
     {
       "id": 54,
-      "image": "/assets/Images/watermelon.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon.svg",
       "images": [
-        "/assets/Images/watermelon.svg",
-        "/assets/Images/watermelon.svg",
-        "/assets/Images/watermelon.svg",
-        "/assets/Images/watermelon.svg",
-        "/assets/Images/watermelon.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Watermelon-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Watermelon-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Watermelon-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Watermelon-4.jpg"
       ],
       "productName": "Watermelon",
       "category": "fruits",
@@ -1073,13 +1019,12 @@
     },
     {
       "id": 55,
-      "image": "/assets/Images/banana.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/banana.svg",
       "images": [
-        "/assets/Images/banana.svg",
-        "/assets/Images/banana.svg",
-        "/assets/Images/banana.svg",
-        "/assets/Images/banana.svg",
-        "/assets/Images/banana.svg"
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Robusto Banana-1.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Robusto Banana-2.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Robusto Banana-3.jpg",
+        "https://d1p5ayh0d7heww.cloudfront.net/Images/Robusto Banana-4.jpg"
       ],
       "productName": "Robusto Banana",
       "category": "fruits",
