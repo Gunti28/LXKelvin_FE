@@ -36,34 +36,45 @@ const cartSlice = createSlice({
     },
 
     addToCart(state, action) {
-      const product = action.payload;
-      console.log("addToCart called with product:", product);
+      const {
+        id,
+        name,
+        image,
+        selectedWeight,
+        priceByWeight,
+        price,
+        quantityChange = 1,
+        originalPrice,
+      } = action.payload;
 
-      const existing = state.items.find((item) => item.id === product.id);
-      const quantityToAdd = product.quantity ?? 1;
+      const effectivePrice =
+        selectedWeight && priceByWeight?.[selectedWeight] !== undefined
+          ? priceByWeight[selectedWeight]
+          : price;
+
+      const existing = state.items.find(
+        (item) => item.id === id && item.selectedWeight === selectedWeight
+      );
 
       if (existing) {
-        existing.quantity += quantityToAdd;
-      } else {
-        const weights = product.priceByWeight
-          ? Object.keys(product.priceByWeight)
-          : [];
-        const selectedWeight =
-          product.selectedWeight && weights.includes(product.selectedWeight)
-            ? product.selectedWeight
-            : weights.length > 0
-            ? weights[0]
-            : null;
+        existing.quantity += quantityChange;
 
+        if (existing.quantity <= 0) {
+          state.items = state.items.filter(
+            (item) =>
+              !(item.id === id && item.selectedWeight === selectedWeight)
+          );
+        }
+      } else if (quantityChange > 0) {
         state.items.push({
-          ...product,
-          quantity: quantityToAdd,
+          id,
+          name,
+          image,
           selectedWeight,
-          price:
-            selectedWeight &&
-            product.priceByWeight?.[selectedWeight] !== undefined
-              ? product.priceByWeight[selectedWeight]
-              : product.price,
+          price: effectivePrice,
+          quantity: quantityChange,
+          priceByWeight,
+          originalPrice,
         });
       }
     },

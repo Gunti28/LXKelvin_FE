@@ -22,7 +22,12 @@ const DeliveryAddress = () => {
 
   // Load addresses on mount
   useEffect(() => {
-    dispatch(fetchAddresses());
+    const savedAddress = localStorage.getItem("savedAddress");
+    if (savedAddress) {
+      dispatch(updateCurrentAddress(JSON.parse(savedAddress)));
+    } else {
+      dispatch(fetchAddresses());
+    }
   }, [dispatch]);
 
   useEffect(() => {
@@ -39,7 +44,6 @@ const DeliveryAddress = () => {
     };
   }, []);
 
-  // Initialize Google Map and Marker
   const initializeMap = () => {
     const defaultLocation = { lat: 47.4715, lng: 48.1755 };
 
@@ -70,7 +74,6 @@ const DeliveryAddress = () => {
       reverseGeocode(event.latLng);
     });
 
-    // If currentAddress exists, place marker there
     if (currentAddress) {
       const pos = {
         lat: currentAddress.lat || defaultLocation.lat,
@@ -81,7 +84,6 @@ const DeliveryAddress = () => {
     }
   };
 
-  // Handle marker drag end - update address fields by reverse geocode
   const handleMarkerDragEnd = (event) => {
     const newPosition = {
       lat: event.latLng.lat(),
@@ -90,7 +92,6 @@ const DeliveryAddress = () => {
     reverseGeocode(newPosition);
   };
 
-  // Reverse geocode location to address components
   const reverseGeocode = (location) => {
     const geocoder = new window.google.maps.Geocoder();
 
@@ -142,12 +143,10 @@ const DeliveryAddress = () => {
     });
   };
 
-  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     const val = type === "checkbox" ? checked : value;
 
-    // For type (home, office, etc.) lowercase in json
     if (name === "type") {
       dispatch(updateCurrentAddress({ [name]: val.toLowerCase() }));
     } else {
@@ -155,7 +154,6 @@ const DeliveryAddress = () => {
     }
   };
 
-  // Autofill current location
   const handleAutoFill = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -177,10 +175,11 @@ const DeliveryAddress = () => {
     }
   };
 
-  // Save form submit
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(saveCurrentAddress());
+    localStorage.setItem("savedAddress", JSON.stringify(currentAddress));
+    navigate("/orderSummary");
   };
 
   if (loading) return <div>Loading addresses...</div>;
@@ -319,8 +318,7 @@ const DeliveryAddress = () => {
                 <button
                   type="submit"
                   style={{ backgroundColor: "#ff9900" }}
-                  className="btn "
-                  onClick={() => navigate("/orderSummary")}
+                  className="btn"
                 >
                   Save and Continue
                 </button>

@@ -1,62 +1,135 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  fetchOrderSummary,
-  setPaymentMethod,
-} from "../../../../store/slice/orderSummarySlice";
+import { setPaymentMethod } from "../../../../store/slice/orderSummarySlice";
 import styles from "../../../../lib/common/css/cart/OrderSummary.module.css";
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
-import {
-  AMEX,
-  APPLE_PAY,
-  MASTER_CARD,
-  PAYPAL,
-  VISA,
-} from "../../../../lib/constants/Image_Constants";
+import { Const, ORDER_CONSTANTS } from "../../../../lib/constants/index";
+import { addOrder } from "../../../../store/slice/orderSlice";
+
 const OrderSummery = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const {
-    address,
-    selectedPaymentMethod,
-    itemsPrice,
-    deliveryCharges,
-    vatRate,
-    promotionDiscount,
-    loading,
-    error,
-  } = useSelector((state) => state.orderSummary);
+  const deliveryAddress = useSelector(
+    (state) => state.deliveryAddress.currentAddress
+  );
+  const cartItems = useSelector((state) => state.cart.items);
+  const selectedPaymentMethod = useSelector(
+    (state) => state.orderSummary.selectedPaymentMethod
+  );
+
+  const { DELIVERY_CHARGES, VAT_RATE, getPromotionDiscount } = ORDER_CONSTANTS;
 
   useEffect(() => {
-    dispatch(fetchOrderSummary());
-  }, [dispatch]);
+    if (!deliveryAddress?.houseNo) {
+      navigate("/deliveryAddress");
+    }
+  }, [deliveryAddress, navigate]);
 
   const handleChange = (e) => {
-    const value = e.target.value;
-    dispatch(setPaymentMethod(value));
+    dispatch(setPaymentMethod(e.target.value));
   };
 
   const handleProceed = () => {
     if (selectedPaymentMethod === "card") {
-      navigate("/cardPayment");
+      const itemsPrice = cartItems.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+      const promotionDiscount = getPromotionDiscount(itemsPrice);
+      const deliveryCharges = DELIVERY_CHARGES;
+      const vatAmount = (itemsPrice + deliveryCharges) * (VAT_RATE / 100);
+      const total = itemsPrice + deliveryCharges + vatAmount;
+      const totalPayable = total - promotionDiscount;
+
+      const newOrder = {
+        id: Date.now(),
+        items: cartItems,
+        deliveryAddress,
+        paymentMethod: selectedPaymentMethod,
+        itemsPrice,
+        promotionDiscount,
+        deliveryCharges,
+        vatAmount,
+        totalPayable,
+        orderDate: new Date().toISOString(),
+        status: "Pending",
+      };
+
+      dispatch(addOrder(newOrder));
+      navigate("/orderCardPayment");
     } else if (selectedPaymentMethod === "net") {
-      navigate("/upiPayment");
+      const itemsPrice = cartItems.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+      const promotionDiscount = getPromotionDiscount(itemsPrice);
+      const deliveryCharges = DELIVERY_CHARGES;
+      const vatAmount = (itemsPrice + deliveryCharges) * (VAT_RATE / 100);
+      const total = itemsPrice + deliveryCharges + vatAmount;
+      const totalPayable = total - promotionDiscount;
+
+      const newOrder = {
+        id: Date.now(),
+        items: cartItems,
+        deliveryAddress,
+        paymentMethod: selectedPaymentMethod,
+        itemsPrice,
+        promotionDiscount,
+        deliveryCharges,
+        vatAmount,
+        totalPayable,
+        orderDate: new Date().toISOString(),
+        status: "Order Placed",
+      };
+
+      dispatch(addOrder(newOrder));
+      navigate("/orderUpiPayment");
     } else if (selectedPaymentMethod === "cash") {
+      const itemsPrice = cartItems.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+      const promotionDiscount = getPromotionDiscount(itemsPrice);
+      const deliveryCharges = DELIVERY_CHARGES;
+      const vatAmount = (itemsPrice + deliveryCharges) * (VAT_RATE / 100);
+      const total = itemsPrice + deliveryCharges + vatAmount;
+      const totalPayable = total - promotionDiscount;
+
+      const newOrder = {
+        id: Date.now().toString(),
+        items: cartItems.map((item) => item.name),
+        deliveryAddress,
+        paymentMethod: selectedPaymentMethod,
+        price: `€ ${totalPayable.toFixed(2)}`,
+        date: `Placed on ${new Date().toLocaleDateString()}, ${new Date().toLocaleTimeString()}`,
+        status: "Pending",
+        showReorder: true,
+      };
+
+      dispatch(addOrder(newOrder));
       alert("Cash on Delivery selected. Order placed successfully!");
     } else {
       alert("Please select a payment method.");
     }
   };
 
-  const vatAmount = (itemsPrice + deliveryCharges) * (vatRate / 100);
+  const hasItems = cartItems.length > 0;
+
+  const itemsPrice = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+
+  const promotionDiscount = hasItems ? getPromotionDiscount(itemsPrice) : 0;
+  const deliveryCharges = hasItems ? DELIVERY_CHARGES : 0;
+  const vatAmount = hasItems
+    ? (itemsPrice + deliveryCharges) * (VAT_RATE / 100)
+    : 0;
   const total = itemsPrice + deliveryCharges + vatAmount;
   const totalPayable = total - promotionDiscount;
   const savings = promotionDiscount;
-
-  if (loading) return <p>Loading order summary...</p>;
-  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className={styles.SummCon}>
@@ -64,12 +137,13 @@ const OrderSummery = () => {
         <p className={styles.DelHeading}>Delivery Address</p>
         <div className={styles.AddCon}>
           <p className={styles.AddText}>
-            {address.name}, {address.address}, {address.landmark},{" "}
-            {address.city}, {address.state}.
+            {deliveryAddress.houseNo}, {deliveryAddress.landMark},{" "}
+            {deliveryAddress.city}, {deliveryAddress.state} -{" "}
+            {deliveryAddress.pincode}
           </p>
           <button
             className={styles.ChangeBtn}
-            onClick={() => navigate("/deliveryaddress")}
+            onClick={() => navigate("/deliveryAddress")}
           >
             Change
           </button>
@@ -80,23 +154,7 @@ const OrderSummery = () => {
         <div className={styles.BtmLeft}>
           <p className={styles.selectText}>Select a Payment method</p>
           <div className={styles.RadioCon}>
-            {[
-              {
-                label: "Credit or debit card",
-                value: "card",
-                icons: [VISA, AMEX, MASTER_CARD],
-              },
-              {
-                label: "Net Banking",
-                value: "net",
-                icons: [PAYPAL, APPLE_PAY],
-              },
-              {
-                label: "Cash on delivery",
-                value: "cash",
-                icons: [],
-              },
-            ].map(({ label, value, icons }) => (
+            {Const.PAYMENT_OPTIONS.map(({ label, value, icons }) => (
               <div key={value} className={styles.radioGroup}>
                 <label>
                   <input
@@ -106,7 +164,6 @@ const OrderSummery = () => {
                     onChange={handleChange}
                     className={styles.customRadio}
                   />
-
                   <p className={styles.radioText}>{label}</p>
                   <div className={styles.cardImgCon}>
                     {icons.map((icon, index) => (
@@ -153,11 +210,11 @@ const OrderSummery = () => {
             </div>
             <div className={styles.summaryRow}>
               <span>Delivery Charges :</span>
-              <span>€ {deliveryCharges.toFixed(2)}</span>
+              <span>€ {DELIVERY_CHARGES.toFixed(2)}</span>
             </div>
             <div className={styles.summaryRow}>
               <span>VAT :</span>
-              <span>{vatRate}%</span>
+              <span>{VAT_RATE}%</span>
             </div>
             <div className={styles.summaryRow}>
               <span>Total :</span>
@@ -191,5 +248,4 @@ const OrderSummery = () => {
     </div>
   );
 };
-
 export default OrderSummery;

@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import styles from "../../../../lib/common/css/products/Listing.module.css";
 import { useDispatch, useSelector } from "react-redux";
+import styles from "../../../../lib/common/css/products/Listing.module.css";
 import { Const } from "../../../../lib/constants/index";
 import { addToCart } from "../../../../../src/store/slice/cartSlice";
 
 const ProductList = () => {
-  const [productsList, setProducts] = useState([]);
-  const [selectedQuantities, setSelectedQuantities] = useState({});
-
   const { products } = useSelector((state) => state.products);
-  // const { items: cartItems } = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
+  const { items: cartItems } = useSelector((state) => state.cart);
   const location = useLocation();
   const path = location.pathname.slice(10);
-  const quantityOptions = Const?.QTY_OPTIONS || ["1", "2", "3", "4", "5"];
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const [selectedQuantities, setSelectedQuantities] = useState({});
+  const [selectedWeights, setSelectedWeights] = useState({});
 
   const getCategory = () => {
     if (location.pathname.includes("seasonalVegetables")) {
@@ -33,48 +32,44 @@ const ProductList = () => {
     }
   };
 
-  useEffect(() => {
-    setProducts(products);
-    fetchData(products);
-  }, [products, location.pathname]);
-
-  const fetchData = (callByRef) => {
+  const filteredProducts = (() => {
     const filter = getCategory();
-    let filteredProducts = callByRef;
+    let filtered = products;
 
     if (filter.category) {
-      filteredProducts = filteredProducts.filter(
-        (p) => p.category === filter.category
-      );
+      filtered = filtered.filter((p) => p.category === filter.category);
     }
     if (filter.seasonal !== undefined) {
-      filteredProducts = filteredProducts.filter(
-        (p) => p.isSeasonal === filter.seasonal
-      );
+      filtered = filtered.filter((p) => p.isSeasonal === filter.seasonal);
     }
-    setProducts(filteredProducts);
+
+    return filtered;
+  })();
+
+  useEffect(() => {
+    const initialQuantities = {};
+    const initialWeights = {};
+    filteredProducts.forEach((p) => {
+      initialQuantities[p.id] = 1;
+      const weights = Object.keys(p.priceByWeight || {});
+      initialWeights[p.id] = weights.length > 0 ? weights[0] : null;
+    });
+    setSelectedQuantities(initialQuantities);
+    setSelectedWeights(initialWeights);
+  }, [products, location.pathname]);
+
+  const getCartQuantity = (id, weight) => {
+    const item = cartItems.find(
+      (item) => item.id === id && item.selectedWeight === weight
+    );
+    return item ? item.quantity : 0;
   };
 
-  const onQuantityChange = (productId, value) => {
-    setSelectedQuantities((prev) => ({
+  const onWeightChange = (productId, value) => {
+    setSelectedWeights((prev) => ({
       ...prev,
-      [productId]: parseInt(value, 10),
+      [productId]: value,
     }));
-  };
-
-  const handleAddToCart = (id) => {
-    const quantity = selectedQuantities[id] || 1;
-    const product = productsList.find((p) => p.id === id);
-    if (!product) return;
-
-    dispatch(addToCart({ ...product, quantity }))
-      .unwrap()
-      .then(() => {
-        console.log("Item added to cart");
-      })
-      .catch((err) => {
-        console.warn("Add to cart failed:", err);
-      });
   };
 
   const handleProductClick = (id) => {
@@ -89,17 +84,26 @@ const ProductList = () => {
           : `Get Fresh ${path} Delivered Online`}
       </h1>
       <div className={styles.productGrid}>
-        {productsList.map((product, index) => {
+        {filteredProducts.map((product) => {
           const selectedQty = selectedQuantities[product.id] || 1;
-          const disableAdd = product.stockCount === 0;
+          const selectedWeight =
+            selectedWeights[product.id] ||
+            Object.keys(product.priceByWeight || {})[0] ||
+            null;
+
+          const priceByWeight = selectedWeight
+            ? product.priceByWeight?.[selectedWeight] || product.price
+            : product.price;
+
+          const qtyInCart = getCartQuantity(product.id, selectedWeight);
 
           return (
-            <div key={index} className={styles.productCard}>
+            <div key={product.id} className={styles.productCard}>
               <div
                 className={styles.imgCon}
                 style={{
                   backgroundColor: product.Colour,
-                  filter: disableAdd ? "grayscale(100%)" : "none",
+                  filter: product.stockCount === 0 ? "grayscale(100%)" : "none",
                 }}
               >
                 <img
@@ -109,36 +113,88 @@ const ProductList = () => {
                   onClick={() => handleProductClick(product.id)}
                 />
               </div>
+
               <h2 className={styles.productName}>{product.name}</h2>
-              <select
-                className={styles.productQuantity}
-                value={selectedQty}
-                onChange={(e) => onQuantityChange(product.id, e.target.value)}
-              >
-                {quantityOptions.map((q, i) => (
-                  <option key={i} value={q}>
-                    {q}
-                  </option>
-                ))}
-              </select>
+
+              {product.priceByWeight &&
+                Object.keys(product.priceByWeight).length > 0 && (
+                  <select
+                    className={styles.productQuantity}
+                    value={selectedWeight || ""}
+                    onChange={(e) => onWeightChange(product.id, e.target.value)}
+                  >
+                    {Object.keys(product.priceByWeight).map((weight) => (
+                      <option key={weight} value={weight}>
+                        {weight}
+                      </option>
+                    ))}
+                  </select>
+                )}
+
               <div className={styles.priceSection}>
                 <span className={styles.discountPrice}>
-                  &#8364;{product.price}
+                  €{priceByWeight * selectedQty}
                 </span>
                 <span className={styles.originalPrice}>
-                  &#8364;{product.originalPrice}
+                  €{product.originalPrice * selectedQty}
                 </span>
               </div>
-              {disableAdd ? (
+
+              {product.stockCount > 0 ? (
+                qtyInCart > 0 ? (
+                  <div className={styles.quantityControls}>
+                    <button
+                      className={styles.qtyButton}
+                      onClick={() => {
+                        dispatch(
+                          addToCart({
+                            ...product,
+                            selectedWeight,
+                            priceByWeight: product.priceByWeight,
+                            quantityChange: -1,
+                          })
+                        );
+                      }}
+                    >
+                      -
+                    </button>
+                    <span className={styles.qtyValue}>{qtyInCart}</span>
+                    <button
+                      className={styles.qtyButton}
+                      onClick={() => {
+                        dispatch(
+                          addToCart({
+                            ...product,
+                            selectedWeight,
+                            priceByWeight: product.priceByWeight,
+                            quantityChange: 1,
+                          })
+                        );
+                      }}
+                    >
+                      +
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    className={styles.addToCart}
+                    onClick={() => {
+                      dispatch(
+                        addToCart({
+                          ...product,
+                          selectedWeight,
+                          quantity: selectedQty,
+                          price: priceByWeight,
+                        })
+                      );
+                    }}
+                  >
+                    Add to cart
+                  </button>
+                )
+              ) : (
                 <button className={styles.outOfStock} disabled>
                   Out of Stock
-                </button>
-              ) : (
-                <button
-                  className={styles.addToCart}
-                  onClick={() => handleAddToCart(product.id)}
-                >
-                  Add to Cart
                 </button>
               )}
             </div>

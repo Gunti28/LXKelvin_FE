@@ -12,7 +12,6 @@ export const fetchOrderSummary = createAsyncThunk(
 const orderSummarySlice = createSlice({
   name: "orderSummary",
   initialState: {
-    address: {},
     selectedPaymentMethod: "",
     itemsPrice: 0,
     deliveryCharges: 0,
@@ -34,19 +33,17 @@ const orderSummarySlice = createSlice({
       })
       .addCase(fetchOrderSummary.fulfilled, (state, action) => {
         const {
-          address,
           selectedPaymentMethod,
           itemsPrice,
           deliveryCharges,
           vatRate,
           promotionDiscount,
         } = action.payload;
-        state.address = address;
-        state.selectedPaymentMethod = selectedPaymentMethod;
-        state.itemsPrice = itemsPrice;
-        state.deliveryCharges = deliveryCharges;
-        state.vatRate = vatRate;
-        state.promotionDiscount = promotionDiscount;
+        state.selectedPaymentMethod = selectedPaymentMethod || "";
+        state.itemsPrice = itemsPrice || 0;
+        state.deliveryCharges = deliveryCharges || 0;
+        state.vatRate = vatRate || 0;
+        state.promotionDiscount = promotionDiscount || 0;
         state.loading = false;
       })
       .addCase(fetchOrderSummary.rejected, (state) => {

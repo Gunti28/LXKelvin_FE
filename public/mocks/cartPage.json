@@ -44,6 +44,12 @@
       "price": 120,
       "quantity": 1,
       "originalPrice": 35,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#fbd7d7",
       "image": "/src/lib/common/assets/Images/apple.svg",
@@ -56,6 +62,12 @@
       "category": "vegetables",
       "price": 25,
       "originalPrice": 35,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 5,
       "Colour": "#e9f1d7",
       "image": "/src/lib/common/assets/Images/cauliflower.svg",
@@ -68,6 +80,12 @@
       "category": "fruits",
       "price": 40,
       "originalPrice": 35,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#EDD251",
       "image": "/src/lib/common/assets/Images/banana.svg",
@@ -80,6 +98,12 @@
       "category": "vegetables",
       "price": 30,
       "originalPrice": 40,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 15,
       "Colour": "#fef0dd",
       "image": "/src/lib/common/assets/Images/garlic.svg",
@@ -92,6 +116,12 @@
       "category": "fruits",
       "price": 28,
       "originalPrice": 35,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#E24C36",
       "image": "/src/lib/common/assets/Images/watermelon.svg",
@@ -104,6 +134,12 @@
       "category": "fruits",
       "price": 28,
       "originalPrice": 35,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#c6f5c3",
       "image": "/src/lib/common/assets/Images/kiwi.svg",
@@ -116,6 +152,12 @@
       "category": "vegetables",
       "price": 60,
       "originalPrice": 60,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#E24C36",
       "image": "/src/lib/common/assets/Images/capsicum.svg",
@@ -128,6 +170,12 @@
       "category": "vegetables",
       "price": 150,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#9B5366",
       "image": "/src/lib/common/assets/Images/onion.svg",
@@ -140,6 +188,12 @@
       "category": "fruits",
       "price": 200,
       "originalPrice": 200,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#F47775",
       "image": "/src/lib/common/assets/Images/strawberry.svg",
@@ -152,6 +206,12 @@
       "category": "milkProducts",
       "price": 50,
       "originalPrice": 100,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#86AB85",
       "image": "/src/lib/common/assets/Images/milk.svg",
@@ -164,6 +224,12 @@
       "category": "milkProducts",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#DE8634",
       "image": "/src/lib/common/assets/Images/cheese.svg",
@@ -176,6 +242,12 @@
       "category": "vegetables",
       "price": 350,
       "originalPrice": 550,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 20,
       "Colour": "#A7DD94",
       "image": "/src/lib/common/assets/Images/Artichoke.svg",
@@ -188,6 +260,12 @@
       "category": "vegetables",
       "price": 350,
       "originalPrice": 550,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 20,
       "Colour": "#AADBA2",
       "image": "/src/lib/common/assets/Images/Arugula.svg",
@@ -200,6 +278,12 @@
       "category": "vegetables",
       "price": 150,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 20,
       "Colour": "#DDED97",
       "image": "/src/lib/common/assets/Images/asparagus.svg",
@@ -212,6 +296,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#9CDA52",
       "image": "/src/lib/common/assets/Images/french-beans.svg",
@@ -224,6 +314,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#ABC25C",
       "image": "/src/lib/common/assets/Images/cucumber.svg",
@@ -236,6 +332,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#86AB85",
       "image": "/src/lib/common/assets/Images/chives.svg",
@@ -248,6 +350,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#B6B3BF",
       "image": "/src/lib/common/assets/Images/eggplant.svg",
@@ -260,6 +368,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#F0728B",
       "image": "/src/lib/common/assets/Images/beetroot.svg",
@@ -272,6 +386,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#E9C886",
       "image": "/src/lib/common/assets/Images/blacksalsify.svg",
@@ -284,6 +404,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#94CF7D",
       "image": "/src/lib/common/assets/Images/broccoli.svg",
@@ -296,6 +422,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#ADD76C",
       "image": "/src/lib/common/assets/Images/brusselsprouts.svg",
@@ -308,6 +440,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#F0C861",
       "image": "/src/lib/common/assets/Images/corn.svg",
@@ -320,6 +458,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#97C764",
       "image": "/src/lib/common/assets/Images/chineesecabbage.svg",
@@ -332,6 +476,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#C3CE72",
       "image": "/src/lib/common/assets/Images/endive.svg",
@@ -344,6 +494,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#F7B18C",
       "image": "/src/lib/common/assets/Images/carrot.svg",
@@ -356,6 +512,12 @@
       "category": "vegetables",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#A3DDD6",
       "image": "/src/lib/common/assets/Images/cauliflower.svg",
@@ -368,6 +530,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#E3B984",
       "image": "/src/lib/common/assets/Images/celeraic.svg",
@@ -380,6 +548,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#DDCEB7",
       "image": "/src/lib/common/assets/Images/mushroom.svg",
@@ -392,6 +566,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#EEE28E",
       "image": "/src/lib/common/assets/Images/chicory.svg",
@@ -404,6 +584,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#F47775",
       "image": "/src/lib/common/assets/Images/chilli.svg",
@@ -416,6 +602,12 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 60,
       "Colour": "#BBB4A2",
       "image": "/src/lib/common/assets/Images/white radish.svg",
@@ -428,6 +620,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#FF8F8D",
       "image": "/src/lib/common/assets/Images/cherry.svg",
@@ -440,6 +638,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#AADBA2",
       "image": "/src/lib/common/assets/Images/pomelo.svg",
@@ -452,6 +656,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#DDED97",
       "image": "/src/lib/common/assets/Images/grapes.svg",
@@ -464,6 +674,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#DFA013",
       "image": "/src/lib/common/assets/Images/plum.svg",
@@ -476,6 +692,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#ABC25C",
       "image": "/src/lib/common/assets/Images/amla.svg",
@@ -488,6 +710,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#86AB85",
       "image": "/src/lib/common/assets/Images/custurd apple.svg",
@@ -500,6 +728,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#B6B3BF",
       "image": "/src/lib/common/assets/Images/avacado.svg",
@@ -512,6 +746,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#F0728B",
       "image": "/src/lib/common/assets/Images/strawberry-new.svg",
@@ -524,6 +764,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#E9C886",
       "image": "/src/lib/common/assets/Images/pears.svg",
@@ -536,6 +782,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#94CF7D",
       "image": "/src/lib/common/assets/Images/green-apple.svg",
@@ -548,6 +800,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#D84A4C",
       "image": "/src/lib/common/assets/Images/rambutan.svg",
@@ -560,6 +818,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#F0C861",
       "image": "/src/lib/common/assets/Images/orange.svg",
@@ -572,6 +836,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#C8C460",
       "image": "/src/lib/common/assets/Images/starfruit.svg",
@@ -584,6 +854,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#A75720",
       "image": "/src/lib/common/assets/Images/jackfruit.svg",
@@ -596,6 +872,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#CA4858",
       "image": "/src/lib/common/assets/Images/lychee.svg",
@@ -608,6 +890,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#FEF2D1",
       "image": "/src/lib/common/assets/Images/chalisa-fig.svg",
@@ -620,6 +908,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#E3B984",
       "image": "/src/lib/common/assets/Images/musk-melon.svg",
@@ -632,6 +926,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#DDCEB7",
       "image": "/src/lib/common/assets/Images/black-berry.svg",
@@ -644,6 +944,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#F7E2CA",
       "image": "/src/lib/common/assets/Images/pomegranate.svg",
@@ -656,6 +962,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#F47775",
       "image": "/src/lib/common/assets/Images/watermelon.svg",
@@ -668,6 +980,12 @@
       "category": "fruits",
       "price": 250,
       "originalPrice": 250,
+      "selectedWeight": "1kg",
+      "priceByWeight": {
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
+      },
       "discount": 0,
       "Colour": "#EDD251",
       "image": "/src/lib/common/assets/Images/banana.svg",

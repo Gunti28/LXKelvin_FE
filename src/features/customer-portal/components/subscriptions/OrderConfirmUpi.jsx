@@ -1,33 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import confirmstyle from "../../../../lib/common/css/SubscriptionCards/ConfirmUpi.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { planNames } from "../../../../lib/constants";
+// import { planNames } from "../../../../lib/constants";
 import { confirmSubscription } from "../../../../store/slice/subscriptionPaySlice";
 import { useNavigate } from "react-router-dom";
-const ConfirmUpi = () => {
+
+const OrderConfirmUpi = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { selectedPlanId, price, selectedUpiApp, upiId } = useSelector(
-    (state) => state.subscription
-  );
-  const [agreed, setAgreed] = useState(false);
-  const [validated, setValidated] = useState(false);
+  const { selectedUpiApp, upiId } = useSelector((state) => state.subscription);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!agreed) {
-      setValidated(true);
-      return;
-    }
     dispatch(confirmSubscription());
-    navigate("/my_account");
+    navigate("/orderPlaced");
   };
-  const handleEditPlan = () => {
-    navigate("/subscriptions");
-  };
+
   const handleChangeUpi = () => {
     navigate("/upiPayment");
   };
@@ -39,26 +30,6 @@ const ConfirmUpi = () => {
       </strong>
 
       <div className="d-flex justify-content-center align-items-center flex-column">
-        <Card
-          className={`mt-3 border-top-0 ${confirmstyle.cardWrapper}`}
-          style={{ borderRadius: "1px", background: "#D4E7F380" }}
-        >
-          <Card.Body className=" d-flex justify-content-between align-items-center">
-            <div className="fs-bold text-start ">
-              {planNames[selectedPlanId]}
-              <div>
-                {" "}
-                {price !== null && (
-                  <div className="fw-semibold mt-2">&#8364;{price}</div>
-                )}
-              </div>
-            </div>
-
-            <Button variant="link" onClick={handleEditPlan}>
-              Edit Plan
-            </Button>
-          </Card.Body>
-        </Card>
         <Card
           className={` border-bottom-0 ${confirmstyle.cardWrapper}`}
           style={{ borderRadius: "1px", background: "#D4E7F380" }}
@@ -83,20 +54,11 @@ const ConfirmUpi = () => {
             fees.
           </p>
         </div>
-        <Form
-          noValidate
-          validated={validated}
-          onSubmit={handleSubmit}
-          className="w-100 d-flex flex-column align-items-center"
-        ></Form>
+
         <div className={`${confirmstyle.agree} mt-3 d-flex`}>
           <Form.Check
-            required
             type="checkbox"
             id="confirmCheck"
-            checked={agreed}
-            onChange={(e) => setAgreed(e.target.checked)}
-            isInvalid={validated && !agreed}
             style={{ width: "34px", height: "34px", marginTop: "5px" }}
           />
           <Form.Label
@@ -119,4 +81,4 @@ const ConfirmUpi = () => {
     </div>
   );
 };
-export default ConfirmUpi;
+export default OrderConfirmUpi;

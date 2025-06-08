@@ -17,8 +17,6 @@ const addressSlice = createSlice({
   name: "addresses",
   initialState: {
     list: [],
-    loading: false,
-    error: null,
     currentAddress: {
       houseNo: "",
       landMark: "",
@@ -26,21 +24,24 @@ const addressSlice = createSlice({
       state: "",
       pincode: "",
       type: "home",
-      
       lat: null,
       lng: null,
     },
+    loading: false,
+    error: null,
   },
   reducers: {
     setCurrentAddress(state, action) {
       state.currentAddress = action.payload;
     },
-    updateCurrentAddress(state, action) {
-      state.currentAddress = {
-        ...state.currentAddress,
-        ...action.payload,
-      };
+    updateCurrentAddress: (state, action) => {
+      state.currentAddress = { ...state.currentAddress, ...action.payload };
+      localStorage.setItem(
+        "selectedAddress",
+        JSON.stringify(state.currentAddress)
+      );
     },
+
     saveCurrentAddress(state) {
       if (!state.currentAddress) return;
       const idx = state.list.findIndex((a) => a.id === state.currentAddress.id);

@@ -2,14 +2,16 @@
   overflow-y: auto;
   background-color: #fff;
   padding: 20px;
-  height: 100vh;
+  height: 85vh;
   overflow-y: auto;
+  margin-bottom: 4rem !important;
 }
 
 .itemimg img {
   width: 200px;
   height: auto;
   object-fit: contain;
+  padding-left: 1rem;
 }
 
 .itemimg div {

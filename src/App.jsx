@@ -27,14 +27,15 @@ import ProductDetailsPage from "./features/customer-portal/components/products/P
 import SubscriptionCards from "./features/customer-portal/components/subscriptions/SubscriptionCard";
 import ChoosePayment from "./features/customer-portal/components/subscriptions/ChoosePayment";
 import SelectUpi from "./features/customer-portal/components/subscriptions/SelectUpi";
-import ConfirmUpi from "./features/customer-portal/components/subscriptions/ConfirmUpi";
-import CardPayment from "./features/customer-portal/components/subscriptions/CardPayment";
 import CartPage from "./features/customer-portal/components/cart/cartPage";
 import DeliveryAddress from "./features/customer-portal/components/deliveryaddress/DeliveryAddress";
-// import CardPayment from "./features/customer-portal/components/payment/cardpayment";
 import OrderSummery from "./features/customer-portal/components/cart/orderSummary";
-// import ChoosePayment from "./features/customer-portal/components/payment/choosepayment";
-
+import OrderPlacedModal from "./features/customer-portal/components/products/OrderPlacedModal";
+import ConfirmUpi from "./features/customer-portal/components/subscriptions/ConfirmUpi";
+import CardPayment from "./features/customer-portal/components/subscriptions/CardPayment";
+import OrderConfirmUpi from "./features/customer-portal/components/subscriptions/OrderConfirmUpi";
+import OrderCardPayment from "./features/customer-portal/components/subscriptions/OrderCardPayment";
+import OrderSelectUpi from "./features/customer-portal/components/subscriptions/OrderSelectUpi";
 function App() {
   return (
     <Router>
@@ -57,13 +58,15 @@ function App() {
           <Route path="subscriptions" element={<SubscriptionCards />} />
           <Route path="choosePayment" element={<ChoosePayment />} />
           <Route path="upiPayment" element={<SelectUpi />} />
+          <Route path="orderConfirmUpi" element={<OrderConfirmUpi />} />
+          <Route path="orderCardPayment" element={<OrderCardPayment />} />
           <Route path="confirmUpi" element={<ConfirmUpi />} />
           <Route path="cardPayment" element={<CardPayment />} />
           <Route path="cart" element={<CartPage />} />
-          <Route path="deliveryaddress" element={<DeliveryAddress />} />
-          {/* <Route path="cardpayment" element={<CardPayment />} /> */}
-          <Route path="ordersummary" element={<OrderSummery />} />
-          {/* <Route path="choosepayment" element={<ChoosePayment />} /> */}
+          <Route path="deliveryAddress" element={<DeliveryAddress />} />
+          <Route path="orderSummary" element={<OrderSummery />} />
+          <Route path="orderPlaced" element={<OrderPlacedModal />} />
+          <Route path="orderUpiPayment" element={<OrderSelectUpi />} />
           <Route path="my_account" element={<ProfileLayout />}>
             <Route
               index

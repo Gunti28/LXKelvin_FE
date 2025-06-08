@@ -19,7 +19,7 @@ const CartPage = () => {
 
   const handlePlaceOrder = () => {
     console.log("Placing order...");
-    navigate("/deliveryaddress");
+    navigate("/deliveryAddress");
   };
 
   const cartItems = useSelector((state) => state.cart.items ?? []);
@@ -30,16 +30,11 @@ const CartPage = () => {
 
   const subtotal = cartItems.reduce((sum, item) => {
     const price = item.priceByWeight?.[item.selectedWeight] ?? item.price ?? 0;
-    const itemSubtotal = price * item.quantity;
-    console.log(
-      `Subtotal for ${item.name}: ${price} x ${item.quantity} = ${itemSubtotal}`
-    );
-    return sum + itemSubtotal;
+    return sum + price * item.quantity;
   }, 0);
 
   const totalDiscount = cartItems.reduce((sum, item) => {
     const discount = item.quantity > 0 ? item.discount || 0 : 0;
-    console.log(`Discount for ${item.name}: ${discount}`);
     return sum + discount;
   }, 0);
 
@@ -63,135 +58,181 @@ const CartPage = () => {
           className={`${CartModule.mainitemsec} justify-content-center align-items-center`}
           style={{ marginBottom: "20px", paddingRight: "10px" }}
         >
-          {cartItems.map((item) => {
-            const price =
-              item.priceByWeight?.[item.selectedWeight] ?? item.price ?? 0;
-            const itemTotal = price * item.quantity;
-            console.log(
-              `Rendering ${item.name}: quantity = ${item.quantity}, selectedWeight = ${item.selectedWeight}, price = ${price}, total = ${itemTotal}`
-            );
-
-            return (
-              <div
-                key={item.id}
-                className={`d-flex flex-row justify-content-between align-items-center pt-4 ${CartModule.cartItem}`}
-              >
-                <div
-                  className={`d-flex flex-row justify-content-center align-items-center gap-3 ${CartModule.itemimg}`}
+          {
+            // Group items by category and render
+            Object.entries(
+              cartItems.reduce((groups, item) => {
+                const category = item.category || "Others";
+                if (!groups[category]) groups[category] = [];
+                groups[category].push(item);
+                return groups;
+              }, {})
+            ).map(([categoryName, items]) => (
+              <div key={categoryName} style={{ marginBottom: "20px" }}>
+                <h5
+                  style={{
+                    fontWeight: "600",
+                    color: "#0a5c23",
+                    borderBottom: "1px solid #ccc",
+                  }}
                 >
-                  <img src={item.image} alt={item.name} />
-                  <div className={CartModule.imgtext}>
-                    <div>{item.name}</div>
-                    <p>
-                      <MdOutlineEuro />
-                      {itemTotal.toFixed(2)}
-                      <span className="ms-3" style={{ color: "#666666" }}>
-                        PMD <MdOutlineEuro /> {item.originalPrice}
-                      </span>
-                    </p>
-                  </div>
-                </div>
+                  {categoryName}
+                </h5>
 
-                <div
-                  style={{ marginRight: 150 }}
-                  className={CartModule.itembtn}
-                >
-                  <div className="d-flex flex-row justify-content-center align-items-center gap-3 w-200">
-                    <SplitButton
-                      as={ButtonGroup}
-                      size="sm"
-                      variant="light"
-                      title={item.selectedWeight ?? "Select Weight"}
-                      onSelect={(e) => {
-                        console.log(`Changed weight for ${item.name} to ${e}`);
-                        dispatch(updateWeight({ id: item.id, weight: e }));
-                      }}
+                {items.map((item) => {
+                  const price =
+                    item.priceByWeight?.[item.selectedWeight] ??
+                    item.price ??
+                    0;
+                  const itemTotal = price * item.quantity;
+
+                  return (
+                    <div
+                      key={item.id}
+                      className={`d-flex flex-row justify-content-between align-items-center pt-4 ${CartModule.cartItem}`}
                     >
-                      {Object.keys(item.priceByWeight ?? {}).map(
-                        (weightOption) => (
-                          <Dropdown.Item
-                            key={weightOption}
-                            eventKey={weightOption}
+                      <div
+                        className={`d-flex flex-row justify-content-center align-items-center gap-3 ${CartModule.itemimg}`}
+                      >
+                        <img src={item.image} alt={item.name} />
+                        <div className={CartModule.imgtext}>
+                          <div>{item.name}</div>
+                          <p
+                            className="d-flex flex-row align-items-center"
+                            style={{ gap: "10px", marginBottom: 0 }}
                           >
-                            {weightOption}
-                          </Dropdown.Item>
-                        )
-                      )}
-                    </SplitButton>
+                            <span
+                              className="d-flex align-items-center"
+                              style={{ gap: "2px" }}
+                            >
+                              <MdOutlineEuro />
+                              {price.toFixed(2)}
+                            </span>
+                            <span
+                              className="d-flex align-items-center"
+                              style={{ color: "#666666", gap: "4px" }}
+                            >
+                              PMD <MdOutlineEuro /> {item.originalPrice}
+                            </span>
+                          </p>
+                        </div>
+                      </div>
 
-                    <div className="d-flex flex-row justify-content-center align-items-center gap-2">
-                      <Button
-                        style={{
-                          borderWidth: 1,
-                          width: 35,
-                          backgroundColor: "white",
-                          color: "black",
-                          borderColor: "#FF9900",
-                        }}
-                        onClick={() => {
-                          console.log(`Decreased quantity for ${item.name}`);
-                          dispatch(
-                            updateQuantity({
-                              id: item.id,
-                              changeInQuantity: -1,
-                            })
-                          );
-                        }}
+                      <div
+                        style={{ marginRight: 150 }}
+                        className={CartModule.itembtn}
                       >
-                        -
-                      </Button>
-                      <p className={CartModule.midCount}>{item.quantity}</p>
-                      <Button
-                        style={{
-                          borderWidth: 1,
-                          backgroundColor: "white",
-                          color: "black",
-                          borderColor: "#FF9900",
-                        }}
-                        onClick={() => {
-                          console.log(`Increased quantity for ${item.name}`);
-                          dispatch(
-                            updateQuantity({
-                              id: item.id,
-                              changeInQuantity: 1,
-                            })
-                          );
-                        }}
-                      >
-                        +
-                      </Button>
+                        <div className="d-flex flex-row justify-content-center align-items-center gap-3 w-200">
+                          <SplitButton
+                            as={ButtonGroup}
+                            size="sm"
+                            variant="light"
+                            title={item.selectedWeight ?? "Select Weight"}
+                            onSelect={(e) => {
+                              dispatch(
+                                updateWeight({ id: item.id, weight: e })
+                              );
+                            }}
+                          >
+                            {Object.keys(item.priceByWeight ?? {}).map(
+                              (weightOption) => (
+                                <Dropdown.Item
+                                  key={weightOption}
+                                  eventKey={weightOption}
+                                >
+                                  {weightOption}
+                                </Dropdown.Item>
+                              )
+                            )}
+                          </SplitButton>
+
+                          <div className="d-flex flex-row justify-content-center align-items-center gap-2">
+                            <Button
+                              style={{
+                                borderWidth: 1,
+                                width: 35,
+                                backgroundColor: "white",
+                                color: "black",
+                                borderColor: "#FF9900",
+                              }}
+                              onClick={() => {
+                                dispatch(
+                                  updateQuantity({
+                                    id: item.id,
+                                    changeInQuantity: -1,
+                                  })
+                                );
+                              }}
+                            >
+                              -
+                            </Button>
+                            <p className={CartModule.midCount}>
+                              {item.quantity}
+                            </p>
+                            <Button
+                              style={{
+                                borderWidth: 1,
+                                backgroundColor: "white",
+                                color: "black",
+                                borderColor: "#FF9900",
+                              }}
+                              onClick={() => {
+                                dispatch(
+                                  updateQuantity({
+                                    id: item.id,
+                                    changeInQuantity: 1,
+                                  })
+                                );
+                              }}
+                            >
+                              +
+                            </Button>
+                          </div>
+                        </div>
+
+                        <div className="d-flex flex-row justify-content-center align-items-center gap-2 mt-2">
+                          <Button
+                            variant="outline-danger"
+                            size="sm"
+                            onClick={() => {
+                              dispatch(deleteCartItem(item.id));
+                            }}
+                          >
+                            Delete
+                          </Button>
+                          <Button variant="outline-primary" size="sm">
+                            Save for Later
+                          </Button>
+                        </div>
+                      </div>
+
+                      <div className={CartModule.itemprice}>
+                        <div
+                          className="d-flex align-items-center"
+                          style={{ gap: "4px" }}
+                        >
+                          <MdOutlineEuro />
+                          {itemTotal.toFixed(2)}
+                        </div>
+                        <div
+                          className="d-flex align-items-center"
+                          style={{
+                            color: "#17B017",
+                            fontSize: 14,
+                            gap: "4px",
+                          }}
+                        >
+                          Saved:
+                          <MdOutlineEuro />
+                          {(item.discount ?? 0).toFixed(2)}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="d-flex flex-row justify-content-center align-items-center gap-2 mt-2">
-                    <Button
-                      variant="outline-danger"
-                      size="sm"
-                      onClick={() => {
-                        console.log(`Deleting ${item.name}`);
-                        dispatch(deleteCartItem(item.id));
-                      }}
-                    >
-                      Delete
-                    </Button>
-                    <Button variant="outline-primary" size="sm">
-                      Save for Later
-                    </Button>
-                  </div>
-                </div>
-
-                <div className={CartModule.itemprice}>
-                  <div>
-                    <MdOutlineEuro /> {itemTotal.toFixed(2)}
-                  </div>
-                  <div style={{ color: "#17B017", fontSize: 14 }}>
-                    discount: <MdOutlineEuro />{" "}
-                    {(item.discount ?? 0).toFixed(2)}
-                  </div>
-                </div>
+                  );
+                })}
               </div>
-            );
-          })}
+            ))
+          }
         </div>
 
         <div
@@ -209,7 +250,6 @@ const CartPage = () => {
             <Button
               variant="light"
               onClick={() => {
-                console.log("Navigating to all categories");
                 navigate("/products/all-categories");
               }}
             >
@@ -222,18 +262,32 @@ const CartPage = () => {
             className="d-flex justify-content-between align-items-center flex-row mt-3 pe-5"
           >
             <div className="ps-3 pt-2 pb-2 d-flex flex-column text-start gap-3">
-              <div>
-                Subtotal({itemCount} items): <MdOutlineEuro />{" "}
-                {subtotal.toFixed(2)}
+              <div
+                className="d-flex justify-content-between"
+                style={{ fontSize: 16 }}
+              >
+                <span>Subtotal ({itemCount} items):</span>
+                <span
+                  className="d-flex align-items-center"
+                  style={{ gap: 2, padding: 10 }}
+                >
+                  <MdOutlineEuro />
+                  {subtotal.toFixed(2)}
+                </span>
               </div>
-              <div style={{ fontSize: 14 }}>
-                Discount: <MdOutlineEuro /> {totalDiscount.toFixed(2)}
-              </div>
-              <div style={{ fontWeight: "bold", fontSize: 16 }}>
-                Total Amount: <MdOutlineEuro />{" "}
-                {(subtotal - totalDiscount).toFixed(2)}
+
+              <div
+                className="d-flex justify-content-between"
+                style={{ fontSize: 14 }}
+              >
+                <span>Saved:</span>
+                <span className="d-flex align-items-center" style={{ gap: 1 }}>
+                  <MdOutlineEuro />
+                  {totalDiscount.toFixed(2)}
+                </span>
               </div>
             </div>
+
             <Button
               className="w-25 border-0"
               style={{ backgroundColor: "#FF9900", height: 40 }}
