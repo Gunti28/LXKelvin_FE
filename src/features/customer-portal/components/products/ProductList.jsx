@@ -5,9 +5,16 @@ import styles from "../../../../lib/common/css/products/Listing.module.css";
 import { Const } from "../../../../lib/constants/index";
 import { addToCart } from "../../../../../src/store/slice/cartSlice";
 
+import OverLayLoader from "../overLayLoader/OverLayLoader";
 const ProductList = () => {
   const { products } = useSelector((state) => state.products);
   const { items: cartItems } = useSelector((state) => state.cart);
+
+  /**
+   * we need to add changes on loaderCategories once service is placed
+   */
+  const [loaderCategories, serLoaderCategories] = useState(true);
+
   const location = useLocation();
   const path = location.pathname.slice(10);
   const dispatch = useDispatch();
@@ -33,6 +40,24 @@ const ProductList = () => {
   };
 
   const filteredProducts = (() => {
+  useEffect(() => {
+    setProducts(products);
+    fetchData(products);
+    /**
+     * this TimeOut function we need to re-wramp once service is in place
+     */
+    serLoaderCategories(true);
+    setTimeout(() => {
+      serLoaderCategories(false);
+    }, 1500);
+  }, [products, location.pathname]);
+
+  /**
+   * This function is need to be change once BE end points are deployed on server
+   * @param {*} callByRef
+   */
+  const fetchData = (callByRef) => {
+
     const filter = getCategory();
     let filtered = products;
 
@@ -78,6 +103,7 @@ const ProductList = () => {
 
   return (
     <div className={styles.listingContainer}>
+      <OverLayLoader isLoader={loaderCategories} />
       <h1 className={styles.pageTitle}>
         {path === "all-categories"
           ? "All Products"

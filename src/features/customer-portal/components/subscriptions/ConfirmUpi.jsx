@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -16,6 +17,9 @@ const ConfirmUpi = () => {
   const [agreed, setAgreed] = useState(false);
   const [validated, setValidated] = useState(false);
 
+  const [agreed, setAgreed] = useState(false);
+  const [validated, setValidated] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!agreed) {
@@ -23,7 +27,7 @@ const ConfirmUpi = () => {
       return;
     }
     dispatch(confirmSubscription());
-    navigate("/my_account");
+    navigate("/vipSuccess");
   };
   const handleEditPlan = () => {
     navigate("/subscriptions");

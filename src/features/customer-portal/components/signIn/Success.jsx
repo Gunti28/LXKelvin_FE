@@ -4,7 +4,8 @@ import ModelPage from "../../../../lib/common/css/registration/ModelPage.module.
 import { Button } from "react-bootstrap";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import { FOOTER_IMG } from "../../../../lib/constants/Image_Constants";
+
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 
 const Success = () => {
   const navigate = useNavigate();
@@ -44,7 +45,8 @@ const Success = () => {
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
-          src={FOOTER_IMG}
+
+          src={IMAGES.footer_Img}
           className="image-fluid w-100 "
           style={{ objectFit: "cover" }}
         />

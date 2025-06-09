@@ -36,6 +36,13 @@ import CardPayment from "./features/customer-portal/components/subscriptions/Car
 import OrderConfirmUpi from "./features/customer-portal/components/subscriptions/OrderConfirmUpi";
 import OrderCardPayment from "./features/customer-portal/components/subscriptions/OrderCardPayment";
 import OrderSelectUpi from "./features/customer-portal/components/subscriptions/OrderSelectUpi";
+
+import PaymentFailed from "./features/customer-portal/components/MessageModals/PaymentFailed";
+import Pay1 from "./features/customer-portal/components/MessageModals/PaymentSuccess";
+import Thankyou from "./features/customer-portal/components/MessageModals/ThankYou";
+import VipSuccess from "./features/customer-portal/components/MessageModals/VipSuccess";
+
+
 function App() {
   return (
     <Router>
@@ -47,7 +54,7 @@ function App() {
           <Route path="success" element={<Success />} />
           <Route path="products" element={<ListingLayoutContainer />}>
             <Route index element={<ListingComponent />} />
-            <Route path="all-categories" element={<ListingComponent />} />
+            <Route path="all-categories" element={<ProductList />} />
             <Route path="vegetables" element={<ProductList />} />
             <Route path="fruits" element={<ProductList />} />
             <Route path="seasonalVegetables" element={<ProductList />} />
@@ -67,6 +74,12 @@ function App() {
           <Route path="orderSummary" element={<OrderSummery />} />
           <Route path="orderPlaced" element={<OrderPlacedModal />} />
           <Route path="orderUpiPayment" element={<OrderSelectUpi />} />
+
+          <Route path="vipSuccess" element={<VipSuccess />} />
+          <Route path="paymentFailed" element={<PaymentFailed />} />
+          <Route path="paymentSuccess" element={<Pay1 />} />
+          <Route path="thankYou" element={<Thankyou />} />
+
           <Route path="my_account" element={<ProfileLayout />}>
             <Route
               index

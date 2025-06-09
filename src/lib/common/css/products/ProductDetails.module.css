@@ -4,6 +4,7 @@
   background-color: #fff;
   height: 100%;
   width: 100% !important;
+  margin-bottom: 5rem !important;
 }
 
 .productPage .breadcrumb {
@@ -21,7 +22,6 @@
   position: relative;
   width: 100%;
   height: 60vh;
-  border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -29,11 +29,11 @@
   justify-content: center;
   background: #fff;
 }
-
 .mainPreviewImage {
-  width: 100%;
+  width: 70%;
   height: 100%;
-  object-fit: cover;
+  border-radius: 4px;
+  /* object-fit: cover; */
   transition: transform 0.3s ease;
 }
 
@@ -78,10 +78,10 @@
 /* Carousel Controls */
 .carouselControl {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
   background: rgba(255, 255, 255, 0.8);
-  border: none;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -91,14 +91,11 @@
   justify-content: center;
   cursor: pointer;
   color: #333;
-  transition: all 0.3s ease-in-out;
 }
 
 .carouselControl:hover {
   background: rgba(255, 255, 255, 1);
   color: #ffa500;
-  transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carouselControl .prev {
@@ -123,28 +120,25 @@
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
-.HomeText{
+.HomeText {
   cursor: pointer;
-
 }
-.HomeText:hover{
-  color:#ff9900
+.HomeText:hover {
+  color: #ff9900;
 }
-.CategoryText{
-  cursor: pointer;
-  margin-left: 0.1rem;
-
-}
-.CategoryText:hover{
-  color:#ff9900
-}
-.ProductText{
+.CategoryText {
   cursor: pointer;
   margin-left: 0.1rem;
-
 }
-.ProductText:hover{
-  color:#ff9900
+.CategoryText:hover {
+  color: #ff9900;
+}
+.ProductText {
+  cursor: pointer;
+  margin-left: 0.1rem;
+}
+.ProductText:hover {
+  color: #ff9900;
 }
 
 .ProductTitle {
@@ -251,6 +245,7 @@
 .pmdPrice {
   color: #666;
   font-size: 0.8rem;
+  text-decoration: line-through;
 }
 
 .discount {
@@ -327,7 +322,7 @@
 }
 
 .offerBanner {
-  background: linear-gradient(to right, #99742d, #ffc14b);
+  background: linear-gradient(to right, #99742d, #ffc14b, #e8b919);
   padding: 0.8rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
@@ -343,11 +338,11 @@
 }
 
 .vipTag {
-  background: #7f1d1d;
-  color: white;
-  padding: 2px 8px;
+  background: #880e4f;
+  color: #ffc14b;
+  padding: 0.5rem 0.3rem;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 0.8rem;
   margin: 0 4px;
 }
 
@@ -469,6 +464,7 @@
 .customerFeedback {
   margin-top: 2.5rem;
   padding: 1.3rem;
+  margin-bottom: 3rem !important;
 }
 
 .customerFeedback h3 {
