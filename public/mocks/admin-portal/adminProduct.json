@@ -1,0 +1,169 @@
+
+[
+  {
+    "id": "PRD-001",
+    "name": "Fresh Tomatoes",
+    "category": "Vegetables",
+    "price": 234,
+    "inventory": 45,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&h=100&fit=crop",
+    "description": "Fresh organic tomatoes",
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "PRD-002",
+    "name": "Red Apples",
+    "category": "Fruits",
+    "price": 180,
+    "inventory": 67,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&h=100&fit=crop",
+    "description": "Sweet red apples",
+    "createdAt": "2024-01-14T09:15:00Z"
+  },
+  {
+    "id": "PRD-003",
+    "name": "Fresh Lassi",
+    "category": "Milk Products",
+    "price": 85,
+    "inventory": 23,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&h=100&fit=crop",
+    "description": "Traditional yogurt drink",
+    "createdAt": "2024-01-13T14:20:00Z"
+  },
+  {
+    "id": "PRD-004",
+    "name": "Green Broccoli",
+    "category": "Vegetables",
+    "price": 156,
+    "inventory": 0,
+    "status": "Out of Stock",
+    "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=100&h=100&fit=crop",
+    "description": "Fresh green broccoli",
+    "createdAt": "2024-01-12T16:45:00Z"
+  },
+  {
+    "id": "PRD-005",
+    "name": "Organic Bananas",
+    "category": "Fruits",
+    "price": 95,
+    "inventory": 89,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=100&h=100&fit=crop",
+    "description": "Organic ripe bananas",
+    "createdAt": "2024-01-11T11:30:00Z"
+  },
+    {
+    "id": "PRD-001",
+    "name": "Fresh Tomatoes",
+    "category": "Vegetables",
+    "price": 234,
+    "inventory": 45,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&h=100&fit=crop",
+    "description": "Fresh organic tomatoes",
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "PRD-002",
+    "name": "Red Apples",
+    "category": "Fruits",
+    "price": 180,
+    "inventory": 67,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&h=100&fit=crop",
+    "description": "Sweet red apples",
+    "createdAt": "2024-01-14T09:15:00Z"
+  },
+  {
+    "id": "PRD-003",
+    "name": "Fresh Lassi",
+    "category": "Milk Products",
+    "price": 85,
+    "inventory": 23,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&h=100&fit=crop",
+    "description": "Traditional yogurt drink",
+    "createdAt": "2024-01-13T14:20:00Z"
+  },
+  {
+    "id": "PRD-004",
+    "name": "Green Broccoli",
+    "category": "Vegetables",
+    "price": 156,
+    "inventory": 0,
+    "status": "Out of Stock",
+    "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=100&h=100&fit=crop",
+    "description": "Fresh green broccoli",
+    "createdAt": "2024-01-12T16:45:00Z"
+  },
+  {
+    "id": "PRD-005",
+    "name": "Organic Bananas",
+    "category": "Fruits",
+    "price": 95,
+    "inventory": 89,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=100&h=100&fit=crop",
+    "description": "Organic ripe bananas",
+    "createdAt": "2024-01-11T11:30:00Z"
+  },
+    {
+    "id": "PRD-001",
+    "name": "Fresh Tomatoes",
+    "category": "Vegetables",
+    "price": 234,
+    "inventory": 45,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1546470427-227e0fc3e28b?w=100&h=100&fit=crop",
+    "description": "Fresh organic tomatoes",
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "PRD-002",
+    "name": "Red Apples",
+    "category": "Fruits",
+    "price": 180,
+    "inventory": 67,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&h=100&fit=crop",
+    "description": "Sweet red apples",
+    "createdAt": "2024-01-14T09:15:00Z"
+  },
+  {
+    "id": "PRD-003",
+    "name": "Fresh Lassi",
+    "category": "Milk Products",
+    "price": 85,
+    "inventory": 23,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1571212515416-c9b7886c9524?w=100&h=100&fit=crop",
+    "description": "Traditional yogurt drink",
+    "createdAt": "2024-01-13T14:20:00Z"
+  },
+  {
+    "id": "PRD-004",
+    "name": "Green Broccoli",
+    "category": "Vegetables",
+    "price": 156,
+    "inventory": 0,
+    "status": "Out of Stock",
+    "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=100&h=100&fit=crop",
+    "description": "Fresh green broccoli",
+    "createdAt": "2024-01-12T16:45:00Z"
+  },
+  {
+    "id": "PRD-005",
+    "name": "Organic Bananas",
+    "category": "Fruits",
+    "price": 95,
+    "inventory": 89,
+    "status": "Active",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=100&h=100&fit=crop",
+    "description": "Organic ripe bananas",
+    "createdAt": "2024-01-11T11:30:00Z"
+  }
+
+]

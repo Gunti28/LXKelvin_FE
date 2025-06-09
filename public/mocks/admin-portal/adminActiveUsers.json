@@ -1,0 +1,32 @@
+{
+  "activeUsers": [
+    {
+      "name": "Thomas Anderson",
+      "email": "t.anderson@example.com",
+      "action": "Added 3 items to cart",
+      "time": "5 minutes ago",
+      "img": "/assets/Images/activeuser1.svg"
+    },
+    {
+      "name": "Lisa Johnson",
+      "email": "lisa.j@example.com",
+      "action": "Completed checkout",
+      "time": "12 minutes ago",
+      "img":"/assets/Images/activeuser2.svg"
+    },
+    {
+      "name": "Kevin Patel",
+      "email": "k.patel@example.com",
+      "action": "Viewed 8 products",
+      "time": "18 minutes ago",
+      "img": "/assets/Images/activeuser3.svg"
+    },
+    {
+      "name": "Maria Garcia",
+      "email": "m.garcia@example.com",
+      "action": "Left product review",
+      "time": "30 minutes ago",
+      "img": "/assets/Images/activeuser4.svg"
+    }
+  ]
+}

@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+
+
+import React from "react";
 import { GrPowerCycle } from "react-icons/gr";
 import { LuFilter } from "react-icons/lu";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilters } from "../../../../store/slice/admin-portal/admin-productSlice";
 
 const ProductFilters = () => {
-  const [category, setCategory] = useState("");
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
-  const [inventory, setInventory] = useState("");
-  const [status, setStatus] = useState("");
+  const dispatch = useDispatch();
+  const filters = useSelector((state) => state.adminProducts.filters);
+
+  const handleFilterChange = (filterName, value) => {
+    dispatch(setFilters({ [filterName]: value }));
+  };
 
   const handleReset = () => {
-    setCategory("");
-    setMinPrice("");
-    setMaxPrice("");
-    setInventory("");
-    setStatus("");
+    dispatch(setFilters({
+      category: "",
+      minPrice: "",
+      maxPrice: "",
+      inventory: "",
+      status: ""
+    }));
   };
 
   return (
@@ -26,7 +33,6 @@ const ProductFilters = () => {
         </p>
       </div>
 
-      {/* Responsive Grid for Filter Inputs */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {/* Category */}
         <div className="flex flex-col">
@@ -34,8 +40,8 @@ const ProductFilters = () => {
             Category
           </label>
           <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            value={filters.category}
+            onChange={(e) => handleFilterChange('category', e.target.value)}
             className="border rounded px-3 py-2 text-sm w-full"
           >
             <option value="">All Categories</option>
@@ -56,15 +62,15 @@ const ProductFilters = () => {
             <input
               type="number"
               placeholder="Min"
-              value={minPrice}
-              onChange={(e) => setMinPrice(e.target.value)}
+              value={filters.minPrice}
+              onChange={(e) => handleFilterChange('minPrice', e.target.value)}
               className="border rounded px-3 py-2 text-sm w-1/2"
             />
             <input
               type="number"
               placeholder="Max"
-              value={maxPrice}
-              onChange={(e) => setMaxPrice(e.target.value)}
+              value={filters.maxPrice}
+              onChange={(e) => handleFilterChange('maxPrice', e.target.value)}
               className="border rounded px-3 py-2 text-sm w-1/2"
             />
           </div>
@@ -76,14 +82,14 @@ const ProductFilters = () => {
             Inventory
           </label>
           <select
-            value={inventory}
-            onChange={(e) => setInventory(e.target.value)}
+            value={filters.inventory}
+            onChange={(e) => handleFilterChange('inventory', e.target.value)}
             className="border rounded px-3 py-2 text-sm w-full"
           >
             <option value="">All</option>
-            <option value="Fruits">Fruits</option>
-            <option value="Vegetables">Vegetables</option>
-            <option value="Milk products">Milk products</option>
+            <option value="In Stock">In Stock</option>
+            <option value="Low Stock">Low Stock</option>
+            <option value="Out of Stock">Out of Stock</option>
           </select>
         </div>
 
@@ -93,14 +99,14 @@ const ProductFilters = () => {
             Status
           </label>
           <select
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
+            value={filters.status}
+            onChange={(e) => handleFilterChange('status', e.target.value)}
             className="border rounded px-3 py-2 text-sm w-full"
           >
             <option value="">All Status</option>
             <option value="Active">Active</option>
             <option value="Pending">Pending</option>
-            <option value="Out of stock">Out of stock</option>
+            <option value="Out of Stock">Out of Stock</option>
           </select>
         </div>
       </div>
@@ -109,15 +115,13 @@ const ProductFilters = () => {
       <div className="flex flex-wrap gap-4">
         <button
           className="bg-black text-white flex items-center gap-2 px-3 py-2 rounded shadow hover:bg-gray-800"
-          onClick={() =>
-            console.log({ category, minPrice, maxPrice, inventory, status })
-          }
+          onClick={() => console.log('Filters applied:', filters)}
         >
           <LuFilter />
           Apply Filters
         </button>
         <button
-          className="border border-gray-300 text-black px-3 py-2 rounded bg-white hover:bg-gray-100 flex  gap-2 items-center"
+          className="border border-gray-300 text-black px-3 py-2 rounded bg-white hover:bg-gray-100 flex gap-2 items-center"
           onClick={handleReset}
         >
           <GrPowerCycle /> <span>Reset</span>

@@ -1,25 +1,23 @@
-
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updatePricingField } from "../../../../../store/slice/admin-portal/admin-productPricingSlice";
 
-const PricingTab = ({ data, onChange }) => {
-  // Destructure pricing info from parent's state and product status from top-level state
-  const { regular, sale, taxSetting, taxExempt, onSale } = data.pricing;
-  const productStatus = data.status;
+const PricingTab = ({onSave, onCancel}) => {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.adminProductPricing);
+
+  // Destructure pricing info
+  const { regular, sale, taxSetting, taxExempt, onSale, status } = data;
 
   // Handler to update pricing fields
   const handlePricingChange = (field, value) => {
-    onChange("pricing", { ...data.pricing, [field]: value });
-  };
-
-  // Handler to update product status (top-level state)
-  const handleStatusChange = (value) => {
-    onChange("status", value);
+    dispatch(updatePricingField({ field, value }));
   };
 
   return (
     <div className="bg-white p-2 w-full max-w-3xl">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
-        <div className="">
+        <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Regular Price (€)
           </label>
@@ -45,11 +43,11 @@ const PricingTab = ({ data, onChange }) => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-4">
         <div>
           <label className="text-sm font-medium">On Sale</label>
           <p className="text-sm text-gray-500">
-             Enable this to show the the product is on sale
+            Enable this to show the product is on sale
           </p>
         </div>
         <label className="inline-flex items-center cursor-pointer">
@@ -78,7 +76,7 @@ const PricingTab = ({ data, onChange }) => {
         </select>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-4">
         <div>
           <label className="text-sm font-medium">Tax exempt</label>
           <p className="text-sm text-gray-500">
@@ -100,8 +98,8 @@ const PricingTab = ({ data, onChange }) => {
         <div className="flex items-center gap-2">
           <label className="font-medium">Product Status :</label>
           <select
-            value={data.status}
-            onChange={(e) => handleStatusChange("status", e.target.value)}
+            value={status}
+            onChange={(e) => handlePricingChange("status", e.target.value)}
             className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option>Active</option>
@@ -109,10 +107,10 @@ const PricingTab = ({ data, onChange }) => {
           </select>
         </div>
 
-        <button className="border-1 px-3 py-1 rounded border-gray-400">
+        <button className="border-1 px-3 py-1 rounded border-gray-400" onClick={onCancel}>
           Cancel
         </button>
-        <button className="border-1 px-3 py-1 rounded border-gray-400 bg-black text-white">
+        <button className="border-1 px-3 py-1 rounded border-gray-400 bg-black text-white" onClick={onSave}>
           Add Product
         </button>
       </div>

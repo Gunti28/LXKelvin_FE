@@ -4,38 +4,63 @@ import { format } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { CalendarDays, Download } from "lucide-react";
-import { FaArrowUp } from "react-icons/fa6";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa6";
+
 import SalesByDate from "./SalesByDate";
 import SalesByCustomer from "./SalesByCustomers";
 import CustomReport from "./CustomReport";
 import SalesByCategory from "./SalesByCategory";
 import SalesByProduct from "./SalesByProduct";
 
-const ReportPage = ({ onDateSelect }) => {
+const ReportPage = () => {
   const [activeTab, setActiveTab] = useState("SalesByDate");
   const [chartType, setChartType] = useState("Line");
-  const [selectedRange, setSelectedRange] = useState(null);
   const [showCalendar, setShowCalendar] = useState(false);
   const [selectionRange, setSelectionRange] = useState({
     startDate: new Date(),
     endDate: new Date(),
     key: "selection",
   });
-
   const [hasSelected, setHasSelected] = useState(false);
+
   const handleSelect = (ranges) => {
     const selected = ranges.selection;
     setSelectionRange(selected);
     setShowCalendar(false);
     setHasSelected(true);
-    onDateSelect && onDateSelect(selected);
   };
+
+  const selectedRange = hasSelected
+    ? { startDate: selectionRange.startDate, endDate: selectionRange.endDate }
+    : null;
+
+  const kpis = [
+    {
+      label: "Average Order value",
+      value: "€67.00",
+      change: 5.2,
+    },
+    {
+      label: "Conversion Rate",
+      value: "5.24%",
+      change: 0.8,
+    },
+    {
+      label: "Cart Abandonment",
+      value: "68.7%",
+      change: -2.2,
+    },
+    {
+      label: "Customer Acquisition cost",
+      value: "€24.01",
+      change: -5.2,
+    },
+  ];
 
   return (
     <div className="space-y-4 mb-20">
-      <p className="lg:text-2xl font-semibold sm:text-base">
-        Reports & Analytics
-      </p>
+      <p className="lg:text-2xl font-semibold sm:text-base">Reports & Analytics</p>
+
       <div className="bg-white p-4 rounded shadow">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5 me-2 relative">
           <div className="w-full sm:w-auto">
@@ -45,10 +70,10 @@ const ReportPage = ({ onDateSelect }) => {
             >
               <CalendarDays size={16} />
               {hasSelected
-                ? `${format(
-                    selectionRange.startDate,
+                ? `${format(selectionRange.startDate, "MMM d, yyyy")} - ${format(
+                    selectionRange.endDate,
                     "MMM d, yyyy"
-                  )} - ${format(selectionRange.endDate, "MMM d, yyyy")}`
+                  )}`
                 : "Select the date"}
             </button>
 
@@ -72,55 +97,29 @@ const ReportPage = ({ onDateSelect }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-5 ">
-          <div className="bg-white p-3 rounded border border-black">
-            <div className="flex flex-row justify-between">
-              <h6 className="text-sm mb-1 text-gray-500">
-                Average Order Value
-              </h6>
-              <div className="flex flex-row text-green-900 text-[10px] h-[18px] bg-green-200 px-1 py-[2px] rounded">
-                <FaArrowUp />
-                <p>+5.2%</p>
+        {/* KPIs */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+          {kpis.map((kpi, index) => (
+            <div
+              key={index}
+              className="border rounded p-4 flex flex-col justify-between"
+            >
+              <p className="text-sm text-gray-500 mb-1">{kpi.label}</p>
+              <p className="text-xl font-semibold">{kpi.value}</p>
+              <div className="flex items-center text-green-600 text-sm">
+                {kpi.change >= 0 ? (
+                  <>
+                    <FaArrowUp className="mr-1" /> +{kpi.change}%
+                  </>
+                ) : (
+                  <span className="text-red-600 flex items-center">
+                    <FaArrowDown className="mr-1" /> {kpi.change}%
+                  </span>
+                )}
               </div>
+              <p className="text-xs text-gray-400">Vs. previous period</p>
             </div>
-            <p className="text-xl font-bold">$67.00</p>
-            <p className="text-sm text-gray-400">Vs. previous period</p>
-          </div>
-          <div className="bg-white p-3 rounded border border-black">
-            <div className="flex flex-row justify-between">
-              <h6 className="text-sm text-gray-500 ">Conversion Rate</h6>
-              <div className="flex flex-row text-green-900 text-[10px] h-[18px] bg-green-200 px-1 py-[2px] rounded">
-                <FaArrowUp />
-                <p>+5.2%</p>
-              </div>
-            </div>
-            <p className="text-xl font-bold">5.24%</p>
-            <p className="text-sm text-gray-400">Vs. previous period</p>
-          </div>
-          <div className="bg-white p-3 rounded border border-black">
-            <div className="flex flex-row justify-between">
-              <h6 className="text-sm text-gray-500 ">Cart Abandonment</h6>
-              <div className="flex flex-row text-green-900 text-[10px] h-[18px] bg-green-200 px-1 py-[2px] rounded">
-                <FaArrowUp />
-                <p>+5.2%</p>
-              </div>
-            </div>
-            <p className="text-xl font-bold">68.7%</p>
-            <p className="text-sm text-gray-400 ">Vs. previous period</p>
-          </div>
-          <div className="bg-white p-3 rounded border border-black">
-            <div className="flex flex-row justify-between">
-              <h6 className="text-sm text-gray-500 ">
-                Customer Acquisition Cost
-              </h6>
-              <div className="flex flex-row text-green-900 text-[10px] h-[18px] bg-green-200 px-1 py-[2px] rounded">
-                <FaArrowUp />
-                <p>+5.2%</p>
-              </div>
-            </div>
-            <p className="text-xl font-bold">$24.01</p>
-            <p className="text-sm text-gray-400">Vs. previous period</p>
-          </div>
+          ))}
         </div>
 
         {/* Tabs */}
@@ -136,7 +135,7 @@ const ReportPage = ({ onDateSelect }) => {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`text-sm px-2 sm:px-3 py-1 rounded ${
-                activeTab === tab.id ? " bg-white text-black" : "text-gray-500"
+                activeTab === tab.id ? "bg-white text-black" : "text-gray-500"
               }`}
             >
               {tab.label}
@@ -152,12 +151,14 @@ const ReportPage = ({ onDateSelect }) => {
             setChartType={setChartType}
           />
         )}
-        {activeTab === "SalesByCustomer" && (
-          <SalesByCustomer selectedRange={selectedRange} />
-        )}
+
+        {activeTab === "SalesByProduct" && <SalesByProduct selectedRange={selectedRange} />}
+
+        {activeTab === "SalesByCategory" && <SalesByCategory selectedRange={selectedRange} />}
+
+        {activeTab === "SalesByCustomer" && <SalesByCustomer selectedRange={selectedRange} />}
+
         {activeTab === "customReport" && <CustomReport />}
-        {activeTab === "SalesByCategory" && <SalesByCategory />}
-        {activeTab === "SalesByProduct" && <SalesByProduct />}
       </div>
     </div>
   );

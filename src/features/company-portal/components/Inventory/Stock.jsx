@@ -1,32 +1,36 @@
+
+
 import React, { useState, useRef, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { CiSearch } from "react-icons/ci";
 import { MdNoteAlt } from "react-icons/md";
-import AdjustStockModal from "./AdjustStockModel";
-
-const generateProducts = () => {
-  return Array.from({ length: 100 }, (_, idx) => ({
-    id: `PRD-${(idx + 1).toString().padStart(4, "100")}`,
-    name: idx % 3 === 0 ? "Tomato" : idx % 2 === 0 ? "Apple" : "Lassi",
-    category:
-      idx % 3 === 0 ? "Vegetables" : idx % 2 === 0 ? "Fruits" : "Milk-Products",
-    inventory: 55,
-    reserved: 5,
-    available: 50,
-    reorder: 14,
-    status: idx === 4 ? "Out of Stock" : "Active",
-  }));
-};
+import AdjustStockModal from "./AdjustStockModel"
+import { fetchStockData } from "../../../../lib/services/admin-portal/adminInventoryStockAsynckThunk";
+import {
+  openAdjustStockModal,
+  closeAdjustStockModal,
+} from "../../../../store/slice/admin-portal/admin-inventoryAdjustStockModelSlice";
 
 const Stock = () => {
-  const [states, setStates] = useState("");
-  const products = generateProducts();
+  const dispatch = useDispatch();
+
+  const { products, loading, error } = useSelector(
+    (state) => state.adminInventoryStock
+  );
+  const { selectedProduct, isModalOpen } = useSelector(
+    (state) => state.adminInventoryAdjustStock
+  );
+
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const dropdownRefs = useRef([]);
 
   const itemsPerPage = 10;
+
+  useEffect(() => {
+    dispatch(fetchStockData());
+  }, [dispatch]);
 
   const filteredProducts = products.filter((product) =>
     [product.id, product.name, product.category].some((field) =>
@@ -62,8 +66,8 @@ const Stock = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen space-x-4">
-      <div className=" rounded-xl p-4 border">
-        {/* Header */}
+      <div className="rounded-xl p-4 border">
+        {/* Top Controls */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-4">
           <div className="flex flex-row sm:flex-col gap-2">
             <div className="relative w-full sm:w-64">
@@ -76,19 +80,7 @@ const Stock = () => {
               />
               <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg" />
             </div>
-            <select
-              value={states}
-              onChange={(e) => setStates(e.target.value)}
-              className="border-1 rounded px-1 py-2 text-sm"
-            >
-              <option>All States</option>
-              <option>Pending</option>
-              <option>Paid</option>
-              <option>Processing</option>
-              <option>Failed</option>
-            </select>
-
-            <button className=" flex items-center gap-2 px-2 py-2 rounded border-1">
+            <button className="flex items-center gap-2 px-2 py-2 rounded border-1">
               <svg
                 className="w-4 h-4"
                 fill="none"
@@ -103,137 +95,137 @@ const Stock = () => {
           </div>
 
           <div className="gap-3 flex flex-row sm:flex-col">
-            <button
-              className="border-1 px-2 py-2 rounded text-sm"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Adjust Stock
-            </button>
-            {isModalOpen && (
-              <AdjustStockModal onClose={() => setIsModalOpen(false)} />
-            )}
-
-            <button className="border-1 px-2 py-2 rounded">
-              Print Labs
-            </button>
+            <button className="border-1 px-2 py-2 rounded text-sm">Adjust Stock</button>
+            <button className="border-1 px-2 py-2 rounded">Print Labs</button>
           </div>
         </div>
+
+        {/* Modal */}
+        {isModalOpen && selectedProduct && (
+          <AdjustStockModal
+            product={selectedProduct}
+            onClose={() => dispatch(closeAdjustStockModal())}
+          />
+        )}
 
         {/* Table */}
         <div className="overflow-x-auto">
-          <table className="min-w-full text-sm text-left border table-fixed">
-            <thead className="bg-gray-50 text-gray-600 font-semibold">
-              <tr>
-                <th className="px-4 py-2 text-center">Product ID</th>
-                <th className="px-4 py-2 text-center">Product Name</th>
-                <th className="px-4 py-2 text-center">SKU</th>
-                <th className="px-4 py-2 text-center">Current Stock</th>
-                <th className="px-4 py-2 text-center">Reserved</th>
-                <th className="px-4 py-2 text-center">Available</th>
-                <th className="px-4 py-2 text-center">Reorder Level</th>
-                <th className="px-4 py-2 text-center">Status</th>
-                <th className="px-4 py-2 text-center">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {paginatedProducts.map((product, index) => (
-                <tr key={product.id} className="border hover:bg-gray-50">
-                  <td className="px-4 py-2 text-center">{product.id}</td>
-                  <td className="px-4 py-2 text-center">{product.name}</td>
-                  <td className="px-4 py-2 text-center">{product.category}</td>
-                  <td className="px-4 py-2 text-center">{product.inventory}</td>
-                  <td className="px-4 py-2 text-center">{product.reserved}</td>
-                  <td className="px-4 py-2 text-center">{product.available}</td>
-                  <td className="px-4 py-2 text-center">{product.reorder}</td>
-                  <td className="px-4 py-2 text-center">
-                    {product.status === "Out of Stock" ? (
-                      <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full">
-                        Out of Stock
-                      </span>
-                    ) : (
-                      <span className="bg-black text-white text-xs px-2 py-1 rounded-full">
-                        Active
-                      </span>
-                    )}
-                  </td>
-                  <td
-                    className="px-4 py-2 text-center relative"
-                    ref={(el) => (dropdownRefs.current[index] = el)}
-                  >
-                    <button
-                      onClick={() =>
-                        setOpenDropdown(openDropdown === index ? null : index)
-                      }
-                      className="text-xl hover:text-gray-700 focus:outline-none"
-                    >
-                      ⋯
-                    </button>
-                    {openDropdown === index && (
-                      <div className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-lg z-10">
-                        <ul className="text-sm text-left">
-                          <li
-                            onClick={() => {
-                              setIsModalOpen(true);
-                              setOpenDropdown(null);
-                            }}
-                            className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-                          >
-                            <MdNoteAlt className="text-base" />
-                            Adjust Stock
-                          </li>
-
-                          <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                            View History
-                          </li>
-                          <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                            View Product
-                          </li>
-                          <li className="px-4 hover:bg-gray-100 cursor-pointer">
-                            Create Purchase Order
-                          </li>
-                        </ul>
-                      </div>
-                    )}
-                  </td>
+          {loading ? (
+            <p className="text-center py-8">Loading stock data...</p>
+          ) : error ? (
+            <p className="text-center text-red-500 py-8">{error}</p>
+          ) : (
+            <table className="min-w-full text-sm text-left border table-fixed">
+              <thead className="bg-gray-200 text-gray-500 text-sm ">
+                <tr>
+                  <th className="px-4 py-2 ">Product ID</th>
+                  <th className="px-4 py-2 ">Product Name</th>
+                  <th className="px-4 py-2 ">Category</th>
+                  <th className="px-4 py-2 ">Current Stock</th>
+                  <th className="px-4 py-2 ">Reserved</th>
+                  <th className="px-4 py-2 ">Available</th>
+                  <th className="px-4 py-2 ">Reorder Level</th>
+                  <th className="px-4 py-2 ">Status</th>
+                  <th className="px-4 py-2 ">Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {paginatedProducts.map((product, index) => (
+                  <tr key={product.id} className="border hover:bg-gray-50 ">
+                    <td className="px-4 py-3">{product.id}</td>
+                    <td className="px-4 py-2">{product.name}</td>
+                    <td className="px-4 py-2">{product.category}</td>
+                    <td className="px-4 py-2">{product.inventory}</td>
+                    <td className="px-4 py-2">{product.reserved}</td>
+                    <td className="px-4 py-2">{product.available}</td>
+                    <td className="px-4 py-2">{product.reorder}</td>
+                    <td className="px-4 py-2">
+                      {product.status === "Out of Stock" ? (
+                        <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full">
+                          Out of Stock
+                        </span>
+                      ) : (
+                        <span className="bg-black text-white text-xs px-2 py-1 rounded-full">
+                          Active
+                        </span>
+                      )}
+                    </td>
+                    <td
+                      className="px-4 py-2 text-center relative"
+                      ref={(el) => (dropdownRefs.current[index] = el)}
+                    >
+                      <button
+                        onClick={() =>
+                          setOpenDropdown(openDropdown === index ? null : index)
+                        }
+                        className="text-xl hover:text-gray-700 focus:outline-none"
+                      >
+                        ⋯
+                      </button>
+                      {openDropdown === index && (
+                        <div className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-lg z-10">
+                          <ul className="text-sm text-left">
+                            <li
+                              onClick={() => {
+                                dispatch(openAdjustStockModal(product));
+                                setOpenDropdown(null);
+                              }}
+                              className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+                            >
+                              <MdNoteAlt className="text-base" />
+                              Adjust Stock
+                            </li>
+                            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                              View History
+                            </li>
+                            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                              View Product
+                            </li>
+                            <li className="px-4 hover:bg-gray-100 cursor-pointer">
+                              Create Purchase Order
+                            </li>
+                          </ul>
+                        </div>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
 
-        {/* Footer */}
-        <div className="flex flex-col sm:flex-row justify-between items-center mt-4 text-sm text-gray-600">
-          <p>
-            Showing {paginatedProducts.length} of {filteredProducts.length}{" "}
-            Products
-          </p>
-          <div className="flex gap-2 mt-2 sm:mt-0">
-            <button
-              className="border px-4 py-1 rounded hover:bg-gray-100 disabled:opacity-50"
-              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-              disabled={currentPage === 1}
-            >
-              Previous
-            </button>
-            <button
-              className="border px-4 py-1 rounded hover:bg-gray-100 disabled:opacity-50"
-              onClick={() =>
-                setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-              }
-              disabled={currentPage === totalPages}
-            >
-              Next
-            </button>
+        {/* Pagination */}
+        {!loading && !error && (
+          <div className="flex flex-col sm:flex-row justify-between items-center mt-4 text-sm text-gray-600">
+            <p>
+              Showing {paginatedProducts.length} of {filteredProducts.length}{" "}
+              Products
+            </p>
+            <div className="flex gap-2 mt-2 sm:mt-0">
+              <button
+                className="border px-4 py-1 rounded hover:bg-gray-100 disabled:opacity-50"
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+              >
+                Previous
+              </button>
+              <button
+                className="border px-4 py-1 rounded hover:bg-gray-100 disabled:opacity-50"
+                onClick={() =>
+                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                }
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
-
-      {/* Modal */}
-      {isModalOpen && (
-        <AdjustStockModal onClose={() => setIsModalOpen(false)} />
-      )}
     </div>
   );
 };
 
 export default Stock;
+

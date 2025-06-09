@@ -1,0 +1,205 @@
+[
+  {
+    "id": "PRD-0001",
+    "name": "Tomato",
+    "category": "Vegetables",
+    "inventory": 55,
+    "reserved": 5,
+    "available": 50,
+    "reorder": 14,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0002",
+    "name": "Potato",
+    "category": "Vegetables",
+    "inventory": 80,
+    "reserved": 15,
+    "available": 65,
+    "reorder": 20,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0003",
+    "name": "Apple",
+    "category": "Fruits",
+    "inventory": 100,
+    "reserved": 20,
+    "available": 80,
+    "reorder": 25,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0004",
+    "name": "Milk",
+    "category": "Dairy",
+    "inventory": 200,
+    "reserved": 50,
+    "available": 150,
+    "reorder": 60,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0005",
+    "name": "Cheese",
+    "category": "Dairy",
+    "inventory": 60,
+    "reserved": 10,
+    "available": 50,
+    "reorder": 15,
+    "status": "Inactive"
+  },
+  {
+    "id": "PRD-0006",
+    "name": "Rice",
+    "category": "Grains",
+    "inventory": 300,
+    "reserved": 40,
+    "available": 260,
+    "reorder": 80,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0007",
+    "name": "Banana",
+    "category": "Fruits",
+    "inventory": 120,
+    "reserved": 25,
+    "available": 95,
+    "reorder": 30,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0008",
+    "name": "Onion",
+    "category": "Vegetables",
+    "inventory": 90,
+    "reserved": 10,
+    "available": 80,
+    "reorder": 18,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0009",
+    "name": "Wheat Flour",
+    "category": "Grains",
+    "inventory": 250,
+    "reserved": 30,
+    "available": 220,
+    "reorder": 70,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0010",
+    "name": "Yogurt",
+    "category": "Dairy",
+    "inventory": 70,
+    "reserved": 5,
+    "available": 65,
+    "reorder": 20,
+    "status": "Inactive"
+  },
+  {
+    "id": "PRD-0011",
+    "name": "Orange Juice",
+    "category": "Beverages",
+    "inventory": 150,
+    "reserved": 20,
+    "available": 130,
+    "reorder": 40,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0012",
+    "name": "Green Tea",
+    "category": "Beverages",
+    "inventory": 90,
+    "reserved": 10,
+    "available": 80,
+    "reorder": 25,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0013",
+    "name": "Chocolate Chip Cookies",
+    "category": "Snacks",
+    "inventory": 70,
+    "reserved": 12,
+    "available": 58,
+    "reorder": 20,
+    "status": "Inactive"
+  },
+  {
+    "id": "PRD-0014",
+    "name": "Basmati Rice",
+    "category": "Grains",
+    "inventory": 180,
+    "reserved": 30,
+    "available": 150,
+    "reorder": 60,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0015",
+    "name": "Chili Powder",
+    "category": "Spices",
+    "inventory": 110,
+    "reserved": 15,
+    "available": 95,
+    "reorder": 35,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0016",
+    "name": "Black Pepper",
+    "category": "Spices",
+    "inventory": 85,
+    "reserved": 10,
+    "available": 75,
+    "reorder": 30,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0017",
+    "name": "White Bread",
+    "category": "Bakery",
+    "inventory": 60,
+    "reserved": 5,
+    "available": 55,
+    "reorder": 20,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0018",
+    "name": "Toilet Paper",
+    "category": "Household",
+    "inventory": 300,
+    "reserved": 40,
+    "available": 260,
+    "reorder": 100,
+    "status": "Active"
+  },
+  {
+    "id": "PRD-0019",
+    "name": "Dish Soap",
+    "category": "Household",
+    "inventory": 120,
+    "reserved": 15,
+    "available": 105,
+    "reorder": 40,
+    "status": "Inactive"
+  },
+  {
+    "id": "PRD-0020",
+    "name": "Peanut Butter",
+    "category": "Snacks",
+    "inventory": 95,
+    "reserved": 20,
+    "available": 75,
+    "reorder": 30,
+    "status": "Active"
+  }
+
+
+]
+
