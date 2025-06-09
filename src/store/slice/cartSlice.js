@@ -7,6 +7,7 @@ import {
 
 const initialState = {
   items: [],
+  selectedOptions: {}, // NEW: store temporary selections
   status: "idle",
   error: null,
 };
@@ -78,6 +79,11 @@ const cartSlice = createSlice({
         });
       }
     },
+
+    setProductWeightPreview(state, action) {
+      const { id, weight } = action.payload;
+      state.selectedOptions[id] = weight;
+    },
   },
 
   extraReducers: (builder) => {
@@ -86,8 +92,6 @@ const cartSlice = createSlice({
         state.status = "loading";
       })
       .addCase(fetchCartItems.fulfilled, (state, action) => {
-        console.log("fetchCartItems.fulfilled payload:", action.payload);
-
         state.status = "succeeded";
 
         state.items = action.payload.map((item) => {
@@ -122,8 +126,6 @@ const cartSlice = createSlice({
       })
       .addCase(addToCartThunk.fulfilled, (state, action) => {
         const product = action.payload;
-        console.log("addToCartThunk.fulfilled payload:", product);
-
         const existing = state.items.find((item) => item.id === product.id);
         const quantityToAdd = product.quantity ?? 1;
 
@@ -155,5 +157,11 @@ const cartSlice = createSlice({
   },
 });
 
-export const { updateWeight, updateQuantity, addToCart } = cartSlice.actions;
+export const {
+  updateWeight,
+  updateQuantity,
+  addToCart,
+  setProductWeightPreview,
+} = cartSlice.actions;
+
 export default cartSlice.reducer;

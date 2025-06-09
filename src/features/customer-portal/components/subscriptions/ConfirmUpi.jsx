@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -14,8 +13,6 @@ const ConfirmUpi = () => {
   const { selectedPlanId, price, selectedUpiApp, upiId } = useSelector(
     (state) => state.subscription
   );
-  const [agreed, setAgreed] = useState(false);
-  const [validated, setValidated] = useState(false);
 
   const [agreed, setAgreed] = useState(false);
   const [validated, setValidated] = useState(false);

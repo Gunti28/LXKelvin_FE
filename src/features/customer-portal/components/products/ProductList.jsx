@@ -1,87 +1,53 @@
-import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import styles from "../../../../lib/common/css/products/Listing.module.css";
-import { Const } from "../../../../lib/constants/index";
-import { addToCart } from "../../../../../src/store/slice/cartSlice";
+import { useSelector, useDispatch } from "react-redux";
+import ListingStyle from "../../../../lib/common/css/products/Listing.module.css";
+import {
+  addToCart,
+  setProductWeightPreview,
+} from "../../../../../src/store/slice/cartSlice";
 
-import OverLayLoader from "../overLayLoader/OverLayLoader";
 const ProductList = () => {
   const { products } = useSelector((state) => state.products);
-  const { items: cartItems } = useSelector((state) => state.cart);
-
-  /**
-   * we need to add changes on loaderCategories once service is placed
-   */
-  const [loaderCategories, serLoaderCategories] = useState(true);
-
+  const { items: cartItems, selectedOptions } = useSelector(
+    (state) => state.cart
+  );
   const location = useLocation();
-  const path = location.pathname.slice(10);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const [selectedQuantities, setSelectedQuantities] = useState({});
-  const [selectedWeights, setSelectedWeights] = useState({});
+  const dispatch = useDispatch();
 
   const getCategory = () => {
-    if (location.pathname.includes("seasonalVegetables")) {
+    const path = location.pathname;
+
+    if (path.includes("all-categories")) {
+      return { category: null };
+    } else if (path.includes("seasonalVegetables")) {
       return { category: "vegetables", seasonal: true };
-    } else if (location.pathname.includes("vegetables")) {
+    } else if (path.includes("vegetables")) {
       return { category: "vegetables" };
-    } else if (location.pathname.includes("seasonalFruits")) {
+    } else if (path.includes("seasonalFruits")) {
       return { category: "fruits", seasonal: true };
-    } else if (location.pathname.includes("fruits")) {
+    } else if (path.includes("fruits")) {
       return { category: "fruits" };
-    } else if (location.pathname.includes("milkProducts")) {
+    } else if (path.includes("milkProducts")) {
       return { category: "milkProducts" };
     } else {
       return {};
     }
   };
 
-  const filteredProducts = (() => {
-  useEffect(() => {
-    setProducts(products);
-    fetchData(products);
-    /**
-     * this TimeOut function we need to re-wramp once service is in place
-     */
-    serLoaderCategories(true);
-    setTimeout(() => {
-      serLoaderCategories(false);
-    }, 1500);
-  }, [products, location.pathname]);
+  const { category, seasonal } = getCategory();
 
-  /**
-   * This function is need to be change once BE end points are deployed on server
-   * @param {*} callByRef
-   */
-  const fetchData = (callByRef) => {
-
-    const filter = getCategory();
-    let filtered = products;
-
-    if (filter.category) {
-      filtered = filtered.filter((p) => p.category === filter.category);
+  const filteredProducts = products.filter((product) => {
+    if (!category) return true;
+    if (seasonal) {
+      return (
+        product.category.toLowerCase() === category.toLowerCase() &&
+        product.isSeasonal === true
+      );
+    } else {
+      return product.category.toLowerCase() === category.toLowerCase();
     }
-    if (filter.seasonal !== undefined) {
-      filtered = filtered.filter((p) => p.isSeasonal === filter.seasonal);
-    }
-
-    return filtered;
-  })();
-
-  useEffect(() => {
-    const initialQuantities = {};
-    const initialWeights = {};
-    filteredProducts.forEach((p) => {
-      initialQuantities[p.id] = 1;
-      const weights = Object.keys(p.priceByWeight || {});
-      initialWeights[p.id] = weights.length > 0 ? weights[0] : null;
-    });
-    setSelectedQuantities(initialQuantities);
-    setSelectedWeights(initialWeights);
-  }, [products, location.pathname]);
+  });
 
   const getCartQuantity = (id, weight) => {
     const item = cartItems.find(
@@ -90,11 +56,8 @@ const ProductList = () => {
     return item ? item.quantity : 0;
   };
 
-  const onWeightChange = (productId, value) => {
-    setSelectedWeights((prev) => ({
-      ...prev,
-      [productId]: value,
-    }));
+  const handleWeightChange = (productId, weight) => {
+    dispatch(setProductWeightPreview({ id: productId, weight }));
   };
 
   const handleProductClick = (id) => {
@@ -102,31 +65,34 @@ const ProductList = () => {
   };
 
   return (
-    <div className={styles.listingContainer}>
-      <OverLayLoader isLoader={loaderCategories} />
-      <h1 className={styles.pageTitle}>
-        {path === "all-categories"
+    <div className={ListingStyle.listingContainer}>
+      <h1 className={ListingStyle.pageTitle}>
+        {category === null
           ? "All Products"
-          : `Get Fresh ${path} Delivered Online`}
+          : `Get Fresh ${
+              category.charAt(0).toUpperCase() + category.slice(1)
+            } Delivered Online`}
       </h1>
-      <div className={styles.productGrid}>
+
+      <div className={ListingStyle.productGrid}>
         {filteredProducts.map((product) => {
-          const selectedQty = selectedQuantities[product.id] || 1;
+          const weights = Object.keys(product.priceByWeight || {});
           const selectedWeight =
-            selectedWeights[product.id] ||
-            Object.keys(product.priceByWeight || {})[0] ||
-            null;
-
-          const priceByWeight = selectedWeight
-            ? product.priceByWeight?.[selectedWeight] || product.price
-            : product.price;
-
+            selectedOptions[product.id] || weights[0] || null;
+          const priceByWeight =
+            selectedWeight && product.priceByWeight?.[selectedWeight]
+              ? product.priceByWeight[selectedWeight]
+              : product.price;
+          const originalPrice =
+            selectedWeight && product.originalPrice
+              ? product.originalPrice
+              : priceByWeight;
           const qtyInCart = getCartQuantity(product.id, selectedWeight);
 
           return (
-            <div key={product.id} className={styles.productCard}>
+            <div key={product.id} className={ListingStyle.productCard}>
               <div
-                className={styles.imgCon}
+                className={ListingStyle.imgCon}
                 style={{
                   backgroundColor: product.Colour,
                   filter: product.stockCount === 0 ? "grayscale(100%)" : "none",
@@ -135,43 +101,44 @@ const ProductList = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className={styles.productImage}
+                  className={ListingStyle.productImage}
                   onClick={() => handleProductClick(product.id)}
                 />
               </div>
 
-              <h2 className={styles.productName}>{product.name}</h2>
+              <h2 className={ListingStyle.productName}>{product.name}</h2>
 
-              {product.priceByWeight &&
-                Object.keys(product.priceByWeight).length > 0 && (
-                  <select
-                    className={styles.productQuantity}
-                    value={selectedWeight || ""}
-                    onChange={(e) => onWeightChange(product.id, e.target.value)}
-                  >
-                    {Object.keys(product.priceByWeight).map((weight) => (
-                      <option key={weight} value={weight}>
-                        {weight}
-                      </option>
-                    ))}
-                  </select>
-                )}
+              {weights.length > 0 && (
+                <select
+                  className={ListingStyle.productQuantity}
+                  value={selectedWeight}
+                  onChange={(e) =>
+                    handleWeightChange(product.id, e.target.value)
+                  }
+                >
+                  {weights.map((weight) => (
+                    <option key={weight} value={weight}>
+                      {weight}
+                    </option>
+                  ))}
+                </select>
+              )}
 
-              <div className={styles.priceSection}>
-                <span className={styles.discountPrice}>
-                  €{priceByWeight * selectedQty}
+              <div className={ListingStyle.priceSection}>
+                <span className={ListingStyle.discountPrice}>
+                  €{priceByWeight}
                 </span>
-                <span className={styles.originalPrice}>
-                  €{product.originalPrice * selectedQty}
+                <span className={ListingStyle.originalPrice}>
+                  €{originalPrice}
                 </span>
               </div>
 
               {product.stockCount > 0 ? (
                 qtyInCart > 0 ? (
-                  <div className={styles.quantityControls}>
+                  <div className={ListingStyle.quantityControls}>
                     <button
-                      className={styles.qtyButton}
-                      onClick={() => {
+                      className={ListingStyle.qtyButton}
+                      onClick={() =>
                         dispatch(
                           addToCart({
                             ...product,
@@ -179,15 +146,15 @@ const ProductList = () => {
                             priceByWeight: product.priceByWeight,
                             quantityChange: -1,
                           })
-                        );
-                      }}
+                        )
+                      }
                     >
                       -
                     </button>
-                    <span className={styles.qtyValue}>{qtyInCart}</span>
+                    <span className={ListingStyle.qtyValue}>{qtyInCart}</span>
                     <button
-                      className={styles.qtyButton}
-                      onClick={() => {
+                      className={ListingStyle.qtyButton}
+                      onClick={() =>
                         dispatch(
                           addToCart({
                             ...product,
@@ -195,31 +162,32 @@ const ProductList = () => {
                             priceByWeight: product.priceByWeight,
                             quantityChange: 1,
                           })
-                        );
-                      }}
+                        )
+                      }
                     >
                       +
                     </button>
                   </div>
                 ) : (
                   <button
-                    className={styles.addToCart}
-                    onClick={() => {
+                    className={ListingStyle.addToCart}
+                    onClick={() =>
                       dispatch(
                         addToCart({
                           ...product,
                           selectedWeight,
-                          quantity: selectedQty,
+                          quantity: 1,
                           price: priceByWeight,
+                          priceByWeight: product.priceByWeight,
                         })
-                      );
-                    }}
+                      )
+                    }
                   >
                     Add to cart
                   </button>
                 )
               ) : (
-                <button className={styles.outOfStock} disabled>
+                <button className={ListingStyle.outOfStock} disabled>
                   Out of Stock
                 </button>
               )}

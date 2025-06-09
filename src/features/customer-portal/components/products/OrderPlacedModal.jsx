@@ -3,10 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Vipstyle from "../../../../lib/common/css/products/OrderPlaceModel.module.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import {
-  FOOTER_IMG,
-  ORDER_PLACED,
-} from "../../../../lib/constants/Image_Constants";
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 
 const OrderPlacedModal = () => {
   const navigate = useNavigate();
@@ -25,7 +22,7 @@ const OrderPlacedModal = () => {
     >
       <Modal.Body className="border-0 d-flex justify-content-center align-items-center flex-column ">
         <img
-          src={ORDER_PLACED}
+          src={IMAGES.orderPlaced}
           className={`${Vipstyle.img}image-fluid w-25 H-25 `}
           alt="FooterImg"
         />
@@ -36,7 +33,7 @@ const OrderPlacedModal = () => {
       </Modal.Body>
       <Modal.Footer className=" p-0 border-0 ps-1  ">
         <img
-          src={FOOTER_IMG}
+          src={IMAGES.footer_Img}
           className={`${Vipstyle.footer}image-fluid w-100`}
           alt="FooterImg"
         />

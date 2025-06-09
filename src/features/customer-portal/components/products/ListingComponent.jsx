@@ -1,137 +1,57 @@
-import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import styles from "../../../../lib/common/css/products/Listing.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { Const } from "../../../../lib/constants/index";
-import { addToCart } from "../../../../../src/store/slice/cartSlice";
+import { useSelector, useDispatch } from "react-redux";
+import ListingStyle from "../../../../lib/common/css/products/Listing.module.css";
+import {
+  addToCart,
+  setProductWeightPreview,
+} from "../../../../../src/store/slice/cartSlice";
 
-const ProductList = () => {
-  const [productsList, setProducts] = useState([]);
-  const [selectedQuantities, setSelectedQuantities] = useState({});
-  const [selectedWeights, setSelectedWeights] = useState({});
-
-import OverLayLoader from "../overLayLoader/OverLayLoader";
 const ListingComponent = () => {
-  /**
-   * call store object with using of selectors
-   */
   const { products } = useSelector((state) => state.products);
-  const { items: cartItems } = useSelector((state) => state.cart);
-
-  const dispatch = useDispatch();
+  const { items: cartItems, selectedOptions } = useSelector(
+    (state) => state.cart
+  );
   const location = useLocation();
-  const path = location.pathname.slice(10);
-  // const quantityOptions = Const?.QTY_OPTIONS || ["1", "2", "3", "4", "5"];
+  const path = location.pathname.slice(1);
   const navigate = useNavigate();
-  /**
-   * we need to add changes on loaderCategories once service is placed
-   */
-  const [loaderCategories, serLoaderCategories] = useState(true);
+  const dispatch = useDispatch();
 
-  const getCategory = () => {
-    if (location.pathname.includes("seasonalVegetables")) {
-      return { category: "vegetables", seasonal: true };
-    } else if (location.pathname.includes("vegetables")) {
-      return { category: "vegetables" };
-    } else if (location.pathname.includes("seasonalFruits")) {
-      return { category: "fruits", seasonal: true };
-    } else if (location.pathname.includes("fruits")) {
-      return { category: "fruits" };
-    } else if (location.pathname.includes("milkProducts")) {
-      return { category: "milkProducts" };
-    } else {
-      return {};
-    }
-  };
+  // Filter products by category or show all
+  const filteredProducts =
+    path === "products/all-categories"
+      ? products
+      : products.filter((p) => p.category.toLowerCase() === path.toLowerCase());
 
-  useEffect(() => {
-    setProducts(products);
-    fetchData(products);
-  }, [products, location.pathname]);
-
-  useEffect(() => {
-    const initialQuantities = {};
-    const initialWeights = {};
-    productsList.forEach((p) => {
-      initialQuantities[p.id] = 1;
-      const weights = Object.keys(p.priceByWeight || {});
-      initialWeights[p.id] = weights.length > 0 ? weights[0] : null;
-    });
-    setSelectedQuantities(initialQuantities);
-    setSelectedWeights(initialWeights);
-  }, [productsList]);
-
-  const fetchData = (callByRef) => {
-    const filter = getCategory();
-    let filteredProducts = callByRef;
-
-    if (filter.category) {
-      filteredProducts = filteredProducts.filter(
-        (p) => p.category === filter.category
-      );
-    }
-    if (filter.seasonal !== undefined) {
-      filteredProducts = filteredProducts.filter(
-        (p) => p.isSeasonal === filter.seasonal
-      );
-    }
-    setProducts(filteredProducts);
-  };
-
-  // const onQuantityChange = (productId, value) => {
-  //   setSelectedQuantities((prev) => ({
-  //     ...prev,
-  //     [productId]: parseInt(value, 10),
-  //   }));
-  // };
-
-  const onWeightChange = (productId, value) => {
-    setSelectedWeights((prev) => ({
-      ...prev,
-      [productId]: value,
-    }));
-  };
-
+  // Get quantity in cart for product + weight
   const getCartQuantity = (id, weight) => {
     const item = cartItems.find(
       (item) => item.id === id && item.selectedWeight === weight
     );
     return item ? item.quantity : 0;
   };
-    /**
-     * this TimeOut function we need to re-wramp once service is in place
-     */
-    serLoaderCategories(true);
-    setTimeout(() => {
-      serLoaderCategories(false);
-    }, 1500);
-  }, [products]);
 
-  const filteredProducts =
-    path === "products/all-categories"
-      ? productsList
-      : productsList.filter(
-          (p) => p.category.toLowerCase() === path.toLowerCase()
-        );
+  // Handle weight select change - dispatch to redux to update selected weight
+  const onWeightChange = (productId, value) => {
+    dispatch(setProductWeightPreview({ id: productId, weight: value }));
+  };
+
+  // Navigate to product detail page
   const handleProductClick = (id) => {
     navigate(`/productDetails/${id}`);
   };
 
   return (
-    <div className={styles.listingContainer}>
-      <h1 className={styles.pageTitle}>
     <div className={ListingStyle.listingContainer}>
-      <OverLayLoader isLoader={loaderCategories} />
       <h1 className={ListingStyle.pageTitle}>
         {path === "all-categories"
           ? "All Products"
-          : `Get Fresh ${path} Delivered Online`}
+          : "Get Fresh Fruits & Vegetables Delivered Online"}
       </h1>
-      <div className={styles.productGrid}>
-        {productsList.map((product) => {
-          const selectedQty = selectedQuantities[product.id] || 1;
+
+      <div className={ListingStyle.productGrid}>
+        {filteredProducts.map((product) => {
           const selectedWeight =
-            selectedWeights[product.id] ||
+            selectedOptions[product.id] ||
             Object.keys(product.priceByWeight || {})[0] ||
             null;
 
@@ -140,31 +60,30 @@ const ListingComponent = () => {
             : product.price;
 
           const qtyInCart = getCartQuantity(product.id, selectedWeight);
-          const disableAdd = product.stockCount === 0;
 
           return (
-            <div key={product.id} className={styles.productCard}>
+            <div key={product.id} className={ListingStyle.productCard}>
               <div
-                className={styles.imgCon}
+                className={ListingStyle.imgCon}
                 style={{
                   backgroundColor: product.Colour,
-                  filter: disableAdd ? "grayscale(100%)" : "none",
+                  filter: product.stockCount === 0 ? "grayscale(100%)" : "none",
                 }}
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className={styles.productImage}
+                  className={ListingStyle.productImage}
                   onClick={() => handleProductClick(product.id)}
                 />
               </div>
 
-              <h2 className={styles.productName}>{product.name}</h2>
+              <h2 className={ListingStyle.productName}>{product.name}</h2>
 
               {product.priceByWeight &&
                 Object.keys(product.priceByWeight).length > 0 && (
                   <select
-                    className={styles.productQuantity}
+                    className={ListingStyle.productQuantity}
                     value={selectedWeight || ""}
                     onChange={(e) => onWeightChange(product.id, e.target.value)}
                   >
@@ -176,68 +95,70 @@ const ListingComponent = () => {
                   </select>
                 )}
 
-              <div className={styles.priceSection}>
-                <span className={styles.discountPrice}>
-                  €{priceByWeight * selectedQty}
+              <div className={ListingStyle.priceSection}>
+                <span className={ListingStyle.discountPrice}>
+                  €{(priceByWeight * (qtyInCart || 1)).toFixed(2)}
                 </span>
-                <span className={styles.originalPrice}>
-                  €{product.originalPrice * selectedQty}
+                <span className={ListingStyle.originalPrice}>
+                  €{(product.originalPrice * (qtyInCart || 1)).toFixed(2)}
                 </span>
               </div>
 
-              {disableAdd ? (
-                <button className={styles.outOfStock} disabled>
-                  Out of Stock
-                </button>
-              ) : qtyInCart > 0 ? (
-                <div className={styles.quantityControls}>
+              {product.stockCount > 0 ? (
+                qtyInCart > 0 ? (
+                  <div className={ListingStyle.quantityControls}>
+                    <button
+                      className={ListingStyle.qtyButton}
+                      onClick={() =>
+                        dispatch(
+                          addToCart({
+                            ...product,
+                            selectedWeight,
+                            priceByWeight: product.priceByWeight,
+                            quantityChange: -1,
+                          })
+                        )
+                      }
+                    >
+                      -
+                    </button>
+                    <span className={ListingStyle.qtyValue}>{qtyInCart}</span>
+                    <button
+                      className={ListingStyle.qtyButton}
+                      onClick={() =>
+                        dispatch(
+                          addToCart({
+                            ...product,
+                            selectedWeight,
+                            priceByWeight: product.priceByWeight,
+                            quantityChange: 1,
+                          })
+                        )
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
+                ) : (
                   <button
-                    className={styles.qtyButton}
+                    className={ListingStyle.addToCart}
                     onClick={() =>
                       dispatch(
                         addToCart({
                           ...product,
                           selectedWeight,
-                          priceByWeight: product.priceByWeight,
-                          quantityChange: -1,
+                          quantity: 1,
+                          price: priceByWeight,
                         })
                       )
                     }
                   >
-                    -
+                    Add to cart
                   </button>
-                  <span className={styles.qtyValue}>{qtyInCart}</span>
-                  <button
-                    className={styles.qtyButton}
-                    onClick={() =>
-                      dispatch(
-                        addToCart({
-                          ...product,
-                          selectedWeight,
-                          priceByWeight: product.priceByWeight,
-                          quantityChange: 1,
-                        })
-                      )
-                    }
-                  >
-                    +
-                  </button>
-                </div>
+                )
               ) : (
-                <button
-                  className={styles.addToCart}
-                  onClick={() =>
-                    dispatch(
-                      addToCart({
-                        ...product,
-                        selectedWeight,
-                        quantity: selectedQty,
-                        price: priceByWeight,
-                      })
-                    )
-                  }
-                >
-                  Add to Cart
+                <button className={ListingStyle.outOfStock} disabled>
+                  Out of Stock
                 </button>
               )}
             </div>
@@ -248,4 +169,4 @@ const ListingComponent = () => {
   );
 };
 
-export default ProductList;
+export default ListingComponent;

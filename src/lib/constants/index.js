@@ -1,15 +1,15 @@
+// import {
+//   GREECE,
+//   SPANISH,
+//   FRENCH,
+//   ITALIAN,
+//   AMEX,
+//   APPLE_PAY,
+//   MASTER_CARD,
+//   PAYPAL,
+//   VISA,
+// } from "./Image_Constants";
 
-import {
-  GREECE,
-  SPANISH,
-  FRENCH,
-  ITALIAN,
-  AMEX,
-  APPLE_PAY,
-  MASTER_CARD,
-  PAYPAL,
-  VISA,
-} from "./Image_Constants";
 import { IMAGES } from "./Image_Constants/index.js";
 
 /**
@@ -34,12 +34,12 @@ const PAYMENT_OPTIONS = [
   {
     label: "Credit or debit card",
     value: "card",
-    icons: [VISA, AMEX, MASTER_CARD],
+    icons: [IMAGES.visa, IMAGES.amex, IMAGES.masterCard],
   },
   {
     label: "Net Banking",
     value: "net",
-    icons: [PAYPAL, APPLE_PAY],
+    icons: [IMAGES.paypal, IMAGES.applePay],
   },
   {
     label: "Cash on delivery",
