@@ -98,6 +98,8 @@ const NavbarComponent = () => {
       path.startsWith("/deliveryaddress") ||
       path.startsWith("/orderSummary") ||
       path.startsWith("/upiPayment") ||
+      path.startsWith("/ordersummary");
+    path.startsWith("/upiPayment") ||
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
       path.startsWith("/orderCardPayment") ||

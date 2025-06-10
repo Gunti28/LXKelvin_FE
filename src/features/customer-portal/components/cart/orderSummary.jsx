@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { Const, ORDER_CONSTANTS } from "../../../../lib/constants/index";
 import { addOrder } from "../../../../store/slice/orderSlice";
 import { clearCart } from "../../../../store/slice/cartSlice";
+
 const OrderSummery = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
