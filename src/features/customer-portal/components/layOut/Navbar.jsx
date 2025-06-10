@@ -89,19 +89,22 @@ const NavbarComponent = () => {
 
   useEffect(() => {
     const isHighlightPath =
+      path.startsWith("/productDetails") ||
       path.startsWith("/products") ||
       path.startsWith("/my_account") ||
       path.startsWith("/subscriptions") ||
       path.startsWith("/choosePayment") ||
       path.startsWith("/cart") ||
       path.startsWith("/deliveryaddress") ||
+      path.startsWith("/orderSummary") ||
+      path.startsWith("/upiPayment") ||
       path.startsWith("/ordersummary");
     path.startsWith("/upiPayment") ||
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
-      path.startsWith("/vipSuccess") ||
-
-      path.startsWith("/productDetails");
+      path.startsWith("/orderCardPayment") ||
+      path.startsWith("/orderUpiPayment") ||
+      path.startsWith("/vipSuccess");
     setTextColor(isHighlightPath);
   });
   useEffect(() => {
@@ -139,9 +142,7 @@ const NavbarComponent = () => {
       <div className={` ${HeroStyles.heroText} text-center`}>
         <img
           style={{ margin: "auto", cursor: "pointer" }}
-
           src={IMAGES.logo}
-
           width={150}
           alt="Logo"
         />
@@ -171,9 +172,7 @@ const NavbarComponent = () => {
         <Container fluid>
           <Navbar.Brand href="#">
             <img
-
               src={IMAGES?.logo}
-
               alt="LOGO"
               className={NavbarCss.LogoImg}
               onClick={() => handleLogoClick()}

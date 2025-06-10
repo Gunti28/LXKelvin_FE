@@ -36,6 +36,11 @@ const cartSlice = createSlice({
       }
     },
 
+    clearCart(state) {
+      state.items = [];
+      state.selectedOptions = {};
+    },
+
     addToCart(state, action) {
       const {
         id,
@@ -162,6 +167,7 @@ export const {
   updateQuantity,
   addToCart,
   setProductWeightPreview,
+  clearCart,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
