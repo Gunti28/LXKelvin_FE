@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
 import { Const, ORDER_CONSTANTS } from "../../../../lib/constants/index";
 import { addOrder } from "../../../../store/slice/orderSlice";
-
+import { clearCart } from "../../../../store/slice/cartSlice";
 const OrderSummery = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -58,6 +58,7 @@ const OrderSummery = () => {
       };
 
       dispatch(addOrder(newOrder));
+      dispatch(clearCart());
       navigate("/orderCardPayment");
     } else if (selectedPaymentMethod === "net") {
       const itemsPrice = cartItems.reduce(
@@ -85,6 +86,8 @@ const OrderSummery = () => {
       };
 
       dispatch(addOrder(newOrder));
+      dispatch(clearCart());
+
       navigate("/orderUpiPayment");
     } else if (selectedPaymentMethod === "cash") {
       const itemsPrice = cartItems.reduce(
@@ -109,6 +112,8 @@ const OrderSummery = () => {
       };
 
       dispatch(addOrder(newOrder));
+      dispatch(clearCart());
+
       alert("Cash on Delivery selected. Order placed successfully!");
     } else {
       alert("Please select a payment method.");
