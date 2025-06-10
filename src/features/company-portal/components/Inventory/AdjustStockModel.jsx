@@ -44,7 +44,7 @@ const AdjustStockModal = ({ product, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-30 flex justify-center items-center">
+    <div className="fixed inset-0 z-50 flex justify-center items-center">
       <div className="bg-white w-full max-w-md rounded-lg shadow-lg p-6 relative">
         {/* Close button */}
         <button
@@ -68,18 +68,16 @@ const AdjustStockModal = ({ product, onClose }) => {
             <label className="text-sm font-medium">Current Stock</label>
             <input
               type="text"
-              className="w-full border rounded px-2 py-1 text-sm bg-gray-100"
+              className="w-full border rounded px-2 py-1 text-sm"
               value={product.inventory}
-              readOnly
             />
           </div>
           <div>
             <label className="text-sm font-medium">Available Stock</label>
             <input
               type="text"
-              className="w-full border rounded px-2 py-1 text-sm bg-gray-100"
+              className="w-full border rounded px-2 py-1 text-sm"
               value={product.available}
-              readOnly
             />
           </div>
         </div>

@@ -32,6 +32,10 @@ const Stock = () => {
     dispatch(fetchStockData());
   }, [dispatch]);
 
+  const handlesave = () => {
+    dispatch(openAdjustStockModal(true));
+  }
+
   const filteredProducts = products.filter((product) =>
     [product.id, product.name, product.category].some((field) =>
       field.toLowerCase().includes(searchQuery.toLowerCase())
@@ -95,7 +99,7 @@ const Stock = () => {
           </div>
 
           <div className="gap-3 flex flex-row sm:flex-col">
-            <button className="border-1 px-2 py-2 rounded text-sm">Adjust Stock</button>
+            <button onClick={handlesave} className="border-1 px-2 py-2 rounded text-sm">Adjust Stock</button>
             <button className="border-1 px-2 py-2 rounded">Print Labs</button>
           </div>
         </div>

@@ -4,19 +4,19 @@
       "name": "Jessica Williams",
       "email": "jessica.w@example.com",
       "time": "10 minutes ago",
-      "avatar": "https://randomuser.me/api/portraits/women/3.jpg"
+      "avatar": "https://d1p5ayh0d7heww.cloudfront.net/Images/order2.svg"
     },
     {
       "name": "Michael Brown",
       "email": "michael.b@example.com",
       "time": "15 minutes ago",
-      "avatar": "https://randomuser.me/api/portraits/men/5.jpg"
+      "avatar": "https://d1p5ayh0d7heww.cloudfront.net/Images/order1.svg"
     },
     {
       "name": "Michael Brown",
       "email": "michael.b@example.com",
       "time": "15 minutes ago",
-      "avatar": "https://randomuser.me/api/portraits/men/5.jpg"
+      "avatar": "https://d1p5ayh0d7heww.cloudfront.net/Images/order3.svg"
     }
   ]
 }

@@ -11,8 +11,8 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { setSelectedLang } from "../../../../store/slice/languageSlice";
-import  LOGO  from  "../../../../../public/assets/Images/Logo.svg"
 import { Const } from "../../../../lib/constants/index"
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 
 const CompanyNavBar = () => {
   const languages = Const?.LANGUAGES;
@@ -43,7 +43,7 @@ const CompanyNavBar = () => {
             <div className="flex flex-col lg:flex-row lg:items-center justify-between ">
               <div className="flex items-center justify-between w-full lg:w-auto">
                 <div className="flex items-center space-x-2">
-                  <img src={LOGO} className="h-20 w-auto" alt="Logo" />
+                  <img src={IMAGES.logo} className="h-20 w-auto" alt="Logo" />
                   <span className="text-gray-700 font-medium">
                     Welcome, Admin
                   </span>

@@ -7,7 +7,7 @@
       "status": "Processing",
       "payment": "Paid",
       "amount": "$125.99",
-      "avatar": "/assets/Images/order1.svg"
+      "avatar": "https://d1p5ayh0d7heww.cloudfront.net/Images/order1.svg"
     },
     {
       "id": "ORD-7862",
@@ -16,7 +16,7 @@
       "status": "Shipped",
       "payment": "Paid",
       "amount": "$89.99",
-      "avatar": "/assets/Images/order2.svg"
+      "avatar": "https://d1p5ayh0d7heww.cloudfront.net/Images/order2.svg"
     },
     {
       "id": "ORD-7863",
@@ -25,7 +25,7 @@
       "status": "pending",
       "payment": "Pending",
       "amount": "$99.09",
-      "avatar": "/assets/Images/order3.svg"
+      "avatar": "https://d1p5ayh0d7heww.cloudfront.net/Images/order3.svg"
     },
     {
       "id": "ORD-7864",
@@ -34,7 +34,7 @@
       "status": "Delivered",
       "payment": "Paid",
       "amount": "$129.99",
-      "avatar": "/assets/Images/order4.svg"
+      "avatar": "https://d1p5ayh0d7heww.cloudfront.net/Images/order4.svg"
     },
     {
       "id": "ORD-7866",
@@ -43,7 +43,7 @@
       "status": "Cancelled",
       "payment": "Failed",
       "amount": "$80.99",
-      "avatar": "/assets/Images/order5.svg"
+      "avatar": "https://d1p5ayh0d7heww.cloudfront.net/Images/order5.svg"
     }
   ]
 }
