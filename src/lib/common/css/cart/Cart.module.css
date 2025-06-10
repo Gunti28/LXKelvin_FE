@@ -1,0 +1,130 @@
+.CartMain {
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 20px;
+  height: 85vh;
+  overflow-y: auto;
+  margin-bottom: 4rem !important;
+}
+
+.itemimg img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  padding-left: 1rem;
+}
+
+.itemimg div {
+  font-size: 16px;
+}
+.midCount {
+  padding-top: 15px;
+}
+
+@media (max-width: 850px) {
+  .itemimg {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .itemimg img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .itembtn {
+    margin-left: 120px;
+  }
+}
+
+/* @media (max-width: 768px) {
+.cart-item-buttons{
+    margin-left: 120px;
+}
+} */
+
+@media (max-width: 767px) {
+  .cart-item {
+    flex-direction: row !important; /* Keep row */
+    align-items: flex-start !important; /* Align image and text to top */
+    /* gap: 10px; */
+    /* padding: 10px 0; */
+  }
+
+  .itemimg img {
+    width: 70px;
+    height: 70px;
+    margin-top: -20px;
+  }
+
+  .imgtext {
+    margin-top: -10px;
+  }
+
+  .itemimg div {
+    font-size: 14px;
+  }
+
+  .itembtn {
+    margin-left: 20px;
+  }
+  .itemimg p,
+  .itemimg span {
+    font-size: 12px;
+  }
+
+  .itembtn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 13px;
+    gap: 5px;
+    margin-right: 0 !important;
+  }
+
+  .itemprice {
+    font-size: 14px;
+    text-align: right;
+  }
+
+  .cart-item .btn,
+  .itembtn {
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+
+  .cart-item p {
+    margin-bottom: 0;
+  }
+
+  /* Make buttons and price stack better on small widths */
+  .cart-item > div {
+    flex: 1;
+  }
+  .midCount {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .itemimg img {
+    width: 60px;
+    margin-top: -20px;
+  }
+
+  .imgtext {
+    margin-top: -20px;
+  }
+  .itemprice {
+    font-size: 12px;
+  }
+
+  .itembtn {
+    font-size: 12px;
+    gap: 4px;
+  }
+  .midCount {
+    padding-top: 0px;
+  }
+}
