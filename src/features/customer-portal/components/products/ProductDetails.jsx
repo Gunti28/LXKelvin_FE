@@ -14,19 +14,33 @@ import {
   handleHomeClick,
   handleViewPlansClick,
 } from "../../../../lib/helpers";
+
+import OverLayLoader from "../overLayLoader/OverLayLoader";
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { product, status, error } = useSelector(
     (state) => state.productDetails
   );
+
+  /**
+   * we need to add changes on loaderCategories once service is placed
+   */
+  const [loaderCategories, serLoaderCategories] = useState(true);
   useEffect(() => {
     dispatch(fetchProductDetails(id));
+    /**
+     * this TimeOut function we need to re-wramp once service is in place
+     */
+    serLoaderCategories(true);
+    setTimeout(() => {
+      serLoaderCategories(false);
+    }, 1500);
   }, [dispatch, id]);
   const [liked, setLiked] = useState(false);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const totalImages = 5;
+  const totalImages = 4;
 
   const [feedback, setFeedback] = useState([]);
   const navigate = useNavigate();
@@ -45,6 +59,12 @@ const ProductDetailsPage = () => {
 
   const handleThumbnailClick = (index) => {
     setCurrentImageIndex(index);
+  };
+
+  const handleOfferBanner = () => {
+    navigate("/subscriptions", {
+      state: { highlightIndex: 3 },
+    });
   };
 
   const toggleIcon = () => {
@@ -69,6 +89,7 @@ const ProductDetailsPage = () => {
 
   return (
     <div className={ProductDetPage.productPage}>
+      <OverLayLoader isLoader={loaderCategories} />
       <Row>
         <Col md={6} className={ProductDetPage.leftColumn}>
           <div className={ProductDetPage.mainImageContainer}>
@@ -214,11 +235,15 @@ const ProductDetailsPage = () => {
             </div>
 
             <div className={ProductDetPage.subscriptionOffer}>
-              <div className={ProductDetPage.offerBanner}>
+              <div
+                className={ProductDetPage.offerBanner}
+                onClick={handleOfferBanner}
+              >
                 <p>
                   Get extra{" "}
-                  <span className={ProductDetPage.offText}>(15% OFF)</span> with{" "}
-                  <span className="vip-tag">VIP</span> Subscription
+                  <span className={ProductDetPage.offText}>(25% OFF)</span> with{" "}
+                  <span className={ProductDetPage.vipTag}>VIP</span>{" "}
+                  Subscription
                 </p>
               </div>
             </div>

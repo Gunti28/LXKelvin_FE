@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Navigation, Autoplay } from "swiper/modules";
 import { IMAGES } from "../../../../lib/constants/Image_Constants";
+
 const FlashScreens = () => {
   return (
     <div>
@@ -21,6 +22,7 @@ const FlashScreens = () => {
             className={`${Category.carousel} d-flex align-items-center justify-content-center`}
           >
             <img
+
               src={IMAGES.dashboard_carousel}
               alt="Fruits and Vegetables"
               className={Category.banner}
@@ -42,7 +44,9 @@ const FlashScreens = () => {
             className={`${Category.carousel} d-flex align-items-center justify-content-center`}
           >
             <img
+
               src={IMAGES.IMAGES}
+
               alt="Banner Slide 2"
               className={Category.banner}
             />
@@ -63,6 +67,7 @@ const FlashScreens = () => {
             className={`${Category.carousel} d-flex align-items-center justify-content-center`}
           >
             <img
+
               src={IMAGES.dashboard_carousel}
               alt="Banner Slide 3"
               className={Category.banner}

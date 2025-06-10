@@ -91,7 +91,9 @@ const SignInModel = () => {
         </Modal.Body>
         <Modal.Footer className=" p-0 border-0 ps-1  ">
           <img
+
             src={IMAGES.footer_Img}
+
             className={`image-fluid w-100 ${ModelPage.footerImg}`}
           />
         </Modal.Footer>

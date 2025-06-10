@@ -1,4 +1,6 @@
-import React from "react";
+
+import React, { useState } from "react";
+
 import Card from "react-bootstrap/Card";
 import { CiLock } from "react-icons/ci";
 import Form from "react-bootstrap/Form";
@@ -6,7 +8,9 @@ import { IoIosArrowForward } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import Paymentstyles from "../../../../lib/common/css/SubscriptionCards/ChoosePayment.module.css";
 
+
 import { IMAGES } from "../../../../lib/constants/Image_Constants";
+
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setPaymentMethod } from "../../../../store/slice/subscriptionPaySlice";
@@ -14,12 +18,30 @@ const ChoosePayment = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const [validated, setValidated] = useState(false);
+  const [agreed, setAgreed] = useState(false);
+
   const handlePaymentSelect = (method) => {
+    if (!agreed) {
+      setValidated(true);
+      return;
+    }
+
     dispatch(setPaymentMethod(method));
     if (method === "upi") {
       navigate("/upiPayment");
     } else {
       navigate("/cardPayment");
+    }
+  };
+
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (agreed) {
+      setValidated(true);
+    } else {
+      setValidated(true);
     }
   };
 
@@ -39,6 +61,7 @@ const ChoosePayment = () => {
               <div className={Paymentstyles.imgContainer}>
                 <img
                   src={IMAGES.visa}
+
                   alt="Encrypted Icon"
                   style={{ marginLeft: "8px" }}
                 />
@@ -72,6 +95,7 @@ const ChoosePayment = () => {
             <div className="d-flex flex-row">
               <div className={Paymentstyles.nameContainer}>Net banking</div>
               <div className={Paymentstyles.imgContainer}>
+
                 <img src={IMAGES.paypal} alt="paypal" className="ms-2" />
                 <img
                   src={IMAGES.applePay}
@@ -96,10 +120,21 @@ const ChoosePayment = () => {
             <span style={{ borderBottom: "1px solid" }}>End-end encrypted</span>
             <CiLock size={14} className="ms-1 mb-1" />
           </div>
-
-          <Form className={`mt-3 ${Paymentstyles.form}`}>
+          <Form
+            noValidate
+            validated={validated}
+            onSubmit={handleFormSubmit}
+            className={`mt-3 ${Paymentstyles.form}`}
+          >
             <div className={`d-flex ${Paymentstyles.check}`}>
-              <Form.Check type="checkbox" id="confirmCheck" />
+              <Form.Check
+                type="checkbox"
+                id="confirmCheck"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
+                isInvalid={validated && !agreed}
+                required
+              />
               <Form.Label
                 htmlFor="confirmCheck"
                 className={`${Paymentstyles.termsLabel}`}
@@ -114,6 +149,7 @@ const ChoosePayment = () => {
 
         <div className={`${Paymentstyles.vector} `}>
           <img
+
             src={IMAGES.securedPayment}
             alt="Vector Icon"
             style={{ marginRight: "8px" }}

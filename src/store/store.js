@@ -16,6 +16,9 @@ import plansReducer from "./slice/SubscriptionCardSlice";
 import subscriptionReducer from "./slice/subscriptionPaySlice";
 
 import authReducer from "./slice/admin-signinSlice";
+import cartReducer from "./slice/cartSlice";
+import deliveryAddressReducer from "./slice/deliveryAddressSlice";
+import orderSummaryReducer from "./slice/orderSummarySlice";
 
 //admin-portal 
 
@@ -34,6 +37,7 @@ import adminSalesReportReducer from "./slice/admin-portal/admin-reportsSlice";
 import adminInventoryStockReducer from "./slice/admin-portal/admin-inventoryStockSlice";
 import adminInventoryAdjustStockReducer from "./slice/admin-portal/admin-inventoryAdjustStockModelSlice";
 
+
 export const store = configureStore({
   reducer: {
     products: productsReducer,
@@ -48,6 +52,9 @@ export const store = configureStore({
     plans: plansReducer,
     subscription: subscriptionReducer,
     auth: authReducer,
+        cart: cartReducer,
+    deliveryAddress: deliveryAddressReducer,
+    orderSummary: orderSummaryReducer,
 
     //admin-portal
     
@@ -65,6 +72,9 @@ export const store = configureStore({
     adminSalesReport: adminSalesReportReducer,
     adminInventoryStock: adminInventoryStockReducer,
     adminInventoryAdjustStock: adminInventoryAdjustStockReducer,
+
+
+
   },
 });
 export default store;
