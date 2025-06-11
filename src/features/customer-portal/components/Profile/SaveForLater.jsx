@@ -1,26 +1,25 @@
-import React, { useEffect } from "react";
 import styles from "../../../../lib/common/css/profile/SaveForLater.module.css";
 import { Icon } from "@iconify/react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSavedItems } from "../../../../lib/services/saveForLaterAsyncThunk";
+import { removeSavedItem } from "../../../../store/slice/saveLaterSlice";
+import { useNavigate } from "react-router-dom";
 
 const SaveForLater = () => {
   const dispatch = useDispatch();
-  const { items, loading } = useSelector((state) => state.saveForLater);
-
-  useEffect(() => {
-    dispatch(fetchSavedItems());
-  }, [dispatch]);
+  const navigate = useNavigate();
+  // const { loading } = useSelector((state) => state.saveForLater);
+  const savedItems = useSelector((state) => state.savedItems);
 
   const handleDelete = (id) => {
-    console.log("Delete item:", id);
+    dispatch(removeSavedItem(id));
   };
 
   const handleMoveToCart = (id) => {
     console.log("Move to cart:", id);
   };
-
-  if (loading) return <p>Loading...</p>;
+  const handleProductClick = (id) => {
+    navigate(`/productDetails/${id}`);
+  };
 
   return (
     <div className={styles.SaveCon}>
@@ -39,58 +38,52 @@ const SaveForLater = () => {
         </div>
         <p className={styles.addNew}>items</p>
       </div>
-
-      {items.map((item) => (
-        <div key={item.id} className={styles.savedCard}>
-          <div
-            className={styles.imageCon}
-            style={{ backgroundColor: item.bgColor }}
-          >
-            <img
-              src={item.image}
-              alt={item.name}
-              className={styles.productImg}
-            />
-          </div>
-          <div className={styles.productInfo}>
-            <h5>{item.name}</h5>
-            <div className={styles.rating}>
-              {item.rating}
-              <Icon
-                icon="material-symbols:star-rounded"
-                width="11"
-                height="11"
+      {savedItems.length === 0 ? (
+        <p>No items saved.</p>
+      ) : (
+        savedItems.map((item) => (
+          <div key={item.id} className={styles.savedCard}>
+            <div
+              className={styles.imageCon}
+              onClick={() => handleProductClick(item.id)}
+            >
+              <img
+                src={item.images[0]}
+                alt={item.productName}
+                className={styles.productImg}
               />
             </div>
-            <div className={styles.priceRow}>
-              <span className={styles.price}>€ {item.price}</span>
-              <span className={styles.originalPrice}>
-                € {item.originalPrice}
-              </span>
-              <span className={styles.discount}>{item.discount}</span>
+            <div className={styles.productInfo}>
+              <h5>{item.productName}</h5>
+              <div className={styles.priceRow}>
+                <span className={styles.price}>€ {item.offerPrice}</span>
+                <span className={styles.originalPrice}>
+                  € {item.originalPrice}
+                </span>
+                <span className={styles.discount}>{item.discount}% off</span>
+              </div>
+              <button
+                className={styles.moveBtn}
+                onClick={() => handleMoveToCart(item.id)}
+              >
+                Move to cart
+              </button>
             </div>
             <button
-              className={styles.moveBtn}
-              onClick={() => handleMoveToCart(item.id)}
+              className={styles.deleteBtn}
+              onClick={() => handleDelete(item.id)}
             >
-              Move to cart
+              <Icon
+                icon="weui:delete-outlined"
+                width="30"
+                height="30"
+                style={{ color: "#5B5F62" }}
+              />
             </button>
           </div>
-          <button
-            className={styles.deleteBtn}
-            onClick={() => handleDelete(item.id)}
-          >
-            <Icon
-              icon="weui:delete-outlined"
-              width="30"
-              height="30"
-              style={{ color: "#5B5F62" }}
-            />
-          </button>
-        </div>
-      ))}
+        ))
+      )}
     </div>
   );
 };
-
 export default SaveForLater;

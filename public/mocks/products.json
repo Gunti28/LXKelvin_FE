@@ -469,7 +469,7 @@
       "discount": 60,
       "Colour": "#BBB4A2",
 
-      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/white radish.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/white_radish.svg",
 
       "stockCount": 10,
       "isSeasonal": false
@@ -749,7 +749,7 @@
       "discount": 0,
       "Colour": "#F47775",
 
-      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pomegranate.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon.svg",
 
       "stockCount": 10,
       "isSeasonal": true

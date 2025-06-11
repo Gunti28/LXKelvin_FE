@@ -23,7 +23,7 @@ const CategoriesComponent = () => {
     }, 1500);
   }, [categories]);
   return (
-    <Container fluid className="mt-4 ">
+    <Container fluid className="mt-4 mb-4">
       <OverLayLoader isLoader={loaderCategories} />
       <h4 className={`text-center mb-4 ${Category.CatText}`}>CATEGORIES</h4>
       <div className="text-end">
