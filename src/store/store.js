@@ -15,10 +15,14 @@ import productDetailsReducer from "./slice/productDetailsSlice";
 import plansReducer from "./slice/SubscriptionCardSlice";
 import subscriptionReducer from "./slice/subscriptionPaySlice";
 
+import savedItemsReducer from "./slice/saveLaterSlice";
+
 import authReducer from "./slice/admin-signinSlice";
+
 import cartReducer from "./slice/cartSlice";
 import deliveryAddressReducer from "./slice/deliveryAddressSlice";
 import orderSummaryReducer from "./slice/orderSummarySlice";
+
 
 //admin-portal 
 
@@ -51,6 +55,8 @@ export const store = configureStore({
     productDetails: productDetailsReducer,
     plans: plansReducer,
     subscription: subscriptionReducer,
+
+    savedItems: savedItemsReducer,
     auth: authReducer,
         cart: cartReducer,
     deliveryAddress: deliveryAddressReducer,
@@ -72,8 +78,6 @@ export const store = configureStore({
     adminSalesReport: adminSalesReportReducer,
     adminInventoryStock: adminInventoryStockReducer,
     adminInventoryAdjustStock: adminInventoryAdjustStockReducer,
-
-
 
   },
 });

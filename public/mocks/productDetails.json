@@ -13,6 +13,17 @@
       "cat_id": 1,
       "offerPrice": 40,
       "originalPrice": 50,
+      "offerPriceByWeight": {
+        "500g": 40,
+        "1kg": 80,
+        "2kg": 160
+      },
+      "originalPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "liked":false,
       "discount": 20,
       "healthBenefits": "Rich in essential vitamins (A, C, and K) and antioxidants that support heart health.",
       "packing": "Packaged in a ventilated, eco-friendly plastic bag to retain freshness.",
@@ -30,6 +41,17 @@
       "cat_id": 1,
       "offerPrice": 35,
       "originalPrice": 45,
+      "offerPriceByWeight": {
+        "500g": 35,
+        "1kg": 70,
+        "2kg": 140
+      },
+      "originalPriceByWeight": {
+        "500g": 45,
+        "1kg": 90,
+        "2kg": 180
+      },
+      "liked":false,
       "discount": 10,
       "healthBenefits": "A great source of protein and fiber that aids in digestion.",
       "packing": "Packaged in a reusable, breathable pouch to maintain quality.",
@@ -48,6 +70,17 @@
       "cat_id": 2,
       "offerPrice": 120,
       "originalPrice": 35,
+      "offerPriceByWeight": {
+        "500g": 20,
+        "1kg": 40,
+        "2kg": 80
+      },
+      "originalPriceByWeight": {
+        "500g": 35,
+        "1kg": 70,
+        "2kg": 140
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Loaded with dietary fiber and vitamin C to boost immunity.",
       "packing": "Carefully packed in a fruit tray with protective padding.",
@@ -66,6 +99,17 @@
       "cat_id": 1,
       "offerPrice": 25,
       "originalPrice": 35,
+      "offerPriceByWeight": {
+        "500g": 25,
+        "1kg": 50,
+        "2kg": 100
+      },
+      "originalPriceByWeight": {
+        "500g": 35,
+        "1kg": 70,
+        "2kg": 140
+      },
+      "liked":false,
       "discount": 5,
       "healthBenefits": "An excellent source of vitamins and minerals that support overall health.",
       "packing": "Packaged in an eco-friendly, ventilated plastic bag.",
@@ -84,6 +128,17 @@
       "cat_id": 4,
       "offerPrice": 40,
       "originalPrice": 35,
+      "offerPriceByWeight": {
+        "500g": 20,
+        "1kg": 40,
+        "2kg": 80
+      },
+      "originalPriceByWeight": {
+        "500g": 35,
+        "1kg": 70,
+        "2kg": 140
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in potassium and natural sugars that provide quick energy.",
       "packing": "Packaged in a biodegradable net to maintain freshness and allow airflow.",
@@ -102,6 +157,17 @@
       "cat_id": 1,
       "offerPrice": 30,
       "originalPrice": 40,
+      "offerPriceByWeight": {
+        "500g": 30,
+        "1kg": 60,
+        "2kg": 120
+      },
+      "originalPriceByWeight": {
+        "500g": 40,
+        "1kg": 80,
+        "2kg": 160
+      },
+      "liked":false,
       "discount": 15,
       "healthBenefits": "Contains compounds known to boost immunity and support heart health.",
       "packing": "Packaged in a sealed, recyclable bag to preserve aroma and flavor.",
@@ -120,6 +186,17 @@
       "category": "fruits",
       "offerPrice": 28,
       "originalPrice": 35,
+      "offerPriceByWeight": {
+        "500g": 28,
+        "1kg": 56,
+        "2kg": 112
+      },
+      "originalPriceByWeight": {
+        "500g": 35,
+        "1kg": 70,
+        "2kg": 140
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Hydrating and rich in vitamins, promoting healthy skin and digestion.",
       "packing": "Packaged in a sturdy, transparent container to protect the fruit during transport.",
@@ -138,6 +215,17 @@
       "cat_id": 3,
       "offerPrice": 28,
       "originalPrice": 35,
+      "offerPriceByWeight": {
+        "500g": 28,
+        "1kg": 56,
+        "2kg": 112
+      },
+      "originalPriceByWeight": {
+        "500g": 35,
+        "1kg": 70,
+        "2kg": 140
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Packed with vitamin C and fiber, beneficial for immune health.",
       "packing": "Packaged in a tray with individual compartments to avoid bruising.",
@@ -156,6 +244,17 @@
       "cat_id": 3,
       "offerPrice": 60,
       "originalPrice": 60,
+      "offerPriceByWeight": {
+        "500g": 60,
+        "1kg": 120,
+        "2kg": 240
+      },
+      "originalPriceByWeight": {
+        "500g": 60,
+        "1kg": 120,
+        "2kg": 240
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "A great source of antioxidants and vitamins that help boost immunity.",
       "packing": "Packaged in a perforated plastic bag for maximum freshness.",
@@ -175,6 +274,17 @@
       "cat_id": 1,
       "offerPrice": 150,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in antioxidants and beneficial compounds that support health.",
       "packing": "Packaged in a mesh bag to ensure proper air circulation.",
@@ -194,6 +304,17 @@
       "cat_id": 3,
       "offerPrice": 200,
       "originalPrice": 200,
+      "offerPriceByWeight": {
+        "500g": 200,
+        "1kg": 400,
+        "2kg": 800
+      },
+      "originalPriceByWeight": {
+        "500g": 200,
+        "1kg": 400,
+        "2kg": 800
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Loaded with antioxidants and vitamin C, promoting skin and immune health.",
       "packing": "Packaged in a clamshell with protective padding to prevent damage.",
@@ -213,6 +334,17 @@
       "cat_id": 5,
       "offerPrice": 50,
       "originalPrice": 50,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Provides quality protein and calcium essential for strong bones.",
       "packing": "Sealed in a recyclable carton to maintain optimal freshness.",
@@ -232,6 +364,17 @@
       "cat_id": 5,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in protein and calcium, contributing to a balanced diet.",
       "packing": "Packaged in airtight wrappers to preserve flavor and texture.",
@@ -251,6 +394,17 @@
       "cat_id": 3,
       "offerPrice": 350,
       "originalPrice": 550,
+      "offerPriceByWeight": {
+        "500g": 350,
+        "1kg": 700,
+        "2kg": 1400
+      },
+      "originalPriceByWeight": {
+        "500g": 550,
+        "1kg": 1100,
+        "2kg": 2200
+      },
+      "liked":false,
       "discount": 20,
       "healthBenefits": "High in fiber and antioxidants, supporting digestion and overall health.",
       "packing": "Packaged in a ventilated box to maintain freshness during transit.",
@@ -270,6 +424,17 @@
       "cat_id": 3,
       "offerPrice": 350,
       "originalPrice": 550,
+      "offerPriceByWeight": {
+        "500g": 350,
+        "1kg": 700,
+        "2kg": 1400
+      },
+      "originalPriceByWeight": {
+        "500g": 550,
+        "1kg": 1100,
+        "2kg": 2200
+      },
+      "liked":false,
       "discount": 20,
       "healthBenefits": "Packed with vitamins and phytonutrients that promote a healthy diet.",
       "packing": "Packaged in a protective bag that maintains its crisp texture.",
@@ -289,6 +454,17 @@
       "cat_id": 3,
       "offerPrice": 150,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 20,
       "healthBenefits": "Provides essential nutrients and antioxidants that aid detoxification.",
       "packing": "Packaged in a moisture-controlled bag to keep stalks fresh.",
@@ -308,6 +484,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "A good source of vitamins and fiber that supports digestive health.",
       "packing": "Packaged in a reusable, ventilated bag.",
@@ -327,6 +514,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Hydrating and rich in vitamins that support skin health.",
       "packing": "Packaged in a cool, protective bag to ensure long-lasting freshness.",
@@ -346,6 +544,17 @@
       "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Contain antioxidants and vitamins beneficial for overall wellness.",
       "packing": "Packaged in a small clamshell to protect delicate leaves.",
@@ -364,6 +573,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Low in calories and rich in fiber and antioxidants.",
       "packing": "Packaged in a cushioned, recyclable container to minimize bruising.",
@@ -383,6 +603,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Rich in dietary nitrates and antioxidants, which support heart health.",
       "packing": "Packaged in a breathable bag to keep roots crisp and fresh.",
@@ -402,6 +633,17 @@
       "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "A unique source of fiber and minerals essential for well-being.",
       "packing": "Packaged in eco-friendly packaging that maintains product integrity.",
@@ -421,6 +663,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Packed with vitamins C, K and fiber that support immunity and digestion.",
       "packing": "Packaged in a ventilated, recyclable bag to lock in freshness.",
@@ -440,6 +693,17 @@
       "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "High in fiber and antioxidants, supporting detoxification and health.",
       "packing": "Packaged in a secure, perforated bag for optimal ventilation.",
@@ -459,6 +723,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "A good source of fiber and essential nutrients that boost energy.",
       "packing": "Packaged in a sealed bag to prevent moisture loss.",
@@ -478,6 +753,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Rich in vitamins and minerals that support a robust immune system.",
       "packing": "Packaged in a lightweight, ventilated bag for extra freshness.",
@@ -498,6 +784,17 @@
       "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Provides dietary fiber and nutrients vital for digestion.",
       "packing": "Packaged in a moisture-controlled bag to extend shelf life.",
@@ -518,6 +815,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "High in beta-carotene and fiber, beneficial for eye and skin health.",
       "packing": "Packaged in a recyclable bag that maintains crispness.",
@@ -537,6 +845,17 @@
       "cat_id": 1,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in vitamins and antioxidants that support overall well-being.",
       "packing": "Packaged in an eco-friendly bag to lock in freshness.",
@@ -556,6 +875,17 @@
       "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Contains essential vitamins and minerals that promote vitality.",
       "packing": "Packaged with care in a protective, recyclable wrap.",
@@ -575,6 +905,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Low in calories and rich in vitamins, supporting a balanced diet.",
       "packing": "Packaged in a moisture-controlled container to preserve freshness.",
@@ -594,6 +935,17 @@
       "cat_id": 3,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Loaded with inulin and antioxidants that support digestive health.",
       "packing": "Packaged in a sturdy, eco-friendly pouch for lasting freshness.",
@@ -613,6 +965,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Rich in capsaicin, which may help boost metabolism and reduce inflammation.",
       "packing": "Packaged in a secure, moisture-resistant bag to maintain potency.",
@@ -632,6 +995,17 @@
       "cat_id": 1,
       "offerPrice": 50,
       "originalPrice": 150,
+      "offerPriceByWeight": {
+        "500g": 50,
+        "1kg": 100,
+        "2kg": 200
+      },
+      "originalPriceByWeight": {
+        "500g": 150,
+        "1kg": 300,
+        "2kg": 600
+      },
+      "liked":false,
       "discount": 60,
       "healthBenefits": "Contains compounds that promote digestion and support detoxification.",
       "packing": "Packaged in a ventilated container to preserve crispness.",
@@ -651,6 +1025,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in antioxidants and vitamins that help fight inflammation.",
       "packing": "Packaged in a protective clamshell to prevent bruising.",
@@ -670,6 +1055,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Packed with vitamin C and fiber, promoting healthy digestion and immunity.",
       "packing": "Carefully packed in a padded box to protect the delicate fruit.",
@@ -689,6 +1085,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Bursting with antioxidants and vitamins that support heart health.",
       "packing": "Packaged in a clamshell with individual slots to prevent damage.",
@@ -708,6 +1115,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in dietary fiber and antioxidants that aid digestion.",
       "packing": "Packaged in a protective fruit tray to maintain optimal freshness.",
@@ -727,6 +1145,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "High in vitamin C and antioxidants that boost immunity.",
       "packing": "Packaged in a sealed pouch to protect its nutritional value.",
@@ -746,6 +1175,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "A nutrient-rich fruit loaded with fiber and vitamins for overall wellness.",
       "packing": "Packaged in a protective box to prevent bruising during transport.",
@@ -765,6 +1205,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Packed with healthy fats, fiber, and potassium that aid heart health.",
       "packing": "Packaged in a cushioned, recyclable box that protects delicate skin.",
@@ -784,6 +1235,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Bursting with antioxidants and vitamin C to enhance skin and immune health.",
       "packing": "Packaged in a clamshell with padding to avoid damage.",
@@ -803,6 +1265,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in dietary fiber and vitamins that promote good digestion.",
       "packing": "Packaged in a protective tray designed to minimize bruising.",
@@ -822,6 +1295,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "High in fiber and vitamin C, ideal for boosting overall health.",
       "packing": "Packaged in a ventilated, eco-friendly container for optimal freshness.",
@@ -841,6 +1325,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in vitamin C and antioxidants that support immune health.",
       "packing": "Packaged in a protective netted bag to prevent damage.",
@@ -860,6 +1355,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Loaded with vitamin C and essential nutrients to boost immunity.",
       "packing": "Packaged in a sturdy, ventilated box to protect against bruising.",
@@ -879,6 +1385,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Packed with vitamins and antioxidants that enhance overall well-being.",
       "packing": "Packaged in an attractive, sturdy box for safe transport.",
@@ -898,6 +1415,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in fiber and essential vitamins, great for boosting energy.",
       "packing": "Packaged in a moisture-resistant container to maintain its freshness.",
@@ -917,6 +1445,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Contains vitamins and antioxidants that support skin and immune health.",
       "packing": "Packaged in a cooled box with padding for delicate handling.",
@@ -936,6 +1475,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "High in fiber and minerals, aiding in digestion and overall health.",
       "packing": "Packaged in a recycled, cushioned box to safeguard its delicate structure.",
@@ -955,6 +1505,17 @@
       "category": "fruits",
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Packed with vitamins and antioxidants that refresh and hydrate the body.",
       "packing": "Packaged in a ventilated, secure container for optimal freshness.",
@@ -974,6 +1535,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Rich in antioxidants and vitamin C that help fight free radicals.",
       "packing": "Packaged in a protective clamshell to reduce bruising and damage.",
@@ -993,6 +1565,17 @@
       "cat_id": 2,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Packed with antioxidants, vitamins, and fiber to support heart health.",
       "packing": "Packaged in a carefully secured box designed to minimize damage.",
@@ -1012,6 +1595,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "Hydrating and full of vitamins that are essential for maintaining good health.",
       "packing": "Packaged in a robust, insulated container to preserve freshness.",
@@ -1031,6 +1625,17 @@
       "cat_id": 4,
       "offerPrice": 250,
       "originalPrice": 250,
+      "offerPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "originalPriceByWeight": {
+        "500g": 250,
+        "1kg": 500,
+        "2kg": 1000
+      },
+      "liked":false,
       "discount": 0,
       "healthBenefits": "High in potassium and natural sugars, providing a quick energy boost.",
       "packing": "Packaged in a biodegradable net that allows air circulation.",

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CardStyle from "../../../../lib/common/css/SubscriptionCards/SubscriptionCards.module.css";
@@ -11,18 +11,24 @@ import {
   setSelectedPlanId,
   setPrice,
 } from "../../../../store/slice/subscriptionPaySlice";
+import OverLayLoader from "../overLayLoader/OverLayLoader";
 
 const SubscriptionCards = () => {
   const dispatch = useDispatch();
-  const { plans, loading, error } = useSelector((state) => state.plans);
+  const { plans, error } = useSelector((state) => state.plans);
   const navigate = useNavigate();
 
   const location = useLocation();
   const highlightIndex = location.state?.highlightIndex;
 
+  const [loaderCategories, setLoaderCategories] = useState(true);
 
   useEffect(() => {
     dispatch(fetchPlans());
+    setLoaderCategories(true);
+    setTimeout(() => {
+      setLoaderCategories(false);
+    }, 1500);
   }, [dispatch]);
 
   const handlePlanSelect = (planId, price) => {
@@ -30,11 +36,10 @@ const SubscriptionCards = () => {
     dispatch(setPrice(price));
     navigate("/choosePayment");
   };
-
-  if (loading) return <p>Loading plans...</p>;
   if (error) return <p>Error: {error}</p>;
   return (
     <div className={CardStyle.MainContainer}>
+      <OverLayLoader isLoader={loaderCategories} />
       <h4 className="text-center mb-4 fw-bold">
         Choose the plan thats right for you
       </h4>
@@ -46,7 +51,6 @@ const SubscriptionCards = () => {
                 CardStyle.CardHover
               } ${index === highlightIndex ? CardStyle.highlight : ""}`}
             >
-
               <div className="d-flex justify-content-center mb-3">
                 <Button className="bg-white text-dark fw-400 border-dark px-4">
                   {plan.title}

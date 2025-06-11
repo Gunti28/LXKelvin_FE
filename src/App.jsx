@@ -39,6 +39,7 @@ import PaymentFailed from "./features/customer-portal/components/MessageModals/P
 import Pay1 from "./features/customer-portal/components/MessageModals/PaymentSuccess";
 import Thankyou from "./features/customer-portal/components/MessageModals/ThankYou";
 import VipSuccess from "./features/customer-portal/components/MessageModals/VipSuccess";
+import LocationTracker from "./features/customer-portal/components/layOut/Location";
 
 
 // Admin-portal Navigation

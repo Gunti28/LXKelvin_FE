@@ -1,6 +1,6 @@
 import NavbarCss from "../../../../lib/common/css/registration/Navbar.module.css";
 import HeroStyles from "../../../../lib/common/css/registration/OpeningScreen.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Navbar,
   Nav,
@@ -19,6 +19,8 @@ import { showNavBarDefaultTemplate } from "../../../../lib/helpers/index";
 import { IMAGES } from "../../../../lib/constants/Image_Constants/index";
 import { Const } from "../../../../lib/constants/index";
 import { setSelectedLang } from "../../../../store/slice/languageSlice";
+import LocationTracker from "./Location";
+import LocationModel from "./Location";
 
 const NavbarComponent = () => {
   let contentNavWrapper;
@@ -34,7 +36,9 @@ const NavbarComponent = () => {
   const [, setUserData] = useState({});
   const { isUserValid, userAuth } = useSelector((state) => state.userAuth);
   const navigate = useNavigate();
-
+  const [showPopover, setShowPopover] = useState(false);
+  const [userLocation, setUserLocation] = useState(" ");
+  const targetRef = useRef(null);
   const languages = Const?.LANGUAGES;
 
   const dispatch = useDispatch();
@@ -188,12 +192,13 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
               <div className={NavbarCss.DealsCon}>
-                <div className={NavbarCss.locationContainer}>
+                {/* <div className={NavbarCss.locationContainer}>
                   <Nav.Link
                     href="#"
-                    className={text_color ? "text-secondary" : "text-white"}
+                    style={{ color: text_color ? "#5B5F62" : "#fff" }}
+                    className={NavbarCss.locationBox}
                   >
-                    Location
+                    <LocationTracker />
                   </Nav.Link>
                   <div className={NavbarCss.locationIcon}>
                     <Icon
@@ -203,6 +208,45 @@ const NavbarComponent = () => {
                       style={{ color: "#fff" }}
                     />
                   </div>
+                </div> */}
+                <div
+                  onClick={() => setShowPopover(!showPopover)}
+                  // onMouseEnter={() => setShowPopover(true)}
+                  // onMouseLeave={() => setShowPopover(false)}
+                  style={{ position: "relative", display: "inline-block" }}
+                >
+                  <Nav.Link
+                    href="#"
+                    ref={targetRef}
+                    className="d-flex flex-column"
+                    style={{
+                      color: text_color ? "#5B5F62" : "#fff",
+                    }}
+                  >
+                    {text_color?<div>Location</div>:null}
+                    <div className="d-flex flex-row">
+                      {userLocation !== " "
+                        ? `${userLocation.slice(0, 30)}...`
+                        : "Location"}
+                        <Icon
+                      icon="mdi:arrow-down-drop"
+                      width="28"
+                      height="28"
+                      style={{ color: text_color?"#5B5F62":"#fff" }}
+                    />
+                    </div>
+                  </Nav.Link>
+
+                  <LocationModel
+                    show={showPopover}
+                    onClose={() => setShowPopover(false)}
+                    target={targetRef.current}
+                    container={targetRef.current?.closest(".navbar")}
+                    onLocationSet={(location) => {
+                      setUserLocation(location);
+                      setShowPopover(false);
+                    }}
+                  />
                 </div>
 
                 {showDeals && (
