@@ -15,7 +15,13 @@ import productDetailsReducer from "./slice/productDetailsSlice";
 import plansReducer from "./slice/SubscriptionCardSlice";
 import subscriptionReducer from "./slice/subscriptionPaySlice";
 
+<<<<<<< HEAD
 import authReducer from "./slice/admin-signinSlice";
+=======
+import cartReducer from "./slice/cartSlice";
+import deliveryAddressReducer from "./slice/deliveryAddressSlice";
+import orderSummaryReducer from "./slice/orderSummarySlice";
+>>>>>>> 73649b1749dfbbc742c38acc4241cc0c4e3e5705
 
 export const store = configureStore({
   reducer: {
@@ -30,7 +36,13 @@ export const store = configureStore({
     productDetails: productDetailsReducer,
     plans: plansReducer,
     subscription: subscriptionReducer,
+<<<<<<< HEAD
     auth: authReducer
+=======
+    cart: cartReducer,
+    deliveryAddress: deliveryAddressReducer,
+    orderSummary: orderSummaryReducer,
+>>>>>>> 73649b1749dfbbc742c38acc4241cc0c4e3e5705
   },
 });
 export default store;

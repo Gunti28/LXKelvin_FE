@@ -1,5 +1,5 @@
-    {
-      "addresses" : [
+{
+  "addresses": [
     {
       "id": 1,
       "houseNo": "90b",
@@ -8,7 +8,9 @@
       "state": "Karnataka",
       "pincode": "560068",
       "type": "home",
-      "isDefault": true
+      "isDefault": true,
+      "lat": 17.385044,
+      "lng": 78.486671
     },
     {
       "id": 2,
@@ -18,6 +20,9 @@
       "state": "Karnataka",
       "pincode": "560068",
       "type": "office",
-      "isDefault": false
+      "isDefault": false,
+      "lat": 17.385044,
+      "lng": 78.486671
     }
-    ]}
+  ]
+}

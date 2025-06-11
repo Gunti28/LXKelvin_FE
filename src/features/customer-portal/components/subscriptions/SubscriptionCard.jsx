@@ -6,7 +6,7 @@ import { MdOutlineEuroSymbol } from "react-icons/md";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPlans } from "../../../../lib/services/subscriptionCardAsyncThunk";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   setSelectedPlanId,
   setPrice,
@@ -16,6 +16,10 @@ const SubscriptionCards = () => {
   const dispatch = useDispatch();
   const { plans, loading, error } = useSelector((state) => state.plans);
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const highlightIndex = location.state?.highlightIndex;
+
 
   useEffect(() => {
     dispatch(fetchPlans());
@@ -37,7 +41,12 @@ const SubscriptionCards = () => {
       <div className={CardStyle.CardContainer}>
         {plans.map((plan, index) => (
           <div className={CardStyle.card} key={index}>
-            <Card className="me-1 mb-1 h-100 text-center border-2 shadow-lg rounded-3 d-flex flex-column pt-4">
+            <Card
+              className={`me-1 mb-1 text-center border-2 shadow-lg rounded-3 d-flex flex-column pt-4 ${
+                CardStyle.CardHover
+              } ${index === highlightIndex ? CardStyle.highlight : ""}`}
+            >
+
               <div className="d-flex justify-content-center mb-3">
                 <Button className="bg-white text-dark fw-400 border-dark px-4">
                   {plan.title}
@@ -49,7 +58,7 @@ const SubscriptionCards = () => {
                   {plan.price}
                 </Card.Title>
                 <Card.Text className="text-muted">{plan.Name}</Card.Text>
-                <Card.Text className="flex-grow-1">
+                <div className="flex-grow-1">
                   <ul className={`${CardStyle.listed} text-start content`}>
                     {plan.features.map((feature, i) => (
                       <li
@@ -64,7 +73,7 @@ const SubscriptionCards = () => {
                       </li>
                     ))}
                   </ul>
-                </Card.Text>
+                </div>
 
                 <Button
                   className={`${CardStyle.custombutton} w-100`}

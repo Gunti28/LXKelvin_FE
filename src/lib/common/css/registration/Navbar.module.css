@@ -5,7 +5,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.1) !important;
-  background-image: url("/assets/Images/LandingPage.svg");
+  background-image: url("https://d1p5ayh0d7heww.cloudfront.net/Images/LandingPage.svg");
   background-size: cover;
   background-position: center;
 }
@@ -594,4 +594,33 @@
   .searchContainer {
     width: 100% !important;
   }
+}
+
+.cartLink {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.cartIconLight {
+  color: #5b5f62;
+}
+
+.cartIconDark {
+  color: #fff;
 }
