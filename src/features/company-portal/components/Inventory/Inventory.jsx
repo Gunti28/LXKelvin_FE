@@ -6,11 +6,10 @@ import BarcodeScan from "./Bulk Update/BarcodeScan";
 import Stock from "./Stock";
 import StockHistoryData from "./StockHistory";
 
-
 const InventoryPage = () => {
   const [activeTab, setActiveTab] = useState("Stock"); 
-  const [chartType, setChartType] = useState("CSVUpload");
-
+  const [chartType, setChartType] = useState("CSVUpload","ManualEntry");
+  
   const sampleData = [
     {
       productId: "PRD-1001",
@@ -29,15 +28,50 @@ const InventoryPage = () => {
       reason: "Inventory Correction",
     },
   ];
-
+  const manualData = [
+    {
+      productId: "PRD-1001",
+      sku: "WBH-001",
+      Adjustment: 45,
+      Quantity: 50,
+      Reason: "Add",
+      Actions: "Purchase",
+    },
+    {
+      productId: "PRD-1002",
+      sku: "WBH-002",
+      Adjustment: 25,
+      Quantity: 50,
+      Reason: "Add",
+      Actions: "Purchase",
+    },
+  ];
+  const barcodeScan = [
+    {
+      Time: "10:23AM",
+      Barcode: "8901234567890",
+      Product: "Wireless Bluetooth Headphones",
+      Adjustment: "Add",
+      Quantity: "2",
+      Status: "Success",
+    },
+    {
+      Time: "10:21AM",
+      Barcode: "7890123456789",
+      Product: "Smart Fitness Tracker",
+      Adjustment: "Add",
+      Quantity: "3",
+      Status: "Success",
+    },
+  ];
   const renderChartContent = () => {
     switch (chartType) {
       case "CSVUpload":
         return <CSVUpload sampleData={sampleData} />;
       case "ManualEntry":
-        return <ManualEntry />;
+        return <ManualEntry manualData={manualData} />;
       case "BarcodeScan":
-        return <BarcodeScan />;
+        return <BarcodeScan barcodeScan={barcodeScan} />;
       default:
         return null;
     }

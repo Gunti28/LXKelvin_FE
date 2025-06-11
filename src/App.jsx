@@ -4,7 +4,8 @@ import {
   Routes,
   Route,
   Navigate,
-} from "react-router-dom";
+} 
+from "react-router-dom";
 
 import Register from "./features/customer-portal/components/signUp/Register";
 import Success from "./features/customer-portal/components/signIn/Success";
@@ -135,11 +136,9 @@ function App() {
           <Route path="company_settings" element={<SettingPage />} />
           <Route path="company_notifications" element={<NotificationPage />} />
         </Route>
-        
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
-
   );
 }
 

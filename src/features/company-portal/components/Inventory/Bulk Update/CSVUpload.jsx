@@ -48,7 +48,7 @@ const CSVUpload = ({ sampleData }) => {
               <button className=" flex flex-row gap-2 items-center bg-black rounded px-2 py-1 text-white">
                 {" "}
                 <MdOutlineFileUpload />
-                Browse Files
+                Browser Files
               </button>
             </div>
           )}
