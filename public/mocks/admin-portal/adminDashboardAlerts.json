@@ -1,0 +1,28 @@
+{
+  "alerts": [
+    {
+      "title": "Wireless Headphones",
+      "category": "Electronics",
+      "stock": 1,
+      "threshold": 5
+    },
+    {
+      "title": "Cotton T-Shirt (Black, L)",
+      "category": "Apparel",
+      "stock": 2,
+      "threshold": 5
+    },
+    {
+      "title": "Stainless Steel Water Bottle",
+      "category": "Accessories",
+      "stock": 1,
+      "threshold": 4
+    },
+    {
+      "title": "Organic Face Cream",
+      "category": "Beauty",
+      "stock": 1,
+      "threshold": 3
+    }
+  ]
+}
