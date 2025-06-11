@@ -19,8 +19,8 @@ const CategoriesComponent = () => {
   useEffect(() => {
     setTimeout(() => {
       serLoaderCategories(false);
-      setCategories(categories);
     }, 1500);
+    setCategories(categories);
   }, [categories]);
   return (
     <Container fluid className="mt-4 mb-4">

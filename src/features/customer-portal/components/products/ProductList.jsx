@@ -1,41 +1,37 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 import ListingStyle from "../../../../lib/common/css/products/Listing.module.css";
 import {
   addToCart,
   setProductWeightPreview,
 } from "../../../../../src/store/slice/cartSlice";
-
+import OverLayLoader from "../overLayLoader/OverLayLoader";
+import { getCategory } from "../../../../lib/helpers/index";
 const ProductList = () => {
   const { products } = useSelector((state) => state.products);
   const { items: cartItems, selectedOptions } = useSelector(
     (state) => state.cart
   );
   const location = useLocation();
+  const path = location.pathname;
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  /**Add commentMore actions
+   * we need to add changes on loaderCategories once service is placed
+   */
+  const [loaderCategories, serLoaderCategories] = useState(true);
 
-  const getCategory = () => {
-    const path = location.pathname;
-
-    if (path.includes("all-categories")) {
-      return { category: null };
-    } else if (path.includes("seasonalVegetables")) {
-      return { category: "vegetables", seasonal: true };
-    } else if (path.includes("vegetables")) {
-      return { category: "vegetables" };
-    } else if (path.includes("seasonalFruits")) {
-      return { category: "fruits", seasonal: true };
-    } else if (path.includes("fruits")) {
-      return { category: "fruits" };
-    } else if (path.includes("milkProducts")) {
-      return { category: "milkProducts" };
-    } else {
-      return {};
-    }
-  };
-
-  const { category, seasonal } = getCategory();
+  const { category, seasonal } = getCategory(path);
+  useEffect(() => {
+    /**
+     * this TimeOut function we need to re-wramp once service is in place
+     */
+    serLoaderCategories(true);
+    setTimeout(() => {
+      serLoaderCategories(false);
+    }, 1500);
+  }, [products, location.pathname]);
 
   const filteredProducts = products.filter((product) => {
     if (!category) return true;
@@ -66,6 +62,7 @@ const ProductList = () => {
 
   return (
     <div className={ListingStyle.listingContainer}>
+      <OverLayLoader isLoader={loaderCategories} />
       <h1 className={ListingStyle.pageTitle}>
         {category === null
           ? "All Products"

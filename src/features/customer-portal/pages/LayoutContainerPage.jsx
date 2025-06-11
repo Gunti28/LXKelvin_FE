@@ -3,7 +3,7 @@ import { fetchProducts } from "../../../lib/services/productsAsyncThunk";
 import { fetchCategories } from "../../../lib/services/categoriesAsyncThunk";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { setUserValid } from "../../../store/slice/otpAuthSlice";
+import { setActiveUser, setUserValid } from "../../../store/slice/otpAuthSlice";
 export default function LayoutContainerPage() {
   const { userAuth, isUserValid } = useSelector((state) => state.userAuth);
   const dispatch = useDispatch();
@@ -30,8 +30,11 @@ export default function LayoutContainerPage() {
   useEffect(() => {
     if (userAuth?.length) {
       dispatch(setUserValid(true));
+      dispatch(setActiveUser(userAuth));
     } else {
       dispatch(setUserValid(false));
+      console.log("inside--else");
+      // dispatch(setActiveUser(JSON.parse(sessionStorage.getItem("userAuth"))));
     }
   }, [userAuth]);
 

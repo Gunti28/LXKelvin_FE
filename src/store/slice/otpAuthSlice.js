@@ -15,6 +15,16 @@ const getOtpSlice = createSlice({
     setUserValid: (state, action) => {
       state.isUserValid = action.payload;
     },
+    setActiveUser: (state, action) => {
+      state.userAuth = action.payload;
+      // Store in sessionStorage
+      sessionStorage.setItem("userAuth", JSON.stringify(action.payload));
+    },
+    setUserLogout: (state) => {
+      state.userAuth = [];
+      sessionStorage.removeItem("userAuth");
+      state.isUserValid = false;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -31,5 +41,6 @@ const getOtpSlice = createSlice({
       });
   },
 });
-export const { setUserValid } = getOtpSlice.actions;
+export const { setUserValid, setActiveUser, setUserLogout } =
+  getOtpSlice.actions;
 export default getOtpSlice.reducer;

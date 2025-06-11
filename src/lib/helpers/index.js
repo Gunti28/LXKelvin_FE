@@ -53,4 +53,26 @@ export const handleViewPlansClick = (navigate) => {
   return navigate("/subscriptions");
 };
 
+/**
+ *
+ * @param {*} path
+ * @returns
+ */
+export const getCategory = (path) => {
+  if (path.includes("all-categories")) {
+    return { category: null };
+  } else if (path.includes("seasonalVegetables")) {
+    return { category: "vegetables", seasonal: true };
+  } else if (path.includes("vegetables")) {
+    return { category: "vegetables" };
+  } else if (path.includes("seasonalFruits")) {
+    return { category: "fruits", seasonal: true };
+  } else if (path.includes("fruits")) {
+    return { category: "fruits" };
+  } else if (path.includes("milkProducts")) {
+    return { category: "milkProducts" };
+  } else {
+    return {};
+  }
+};
 // card & upi payments
