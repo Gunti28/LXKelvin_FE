@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.SummCon {
+  padding: 1rem 4rem;
+  font-family: "Montserrat", sans-serif;
+  max-height: 85vh;
+  overflow-y: auto;
+  background-color: #fff;
+}
+.TopCon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.DelHeading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #272727;
+}
+.AddCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  align-items: center;
+  width: 60vw;
+  padding: 0.5rem 2rem;
+}
+.AddText {
+  width: 70%;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+.ChangeBtn {
+  width: 8vw;
+  height: 5vh;
+  background-color: #e4edf3;
+  border-radius: 10px;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+.BottomCon {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.BtmLeft {
+  flex: 2;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.RadioCon {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 1rem;
+  margin: 0.6rem;
+  flex-grow: 1;
+}
+.radioGroup {
+  margin-bottom: 1.5rem;
+}
+.customRadio {
+  transform: scale(1.2);
+
+  cursor: pointer;
+}
+
+.ProBtn {
+  background-color: #ff9900;
+  color: #fff;
+  border-radius: 10px;
+  width: 15vw;
+  height: 6vh;
+  border: none;
+  align-self: flex-end;
+  margin: 0.5rem;
+}
+.selectText {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 1rem;
+  margin-bottom: 0rem;
+}
+
+.radioText {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 2rem;
+  margin-top: -1.5rem;
+}
+.cardImgCon {
+  display: flex;
+  justify-content: space-around;
+  margin: 0rem 2rem;
+}
+.cardImg {
+  width: 3vw;
+  height: 4.5vh;
+  margin: 5px;
+}
+.netImgCon {
+  display: flex;
+  justify-content: space-around;
+  margin: 0rem 2rem;
+}
+.netImg {
+  width: 4vw;
+  height: 3vh;
+  margin: 5px;
+}
+.btmRight {
+  flex: 1;
+  border: 1px solid #d9d9d9;
+}
+.applyCon {
+  border: 1px solid #d9d9d9;
+  padding: 0.5rem 0.5rem;
+  margin: 1rem;
+  display: flex;
+  width: 18rem;
+  justify-content: space-between;
+}
+.Applyicon {
+  margin-top: 0.5rem;
+}
+.couponTextCon {
+  display: flex;
+}
+.couponText {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: -1px;
+}
+.couponSubText {
+  font-size: 8px;
+  font-weight: 500;
+}
+.viewBtn {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1e90ff;
+  background-color: transparent;
+  border: none;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 25vw;
+  height: 100%;
+  background-color: #fff;
+  margin-left: 1rem;
+}
+
+.couponHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.couponIcon {
+  margin-right: 6px;
+}
+
+.couponNote {
+  font-size: 8px;
+  margin-left: 2rem;
+}
+
+.viewAll {
+  font-size: 12px;
+  color: #1e90ff;
+  background-color: transparent;
+  border: none;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+.couponHeading {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.savings {
+  display: flex;
+  justify-content: space-between;
+  color: #00eb00;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.savingAmount {
+  color: #00eb00;
+}
+
+@media (max-width: 768px) {
+  .SummCon {
+    padding: 1rem 2rem;
+  }
+
+  .TopCon,
+  .AddCon {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .BottomCon {
+    flex-direction: column-reverse;
+  }
+
+  .AddCon {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .AddText {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .ChangeBtn {
+    width: 20%;
+    height: 30px;
+    align-self: flex-end;
+  }
+
+  .btmRight,
+  .BtmLeft {
+    width: 100%;
+  }
+
+  .ProBtn {
+    width: 30%;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .cardImg,
+  .netImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .applyCon {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .couponTextCon {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-left: 0;
+  }
+  .BtmLeft {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .DelHeading,
+  .selectText {
+    font-size: 18px;
+  }
+
+  .AddText {
+    font-size: 0.85rem;
+  }
+
+  .couponText {
+    font-size: 14px;
+  }
+
+  .couponSubText {
+    font-size: 10px;
+  }
+
+  .radioText {
+    font-size: 14px;
+    margin-left: 2rem;
+  }
+
+  .ProBtn {
+    font-size: 14px;
+    font-weight: 500;
+    width: 50%;
+    height: 6vh;
+  }
+
+  .ChangeBtn {
+    font-size: 11px;
+    width: 50%;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+  .summaryRow {
+    font-size: 11px;
+  }
+
+  .couponHeading {
+    font-size: 13px;
+  }
+  .cardImg,
+  .netImg {
+    width: 30px;
+    height: 20px !important;
+  }
+}

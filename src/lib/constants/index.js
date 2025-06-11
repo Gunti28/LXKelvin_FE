@@ -1,22 +1,57 @@
+// import {
+//   GREECE,
+//   SPANISH,
+//   FRENCH,
+//   ITALIAN,
+//   AMEX,
+//   APPLE_PAY,
+//   MASTER_CARD,
+//   PAYPAL,
+//   VISA,
+// } from "./Image_Constants";
+
 import { IMAGES } from "./Image_Constants/index.js";
 
 /**
- * declarations
+ * Language dropdown options
  */
-const QTY_OPTIONS = ["500g", "1kg", "2kg"];
-
 const LANGUAGES = [
   { name: "Italian", icon: IMAGES.italian },
   { name: "Greece", icon: IMAGES.greece },
   { name: "Spanish", icon: IMAGES.Spanish },
   { name: "French", icon: IMAGES.french },
 ];
+
 /**
- * exports to get the const value
+ * Quantity options
  */
+const QTY_OPTIONS = ["500g", "1kg", "2kg"];
+
+/**
+ * Payment method options
+ */
+const PAYMENT_OPTIONS = [
+  {
+    label: "Credit or debit card",
+    value: "card",
+    icons: [IMAGES.visa, IMAGES.amex, IMAGES.masterCard],
+  },
+  {
+    label: "Net Banking",
+    value: "net",
+    icons: [IMAGES.paypal, IMAGES.applePay],
+  },
+  {
+    label: "Cash on delivery",
+    value: "cash",
+    icons: [],
+  },
+];
+
 export const Const = {
-  QTY_OPTIONS: QTY_OPTIONS,
-  LANGUAGES: LANGUAGES,
+  QTY_OPTIONS,
+  LANGUAGES,
+  PAYMENT_OPTIONS,
 };
 
 export const ORDER_STATUS_COLORS = {
@@ -25,11 +60,15 @@ export const ORDER_STATUS_COLORS = {
   Default: "#5B5F62",
 };
 
-//subscription plans
-
 export const planNames = {
   1: "Basic",
   2: "Standard",
   3: "Premium",
   4: "Gold",
+};
+
+export const ORDER_CONSTANTS = {
+  VAT_RATE: 18,
+  DELIVERY_CHARGES: 2.5,
+  getPromotionDiscount: (itemsPrice) => (itemsPrice > 0 ? 5.0 : 0.0),
 };

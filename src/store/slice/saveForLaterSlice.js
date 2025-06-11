@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { fetchSavedItems } from '../../lib/services/saveForLaterAsyncThunk';
+import { createSlice } from "@reduxjs/toolkit";
+import { fetchSavedItems } from "../../lib/services/saveForLaterAsyncThunk";
 
 const saveForLaterSlice = createSlice({
-  name: 'saveForLater',
+  name: "saveForLater",
   initialState: {
     items: [],
     loading: false,
-    error: null
+    error: null,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -22,7 +22,7 @@ const saveForLaterSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       });
-  }
+  },
 });
 
 export default saveForLaterSlice.reducer;

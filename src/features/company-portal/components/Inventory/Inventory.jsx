@@ -17,7 +17,7 @@ const InventoryPage = () => {
       sku: "WBH-001",
       currentStock: 45,
       newStock: 50,
-      adjustmentType: "Add",
+      adjustmentType: "Add",   
       reason: "Purchase",
     },
     {
