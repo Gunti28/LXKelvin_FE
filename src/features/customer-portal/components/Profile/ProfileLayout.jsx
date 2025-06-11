@@ -31,7 +31,7 @@ const navItems = [
     label: "Customer Support",
   },
   {
-    to: "/signout",
+    to: "/my_account/logOut",
     icon: "material-symbols-light:logout-sharp",
     label: "Logout",
   },

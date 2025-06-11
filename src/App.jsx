@@ -40,7 +40,7 @@ import Pay1 from "./features/customer-portal/components/MessageModals/PaymentSuc
 import Thankyou from "./features/customer-portal/components/MessageModals/ThankYou";
 import VipSuccess from "./features/customer-portal/components/MessageModals/VipSuccess";
 import LocationTracker from "./features/customer-portal/components/layOut/Location";
-
+import LogOut from "./features/customer-portal/components/Profile/LogOut";
 
 // Admin-portal Navigation
 
@@ -136,6 +136,7 @@ function App() {
                 </AuthGuard>
               }
             />
+            <Route path="logOut" element={<LogOut />} />
           </Route>
         </Route>
 
@@ -162,11 +163,10 @@ function App() {
           <Route path="company_settings" element={<SettingPage />} />
           <Route path="company_notifications" element={<NotificationPage />} />
         </Route>
-        
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
-
   );
 }
 
