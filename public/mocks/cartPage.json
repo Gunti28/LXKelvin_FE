@@ -5,18 +5,17 @@
       "name": "Tomato",
       "category": "vegetables",
       "price": 40,
+      "quantity": 1,
       "originalPrice": 50,
       "selectedWeight": "1kg",
+      "discount": 20,
       "priceByWeight": {
         "500g": 40,
         "1kg": 70,
         "2kg": 130
       },
-      "discount": 20,
       "Colour": "#fbd7d7",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/tomato.svg",
-
       "stockCount": 5,
       "isSeasonal": false
     },
@@ -34,9 +33,7 @@
       },
       "discount": 10,
       "Colour": "#c6f5c3",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/beans.svg",
-
       "stockCount": 5,
       "isSeasonal": false
     },
@@ -45,18 +42,17 @@
       "name": "Apple",
       "category": "fruits",
       "price": 120,
+      "quantity": 1,
       "originalPrice": 35,
       "selectedWeight": "1kg",
       "priceByWeight": {
-        "500g": 30,
-        "1kg": 60,
-        "2kg": 120
+        "500g": 80,
+        "1kg": 160,
+        "2kg": 320
       },
       "discount": 0,
       "Colour": "#fbd7d7",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/apple.svg",
-
       "stockCount": 1,
       "isSeasonal": false
     },
@@ -74,9 +70,7 @@
       },
       "discount": 5,
       "Colour": "#e9f1d7",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -94,9 +88,7 @@
       },
       "discount": 0,
       "Colour": "#EDD251",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/banana.svg",
-
       "stockCount": 20,
       "isSeasonal": true
     },
@@ -114,9 +106,7 @@
       },
       "discount": 15,
       "Colour": "#fef0dd",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/garlic.svg",
-
       "stockCount": 8,
       "isSeasonal": false
     },
@@ -134,9 +124,7 @@
       },
       "discount": 0,
       "Colour": "#E24C36",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon.svg",
-
       "stockCount": 3,
       "isSeasonal": false
     },
@@ -154,9 +142,7 @@
       },
       "discount": 0,
       "Colour": "#c6f5c3",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/kiwi.svg",
-
       "stockCount": 7,
       "isSeasonal": false
     },
@@ -174,9 +160,7 @@
       },
       "discount": 0,
       "Colour": "#E24C36",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/capsicum.svg",
-
       "stockCount": 9,
       "isSeasonal": true
     },
@@ -194,9 +178,7 @@
       },
       "discount": 0,
       "Colour": "#9B5366",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/onion.svg",
-
       "stockCount": 9,
       "isSeasonal": false
     },
@@ -214,9 +196,7 @@
       },
       "discount": 0,
       "Colour": "#F47775",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberry.svg",
-
       "stockCount": 9,
       "isSeasonal": true
     },
@@ -225,7 +205,7 @@
       "name": "Milk",
       "category": "milkProducts",
       "price": 50,
-      "originalPrice": 50,
+      "originalPrice": 100,
       "selectedWeight": "1kg",
       "priceByWeight": {
         "500g": 80,
@@ -234,9 +214,7 @@
       },
       "discount": 0,
       "Colour": "#86AB85",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/milk.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -254,9 +232,7 @@
       },
       "discount": 0,
       "Colour": "#DE8634",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cheese.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -274,9 +250,7 @@
       },
       "discount": 20,
       "Colour": "#A7DD94",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/Artichoke.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -294,9 +268,7 @@
       },
       "discount": 20,
       "Colour": "#AADBA2",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/Arugula.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -314,9 +286,7 @@
       },
       "discount": 20,
       "Colour": "#DDED97",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/asparagus.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -334,9 +304,7 @@
       },
       "discount": 60,
       "Colour": "#9CDA52",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/french-beans.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -354,9 +322,7 @@
       },
       "discount": 60,
       "Colour": "#ABC25C",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cucumber.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -374,9 +340,7 @@
       },
       "discount": 60,
       "Colour": "#86AB85",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chives.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -386,17 +350,15 @@
       "category": "vegetables",
       "price": 50,
       "originalPrice": 150,
-      "discount": 60,
       "selectedWeight": "1kg",
       "priceByWeight": {
         "500g": 80,
         "1kg": 160,
         "2kg": 320
       },
+      "discount": 60,
       "Colour": "#B6B3BF",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/eggplant.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -414,9 +376,7 @@
       },
       "discount": 60,
       "Colour": "#F0728B",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/beetroot.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -434,7 +394,6 @@
       },
       "discount": 60,
       "Colour": "#E9C886",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/blacksalsify.svg",
       "stockCount": 10,
       "isSeasonal": true
@@ -453,7 +412,6 @@
       },
       "discount": 60,
       "Colour": "#94CF7D",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/broccoli.svg",
       "stockCount": 10,
       "isSeasonal": false
@@ -472,9 +430,7 @@
       },
       "discount": 60,
       "Colour": "#ADD76C",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/brusselsprouts.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -492,9 +448,7 @@
       },
       "discount": 60,
       "Colour": "#F0C861",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/corn.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -512,9 +466,7 @@
       },
       "discount": 60,
       "Colour": "#97C764",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chineesecabbage.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -532,9 +484,7 @@
       },
       "discount": 60,
       "Colour": "#C3CE72",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/endive.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -552,9 +502,7 @@
       },
       "discount": 60,
       "Colour": "#F7B18C",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/carrot.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -572,9 +520,7 @@
       },
       "discount": 0,
       "Colour": "#A3DDD6",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cauliflower.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -592,9 +538,7 @@
       },
       "discount": 60,
       "Colour": "#E3B984",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/celeraic.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -612,9 +556,7 @@
       },
       "discount": 60,
       "Colour": "#DDCEB7",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/mushroom.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -632,9 +574,7 @@
       },
       "discount": 60,
       "Colour": "#EEE28E",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chicory.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -652,9 +592,7 @@
       },
       "discount": 60,
       "Colour": "#F47775",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chilli.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -672,9 +610,7 @@
       },
       "discount": 60,
       "Colour": "#BBB4A2",
-
-      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/white_radish.svg",
-
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/white radish.svg",
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -692,9 +628,7 @@
       },
       "discount": 0,
       "Colour": "#FF8F8D",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/cherry.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -712,9 +646,7 @@
       },
       "discount": 0,
       "Colour": "#AADBA2",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pomelo.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -732,9 +664,7 @@
       },
       "discount": 0,
       "Colour": "#DDED97",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/grapes.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -752,9 +682,7 @@
       },
       "discount": 0,
       "Colour": "#DFA013",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/plum.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -772,9 +700,7 @@
       },
       "discount": 0,
       "Colour": "#ABC25C",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/amla.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -792,9 +718,7 @@
       },
       "discount": 0,
       "Colour": "#86AB85",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/custurd apple.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -812,9 +736,7 @@
       },
       "discount": 0,
       "Colour": "#B6B3BF",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/avacado.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -832,9 +754,7 @@
       },
       "discount": 0,
       "Colour": "#F0728B",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/strawberry-new.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -852,9 +772,7 @@
       },
       "discount": 0,
       "Colour": "#E9C886",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pears.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -872,9 +790,7 @@
       },
       "discount": 0,
       "Colour": "#94CF7D",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/green-apple.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -892,9 +808,7 @@
       },
       "discount": 0,
       "Colour": "#D84A4C",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/rambutan.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -912,9 +826,7 @@
       },
       "discount": 0,
       "Colour": "#F0C861",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/orange.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -932,9 +844,7 @@
       },
       "discount": 0,
       "Colour": "#C8C460",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/starfruit.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -952,9 +862,7 @@
       },
       "discount": 0,
       "Colour": "#A75720",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/jackfruit.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -972,9 +880,7 @@
       },
       "discount": 0,
       "Colour": "#CA4858",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/lychee.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -992,9 +898,7 @@
       },
       "discount": 0,
       "Colour": "#FEF2D1",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/chalisa-fig.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -1012,9 +916,7 @@
       },
       "discount": 0,
       "Colour": "#E3B984",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/musk-melon.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -1032,9 +934,7 @@
       },
       "discount": 0,
       "Colour": "#DDCEB7",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/black-berry.svg",
-
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -1052,9 +952,7 @@
       },
       "discount": 0,
       "Colour": "#F7E2CA",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pomegranate.svg",
-
       "stockCount": 10,
       "isSeasonal": false
     },
@@ -1072,9 +970,7 @@
       },
       "discount": 0,
       "Colour": "#F47775",
-
-      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon.svg",
-
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pomegranate.svg",
       "stockCount": 10,
       "isSeasonal": true
     },
@@ -1092,7 +988,6 @@
       },
       "discount": 0,
       "Colour": "#EDD251",
-
       "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/banana.svg",
       "stockCount": 10,
       "isSeasonal": true

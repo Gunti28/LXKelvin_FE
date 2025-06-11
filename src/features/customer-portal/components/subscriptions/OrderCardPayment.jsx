@@ -5,16 +5,14 @@ import SetupCardStyle from "../../../../lib/common/css/SubscriptionCards/CardPay
 import Form from "react-bootstrap/Form";
 import { CiCircleQuestion } from "react-icons/ci";
 import { HiOutlineCreditCard } from "react-icons/hi";
-
 import { IMAGES } from "../../../../lib/constants/Image_Constants";
-import { useDispatch, useSelector } from "react-redux";
-import { planNames } from "../../../../lib/constants";
+import { useDispatch } from "react-redux";
 import {
   confirmSubscription,
   setCardDetails,
 } from "../../../../store/slice/subscriptionPaySlice";
 import { useNavigate } from "react-router-dom";
-const CardPayment = () => {
+const OrderCardPayment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [cardNumber, setCardNumber] = useState("");
@@ -22,7 +20,7 @@ const CardPayment = () => {
   const [cvv, setCvv] = useState("");
   const [nameOnCard, setNameOnCard] = useState("");
 
-  const { selectedPlanId, price } = useSelector((state) => state.subscription);
+  // const { selectedPlanId, price } = useSelector((state) => state.subscription);
 
   const [validated, setValidated] = useState(false);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
@@ -44,7 +42,7 @@ const CardPayment = () => {
       );
 
       dispatch(confirmSubscription());
-      navigate("/vipSuccess");
+      navigate("/orderPlaced");
     }
 
     setValidated(true);
@@ -59,7 +57,6 @@ const CardPayment = () => {
           </h4>
 
           <div className={`d-flex gap-2 mt-3 ${SetupCardStyle.imgs}`}>
-
             <img src={IMAGES.visa} alt="Visa" style={{ height: "100%" }} />
             <img src={IMAGES.amex} alt="AMEX" style={{ height: "100%" }} />
             <img
@@ -148,22 +145,6 @@ const CardPayment = () => {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Card
-            className={`mt-2 border-1 ${SetupCardStyle.cardWrapper}`}
-            style={{ borderRadius: "1px", background: "#D4E7F380" }}
-          >
-            <Card.Body>
-              <div className="fs-bold text-start ">
-                {planNames[selectedPlanId]}
-                <div>
-                  {price !== null && (
-                    <div className="fw-semibold mt-2">&#8364;{price}</div>
-                  )}
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-
           <Form.Group
             className={`mt-4 d-flex align-items-start gap-2 ${SetupCardStyle.checkboxLabel}`}
             controlId="termsCheck"
@@ -197,4 +178,4 @@ const CardPayment = () => {
   );
 };
 
-export default CardPayment;
+export default OrderCardPayment;
