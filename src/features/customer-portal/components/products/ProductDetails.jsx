@@ -22,6 +22,9 @@ import {
 } from "../../../../store/slice/saveLaterSlice";
 
 const ProductDetailsPage = () => {
+  let currentOfferPrice = 0;
+  let currentOriginalPrice = 0;
+  let wrapContent;
   const { id } = useParams();
   const dispatch = useDispatch();
   const { product, status, error } = useSelector(
@@ -37,7 +40,7 @@ const ProductDetailsPage = () => {
   /**
    * we need to add changes on loaderCategories once service is placed
    */
-  const [loaderCategories, serLoaderCategories] = useState(true);
+  const [loader, setLoader] = useState(true);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const totalImages = 4;
@@ -51,9 +54,9 @@ const ProductDetailsPage = () => {
     /**
      * this TimeOut function we need to re-wrap once service is in place
      */
-    serLoaderCategories(true);
+    setLoader(true);
     setTimeout(() => {
-      serLoaderCategories(false);
+      setLoader(false);
     }, 1500);
   }, [dispatch, id]);
 
@@ -86,31 +89,29 @@ const ProductDetailsPage = () => {
     }
   };
 
-  // if (status === "loading") return <p>Loading...</p>;
-  if (status === "failed") return <p>Error: {error}</p>;
-  if (!product) return console.log("No Product Found");
+  if (product) {
+    const {
+      productName,
+      offerPrice,
+      originalPrice,
+      discount,
+      healthBenefits,
+      packing,
+      about,
+      images,
+      cat_id,
+      offerPriceByWeight,
+      originalPriceByWeight,
+    } = product;
 
-  const {
-    productName,
-    offerPrice,
-    originalPrice,
-    discount,
-    healthBenefits,
-    packing,
-    about,
-    images,
-    cat_id,
-    offerPriceByWeight,
-    originalPriceByWeight,
-  } = product;
+    currentOfferPrice = offerPriceByWeight?.[selectedWeight] || offerPrice;
+    currentOriginalPrice =
+      originalPriceByWeight?.[selectedWeight] || originalPrice;
 
-  const currentOfferPrice = offerPriceByWeight?.[selectedWeight] || offerPrice;
-  const currentOriginalPrice =
-    originalPriceByWeight?.[selectedWeight] || originalPrice;
-
-  return (
-    <div className={ProductDetPage.productPage}>
-      <OverLayLoader isLoader={loaderCategories} />
+    /**
+     * wrapping  content as visible when product details are fetched
+     */
+    wrapContent = (
       <Row>
         <Col md={6} className={ProductDetPage.leftColumn}>
           <div className={ProductDetPage.mainImageContainer}>
@@ -327,6 +328,13 @@ const ProductDetailsPage = () => {
           </div>
         </Col>
       </Row>
+    );
+  }
+
+  return (
+    <div className={ProductDetPage.productPage}>
+      <OverLayLoader isLoader={loader} />
+      {product && wrapContent}
       {/* Customer Feedback Section */}
       <div className={ProductDetPage.customerFeedback}>
         <h3>Customer Feedback</h3>
