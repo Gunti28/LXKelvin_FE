@@ -1,0 +1,24 @@
+{
+  "revenue": [
+    {
+      "label": "Today's Revenue",
+      "value": "$4,550",
+      "change": "+12.5% from yesterday"
+    },
+    {
+      "label": "Weekly Revenue",
+      "value": "$28,700",
+      "change": "+5.2% from last week"
+    },
+    {
+      "label": "Monthly Revenue",
+      "value": "$125,430",
+      "change": "+8.1% from last month"
+    },
+    {
+      "label": "Orders Today",
+      "value": "42",
+      "change": "+18% from yesterday"
+    }
+  ]
+}

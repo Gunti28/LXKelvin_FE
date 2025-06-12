@@ -1,0 +1,28 @@
+{
+  "salesByProduct": [
+    { "id": 1, "product": "Product A", "amount": 1200, "date": "2025-06-01" },
+    { "id": 2, "product": "Product B", "amount": 950, "date": "2025-06-30" }
+  ],
+  "salesByCustomer": [
+    { "id": 1, "customer": "John Doe", "amount": 800, "date": "2025-06-01" },
+    { "id": 2, "customer": "Jane Smith", "amount": 1100, "date": "2025-06-30" }
+  ],
+  "salesByCategory": [
+    { "id": 1, "category": "Electronics", "amount": 1500, "date": "2025-06-01" },
+    { "id": 2, "category": "Clothing", "amount": 700, "date": "2025-06-30" }
+  ],
+   "salesByDate": [
+    { "id": 1, "date": "2025-06-01", "totalSales": 3500, "orderCount": 15 },
+    { "id": 2, "date": "2025-06-02", "totalSales": 2100, "orderCount": 8 },
+    { "id": 3, "date": "2025-06-03", "totalSales": 1650, "orderCount": 12 },
+    { "id": 4, "date": "2025-06-04", "totalSales": 2800, "orderCount": 10 },
+    { "id": 5, "date": "2025-06-05", "totalSales": 1900, "orderCount": 7 }
+  ],
+  "summaryKPIs": {
+    "averageOrderValue": 67.0,
+    "conversionRate": 5.24,
+    "cartAbandonment": 68.7,
+    "customerAcquisitionCost": 24.01,
+    "growth": "+5.2%"
+  }
+}

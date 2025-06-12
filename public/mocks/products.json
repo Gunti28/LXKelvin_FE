@@ -690,7 +690,7 @@
       "Colour": "#BBB4A2",
       "cat_id": 1,
 
-      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/white radish.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/white_radish.svg",
 
       "stockCount": 10,
       "isSeasonal": false
@@ -1102,7 +1102,7 @@
       "Colour": "#F47775",
       "cat_id": 4,
 
-      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/pomegranate.svg",
+      "image": "https://d1p5ayh0d7heww.cloudfront.net/Images/watermelon.svg",
 
       "stockCount": 10
     },

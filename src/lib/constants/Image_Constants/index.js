@@ -105,6 +105,10 @@ export const IMAGES = {
   paymentSuccess: `${BASE}/Images/Payment_success_vector.svg`,
   orderPlaced: `${BASE}/Images/OrderPlaced.svg`,
   bike: `${BASE}/Images/bike.svg`,
+  worldMap: `${BASE}/Images/worldIcon.svg`,
+
+  orderPlaced: `${BASE}/Images/OrderPlaced.svg`
+
 };
 
 // export const VISA = Visa;

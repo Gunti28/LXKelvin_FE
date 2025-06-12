@@ -1,0 +1,17 @@
+.popoverCustom {
+  max-width: 30rem !important;
+}
+
+.descriptionText {
+  width: 300px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.orText {
+  margin-top: 20px;
+}
+
+.locationText {
+  font-size: 12px;
+}

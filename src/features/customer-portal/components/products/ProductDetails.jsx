@@ -16,6 +16,11 @@ import {
 } from "../../../../lib/helpers";
 
 import OverLayLoader from "../overLayLoader/OverLayLoader";
+import {
+  addSavedItem,
+  removeSavedItem,
+} from "../../../../store/slice/saveLaterSlice";
+
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -23,27 +28,34 @@ const ProductDetailsPage = () => {
     (state) => state.productDetails
   );
 
+  //save for later
+  const savedItems = useSelector((state) => state.savedItems);
+  const isSaved = product
+    ? savedItems.some((item) => item.id === product.id)
+    : false;
+
   /**
    * we need to add changes on loaderCategories once service is placed
    */
   const [loaderCategories, serLoaderCategories] = useState(true);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const totalImages = 4;
+
+  const [feedback, setFeedback] = useState([]);
+  const [selectedWeight, setSelectedWeight] = useState("500g");
+  const navigate = useNavigate();
+
   useEffect(() => {
     dispatch(fetchProductDetails(id));
     /**
-     * this TimeOut function we need to re-wramp once service is in place
+     * this TimeOut function we need to re-wrap once service is in place
      */
     serLoaderCategories(true);
     setTimeout(() => {
       serLoaderCategories(false);
     }, 1500);
   }, [dispatch, id]);
-  const [liked, setLiked] = useState(false);
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const totalImages = 4;
-
-  const [feedback, setFeedback] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     setFeedback(feedbackData.feedback);
@@ -66,14 +78,17 @@ const ProductDetailsPage = () => {
       state: { highlightIndex: 3 },
     });
   };
-
   const toggleIcon = () => {
-    setLiked((prev) => !prev);
+    if (isSaved) {
+      dispatch(removeSavedItem(product.id));
+    } else {
+      dispatch(addSavedItem(product));
+    }
   };
 
-  if (status === "loading") return <p>Loading...</p>;
+  // if (status === "loading") return <p>Loading...</p>;
   if (status === "failed") return <p>Error: {error}</p>;
-  if (!product) return <p>No product found</p>;
+  if (!product) return console.log("No Product Found");
 
   const {
     productName,
@@ -85,7 +100,13 @@ const ProductDetailsPage = () => {
     about,
     images,
     cat_id,
+    offerPriceByWeight,
+    originalPriceByWeight,
   } = product;
+
+  const currentOfferPrice = offerPriceByWeight?.[selectedWeight] || offerPrice;
+  const currentOriginalPrice =
+    originalPriceByWeight?.[selectedWeight] || originalPrice;
 
   return (
     <div className={ProductDetPage.productPage}>
@@ -195,10 +216,14 @@ const ProductDetailsPage = () => {
               <div className={ProductDetPage.quantityAddContainer}>
                 <Form.Group className={ProductDetPage.quantitySelector}>
                   <Form.Label>Quantity: </Form.Label>
-                  <Form.Select className={ProductDetPage.quantityDropdown}>
-                    <option>500 g</option>
-                    <option>1 kg</option>
-                    <option>2 kg</option>
+                  <Form.Select
+                    className={ProductDetPage.quantityDropdown}
+                    value={selectedWeight}
+                    onChange={(e) => setSelectedWeight(e.target.value)}
+                  >
+                    <option value="500g">500 g</option>
+                    <option value="1kg">1 kg</option>
+                    <option value="2kg">2 kg</option>
                   </Form.Select>
                 </Form.Group>
                 <Button className={ProductDetPage.addButton}>Add</Button>
@@ -206,21 +231,18 @@ const ProductDetailsPage = () => {
 
               <div className={ProductDetPage.priceDisplay}>
                 <span className={ProductDetPage.currentPrice}>
-                  €{offerPrice}
+                  €{currentOfferPrice}
                 </span>
                 <span className={ProductDetPage.pmdPrice}>
-                  PMD €{originalPrice}
+                  PMD €{currentOriginalPrice}
                 </span>
                 <span className={ProductDetPage.discount}>{discount}% OFF</span>
-                {/* <div className="heart-icon">
-                                <Icon icon="solar:heart-linear" width="34" height="34" />
-                                </div> */}
                 <div
                   className={ProductDetPage.heartIcon}
                   onClick={toggleIcon}
                   style={{ cursor: "pointer" }}
                 >
-                  {liked ? (
+                  {isSaved ? (
                     <Icon
                       icon="solar:heart-bold"
                       width="34"
