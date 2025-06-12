@@ -29,9 +29,7 @@ import {
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { product, status, error } = useSelector(
-    (state) => state.productDetails
-  );
+  const { product } = useSelector((state) => state.productDetails);
   const { items: cartItems, selectedOptions } = useSelector(
     (state) => state.cart
   );
@@ -125,8 +123,6 @@ const ProductDetailsPage = () => {
   const handleWeightChange = (productId, weight) => {
     dispatch(setProductWeightPreview({ id: productId, weight }));
   };
-  if (status === "failed") return <p>Error: {error}</p>;
-  if (!product) return console.log("No Product Found");
 
   const {
     productName,
