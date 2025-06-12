@@ -95,6 +95,7 @@ const CartPage = () => {
                         className={`d-flex flex-row justify-content-center align-items-center gap-3 ${CartModule.itemimg}`}
                       >
                         <img src={item.image} alt={item.name} />
+
                         <div className={CartModule.imgtext}>
                           <div>{item.name}</div>
                           <p

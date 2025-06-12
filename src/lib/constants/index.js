@@ -72,3 +72,26 @@ export const ORDER_CONSTANTS = {
   DELIVERY_CHARGES: 2.5,
   getPromotionDiscount: (itemsPrice) => (itemsPrice > 0 ? 5.0 : 0.0),
 };
+
+export const DEFAULT_ORDER_META = {
+  bikePosition: 0,
+  orderNumber: "",
+  createdAt: "",
+  lastUpdate: "",
+  onTimeMessage: "",
+  vatPercentage: 2,
+  deliveryFee: 5,
+};
+
+export const PROGRESS_STEPS = [0, 50, 100];
+
+export const STEP_COLORS = {
+  active: "#F2BE23",
+  inactive: "gray",
+};
+
+export const ORDER_STATUSES = [
+  "Order placed",
+  "Order processed",
+  "Order delivered",
+];

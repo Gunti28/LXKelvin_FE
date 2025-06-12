@@ -18,6 +18,8 @@ import subscriptionReducer from "./slice/subscriptionPaySlice";
 import cartReducer from "./slice/cartSlice";
 import deliveryAddressReducer from "./slice/deliveryAddressSlice";
 import orderSummaryReducer from "./slice/orderSummarySlice";
+import orderMetaSummaryReducer from "./slice/orderMetaSLice";
+import trackingDetailsReducer from "./slice/trackingDetailsSlice";
 
 export const store = configureStore({
   reducer: {
@@ -28,7 +30,8 @@ export const store = configureStore({
     addresses: addressReducer,
     orders: orderReducer,
     saveForLater: saveForLaterReducer,
-
+    orderMetaSummary: orderMetaSummaryReducer,
+    trackingDetails: trackingDetailsReducer,
     language: languageReducer,
     productDetails: productDetailsReducer,
     plans: plansReducer,

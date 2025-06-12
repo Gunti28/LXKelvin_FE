@@ -3,7 +3,7 @@
 .SummCon {
   padding: 1rem 4rem;
   font-family: "Montserrat", sans-serif;
-  max-height: 85vh;
+  height: 90vh;
   overflow-y: auto;
   background-color: #fff;
 }

@@ -11,4 +11,4 @@ export const fetchProducts = createAsyncThunk(
     // console.log(response.data.products);
     return response.data.products;
   }
-);
+);  

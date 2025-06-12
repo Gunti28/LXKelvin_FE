@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import React from "react";
 import ListingStyle from "../../../../lib/common/css/products/Listing.module.css";
 import {
   addToCart,
@@ -16,7 +17,7 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   const getCategory = () => {
-    const path = location.pathname;
+    const path = location.pathname.toLowerCase();
 
     if (path.includes("all-categories")) {
       return { category: null };
@@ -28,7 +29,7 @@ const ProductList = () => {
       return { category: "fruits", seasonal: true };
     } else if (path.includes("fruits")) {
       return { category: "fruits" };
-    } else if (path.includes("milkProducts")) {
+    } else if (path.includes("milkproducts")) {
       return { category: "milkProducts" };
     } else {
       return {};

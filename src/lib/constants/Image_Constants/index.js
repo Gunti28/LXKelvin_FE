@@ -103,7 +103,8 @@ export const IMAGES = {
   thankYou: `${BASE}/Images/ThanksVector.svg`,
   vip_payment: `${BASE}/Images/Vip_Payment.svg`,
   paymentSuccess: `${BASE}/Images/Payment_success_vector.svg`,
-  orderPlaced: `${BASE}/Images/OrderPlaced.svg`
+  orderPlaced: `${BASE}/Images/OrderPlaced.svg`,
+  bike: `${BASE}/Images/bike.svg`,
 };
 
 // export const VISA = Visa;

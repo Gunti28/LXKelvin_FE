@@ -9,7 +9,7 @@ const OrderPlacedModal = () => {
   const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
-      navigate("/my_account/my_orders");
+      navigate("/orderTracking");
     }, 1000);
   }, []);
   return (

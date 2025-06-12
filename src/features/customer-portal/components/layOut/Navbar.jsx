@@ -1,6 +1,6 @@
 import NavbarCss from "../../../../lib/common/css/registration/Navbar.module.css";
 import HeroStyles from "../../../../lib/common/css/registration/OpeningScreen.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Navbar,
   Nav,
@@ -13,12 +13,15 @@ import { FaSearch } from "react-icons/fa";
 import { IoMic } from "react-icons/io5";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import { Outlet, useLocation, useNavigate, Link } from "react-router-dom";
+import { fetchProducts } from "../../../../lib/services/productsAsyncThunk";
 import { Icon } from "@iconify/react";
 import { useDispatch, useSelector } from "react-redux";
 import { showNavBarDefaultTemplate } from "../../../../lib/helpers/index";
 import { IMAGES } from "../../../../lib/constants/Image_Constants/index";
 import { Const } from "../../../../lib/constants/index";
 import { setSelectedLang } from "../../../../store/slice/languageSlice";
+import { throttle } from "lodash";
+import { getFilteredResults } from "../../../../lib/helpers/index";
 
 const NavbarComponent = () => {
   let contentNavWrapper;
@@ -32,14 +35,51 @@ const NavbarComponent = () => {
   const path = location.pathname;
   const [text_color, setTextColor] = useState(true);
   const [, setUserData] = useState({});
+  const [filteredResults, setFilteredResults] = useState([]);
+
   const { isUserValid, userAuth } = useSelector((state) => state.userAuth);
   const navigate = useNavigate();
+  const { products, status } = useSelector((state) => state.products);
 
   const languages = Const?.LANGUAGES;
 
   const dispatch = useDispatch();
 
   const selectedLang = useSelector((state) => state.language.selectedLang);
+
+  const throttledFilter = useCallback(
+    throttle((term) => {
+      const results = getFilteredResults(products, term);
+      setFilteredResults(results);
+    }, 300),
+    [products]
+  );
+
+  const isDashboard =
+    location.pathname === "/" || location.pathname === "/dashBoard";
+
+  // Fetch products on initial mount
+  useEffect(() => {
+    if (status === "init") {
+      dispatch(fetchProducts());
+    }
+  }, [dispatch, status]);
+
+  useEffect(() => {
+    return () => throttledFilter.cancel();
+  }, [throttledFilter]);
+
+  const handleResultClick = (item) => {
+    if (item.type === "category") {
+      const categoryPath = item.name.toLowerCase().replace(/\s+/g, "");
+      navigate(`/products/${categoryPath}`);
+    } else {
+      navigate(`/productDetails/${item.id}`);
+    }
+    setSearchTerm("");
+    setFilteredResults([]);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -56,6 +96,15 @@ const NavbarComponent = () => {
   }, []);
 
   const [searchTerm, setSearchTerm] = useState("");
+  useEffect(() => {
+    if (!searchTerm.trim()) {
+      setFilteredResults([]);
+      return;
+    }
+
+    throttledFilter(searchTerm);
+  }, [searchTerm, throttledFilter]);
+
   const handleSignInBtn = () => {
     navigate("/signIn");
   };
@@ -98,12 +147,14 @@ const NavbarComponent = () => {
       path.startsWith("/deliveryaddress") ||
       path.startsWith("/orderSummary") ||
       path.startsWith("/upiPayment") ||
-      path.startsWith("/ordersummary");
-    path.startsWith("/upiPayment") ||
+      path.startsWith("/ordersummary") ||
+      path.startsWith("/upiPayment") ||
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
       path.startsWith("/orderCardPayment") ||
       path.startsWith("/orderUpiPayment") ||
+      path.startsWith("/orderTracking") ||
+      path.startsWith("/trackingDetails") ||
       path.startsWith("/vipSuccess");
     setTextColor(isHighlightPath);
   });
@@ -225,8 +276,9 @@ const NavbarComponent = () => {
             </Nav>
 
             <div
-              className={`${NavbarCss.searchBar}  d-flex flex-grow-1 justify-content-center position-relative w-300 my-2 `}
+              className={`${NavbarCss.searchBar} d-flex flex-grow-1 justify-content-center position-relative w-300 my-2`}
             >
+              ``
               <div className={NavbarCss.searchContainer}>
                 <FaSearch
                   style={{
@@ -287,6 +339,28 @@ const NavbarComponent = () => {
                   }}
                 />
               </div>
+              {/* Search dropdown results */}
+              {filteredResults.length > 0 && (
+                <ul
+                  className={`${NavbarCss.searchResults} ${
+                    !isDashboard ? NavbarCss.whiteBackground : ""
+                  }`}
+                >
+                  {filteredResults.map((item, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => handleResultClick(item)}
+                      className={NavbarCss.searchItem}
+                    >
+                      {item.type === "category" ? (
+                        <span style={{ fontWeight: "bold" }}>{item.name}</span>
+                      ) : (
+                        <span>{item.name}</span>
+                      )}
+                    </div>
+                  ))}
+                </ul>
+              )}
               {/* {searchTerm && (
                 <ul
                 className={NavbarCss.searchProducts}
