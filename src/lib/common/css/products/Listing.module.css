@@ -5,7 +5,7 @@
 
 .pageTitle {
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 2rem;
   color: #333;
   font-weight: bold;
@@ -44,7 +44,7 @@
 
 .productCard {
   display: inline-block;
-  width: calc(33.33% - 1rem);
+  width: calc(25% - 1rem);
   margin: 0.5rem;
   background: #f4f6fb;
   border-radius: 12px;
@@ -70,13 +70,13 @@
 }
 
 .productImage {
-  width: 120px;
-  height: 120px;
+  width: 15rem;
+  height: 15rem;
   cursor: pointer;
 }
 
 .productName {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -162,6 +162,7 @@
 
   .productCard {
     padding: 0.75rem;
+    width: calc(33.333% - 1rem);
   }
 
   .productImage {

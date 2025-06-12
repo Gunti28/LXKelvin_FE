@@ -12,21 +12,20 @@ import {
   updateQuantity,
 } from "../../../../store/slice/cartSlice";
 import { useNavigate } from "react-router-dom";
+import { addSavedItem } from "../../../../store/slice/saveLaterSlice";
 
 const CartPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handlePlaceOrder = () => {
-    console.log("Placing order...");
     navigate("/deliveryAddress");
   };
 
   const cartItems = useSelector((state) => state.cart.items ?? []);
-  console.log("Cart items:", cartItems);
+  const savedItems = useSelector((state) => state.savedItems ?? []);
 
   const itemCount = cartItems.filter((item) => item.quantity > 0).length;
-  console.log("Item count:", itemCount);
 
   const subtotal = cartItems.reduce((sum, item) => {
     const price = item.priceByWeight?.[item.selectedWeight] ?? item.price ?? 0;
@@ -41,6 +40,13 @@ const CartPage = () => {
   useEffect(() => {
     console.log("CartPage mounted or updated");
   }, [cartItems]);
+
+  const handleSaveForLater = (item) => {
+    if (!savedItems.some((i) => i.id === item.id)) {
+      dispatch(addSavedItem(item));
+      dispatch(deleteCartItem(item.id));
+    }
+  };
 
   return (
     <div className={CartModule.CartMain}>
@@ -200,7 +206,12 @@ const CartPage = () => {
                           >
                             Delete
                           </Button>
-                          <Button variant="outline-primary" size="sm">
+                          <Button
+                            variant="outline-primary"
+                            size="sm"
+                            disabled={savedItems.some((i) => i.id === item.id)}
+                            onClick={() => handleSaveForLater(item)}
+                          >
                             Save for Later
                           </Button>
                         </div>

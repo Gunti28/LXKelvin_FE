@@ -14,7 +14,6 @@ const MyProfile = () => {
   const { selectedPlanId, isConfirmed } = useSelector(
     (state) => state.subscription
   );
-  // if (!isConfirmed) return <p>No active subscription.</p>;
 
   const [userData, setUserData] = useState({
     name: "Chukka Yaswanth Goud",

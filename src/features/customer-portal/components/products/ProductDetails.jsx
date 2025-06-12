@@ -20,12 +20,20 @@ import {
   addSavedItem,
   removeSavedItem,
 } from "../../../../store/slice/saveLaterSlice";
+import {
+  addToCart,
+  setProductWeightPreview,
+  updateQuantity,
+} from "../../../../store/slice/cartSlice";
 
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { product, status, error } = useSelector(
     (state) => state.productDetails
+  );
+  const { items: cartItems, selectedOptions } = useSelector(
+    (state) => state.cart
   );
 
   //save for later
@@ -43,7 +51,7 @@ const ProductDetailsPage = () => {
   const totalImages = 4;
 
   const [feedback, setFeedback] = useState([]);
-  const [selectedWeight, setSelectedWeight] = useState("500g");
+  // const [selectedWeight, setSelectedWeight] = useState("500g");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -86,27 +94,66 @@ const ProductDetailsPage = () => {
     }
   };
 
-  // if (status === "loading") return <p>Loading...</p>;
+  const handleAdd = () => {
+    dispatch(
+      addToCart({
+        id: product.id,
+        name: product.productName,
+        image: product.images[0],
+        selectedWeight,
+        priceByWeight: product.offerPriceByWeight,
+        price: product.offerPrice,
+        quantityChange: 1,
+        originalPrice: product.originalPrice,
+      })
+    );
+  };
+  const getCartQuantity = (id, weight) => {
+    const item = cartItems.find(
+      (item) => item.id === id && item.selectedWeight === weight
+    );
+    return item ? item.quantity : 0;
+  };
+
+  const handleDecrease = () => {
+    dispatch(updateQuantity({ id: product.id, changeInQuantity: -1 }));
+  };
+
+  const handleIncrease = () => {
+    dispatch(updateQuantity({ id: product.id, changeInQuantity: 1 }));
+  };
+  const handleWeightChange = (productId, weight) => {
+    dispatch(setProductWeightPreview({ id: productId, weight }));
+  };
   if (status === "failed") return <p>Error: {error}</p>;
   if (!product) return console.log("No Product Found");
 
   const {
     productName,
-    offerPrice,
-    originalPrice,
     discount,
     healthBenefits,
     packing,
     about,
     images,
     cat_id,
-    offerPriceByWeight,
-    originalPriceByWeight,
   } = product;
 
-  const currentOfferPrice = offerPriceByWeight?.[selectedWeight] || offerPrice;
-  const currentOriginalPrice =
-    originalPriceByWeight?.[selectedWeight] || originalPrice;
+  /**
+   * Used for Declaration for weights and Prices section
+   */
+  const weights = Object.keys(product.offerPriceByWeight || {});
+
+  const selectedWeight = selectedOptions[product.id] || weights[0] || null;
+  const priceByWeight =
+    selectedWeight && product.offerPriceByWeight?.[selectedWeight]
+      ? product.offerPriceByWeight[selectedWeight]
+      : product.offerPrice;
+
+  const originalPrice =
+    selectedWeight && product.originalPriceByWeight?.[selectedWeight]
+      ? product.originalPriceByWeight[selectedWeight]
+      : product.originalPrice;
+  const qtyInCart = getCartQuantity(product.id, selectedWeight);
 
   return (
     <div className={ProductDetPage.productPage}>
@@ -212,29 +259,59 @@ const ProductDetailsPage = () => {
 
             <p className={ProductDetPage.ProductTitle}>{productName}</p>
 
+            {/* getting weights and quantity dynamically from Cart */}
             <div className={ProductDetPage.quantityPriceSection}>
               <div className={ProductDetPage.quantityAddContainer}>
-                <Form.Group className={ProductDetPage.quantitySelector}>
-                  <Form.Label>Quantity: </Form.Label>
-                  <Form.Select
-                    className={ProductDetPage.quantityDropdown}
-                    value={selectedWeight}
-                    onChange={(e) => setSelectedWeight(e.target.value)}
+                <div>
+                  Quantity:
+                  {weights.length > 0 && (
+                    <select
+                      className={ProductDetPage.productQuantity}
+                      value={selectedWeight}
+                      onChange={(e) =>
+                        handleWeightChange(product.id, e.target.value)
+                      }
+                    >
+                      {weights.map((weight) => (
+                        <option key={weight} value={weight}>
+                          {weight}
+                        </option>
+                      ))}
+                    </select>
+                  )}
+                </div>
+                {qtyInCart === 0 ? (
+                  <Button
+                    className={ProductDetPage.addButton}
+                    onClick={handleAdd}
                   >
-                    <option value="500g">500 g</option>
-                    <option value="1kg">1 kg</option>
-                    <option value="2kg">2 kg</option>
-                  </Form.Select>
-                </Form.Group>
-                <Button className={ProductDetPage.addButton}>Add</Button>
+                    Add
+                  </Button>
+                ) : (
+                  <div className={ProductDetPage.quantityButtons}>
+                    <Button
+                      onClick={handleDecrease}
+                      className={ProductDetPage.quantityBtn}
+                    >
+                      -
+                    </Button>
+                    <span className={ProductDetPage.cartQty}>{qtyInCart}</span>
+                    <Button
+                      onClick={handleIncrease}
+                      className={ProductDetPage.quantityBtn}
+                    >
+                      +
+                    </Button>
+                  </div>
+                )}
               </div>
 
               <div className={ProductDetPage.priceDisplay}>
                 <span className={ProductDetPage.currentPrice}>
-                  €{currentOfferPrice}
+                  €{priceByWeight}
                 </span>
                 <span className={ProductDetPage.pmdPrice}>
-                  PMD €{currentOriginalPrice}
+                  PMD €{originalPrice}
                 </span>
                 <span className={ProductDetPage.discount}>{discount}% OFF</span>
                 <div

@@ -70,8 +70,8 @@ const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
     >
       <Popover id="location-popover" className={styles.popoverCustom}>
         <Popover.Body>
-          <div className="text-center d-flex flex-row justify-content-center align-items-center">
-            <img src={IMAGES.worldMap} width={60} alt="location icon" />
+          <div className="d-flex flex-row align-items-center">
+            <img src={IMAGES.worldMap} className={styles.globe} alt="location icon" />
             <p className={styles.descriptionText}>
               To ensure the fastest delivery possible, please provide your
               current location.
@@ -79,7 +79,10 @@ const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
           </div>
 
           <div className="text-center d-flex flex-row justify-content-center align-items-center gap-3 mb-2">
-            <Button variant="secondary" className="fs-6" onClick={detectLocation}>
+            <Button
+              className={styles.locationBtn}
+              onClick={detectLocation}
+            >
               Current Location
             </Button>
             <p className={styles.orText}>OR</p>
@@ -90,33 +93,47 @@ const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
               onSelect={handleSelect}
             >
               {({ getInputProps, suggestions, getSuggestionItemProps }) => (
-                <div onClick={(e) => e.stopPropagation()}>
+                <div
+                  style={{ position: "relative", width: "50%" }}
+                  onClick={(e) => e.stopPropagation()}
+                >
                   <input
                     {...getInputProps({
                       placeholder: "Search delivery location",
                       className: "form-control",
                     })}
                   />
-                  <div className="border rounded mt-1">
-                    {suggestions.map((suggestion, idx) => (
-                      <div
-                        key={idx}
-                        {...getSuggestionItemProps(suggestion, {
-                          className: `p-2 suggestion-item`,
-                        })}
-                      >
-                        {suggestion.description}
-                      </div>
-                    ))}
-                  </div>
+                  {suggestions.length > 0 && (
+                    <div
+                      className="border rounded bg-white"
+                      style={{
+                        position: "absolute",
+                        top: "100%",
+                        left: 0,
+                        right: 0,
+                        zIndex: 1050,
+                        maxHeight: "200px",
+                        overflowY: "auto",
+                      }}
+                    >
+                      {suggestions.map((suggestion, idx) => (
+                        <div
+                          key={idx}
+                          {...getSuggestionItemProps(suggestion, {
+                            className: `p-2 suggestion-item`,
+                          })}
+                        >
+                          {suggestion.description}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
             </PlacesAutocomplete>
           </div>
 
-          {location && (
-              <span className={styles.locationText}>{location}</span>
-          )}
+          {location && <span className={styles.locationText}>{location}</span>}
         </Popover.Body>
       </Popover>
     </Overlay>
