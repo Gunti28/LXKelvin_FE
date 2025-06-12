@@ -27,8 +27,6 @@ import {
 } from "../../../../store/slice/cartSlice";
 
 const ProductDetailsPage = () => {
-  let currentOfferPrice = 0;
-  let currentOriginalPrice = 0;
   let wrapContent;
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -95,7 +93,6 @@ const ProductDetailsPage = () => {
     }
   };
 
-
   const handleAdd = () => {
     dispatch(
       addToCart({
@@ -131,23 +128,24 @@ const ProductDetailsPage = () => {
   /**
    * Used for Declaration for weights and Prices section
    */
-  const weights = Object.keys(product.offerPriceByWeight || {});
+  const weights = product?.offerPriceByWeight
+    ? Object.keys(product.offerPriceByWeight)
+    : [];
 
-  const selectedWeight = selectedOptions[product.id] || weights[0] || null;
+  const selectedWeight =
+    (product?.id && selectedOptions[product.id]) || weights[0] || null;
+
   const priceByWeight =
-    selectedWeight && product.offerPriceByWeight?.[selectedWeight]
+    product && selectedWeight && product.offerPriceByWeight?.[selectedWeight]
       ? product.offerPriceByWeight[selectedWeight]
-      : product.offerPrice;
+      : product?.offerPrice || 0;
 
-  const originalPrice =
-    selectedWeight && product.originalPriceByWeight?.[selectedWeight]
-      ? product.originalPriceByWeight[selectedWeight]
-      : product.originalPrice;
-  const qtyInCart = getCartQuantity(product.id, selectedWeight);
+  const qtyInCart =
+    product && selectedWeight ? getCartQuantity(product.id, selectedWeight) : 0;
+
   if (product) {
     const {
       productName,
-      offerPrice,
       originalPrice,
       discount,
       healthBenefits,
@@ -155,8 +153,6 @@ const ProductDetailsPage = () => {
       about,
       images,
       cat_id,
-      offerPriceByWeight,
-      originalPriceByWeight,
     } = product;
 
     /**
