@@ -1,6 +1,6 @@
 import NavbarCss from "../../../../lib/common/css/registration/Navbar.module.css";
 import HeroStyles from "../../../../lib/common/css/registration/OpeningScreen.module.css";
-import { useState, useEffect, useRef, useCallBack } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import {
   Navbar,
   Nav,
@@ -277,17 +277,17 @@ const NavbarComponent = () => {
                       color: text_color ? "#5B5F62" : "#fff",
                     }}
                   >
-                    {text_color?<div>Location</div>:null}
+                    {text_color ? <div>Location</div> : null}
                     <div className="d-flex flex-row">
                       {userLocation !== " "
                         ? `${userLocation.slice(0, 30)}...`
                         : "Location"}
-                        <Icon
-                      icon="mdi:arrow-down-drop"
-                      width="28"
-                      height="28"
-                      style={{ color: text_color?"#5B5F62":"#fff" }}
-                    />
+                      <Icon
+                        icon="mdi:arrow-down-drop"
+                        width="28"
+                        height="28"
+                        style={{ color: text_color ? "#5B5F62" : "#fff" }}
+                      />
                     </div>
                   </Nav.Link>
 
