@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchTrackingMock } from "../../../../store/slice/trackingDetailsSlice";
 import style from "../../../../lib/common/css/orderTracking/TrackingDetails.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 const TrackingDetails = () => {
   const dispatch = useDispatch();
@@ -20,6 +22,15 @@ const TrackingDetails = () => {
   return (
     <div className={style.pageWrapper}>
       <div className={style.trackingdetailscontainer}>
+        <NavLink to="/orderTracking">
+          <Icon
+            icon="material-symbols:arrow-back"
+            width="28"
+            height="28"
+            color="black"
+          />
+        </NavLink>
+
         <h2>Tracking Details</h2>
 
         <div className={style.trackingcard}>

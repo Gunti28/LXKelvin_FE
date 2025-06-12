@@ -21,6 +21,21 @@ body {
   overflow: hidden;
 }
 
+.backButton {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  gap: 6px;
+}
+
+.backButton:hover {
+  color: #000;
+}
+
 .sidebar {
   border: 1px solid #ebecf0;
   width: 18rem;

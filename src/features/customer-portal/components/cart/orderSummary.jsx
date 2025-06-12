@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setPaymentMethod } from "../../../../store/slice/orderSummarySlice";
 import styles from "../../../../lib/common/css/cart/OrderSummary.module.css";
 import { Icon } from "@iconify/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { Const, ORDER_CONSTANTS } from "../../../../lib/constants/index";
 import { addOrder } from "../../../../store/slice/orderSlice";
 import { clearCart } from "../../../../store/slice/cartSlice";
@@ -140,6 +140,14 @@ const OrderSummery = () => {
   return (
     <div className={styles.SummCon}>
       <div className={styles.TopCon}>
+        <NavLink to="/deliveryAddress">
+          <Icon
+            icon="material-symbols:arrow-back"
+            width="28"
+            height="28"
+            color="black"
+          />
+        </NavLink>
         <p className={styles.DelHeading}>Delivery Address</p>
         <div className={styles.AddCon}>
           <p className={styles.AddText}>

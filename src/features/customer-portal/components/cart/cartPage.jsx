@@ -3,6 +3,9 @@ import { Container, Button } from "react-bootstrap";
 import CartModule from "../../../../lib/common/css/cart/Cart.module.css";
 import { MdOutlineEuro } from "react-icons/md";
 import Dropdown from "react-bootstrap/Dropdown";
+import { NavLink, Outlet } from "react-router-dom";
+import { Icon } from "@iconify/react";
+
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import SplitButton from "react-bootstrap/SplitButton";
 import { useDispatch, useSelector } from "react-redux";
@@ -44,6 +47,15 @@ const CartPage = () => {
 
   return (
     <div className={CartModule.CartMain}>
+      <NavLink to="/products/all-categories">
+        <Icon
+          icon="material-symbols:arrow-back"
+          width="28"
+          height="28"
+          color="black"
+        />
+      </NavLink>
+
       <div className="pt-3">
         <div
           className="d-flex flex-row justify-content-between align-items-center fs-4"

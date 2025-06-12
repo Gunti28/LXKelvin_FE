@@ -106,9 +106,6 @@ export const IMAGES = {
   orderPlaced: `${BASE}/Images/OrderPlaced.svg`,
   bike: `${BASE}/Images/bike.svg`,
   worldMap: `${BASE}/Images/worldIcon.svg`,
-
-  orderPlaced: `${BASE}/Images/OrderPlaced.svg`
-
 };
 
 // export const VISA = Visa;

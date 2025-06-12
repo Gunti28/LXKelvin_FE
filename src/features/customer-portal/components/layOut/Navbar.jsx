@@ -325,7 +325,6 @@ const NavbarComponent = () => {
             <div
               className={`${NavbarCss.searchBar} d-flex flex-grow-1 justify-content-center position-relative w-300 my-2`}
             >
-              ``
               <div className={NavbarCss.searchContainer}>
                 <FaSearch
                   style={{

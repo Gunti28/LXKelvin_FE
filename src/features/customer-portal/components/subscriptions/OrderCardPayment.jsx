@@ -4,9 +4,11 @@ import Card from "react-bootstrap/Card";
 import SetupCardStyle from "../../../../lib/common/css/SubscriptionCards/CardPayment.module.css";
 import Form from "react-bootstrap/Form";
 import { CiCircleQuestion } from "react-icons/ci";
+import { Icon } from "@iconify/react";
 import { HiOutlineCreditCard } from "react-icons/hi";
 import { IMAGES } from "../../../../lib/constants/Image_Constants";
 import { useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 import {
   confirmSubscription,
   setCardDetails,
@@ -50,6 +52,14 @@ const OrderCardPayment = () => {
 
   return (
     <div className={SetupCardStyle.CardContainer}>
+      <NavLink to="/orderSummary">
+        <Icon
+          icon="material-symbols:arrow-back"
+          width="28"
+          height="28"
+          color="black"
+        />
+      </NavLink>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <div className={SetupCardStyle.cardSection}>
           <h4 className={`text-center mb-4 fw-bold ${SetupCardStyle.heading} `}>

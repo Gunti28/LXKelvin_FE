@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import { Icon } from "@iconify/react";
+
 import {
   fetchAddresses,
   updateCurrentAddress,
@@ -190,6 +193,14 @@ const DeliveryAddress = () => {
     <div className="delivery-address-container">
       <div className="delivery-address-modal">
         <div className="modal-header">
+          <NavLink to="/cart">
+            <Icon
+              icon="material-symbols:arrow-back"
+              width="28"
+              height="28"
+              color="black"
+            />
+          </NavLink>
           <h5 className="modal-title">Delivery Address</h5>
           <button type="button" className="close-button" aria-label="Close">
             <span aria-hidden="true">&times;</span>

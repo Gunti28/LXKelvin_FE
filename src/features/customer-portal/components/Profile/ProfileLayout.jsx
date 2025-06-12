@@ -78,6 +78,10 @@ const ProfileLayout = () => {
       </Offcanvas>
 
       <div className={`${styles.sidebar} d-none d-md-block`}>
+        <NavLink to="/products/all-categories" className={styles.backButton}>
+          <Icon icon="material-symbols:arrow-back" width="28" height="28" />
+        </NavLink>
+
         <ul className={styles.navList}>
           {navItems.map(({ to, icon, label }) => (
             <li key={label}>

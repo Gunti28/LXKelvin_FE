@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import styles from "../../../../lib/common/css/orderTracking/OrderTracking.module.css";
 import { Icon } from "@iconify/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 // Group items by name
 const groupItems = (items) => {
@@ -44,6 +44,15 @@ const OrderTracking = () => {
 
   return (
     <div className={styles.OrderCon}>
+      <NavLink to="/products/all-categories" className={styles.backButton}>
+        <Icon
+          icon="material-symbols:arrow-back"
+          width="28"
+          height="28"
+          color="black"
+        />
+      </NavLink>
+
       <header className={styles.orderHeader}>
         <h2>Order Summary</h2>
       </header>
