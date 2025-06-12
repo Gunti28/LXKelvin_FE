@@ -121,6 +121,10 @@ const NavbarComponent = () => {
     }
   }, [text_color]);
 
+  useEffect(() => {
+    setShowPopover(true);
+  }, []);
+
   /**
    * need split content for wrapping success and failed cases
    */
