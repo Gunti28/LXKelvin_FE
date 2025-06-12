@@ -69,12 +69,12 @@ const ListingComponent = () => {
                   backgroundColor: product.Colour,
                   filter: product.stockCount === 0 ? "grayscale(100%)" : "none",
                 }}
+                onClick={() => handleProductClick(product.id)}
               >
                 <img
                   src={product.image}
                   alt={product.name}
                   className={ListingStyle.productImage}
-                  onClick={() => handleProductClick(product.id)}
                 />
               </div>
 
