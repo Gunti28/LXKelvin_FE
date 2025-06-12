@@ -6,7 +6,8 @@ import {
   addToCart,
   setProductWeightPreview,
 } from "../../../../../src/store/slice/cartSlice";
-
+import OverLayLoader from "../overLayLoader/OverLayLoader";
+import { useState, useEffect } from "react";
 const ProductList = () => {
   const { products } = useSelector((state) => state.products);
   const { items: cartItems, selectedOptions } = useSelector(
@@ -15,7 +16,6 @@ const ProductList = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const getCategory = () => {
     const path = location.pathname.toLowerCase();
 
@@ -37,6 +37,21 @@ const ProductList = () => {
   };
 
   const { category, seasonal } = getCategory();
+
+  /**
+   * we need to add changes on loaderCategories once service is placed
+   */
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    /**
+     * this TimeOut function we need to re-wramp once service is in place
+     */
+    setLoader(true);
+    setTimeout(() => {
+      setLoader(false);
+    }, 1500);
+  }, [products, location.pathname]);
 
   const filteredProducts = products.filter((product) => {
     if (!category) return true;
@@ -67,6 +82,7 @@ const ProductList = () => {
 
   return (
     <div className={ListingStyle.listingContainer}>
+      <OverLayLoader isLoader={loader} />
       <h1 className={ListingStyle.pageTitle}>
         {category === null
           ? "All Products"
@@ -98,12 +114,12 @@ const ProductList = () => {
                   backgroundColor: product.Colour,
                   filter: product.stockCount === 0 ? "grayscale(100%)" : "none",
                 }}
+                onClick={() => handleProductClick(product.id)}
               >
                 <img
                   src={product.image}
                   alt={product.name}
                   className={ListingStyle.productImage}
-                  onClick={() => handleProductClick(product.id)}
                 />
               </div>
 

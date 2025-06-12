@@ -8,7 +8,7 @@ import OverLayLoader from "../overLayLoader/OverLayLoader";
 const CategoriesComponent = () => {
   const { categories } = useSelector((state) => state.categories);
   const [categoriesList, setCategories] = useState([]);
-  const [loaderCategories, serLoaderCategories] = useState(true);
+  const [loaderCategories, setLoaderCategories] = useState(true);
   const navigate = useNavigate();
   const handleAllCategories = () => {
     navigate("/products/all-categories");
@@ -18,7 +18,7 @@ const CategoriesComponent = () => {
   };
   useEffect(() => {
     setTimeout(() => {
-      serLoaderCategories(false);
+      setLoaderCategories(false);
       setCategories(categories);
     }, 1500);
   }, [categories]);

@@ -20,12 +20,19 @@ import {
   addSavedItem,
   removeSavedItem,
 } from "../../../../store/slice/saveLaterSlice";
+import {
+  addToCart,
+  setProductWeightPreview,
+  updateQuantity,
+} from "../../../../store/slice/cartSlice";
 
 const ProductDetailsPage = () => {
+  let wrapContent;
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { product, status, error } = useSelector(
-    (state) => state.productDetails
+  const { product } = useSelector((state) => state.productDetails);
+  const { items: cartItems, selectedOptions } = useSelector(
+    (state) => state.cart
   );
 
   //save for later
@@ -37,13 +44,13 @@ const ProductDetailsPage = () => {
   /**
    * we need to add changes on loaderCategories once service is placed
    */
-  const [loaderCategories, serLoaderCategories] = useState(true);
+  const [loader, setLoader] = useState(true);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const totalImages = 4;
 
   const [feedback, setFeedback] = useState([]);
-  const [selectedWeight, setSelectedWeight] = useState("500g");
+  // const [selectedWeight, setSelectedWeight] = useState("500g");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -51,9 +58,9 @@ const ProductDetailsPage = () => {
     /**
      * this TimeOut function we need to re-wrap once service is in place
      */
-    serLoaderCategories(true);
+    setLoader(true);
     setTimeout(() => {
-      serLoaderCategories(false);
+      setLoader(false);
     }, 1500);
   }, [dispatch, id]);
 
@@ -86,31 +93,72 @@ const ProductDetailsPage = () => {
     }
   };
 
-  // if (status === "loading") return <p>Loading...</p>;
-  if (status === "failed") return <p>Error: {error}</p>;
-  if (!product) return console.log("No Product Found");
+  const handleAdd = () => {
+    dispatch(
+      addToCart({
+        id: product.id,
+        name: product.productName,
+        image: product.images[0],
+        selectedWeight,
+        priceByWeight: product.offerPriceByWeight,
+        price: product.offerPrice,
+        quantityChange: 1,
+        originalPrice: product.originalPrice,
+      })
+    );
+  };
+  const getCartQuantity = (id, weight) => {
+    const item = cartItems.find(
+      (item) => item.id === id && item.selectedWeight === weight
+    );
+    return item ? item.quantity : 0;
+  };
 
-  const {
-    productName,
-    offerPrice,
-    originalPrice,
-    discount,
-    healthBenefits,
-    packing,
-    about,
-    images,
-    cat_id,
-    offerPriceByWeight,
-    originalPriceByWeight,
-  } = product;
+  const handleDecrease = () => {
+    dispatch(updateQuantity({ id: product.id, changeInQuantity: -1 }));
+  };
 
-  const currentOfferPrice = offerPriceByWeight?.[selectedWeight] || offerPrice;
-  const currentOriginalPrice =
-    originalPriceByWeight?.[selectedWeight] || originalPrice;
+  const handleIncrease = () => {
+    dispatch(updateQuantity({ id: product.id, changeInQuantity: 1 }));
+  };
+  const handleWeightChange = (productId, weight) => {
+    dispatch(setProductWeightPreview({ id: productId, weight }));
+  };
 
-  return (
-    <div className={ProductDetPage.productPage}>
-      <OverLayLoader isLoader={loaderCategories} />
+  /**
+   * Used for Declaration for weights and Prices section
+   */
+  const weights = product?.offerPriceByWeight
+    ? Object.keys(product.offerPriceByWeight)
+    : [];
+
+  const selectedWeight =
+    (product?.id && selectedOptions[product.id]) || weights[0] || null;
+
+  const priceByWeight =
+    product && selectedWeight && product.offerPriceByWeight?.[selectedWeight]
+      ? product.offerPriceByWeight[selectedWeight]
+      : product?.offerPrice || 0;
+
+  const qtyInCart =
+    product && selectedWeight ? getCartQuantity(product.id, selectedWeight) : 0;
+
+  if (product) {
+    const {
+      productName,
+      originalPrice,
+      discount,
+      healthBenefits,
+      packing,
+      about,
+      images,
+      cat_id,
+    } = product;
+
+    /**
+     * wrapping  content as visible when product details are fetched
+     */
+    wrapContent = (
       <Row>
         <Col md={6} className={ProductDetPage.leftColumn}>
           <div className={ProductDetPage.mainImageContainer}>
@@ -212,29 +260,59 @@ const ProductDetailsPage = () => {
 
             <p className={ProductDetPage.ProductTitle}>{productName}</p>
 
+            {/* getting weights and quantity dynamically from Cart */}
             <div className={ProductDetPage.quantityPriceSection}>
               <div className={ProductDetPage.quantityAddContainer}>
-                <Form.Group className={ProductDetPage.quantitySelector}>
-                  <Form.Label>Quantity: </Form.Label>
-                  <Form.Select
-                    className={ProductDetPage.quantityDropdown}
-                    value={selectedWeight}
-                    onChange={(e) => setSelectedWeight(e.target.value)}
+                <div>
+                  Quantity:
+                  {weights.length > 0 && (
+                    <select
+                      className={ProductDetPage.productQuantity}
+                      value={selectedWeight}
+                      onChange={(e) =>
+                        handleWeightChange(product.id, e.target.value)
+                      }
+                    >
+                      {weights.map((weight) => (
+                        <option key={weight} value={weight}>
+                          {weight}
+                        </option>
+                      ))}
+                    </select>
+                  )}
+                </div>
+                {qtyInCart === 0 ? (
+                  <Button
+                    className={ProductDetPage.addButton}
+                    onClick={handleAdd}
                   >
-                    <option value="500g">500 g</option>
-                    <option value="1kg">1 kg</option>
-                    <option value="2kg">2 kg</option>
-                  </Form.Select>
-                </Form.Group>
-                <Button className={ProductDetPage.addButton}>Add</Button>
+                    Add
+                  </Button>
+                ) : (
+                  <div className={ProductDetPage.quantityButtons}>
+                    <Button
+                      onClick={handleDecrease}
+                      className={ProductDetPage.quantityBtn}
+                    >
+                      -
+                    </Button>
+                    <span className={ProductDetPage.cartQty}>{qtyInCart}</span>
+                    <Button
+                      onClick={handleIncrease}
+                      className={ProductDetPage.quantityBtn}
+                    >
+                      +
+                    </Button>
+                  </div>
+                )}
               </div>
 
               <div className={ProductDetPage.priceDisplay}>
                 <span className={ProductDetPage.currentPrice}>
-                  €{currentOfferPrice}
+                  €{priceByWeight}
                 </span>
                 <span className={ProductDetPage.pmdPrice}>
-                  PMD €{currentOriginalPrice}
+                  PMD €{originalPrice}
                 </span>
                 <span className={ProductDetPage.discount}>{discount}% OFF</span>
                 <div
@@ -327,6 +405,13 @@ const ProductDetailsPage = () => {
           </div>
         </Col>
       </Row>
+    );
+  }
+
+  return (
+    <div className={ProductDetPage.productPage}>
+      <OverLayLoader isLoader={loader} />
+      {product && wrapContent}
       {/* Customer Feedback Section */}
       <div className={ProductDetPage.customerFeedback}>
         <h3>Customer Feedback</h3>

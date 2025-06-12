@@ -15,3 +15,9 @@
 .locationText {
   font-size: 12px;
 }
+@media (max-width:766px){
+.GlobeImage{
+  height: 5rem !important;
+}
+
+}

@@ -15,21 +15,20 @@ import {
   updateQuantity,
 } from "../../../../store/slice/cartSlice";
 import { useNavigate } from "react-router-dom";
+import { addSavedItem } from "../../../../store/slice/saveLaterSlice";
 
 const CartPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handlePlaceOrder = () => {
-    console.log("Placing order...");
     navigate("/deliveryAddress");
   };
 
   const cartItems = useSelector((state) => state.cart.items ?? []);
-  console.log("Cart items:", cartItems);
+  const savedItems = useSelector((state) => state.savedItems ?? []);
 
   const itemCount = cartItems.filter((item) => item.quantity > 0).length;
-  console.log("Item count:", itemCount);
 
   const subtotal = cartItems.reduce((sum, item) => {
     const price = item.priceByWeight?.[item.selectedWeight] ?? item.price ?? 0;
@@ -44,6 +43,13 @@ const CartPage = () => {
   useEffect(() => {
     console.log("CartPage mounted or updated");
   }, [cartItems]);
+
+  const handleSaveForLater = (item) => {
+    if (!savedItems.some((i) => i.id === item.id)) {
+      dispatch(addSavedItem(item));
+      dispatch(deleteCartItem(item.id));
+    }
+  };
 
   return (
     <div className={CartModule.CartMain}>
@@ -97,17 +103,28 @@ const CartPage = () => {
                     item.price ??
                     0;
                   const itemTotal = price * item.quantity;
+                  console.log(item);
 
                   return (
                     <div
                       key={item.id}
-                      className={`d-flex flex-row justify-content-between align-items-center pt-4 ${CartModule.cartItem}`}
+                      className={` d-flex flex-row justify-content-around align-items-center pt-4 ${CartModule.cartItem}`}
                     >
+                      
                       <div
                         className={`d-flex flex-row justify-content-center align-items-center gap-3 ${CartModule.itemimg}`}
                       >
-                        <img src={item.image} alt={item.name} />
 
+                        <div
+                          className={CartModule.imageCon}
+                          style={{ backgroundColor: item.Colour || "#eee" }}
+                        >
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className={CartModule.mainImg}
+                          />
+                        </div>
                         <div className={CartModule.imgtext}>
                           <div>{item.name}</div>
                           <p
@@ -130,11 +147,7 @@ const CartPage = () => {
                           </p>
                         </div>
                       </div>
-
-                      <div
-                        style={{ marginRight: 150 }}
-                        className={CartModule.itembtn}
-                      >
+                      <div className={CartModule.itembtn}>
                         <div className="d-flex flex-row justify-content-center align-items-center gap-3 w-200">
                           <SplitButton
                             as={ButtonGroup}
@@ -213,12 +226,16 @@ const CartPage = () => {
                           >
                             Delete
                           </Button>
-                          <Button variant="outline-primary" size="sm">
+                          <Button
+                            variant="outline-success"
+                            size="sm"
+                            disabled={savedItems.some((i) => i.id === item.id)}
+                            onClick={() => handleSaveForLater(item)}
+                          >
                             Save for Later
                           </Button>
                         </div>
                       </div>
-
                       <div className={CartModule.itemprice}>
                         <div
                           className="d-flex align-items-center"
@@ -272,7 +289,7 @@ const CartPage = () => {
 
           <div
             style={{ backgroundColor: "#D4E7F3", borderRadius: 10 }}
-            className="d-flex justify-content-between align-items-center flex-row mt-3 pe-5"
+            className="d-flex justify-content-between align-items-center flex-row mt-3 mb-16 pe-5"
           >
             <div className="ps-3 pt-2 pb-2 d-flex flex-column text-start gap-3">
               <div
