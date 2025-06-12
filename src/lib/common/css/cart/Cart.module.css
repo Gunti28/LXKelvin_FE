@@ -1,25 +1,39 @@
 .CartMain {
-  overflow-y: auto;
   background-color: #fff;
-  padding: 20px;
-  height: 90vh;
-  height: 85vh;
+  padding: 1.5rem;
+  height: 100%;
   overflow-y: auto;
-  margin-bottom: 4rem !important;
 }
 
-.itemimg img {
-  width: 200px;
+/* .itemimg img {
+  width: auto;
   height: auto;
   object-fit: contain;
-  padding-left: 1rem;
-}
+  padding-left: 1
+} */
 
 .itemimg div {
   font-size: 16px;
 }
 .midCount {
   padding-top: 15px;
+}
+.imgtext{
+  font-size: 0.8rem !important;
+}
+.imageCon{
+  width: 6rem;
+  height: 6rem;
+  /* background-color: red; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.mainImg{
+  width: 75%;
+  height: 75%;
+  margin:auto;
+  padding-top: 20%;
 }
 
 @media (max-width: 850px) {
@@ -46,7 +60,7 @@
 } */
 
 @media (max-width: 767px) {
-  .cart-item {
+  .cartItem {
     flex-direction: row !important; /* Keep row */
     align-items: flex-start !important; /* Align image and text to top */
     /* gap: 10px; */
@@ -89,18 +103,18 @@
     text-align: right;
   }
 
-  .cart-item .btn,
+  .cartItem .btn,
   .itembtn {
     font-size: 12px;
     padding: 2px 8px;
   }
 
-  .cart-item p {
+  .cartItem p {
     margin-bottom: 0;
   }
 
   /* Make buttons and price stack better on small widths */
-  .cart-item > div {
+  .cartItem > div {
     flex: 1;
   }
   .midCount {

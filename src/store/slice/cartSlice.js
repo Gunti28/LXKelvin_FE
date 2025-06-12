@@ -49,6 +49,7 @@ const cartSlice = createSlice({
         selectedWeight,
         priceByWeight,
         price,
+        Colour,
         quantityChange = 1,
         originalPrice,
       } = action.payload;
@@ -81,6 +82,7 @@ const cartSlice = createSlice({
           quantity: quantityChange,
           priceByWeight,
           originalPrice,
+          Colour,
         });
       }
     },

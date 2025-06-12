@@ -102,8 +102,8 @@ const NavbarComponent = () => {
       path.startsWith("/deliveryaddress") ||
       path.startsWith("/orderSummary") ||
       path.startsWith("/upiPayment") ||
-      path.startsWith("/ordersummary");
-    path.startsWith("/upiPayment") ||
+      path.startsWith("/ordersummary") ||
+      path.startsWith("/upiPayment") ||
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
       path.startsWith("/orderCardPayment") ||
@@ -120,6 +120,10 @@ const NavbarComponent = () => {
       setShowLanguage(true);
     }
   }, [text_color]);
+
+  useEffect(() => {
+    setShowPopover(true);
+  }, []);
 
   /**
    * need split content for wrapping success and failed cases
@@ -192,27 +196,8 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="navbarScroll" className=" w-200 flex-row ">
             <Nav className="gap-4 ">
               <div className={NavbarCss.DealsCon}>
-                {/* <div className={NavbarCss.locationContainer}>
-                  <Nav.Link
-                    href="#"
-                    style={{ color: text_color ? "#5B5F62" : "#fff" }}
-                    className={NavbarCss.locationBox}
-                  >
-                    <LocationTracker />
-                  </Nav.Link>
-                  <div className={NavbarCss.locationIcon}>
-                    <Icon
-                      icon="mdi:arrow-down-drop"
-                      width="28"
-                      height="28"
-                      style={{ color: "#fff" }}
-                    />
-                  </div>
-                </div> */}
                 <div
                   onClick={() => setShowPopover(!showPopover)}
-                  // onMouseEnter={() => setShowPopover(true)}
-                  // onMouseLeave={() => setShowPopover(false)}
                   style={{ position: "relative", display: "inline-block" }}
                 >
                   <Nav.Link
@@ -223,17 +208,21 @@ const NavbarComponent = () => {
                       color: text_color ? "#5B5F62" : "#fff",
                     }}
                   >
-                    {text_color?<div>Location</div>:null}
+                    {userLocation !== " " ? (
+                      text_color ? (
+                        <div>Location</div>
+                      ) : null
+                    ) : null}
                     <div className="d-flex flex-row">
                       {userLocation !== " "
                         ? `${userLocation.slice(0, 30)}...`
                         : "Location"}
-                        <Icon
-                      icon="mdi:arrow-down-drop"
-                      width="28"
-                      height="28"
-                      style={{ color: text_color?"#5B5F62":"#fff" }}
-                    />
+                      <Icon
+                        icon="mdi:arrow-down-drop"
+                        width="28"
+                        height="28"
+                        style={{ color: text_color ? "#5B5F62" : "#fff" }}
+                      />
                     </div>
                   </Nav.Link>
 
@@ -331,37 +320,6 @@ const NavbarComponent = () => {
                   }}
                 />
               </div>
-              {/* {searchTerm && (
-                <ul
-                className={NavbarCss.searchProducts}
-                >
-                  {productNames
-                    .filter((product) =>
-                      product.toLowerCase().includes(searchTerm.toLowerCase())
-                    )
-                    .map((product, index) => (
-                      <li
-                        key={index}
-                        style={{
-                          padding: "3px 1px",
-                          cursor: "pointer",
-                          transition: "background 0.2s",
-                        }}
-
-                        onClick={() => {
-                          setSearchTerm(product);
-                        }}
-                      >
-                        {product}
-                      </li>
-                    ))}
-                  {productNames.filter((product) =>
-                    product.toLowerCase().includes(searchTerm.toLowerCase())
-                  ).length === 0 && (
-                    <li style={{ color: "gray" }}>No products found</li>
-                  )}
-                </ul>
-              )} */}
             </div>
 
             <div

@@ -45,7 +45,7 @@ const FlashScreens = () => {
           >
             <img
 
-              src={IMAGES.IMAGES}
+              src={IMAGES.dashboard_carousel}
 
               alt="Banner Slide 2"
               className={Category.banner}
