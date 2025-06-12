@@ -14,7 +14,6 @@ const ProductList = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const getCategory = () => {
     const path = location.pathname;
 

@@ -70,8 +70,8 @@ const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
     >
       <Popover id="location-popover" className={styles.popoverCustom}>
         <Popover.Body>
-          <div className="d-flex flex-row align-items-center">
-            <img src={IMAGES.worldMap} className={styles.globe} alt="location icon" />
+          <div className="text-center d-flex flex-row justify-content-center align-items-center">
+            <img src={IMAGES.worldMap} width={60} className={styles.GlobeImage} alt="location icon" />
             <p className={styles.descriptionText}>
               To ensure the fastest delivery possible, please provide your
               current location.
@@ -80,7 +80,8 @@ const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
 
           <div className="text-center d-flex flex-row justify-content-center align-items-center gap-3 mb-2">
             <Button
-              className={styles.locationBtn}
+              variant="secondary"
+              className="fs-6"
               onClick={detectLocation}
             >
               Current Location

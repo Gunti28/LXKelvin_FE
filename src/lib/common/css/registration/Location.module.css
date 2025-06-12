@@ -1,28 +1,23 @@
 .popoverCustom {
   max-width: 30rem !important;
 }
-.globe {
-  width: 5rem;
-  height: 5rem;
-}
 
 .descriptionText {
-  width: 20rem;
-  font-size: 0.8rem;
-  margin-top: 1rem;
+  width: 300px;
+  font-size: 12px;
+  margin-top: 20px;
 }
 
 .orText {
-  margin-top: 1.2rem;
+  margin-top: 20px;
 }
 
 .locationText {
-  font-size: 0.7rem;
+  font-size: 12px;
 }
-.locationBtn {
-  font-size: 1rem !important;
-  color: #717171 !important;
-  border: 1.5px solid #717171 !important;
-  border-radius: 10px !important;
-  background-color: transparent !important;
+@media (max-width:766px){
+.GlobeImage{
+  height: 5rem !important;
+}
+
 }

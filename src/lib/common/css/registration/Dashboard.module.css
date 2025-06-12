@@ -133,9 +133,6 @@
     font-size: 10px !important;
     padding: auto !important;
   }
-  img {
-    height: 200px !important;
-  }
   .cardtotal {
     flex-direction: column;
     align-items: center;
