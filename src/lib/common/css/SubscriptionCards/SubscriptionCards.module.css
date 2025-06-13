@@ -33,9 +33,29 @@
   border: 1px solid #376aed;
   box-shadow: 1px 20px 20px rgba(55, 106, 109, 0.5);
 }
+@keyframes blinkBorder {
+  0% {
+    border-color: #ff9900;
+  }
+  25%{
+    border-color: #fea218;
+  }
+  50% {
+    border-color: transparent;
+  }
+  75%{
+    border-color: #fea218;
+  }
+  100% {
+    border-color: #ff9900;
+  }
+}
+
 .highlight {
   border: 1px solid #ff9900;
+  animation: blinkBorder 2s infinite;
 }
+
 
 .card {
   height: 75vh;
