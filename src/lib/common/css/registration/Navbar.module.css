@@ -140,6 +140,37 @@
   margin-right: 3rem !important;
 }
 
+.searchResults {
+  position: absolute;
+  top: 70%;
+  left: 60px;
+  width: 80%;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whiteBackground {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #000 !important;
+  border: 1px solid #ccc;
+}
+
+.searchItem {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.searchItem:hover {
+  /* background-color: #555; */
+  background-color: rgba(0, 0, 0, 0.1); /* subtle gray for white bg */
+}
+
 .heroSection .navbar {
   padding: 0.5rem 1rem;
 }

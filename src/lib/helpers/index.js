@@ -49,6 +49,71 @@ export const getCategoryName = (cat_id) => {
   }
 };
 
+//search functionality helper
+
+export const getFilteredResults = (products, term) => {
+  const lowerTerm = term.toLowerCase();
+  const categorySet = new Set();
+
+  const isSeasonalQuery = lowerTerm.includes("seasonal");
+  const hasFruits = lowerTerm.includes("fruits");
+  const hasVegetables = lowerTerm.includes("vegetables");
+  const hasMilk = lowerTerm.includes("milk");
+
+  const matches = products.filter((item) => {
+    const categoryNameRaw = getCategoryName(item.cat_id);
+    const categoryName = categoryNameRaw
+      ? categoryNameRaw.toLowerCase().replace(/\s+/g, "")
+      : "";
+
+    const nameMatch = item.name.toLowerCase().includes(lowerTerm);
+    const categoryMatch = categoryName.includes(lowerTerm);
+
+    const isItemSeasonal = item.isSeasonal || false;
+
+    const seasonalOnly = isSeasonalQuery && isItemSeasonal;
+
+    const seasonalCategoryMatch =
+      isSeasonalQuery &&
+      isItemSeasonal &&
+      ((hasFruits && categoryName === "seasonalfruits") ||
+        (hasVegetables && categoryName === "seasonalvegetables"));
+
+    const milkCategoryMatch = hasMilk && categoryName === "milkproducts";
+
+    const anyMatch =
+      nameMatch ||
+      categoryMatch ||
+      seasonalOnly ||
+      seasonalCategoryMatch ||
+      milkCategoryMatch;
+
+    if (
+      categoryMatch ||
+      seasonalOnly ||
+      seasonalCategoryMatch ||
+      milkCategoryMatch
+    ) {
+      categorySet.add(categoryNameRaw);
+    }
+
+    return anyMatch;
+  });
+
+  const categories = Array.from(categorySet).map((cat) => ({
+    type: "category",
+    name: cat,
+  }));
+
+  const productResults = matches.map((item) => ({
+    type: "product",
+    id: item.id,
+    name: item.name,
+  }));
+
+  return [...categories, ...productResults];
+};
+
 export const handleViewPlansClick = (navigate) => {
   return navigate("/subscriptions");
 };

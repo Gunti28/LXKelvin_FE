@@ -39,8 +39,9 @@ import PaymentFailed from "./features/customer-portal/components/MessageModals/P
 import Pay1 from "./features/customer-portal/components/MessageModals/PaymentSuccess";
 import Thankyou from "./features/customer-portal/components/MessageModals/ThankYou";
 import VipSuccess from "./features/customer-portal/components/MessageModals/VipSuccess";
+import OrderTracking from "./features/customer-portal/components/Tracking/OrderTracking";
+import TrackingDetails from "./features/customer-portal/components/Tracking/TrackingDetails";
 import LocationTracker from "./features/customer-portal/components/layOut/Location";
-
 
 // Admin-portal Navigation
 
@@ -84,16 +85,19 @@ function App() {
           <Route path="orderCardPayment" element={<OrderCardPayment />} />
           <Route path="confirmUpi" element={<ConfirmUpi />} />
           <Route path="cardPayment" element={<CardPayment />} />
-          <Route path="cart" element={<CartPage />} />
-          <Route path="deliveryAddress" element={<DeliveryAddress />} />
+          <Route path="cart" element={<CartPage />}>
+            <Route path="deliveryAddress" element={<DeliveryAddress />} />
+          </Route>
           <Route path="orderSummary" element={<OrderSummery />} />
           <Route path="orderPlaced" element={<OrderPlacedModal />} />
           <Route path="orderUpiPayment" element={<OrderSelectUpi />} />
+          <Route path="orderTracking" element={<OrderTracking />} />
 
           <Route path="vipSuccess" element={<VipSuccess />} />
           <Route path="paymentFailed" element={<PaymentFailed />} />
           <Route path="paymentSuccess" element={<Pay1 />} />
           <Route path="thankYou" element={<Thankyou />} />
+          <Route path="trackingDetails" element={<TrackingDetails />} />
 
           <Route path="my_account" element={<ProfileLayout />}>
             <Route
@@ -162,11 +166,10 @@ function App() {
           <Route path="company_settings" element={<SettingPage />} />
           <Route path="company_notifications" element={<NotificationPage />} />
         </Route>
-        
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
-
   );
 }
 

@@ -22,6 +22,8 @@ import authReducer from "./slice/admin-signinSlice";
 import cartReducer from "./slice/cartSlice";
 import deliveryAddressReducer from "./slice/deliveryAddressSlice";
 import orderSummaryReducer from "./slice/orderSummarySlice";
+import orderMetaSummaryReducer from "./slice/orderMetaSLice";
+import trackingDetailsReducer from "./slice/trackingDetailsSlice";
 
 
 //admin-portal 
@@ -50,6 +52,9 @@ export const store = configureStore({
     userAuth: otpAuthReducer,
     addresses: addressReducer,
     orders: orderReducer,
+    saveForLater: saveForLaterReducer,
+    orderMetaSummary: orderMetaSummaryReducer,
+    trackingDetails: trackingDetailsReducer,
     saveForLater: saveForLaterReducer, 
     language: languageReducer,
     productDetails: productDetailsReducer,

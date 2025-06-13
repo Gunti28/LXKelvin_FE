@@ -9,6 +9,7 @@ const orderSlice = createSlice({
     orders: [],
     status: "idle",
     error: null,
+    orderMeta: {},
   },
   reducers: {
     addOrder: (state, action) => {
@@ -20,6 +21,12 @@ const orderSlice = createSlice({
         JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
       savedOrders.unshift(action.payload);
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(savedOrders));
+
+      // ✅ Save current order snapshot for OrderTracking page
+      state.orderMeta = action.payload;
+    },
+    clearOrderMeta: (state) => {
+      state.orderMeta = {};
     },
   },
   extraReducers: (builder) => {
@@ -50,5 +57,5 @@ const orderSlice = createSlice({
   },
 });
 
-export const { addOrder } = orderSlice.actions;
+export const { addOrder, clearOrderMeta } = orderSlice.actions;
 export default orderSlice.reducer;

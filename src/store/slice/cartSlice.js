@@ -7,7 +7,7 @@ import {
 
 const initialState = {
   items: [],
-  selectedOptions: {}, // NEW: store temporary selections
+  selectedOptions: {},
   status: "idle",
   error: null,
 };

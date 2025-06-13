@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setPaymentMethod } from "../../../../store/slice/orderSummarySlice";
 import styles from "../../../../lib/common/css/cart/OrderSummary.module.css";
 import { Icon } from "@iconify/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { Const, ORDER_CONSTANTS } from "../../../../lib/constants/index";
 import { addOrder } from "../../../../store/slice/orderSlice";
 import { clearCart } from "../../../../store/slice/cartSlice";
@@ -149,7 +149,7 @@ const OrderSummery = () => {
           </p>
           <button
             className={styles.ChangeBtn}
-            onClick={() => navigate("/deliveryAddress")}
+            onClick={() => navigate("/cart/deliveryAddress")}
           >
             Change
           </button>
@@ -214,14 +214,20 @@ const OrderSummery = () => {
               <span>Items :</span>
               <span>€ {itemsPrice.toFixed(2)}</span>
             </div>
-            <div className={styles.summaryRow}>
-              <span>Delivery Charges :</span>
-              <span>€ {DELIVERY_CHARGES.toFixed(2)}</span>
-            </div>
-            <div className={styles.summaryRow}>
-              <span>VAT :</span>
-              <span>{VAT_RATE}%</span>
-            </div>
+
+            {hasItems && (
+              <>
+                <div className={styles.summaryRow}>
+                  <span>Delivery Charges :</span>
+                  <span>€ {DELIVERY_CHARGES.toFixed(2)}</span>
+                </div>
+                <div className={styles.summaryRow}>
+                  <span>VAT :</span>
+                  <span>{VAT_RATE}%</span>
+                </div>
+              </>
+            )}
+
             <div className={styles.summaryRow}>
               <span>Total :</span>
               <span>€ {total.toFixed(2)}</span>
@@ -230,6 +236,7 @@ const OrderSummery = () => {
               <span>Promotion redeemed :</span>
               <span>- € {promotionDiscount.toFixed(2)}</span>
             </div>
+
             <div
               className={styles.summaryRow}
               style={{

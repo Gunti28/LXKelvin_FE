@@ -1,0 +1,11 @@
+{
+  "orderTracking": {
+    "bikePosition": 50,
+    "orderNumber": "AECB142CSEV2845",
+    "createdAt": "Friday, 25th December",
+    "lastUpdate": "6 minutes ago",
+    "onTimeMessage": "On time | Arriving in 13 min...",
+    "vatPercentage": 10,
+    "deliveryFee": 30
+  }
+}
