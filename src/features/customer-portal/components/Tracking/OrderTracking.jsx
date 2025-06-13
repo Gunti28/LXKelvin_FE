@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import styles from "../../../../lib/common/css/orderTracking/OrderTracking.module.css";
 import { Icon } from "@iconify/react";
 import { useNavigate, NavLink } from "react-router-dom";
+import { IMAGES } from "../../../../lib/constants/Image_Constants";
 
 // Group items by name
 const groupItems = (items) => {
@@ -20,7 +21,7 @@ const OrderTracking = () => {
 
   const {
     items = [],
-    bikePosition = 0,
+    bikePosition = 50,
     orderNumber = "N/A",
     createdAt = "N/A",
     lastUpdate = "N/A",
@@ -67,13 +68,15 @@ const OrderTracking = () => {
                 left: `calc(${bikePosition}% - 0.2rem)`,
                 marginLeft: bikePosition >= 90 ? "-3rem" : null,
               }}
-            />
-            <Icon
+            >
+              <img src={IMAGES.bike} alt="bike" />
+            </div>
+            {/* <Icon
               icon="fluent-emoji:house"
               width="30"
               height="30"
               className={styles.houseIcon}
-            />
+            /> */}
             <div className={styles.progressBar}>
               <div
                 className={styles.progressFill}
