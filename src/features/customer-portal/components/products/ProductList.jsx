@@ -7,7 +7,9 @@ import {
 } from "../../../../../src/store/slice/cartSlice";
 import OverLayLoader from "../overLayLoader/OverLayLoader";
 import { useState, useEffect } from "react";
+import CartSignIn from "../signIn/cartSignIn";
 const ProductList = () => {
+  const [showCartSignIn, setShowCartSignIn] = useState(false);
   const { products } = useSelector((state) => state.products);
   const { items: cartItems, selectedOptions } = useSelector(
     (state) => state.cart
@@ -36,6 +38,7 @@ const ProductList = () => {
   };
 
   const { category, seasonal } = getCategory();
+  const { isUserValid } = useSelector((state) => state.userAuth);
 
   /**
    * we need to add changes on loaderCategories once service is placed
@@ -89,7 +92,6 @@ const ProductList = () => {
               category.charAt(0).toUpperCase() + category.slice(1)
             } Delivered Online`}
       </h1>
-
       <div className={ListingStyle.productGrid}>
         {filteredProducts.map((product) => {
           const weights = Object.keys(product.priceByWeight || {});
@@ -133,7 +135,11 @@ const ProductList = () => {
                   }
                 >
                   {weights.map((weight) => (
-                    <option key={weight} value={weight}>
+                    <option
+                      key={weight}
+                      value={weight}
+                      className="d-flex flex-column"
+                    >
                       {weight}
                     </option>
                   ))}
@@ -188,15 +194,17 @@ const ProductList = () => {
                   <button
                     className={ListingStyle.addToCart}
                     onClick={() =>
-                      dispatch(
-                        addToCart({
-                          ...product,
-                          selectedWeight,
-                          quantity: 1,
-                          price: priceByWeight,
-                          priceByWeight: product.priceByWeight,
-                        })
-                      )
+                      isUserValid
+                        ? dispatch(
+                            addToCart({
+                              ...product,
+                              selectedWeight,
+                              quantity: 1,
+                              price: priceByWeight,
+                              priceByWeight: product.priceByWeight,
+                            })
+                          )
+                        : setShowCartSignIn(true)
                     }
                   >
                     Add to cart
@@ -211,6 +219,10 @@ const ProductList = () => {
           );
         })}
       </div>
+      <CartSignIn
+        show={showCartSignIn}
+        onHide={() => setShowCartSignIn(false)}
+      />
     </div>
   );
 };

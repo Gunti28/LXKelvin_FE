@@ -7,6 +7,8 @@ import { IMAGES } from "../../../../lib/constants/Image_Constants";
 const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
   const [address, setAddress] = useState("");
   const [location, setLocation] = useState("");
+  const [showTypeBtn, setShowTypeBtn] = useState(true);
+  const [showTypeInput, setShowTypeInput] = useState(false);
 
   const detectLocation = () => {
     if (navigator.geolocation) {
@@ -57,6 +59,11 @@ const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
     setAddress(value);
     setLocation(value);
     onLocationSet(value);
+    onClose();
+  };
+  const handleTypeBtn = () => {
+    setShowTypeInput(true);
+    setShowTypeBtn(false);
   };
 
   return (
@@ -65,13 +72,19 @@ const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
       show={show}
       placement="bottom-start"
       container={container}
-      rootClose
+      rootClose={false}
       onHide={onClose}
     >
-      <Popover id="location-popover" className={styles.popoverCustom}>
+      <Popover id="location-popover" className={styles.popoverCustom}
+      onClick={(e)=>e.stopPropagation()}>
         <Popover.Body>
           <div className="text-center d-flex flex-row justify-content-center align-items-center">
-            <img src={IMAGES.worldMap} width={60} className={styles.GlobeImage} alt="location icon" />
+            <img
+              src={IMAGES.worldMap}
+              width={60}
+              className={styles.GlobeImage}
+              alt="location icon"
+            />
             <p className={styles.descriptionText}>
               To ensure the fastest delivery possible, please provide your
               current location.
@@ -80,58 +93,68 @@ const LocationModel = ({ show, target, container, onClose, onLocationSet }) => {
 
           <div className="text-center d-flex flex-row justify-content-center align-items-center gap-3 mb-2">
             <Button
-              variant="secondary"
+              variant="outline-secondary"
               className="fs-6"
               onClick={detectLocation}
             >
               Current Location
             </Button>
             <p className={styles.orText}>OR</p>
-
-            <PlacesAutocomplete
-              value={address}
-              onChange={setAddress}
-              onSelect={handleSelect}
-            >
-              {({ getInputProps, suggestions, getSuggestionItemProps }) => (
-                <div
-                  style={{ position: "relative", width: "50%" }}
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <input
-                    {...getInputProps({
-                      placeholder: "Search delivery location",
-                      className: "form-control",
-                    })}
-                  />
-                  {suggestions.length > 0 && (
-                    <div
-                      className="border rounded bg-white"
-                      style={{
-                        position: "absolute",
-                        top: "100%",
-                        left: 0,
-                        right: 0,
-                        zIndex: 1050,
-                        maxHeight: "200px",
-                        overflowY: "auto",
-                      }}
-                    >
-                      {suggestions.map((suggestion, idx) => (
-                        <div
-                          key={idx}
-                          {...getSuggestionItemProps(suggestion, {
-                            className: `p-2 suggestion-item`,
-                          })}
-                        >
-                          {suggestion.description}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )}
-            </PlacesAutocomplete>
+            {showTypeBtn && (
+              <Button
+                variant="outline-warning"
+                className="fs-6"
+                onClick={handleTypeBtn}
+              >
+                Type Manually
+              </Button>
+            )}
+            {showTypeInput && (
+              <PlacesAutocomplete
+                value={address}
+                onChange={setAddress}
+                onSelect={handleSelect}
+              >
+                {({ getInputProps, suggestions, getSuggestionItemProps }) => (
+                  <div
+                    style={{ position: "relative", width: "50%" }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <input
+                      {...getInputProps({
+                        placeholder: "Type Manually...",
+                        className: "form-control",
+                      })}
+                    />
+                    {suggestions.length > 0 && (
+                      <div
+                        className="border rounded bg-white"
+                        style={{
+                          position: "absolute",
+                          top: "100%",
+                          left: 0,
+                          right: 0,
+                          zIndex: 1050,
+                          maxHeight: "200px",
+                          overflowY: "auto",
+                        }}
+                      >
+                        {suggestions.map((suggestion, idx) => (
+                          <div
+                            key={idx}
+                            {...getSuggestionItemProps(suggestion, {
+                              className: `p-2 suggestion-item`,
+                            })}
+                          >
+                            {suggestion.description}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </PlacesAutocomplete>
+            )}
           </div>
 
           {location && <span className={styles.locationText}>{location}</span>}
