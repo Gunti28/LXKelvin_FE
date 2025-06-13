@@ -214,14 +214,20 @@ const OrderSummery = () => {
               <span>Items :</span>
               <span>€ {itemsPrice.toFixed(2)}</span>
             </div>
-            <div className={styles.summaryRow}>
-              <span>Delivery Charges :</span>
-              <span>€ {DELIVERY_CHARGES.toFixed(2)}</span>
-            </div>
-            <div className={styles.summaryRow}>
-              <span>VAT :</span>
-              <span>{VAT_RATE}%</span>
-            </div>
+
+            {hasItems && (
+              <>
+                <div className={styles.summaryRow}>
+                  <span>Delivery Charges :</span>
+                  <span>€ {DELIVERY_CHARGES.toFixed(2)}</span>
+                </div>
+                <div className={styles.summaryRow}>
+                  <span>VAT :</span>
+                  <span>{VAT_RATE}%</span>
+                </div>
+              </>
+            )}
+
             <div className={styles.summaryRow}>
               <span>Total :</span>
               <span>€ {total.toFixed(2)}</span>
@@ -230,6 +236,7 @@ const OrderSummery = () => {
               <span>Promotion redeemed :</span>
               <span>- € {promotionDiscount.toFixed(2)}</span>
             </div>
+
             <div
               className={styles.summaryRow}
               style={{
