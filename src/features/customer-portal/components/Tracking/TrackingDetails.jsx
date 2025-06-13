@@ -9,15 +9,12 @@ import { Icon } from "@iconify/react";
 const TrackingDetails = () => {
   const dispatch = useDispatch();
 
-  const { orderPlacedTime, partnerName, phone, address, partnerImage, status } =
+  const { orderPlacedTime, partnerName, phone, address, partnerImage } =
     useSelector((state) => state.trackingDetails || {});
 
   useEffect(() => {
     dispatch(fetchTrackingMock());
   }, [dispatch]);
-
-  if (status === "loading") return <p>Loading tracking details...</p>;
-  if (status === "failed") return <p>Error loading tracking details.</p>;
 
   return (
     <div className={style.pageWrapper}>

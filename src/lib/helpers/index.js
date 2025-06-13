@@ -61,10 +61,13 @@ export const getFilteredResults = (products, term) => {
   const hasMilk = lowerTerm.includes("milk");
 
   const matches = products.filter((item) => {
-    const categoryName = getCategoryName(item.cat_id)?.toLowerCase();
+    const categoryNameRaw = getCategoryName(item.cat_id);
+    const categoryName = categoryNameRaw
+      ? categoryNameRaw.toLowerCase().replace(/\s+/g, "")
+      : "";
 
     const nameMatch = item.name.toLowerCase().includes(lowerTerm);
-    const categoryMatch = categoryName?.includes(lowerTerm);
+    const categoryMatch = categoryName.includes(lowerTerm);
 
     const isItemSeasonal = item.isSeasonal || false;
 
@@ -72,11 +75,11 @@ export const getFilteredResults = (products, term) => {
 
     const seasonalCategoryMatch =
       isSeasonalQuery &&
-      ((hasFruits && categoryName === "seasonal fruits") ||
-        (hasVegetables && categoryName === "seasonal vegetables")) &&
-      isItemSeasonal;
+      isItemSeasonal &&
+      ((hasFruits && categoryName === "seasonalfruits") ||
+        (hasVegetables && categoryName === "seasonalvegetables"));
 
-    const milkCategoryMatch = hasMilk && categoryName === "milkProducts";
+    const milkCategoryMatch = hasMilk && categoryName === "milkproducts";
 
     const anyMatch =
       nameMatch ||
@@ -91,7 +94,7 @@ export const getFilteredResults = (products, term) => {
       seasonalCategoryMatch ||
       milkCategoryMatch
     ) {
-      categorySet.add(getCategoryName(item.cat_id));
+      categorySet.add(categoryNameRaw);
     }
 
     return anyMatch;

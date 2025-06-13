@@ -140,14 +140,6 @@ const OrderSummery = () => {
   return (
     <div className={styles.SummCon}>
       <div className={styles.TopCon}>
-        <NavLink to="/deliveryAddress">
-          <Icon
-            icon="material-symbols:arrow-back"
-            width="28"
-            height="28"
-            color="black"
-          />
-        </NavLink>
         <p className={styles.DelHeading}>Delivery Address</p>
         <div className={styles.AddCon}>
           <p className={styles.AddText}>
@@ -157,7 +149,7 @@ const OrderSummery = () => {
           </p>
           <button
             className={styles.ChangeBtn}
-            onClick={() => navigate("/deliveryAddress")}
+            onClick={() => navigate("/cart/deliveryAddress")}
           >
             Change
           </button>

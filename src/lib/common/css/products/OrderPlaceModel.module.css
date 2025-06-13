@@ -6,3 +6,7 @@
 .footer {
   object-fit: cover;
 }
+
+.ModalMain {
+  background-color: white;
+}

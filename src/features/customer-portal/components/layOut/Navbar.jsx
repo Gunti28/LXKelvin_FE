@@ -20,7 +20,6 @@ import { showNavBarDefaultTemplate } from "../../../../lib/helpers/index";
 import { IMAGES } from "../../../../lib/constants/Image_Constants/index";
 import { Const } from "../../../../lib/constants/index";
 import { setSelectedLang } from "../../../../store/slice/languageSlice";
-import { throttle } from "lodash";
 import { getFilteredResults } from "../../../../lib/helpers/index";
 import LocationTracker from "./Location";
 import LocationModel from "./Location";
@@ -54,16 +53,32 @@ const NavbarComponent = () => {
 
   const selectedLang = useSelector((state) => state.language.selectedLang);
 
+  const throttleTimeoutRef = useRef(null);
+
   const throttledFilter = useCallback(
-    throttle((term) => {
-      const results = getFilteredResults(products, term);
-      setFilteredResults(results);
-    }, 300),
+    (term) => {
+      if (throttleTimeoutRef.current) {
+        clearTimeout(throttleTimeoutRef.current);
+      }
+
+      throttleTimeoutRef.current = setTimeout(() => {
+        const results = getFilteredResults(products, term);
+        setFilteredResults(results);
+      }, 300);
+    },
     [products]
   );
 
   const isDashboard =
     location.pathname === "/" || location.pathname === "/dashBoard";
+
+  useEffect(() => {
+    return () => {
+      if (throttleTimeoutRef.current) {
+        clearTimeout(throttleTimeoutRef.current);
+      }
+    };
+  }, []);
 
   // Fetch products on initial mount
   useEffect(() => {
@@ -73,8 +88,12 @@ const NavbarComponent = () => {
   }, [dispatch, status]);
 
   useEffect(() => {
-    return () => throttledFilter.cancel();
-  }, [throttledFilter]);
+    return () => {
+      if (throttleTimeoutRef.current) {
+        clearTimeout(throttleTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleResultClick = (item) => {
     if (item.type === "category") {
@@ -158,6 +177,7 @@ const NavbarComponent = () => {
       path.startsWith("/upiPayment") ||
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
+      path.startsWith("/orderConfirmUpi") ||
       path.startsWith("/orderCardPayment") ||
       path.startsWith("/orderUpiPayment") ||
       path.startsWith("/orderTracking") ||
@@ -262,7 +282,6 @@ const NavbarComponent = () => {
                       color: text_color ? "#5B5F62" : "#fff",
                     }}
                   >
-
                     {userLocation !== " " ? (
                       text_color ? (
                         <div>Location</div>
@@ -398,7 +417,6 @@ const NavbarComponent = () => {
                   ))}
                 </ul>
               )}
-           
             </div>
 
             <div

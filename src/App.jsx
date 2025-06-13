@@ -43,7 +43,6 @@ import OrderTracking from "./features/customer-portal/components/Tracking/OrderT
 import TrackingDetails from "./features/customer-portal/components/Tracking/TrackingDetails";
 import LocationTracker from "./features/customer-portal/components/layOut/Location";
 
-
 // Admin-portal Navigation
 
 import CompanyLayout from "./features/company-portal/pages/CompanyLayOut";
@@ -86,8 +85,9 @@ function App() {
           <Route path="orderCardPayment" element={<OrderCardPayment />} />
           <Route path="confirmUpi" element={<ConfirmUpi />} />
           <Route path="cardPayment" element={<CardPayment />} />
-          <Route path="cart" element={<CartPage />} />
-          <Route path="deliveryAddress" element={<DeliveryAddress />} />
+          <Route path="cart" element={<CartPage />}>
+            <Route path="deliveryAddress" element={<DeliveryAddress />} />
+          </Route>
           <Route path="orderSummary" element={<OrderSummery />} />
           <Route path="orderPlaced" element={<OrderPlacedModal />} />
           <Route path="orderUpiPayment" element={<OrderSelectUpi />} />
@@ -166,11 +166,10 @@ function App() {
           <Route path="company_settings" element={<SettingPage />} />
           <Route path="company_notifications" element={<NotificationPage />} />
         </Route>
-        
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
-
   );
 }
 
