@@ -25,6 +25,7 @@ import {
   setProductWeightPreview,
   updateQuantity,
 } from "../../../../store/slice/cartSlice";
+import CartSignIn from "../signIn/cartSignIn";
 
 const ProductDetailsPage = () => {
   let wrapContent;
@@ -34,6 +35,7 @@ const ProductDetailsPage = () => {
   const { items: cartItems, selectedOptions } = useSelector(
     (state) => state.cart
   );
+  const { isUserValid } = useSelector((state) => state.userAuth);
 
   //save for later
   const savedItems = useSelector((state) => state.savedItems);
@@ -48,6 +50,7 @@ const ProductDetailsPage = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const totalImages = 4;
+  const [showCartSignIn, setShowCartSignIn] = useState(false);
 
   const [feedback, setFeedback] = useState([]);
   // const [selectedWeight, setSelectedWeight] = useState("500g");
@@ -94,18 +97,22 @@ const ProductDetailsPage = () => {
   };
 
   const handleAdd = () => {
-    dispatch(
-      addToCart({
-        id: product.id,
-        name: product.productName,
-        image: product.images[0],
-        selectedWeight,
-        priceByWeight: product.offerPriceByWeight,
-        price: product.offerPrice,
-        quantityChange: 1,
-        originalPrice: product.originalPrice,
-      })
-    );
+    if (isUserValid) {
+      dispatch(
+        addToCart({
+          id: product.id,
+          name: product.productName,
+          image: product.images[0],
+          selectedWeight,
+          priceByWeight: product.offerPriceByWeight,
+          price: product.offerPrice,
+          quantityChange: 1,
+          originalPrice: product.originalPrice,
+        })
+      );
+    } else {
+      setShowCartSignIn(true);
+    }
   };
   const getCartQuantity = (id, weight) => {
     const item = cartItems.find(
@@ -440,6 +447,10 @@ const ProductDetailsPage = () => {
           ))}
         </div>
       </div>
+      <CartSignIn
+        show={showCartSignIn}
+        onHide={() => setShowCartSignIn(false)}
+      />
     </div>
   );
 };

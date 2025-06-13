@@ -107,6 +107,7 @@ const NavbarComponent = () => {
       path.startsWith("/confirmUpi") ||
       path.startsWith("/cardPayment") ||
       path.startsWith("/orderCardPayment") ||
+      path.startsWith("/orderConfirmUpi") ||
       path.startsWith("/orderUpiPayment") ||
       path.startsWith("/vipSuccess");
     setTextColor(isHighlightPath);
